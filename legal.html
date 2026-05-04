@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правова інформація — LEGO WeDo 2.0 Каталог</title>
+    <link rel="stylesheet" href="app.css">
+    <style>
+        body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;margin:0;padding:0}
+        .legal-page{max-width:860px;margin:0 auto;padding:40px 24px 80px}
+        .legal-back{
+            display:inline-flex;align-items:center;gap:10px;
+            background:var(--surface);color:var(--green);
+            padding:12px 24px;border-radius:14px;border:2px solid var(--surface2);
+            text-decoration:none;font-weight:800;font-size:1rem;
+            transition:all .2s;margin-bottom:32px;
+        }
+        .legal-back:hover{background:var(--green);color:#fff;transform:translateY(-2px)}
+        .legal-hero{
+            text-align:center;padding:48px 32px;margin-bottom:40px;
+            background:linear-gradient(160deg,#1a1a2e,#0f3460);
+            border-radius:24px;border:3px solid var(--yellow);
+            box-shadow:0 15px 50px rgba(0,0,0,.4);
+        }
+        .legal-hero-icon{font-size:4rem;margin-bottom:12px}
+        .legal-hero h1{font-size:2.2rem;font-weight:900;color:var(--yellow);margin:0 0 12px}
+        .legal-hero p{color:var(--text2);font-size:1.1rem;margin:0}
+        .legal-updated{
+            text-align:center;color:var(--text2);font-size:.85rem;
+            margin-bottom:40px;padding:12px;
+            background:var(--surface);border-radius:12px;border:1px solid var(--border);
+        }
+        .legal-section{margin-bottom:36px}
+        .legal-section h2{
+            font-size:1.4rem;font-weight:900;color:var(--green);
+            margin-bottom:16px;padding-bottom:10px;
+            border-bottom:2px solid var(--border);
+            display:flex;align-items:center;gap:12px;
+        }
+        .legal-section h2 span{font-size:1.6rem}
+        .legal-section p,.legal-section li{
+            color:var(--text2);line-height:1.85;font-size:.95rem;margin-bottom:10px;
+        }
+        .legal-section strong{color:#fff}
+        .legal-section ul{padding-left:20px;list-style:none;margin:12px 0}
+        .legal-section li{position:relative;padding-left:28px;margin-bottom:8px}
+        .legal-section li::before{
+            content:'•';position:absolute;left:8px;color:var(--green);font-weight:900;font-size:1.2rem;
+        }
+        .legal-highlight{
+            background:linear-gradient(135deg,rgba(255,193,18,.08),rgba(255,71,87,.05));
+            border-left:4px solid var(--yellow);
+            padding:20px 24px;border-radius:0 16px 16px 0;
+            margin:20px 0;
+        }
+        .legal-highlight p{color:var(--text);margin:0}
+        .legal-contact{
+            background:var(--surface);border-radius:20px;padding:32px;
+            border:2px solid var(--border);text-align:center;margin-top:40px;
+        }
+        .legal-contact h3{color:var(--green);font-size:1.2rem;margin-bottom:12px}
+        .legal-contact p{color:var(--text2);font-size:.95rem;line-height:1.7}
+        .legal-footer{
+            text-align:center;padding:32px 0;margin-top:48px;
+            border-top:2px solid var(--border);
+            color:var(--text2);font-size:.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="legal-page">
+        <a href="index.html" class="legal-back">← Повернутися до каталогу</a>
+
+        <div class="legal-hero">
+            <div class="legal-hero-icon">⚖️</div>
+            <h1>Правова інформація</h1>
+            <p>Умови використання, відмова від відповідальності та авторські права</p>
+        </div>
+
+        <div class="legal-updated">
+            📅 Останнє оновлення: травень 2026 року
+        </div>
+
+        <section class="legal-section">
+            <h2><span>📋</span> 1. Загальні положення</h2>
+            <p>Цей веб-каталог (далі — «Каталог») є <strong>некомерційним освітнім проєктом</strong>, створеним виключно для використання на уроках робототехніки з дітьми молодшого шкільного віку (1–4 клас).</p>
+            <p>Каталог <strong>не є офіційним продуктом</strong> компанії LEGO Group, не афілійований, не схвалений і не спонсований нею.</p>
+            <p>Каталог не здійснює жодної комерційної діяльності, не отримує прибутку та не має рекламних інтеграцій.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>🔗</span> 2. Походження матеріалів</h2>
+            <p>Усі інструкції та зображення, представлені в Каталозі, були <strong>зібрані виключно з публічно доступних джерел</strong> мережі Інтернет, зокрема:</p>
+            <ul>
+                <li>Відкриті освітні ресурси та форуми спільноти LEGO WeDo</li>
+                <li>Публічні репозиторії навчальних матеріалів</li>
+                <li>Вільнодоступні збірки інструкцій, розміщені авторами без обмежень</li>
+                <li>Офіційні безкоштовні інструкції LEGO Education</li>
+            </ul>
+            <div class="legal-highlight">
+                <p>⚠️ <strong>Важливо:</strong> Автор Каталогу добросовісно вважає, що всі зібрані матеріали були розміщені у відкритому доступі їхніми правовласниками або з їхньої згоди. Жоден матеріал не був отриманий шляхом обходу систем захисту, зламу платного доступу чи іншим протиправним способом.</p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>©</span> 3. Авторські права</h2>
+            <p>Усі торговельні марки, логотипи, назви продуктів та інтелектуальна власність належать їхнім законним правовласникам:</p>
+            <ul>
+                <li><strong>LEGO®</strong>, <strong>LEGO WeDo®</strong>, <strong>LEGO Education®</strong> — зареєстровані торговельні марки LEGO Group (Данія)</li>
+                <li>Авторські проєкти інструкцій належать їхнім відповідним авторам та спільнотам</li>
+            </ul>
+            <p>Використання цих назв у Каталозі здійснюється виключно в описових та ідентифікаційних цілях (<strong>nominative fair use</strong>).</p>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>🛡️</span> 4. Відмова від відповідальності (Disclaimer)</h2>
+            <p>Автор та власник Каталогу:</p>
+            <ul>
+                <li><strong>Не несе жодної відповідальності</strong> за зміст, точність, повноту або актуальність представлених матеріалів</li>
+                <li><strong>Не гарантує</strong>, що матеріали не порушують права третіх осіб</li>
+                <li><strong>Не надає жодних гарантій</strong> щодо придатності матеріалів для будь-яких цілей</li>
+                <li><strong>Не несе відповідальності</strong> за будь-які збитки, прямі чи непрямі, пов'язані з використанням Каталогу</li>
+            </ul>
+            <p>Каталог надається на умовах <strong>«як є» (as is)</strong> без будь-яких гарантій, явних чи неявних.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>📝</span> 5. Умови використання</h2>
+            <p>Використовуючи Каталог, ви погоджуєтесь із наступним:</p>
+            <ul>
+                <li>Матеріали використовуються <strong>виключно в особистих освітніх цілях</strong></li>
+                <li>Ви <strong>не будете розповсюджувати</strong> матеріали з комерційною метою</li>
+                <li>Ви <strong>не будете видавати</strong> чужі роботи за свої</li>
+                <li>Ви <strong>берете на себе</strong> повну відповідальність за використання матеріалів</li>
+                <li>Ви розумієте, що Каталог може містити матеріали, захищені авторським правом, і використовуєте їх <strong>на власний ризик</strong></li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>🗑️</span> 6. Процедура видалення (DMCA / Takedown)</h2>
+            <p>Якщо ви є <strong>правовласником</strong> будь-якого матеріалу, представленого в Каталозі, та вважаєте, що ваші права порушені, ви маєте право подати запит на видалення.</p>
+            <div class="legal-highlight">
+                <p>📩 При отриманні обґрунтованого запиту від правовласника (або його уповноваженого представника) відповідний матеріал буде <strong>негайно та безумовно видалений</strong> з Каталогу без будь-яких заперечень.</p>
+            </div>
+            <p>Для подання запиту на видалення, будь ласка, зв'яжіться з автором через контактну інформацію, вказану нижче, та надайте:</p>
+            <ul>
+                <li>Ідентифікацію матеріалу, який порушує ваші права</li>
+                <li>Підтвердження вашого статусу правовласника</li>
+                <li>Контактну інформацію для зворотного зв'язку</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>🎓</span> 7. Освітнє використання (Fair Use)</h2>
+            <p>Каталог використовує матеріали на підставі принципу <strong>добросовісного використання (fair use / fair dealing)</strong> відповідно до міжнародних норм авторського права, зокрема:</p>
+            <ul>
+                <li>Використання є <strong>некомерційним та освітнім</strong></li>
+                <li>Матеріали використовуються для <strong>навчання дітей</strong> основам робототехніки та конструювання</li>
+                <li>Каталог <strong>не замінює</strong> оригінальні продукти та не зменшує їхню ринкову вартість</li>
+                <li>Обсяг використання є <strong>мінімально необхідним</strong> для освітніх цілей</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2><span>🔒</span> 8. Конфіденційність</h2>
+            <p>Каталог <strong>не збирає, не зберігає та не обробляє</strong> жодних персональних даних користувачів.</p>
+            <p>Усі налаштування (обране, прийняття умов) зберігаються виключно локально у браузері користувача (localStorage) і <strong>не передаються</strong> на жодні зовнішні сервери.</p>
+        </section>
+
+        <div class="legal-contact">
+            <h3>📬 Зворотний зв'язок</h3>
+            <p>Якщо у вас є питання, пропозиції або запити на видалення матеріалів, будь ласка, зв'яжіться з автором Каталогу через адміністратора навчального закладу, де використовується цей ресурс.</p>
+        </div>
+
+        <div class="legal-footer">
+            <p>© 2024–2026 LEGO WeDo 2.0 — Каталог інструкцій. Некомерційний освітній проєкт.</p>
+            <p>LEGO® є зареєстрованою торговельною маркою LEGO Group. Цей сайт не є продуктом LEGO Group.</p>
+        </div>
+    </div>
+</body>
+</html>

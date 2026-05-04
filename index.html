@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>LEGO WeDo 2.0 — Каталог інструкцій 🧱</title>
+    <meta name="description" content="Каталог інструкцій для складання моделей Lego WeDo 2.0 українською мовою">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-inner">
+            <div class="logo" id="logoHome">
+                <div class="lego-dots">
+                    <span style="background:#ff4757"></span>
+                    <span style="background:#ffc312"></span>
+                    <span style="background:#00d26a"></span>
+                    <span style="background:#1e90ff"></span>
+                </div>
+                <div class="logo-text">
+                    <strong>🧱 LEGO WeDo 2.0</strong>
+                    <small>Каталог інструкцій</small>
+                </div>
+            </div>
+            <div class="search-wrap">
+                <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+                <input type="text" id="searchInput" placeholder="🔎 Знайди свою модель..." autocomplete="off">
+                <button id="clearSearch" class="clear-btn hidden" aria-label="Очистити">&times;</button>
+            </div>
+            <div class="header-stats">
+                <button id="navFav" class="nav-fav-btn" title="Моє обране">
+                    <span class="nav-fav-icon">❤️</span>
+                    <span id="navFavCount" class="nav-fav-count">0</span>
+                </button>
+                <div class="stat-item">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-text"><span id="shownCount">0</span> / <span id="totalCount">0</span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="layout">
+        <nav class="sidebar" id="sidebar">
+            <div class="sidebar-title">🎮 Категорії</div>
+            <ul id="categoryList"></ul>
+        </nav>
+
+        <main class="content" id="content">
+            <!-- Home View (Hub) -->
+            <div id="homeView" class="home-view">
+                <section class="hero-section">
+                    <div class="hero-banner">
+                        <div class="hero-content">
+                            <h1>Привіт, Майстер! 👋</h1>
+                            <p>Що будемо будувати сьогодні?</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="trending-section horizontal-row-wrap">
+                    <div class="section-header">
+                        <h3>🔥 Зараз у тренді</h3>
+                        <div class="scroll-controls">
+                            <button class="scroll-btn prev" onclick="sideScroll('trendingGrid', 'left')">‹</button>
+                            <button class="scroll-btn next" onclick="sideScroll('trendingGrid', 'right')">›</button>
+                        </div>
+                    </div>
+                    <div id="trendingGrid" class="horizontal-scroll"></div>
+                </section>
+
+                <section class="genres-section horizontal-row-wrap">
+                    <div class="section-header">
+                        <h3>🎮 Популярні категорії</h3>
+                        <div class="scroll-controls">
+                            <button class="scroll-btn prev" onclick="sideScroll('genreGrid', 'left')">‹</button>
+                            <button class="scroll-btn next" onclick="sideScroll('genreGrid', 'right')">›</button>
+                        </div>
+                    </div>
+                    <div id="genreGrid" class="genre-row"></div>
+                </section>
+
+                <section class="recommended-section">
+                    <div class="section-header">
+                        <h3>✨ Рекомендовано для тебе</h3>
+                    </div>
+                    <div id="recommendedGrid" class="grid"></div>
+                </section>
+            </div>
+
+            <!-- Category/Search View (Standard Grid) -->
+            <div id="gridView" class="grid-view hidden">
+                <div class="content-top">
+                    <h2 id="currentTitle">🏆 Всі моделі</h2>
+                    <div class="view-toggle">
+                        <button id="btnGrid" class="vt active" title="Звичайна сітка">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10-10h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+                        </button>
+                        <button id="btnBig" class="vt" title="Великі плитки">
+                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="grid" class="grid"></div>
+                <div id="empty" class="empty hidden">
+                    <div class="empty-emoji">🤔</div>
+                    <h3>Нічого не знайдено!</h3>
+                    <p>Спробуй іншу назву або категорію 😊</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal for model preview -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-img" id="modalImg"></div>
+            <div class="modal-info">
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-cats" id="modalCats"></div>
+                <a class="modal-open-btn" id="modalOpenBtn" href="#" target="_blank">
+                    <span class="btn-icon">📖</span>
+                    Відкрити інструкцію
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Modal -->
+    <div class="disclaimer-overlay" id="disclaimerOverlay">
+        <div class="disclaimer-modal">
+            <div class="disclaimer-icon">⚠️</div>
+            <h2>Увага! Важлива інформація</h2>
+            <div class="disclaimer-text">
+                <p>Цей каталог створений <strong>виключно в освітніх та ознайомлювальних цілях</strong> для використання на уроках робототехніки.</p>
+                <p>Усі інструкції, зображення та матеріали належать їхнім законним правовласникам — компанії <strong>LEGO Group</strong> та авторам оригінальних проєктів. Матеріали зібрані з <strong>публічно доступних джерел</strong> мережі Інтернет.</p>
+                <p>Власник каталогу <strong>не несе жодної відповідальності</strong> за використання представлених матеріалів.</p>
+                <p>Натискаючи «Прийняти», ви підтверджуєте, що:</p>
+                <ul>
+                    <li>Ознайомлені з <a href="legal.html" style="color:var(--green);font-weight:700">умовами використання</a></li>
+                    <li>Використовуєте матеріали виключно для особистого навчання</li>
+                    <li>Не будете розповсюджувати матеріали з комерційною метою</li>
+                </ul>
+            </div>
+            <button class="disclaimer-accept" id="disclaimerAccept">✅ Прийняти та продовжити</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">🧱</span>
+                <div>
+                    <strong>LEGO WeDo 2.0 — Каталог інструкцій</strong>
+                    <small>Некомерційний освітній проєкт</small>
+                </div>
+            </div>
+            <div class="footer-links">
+                <a href="legal.html">⚖️ Правова інформація</a>
+                <a href="legal.html#dmca">🗑️ Запит на видалення</a>
+            </div>
+            <div class="footer-copy">
+                <p>© 2024–2026. Усі торговельні марки належать їхнім правовласникам.</p>
+                <p>LEGO® — зареєстрована торговельна марка LEGO Group. Цей сайт не є продуктом LEGO Group.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top hidden" aria-label="Нагору">↑</button>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
