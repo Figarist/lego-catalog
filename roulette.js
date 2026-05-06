@@ -33,7 +33,8 @@ window.LegoRoulette = (function() {
             card.id = 'r-card-' + idx;
             
             let imgHtml = item.i ? `<img src="${item.i}" alt="">` : '<div class="no-img">📋</div>';
-            card.innerHTML = `${imgHtml}<div class="roulette-card-title">${item.t}</div>`;
+            const localizedTitle = LegoStore.getLocalized(item.t);
+            card.innerHTML = `${imgHtml}<div class="roulette-card-title">${localizedTitle}</div>`;
             fragment.appendChild(card);
         });
         strip.appendChild(fragment);
