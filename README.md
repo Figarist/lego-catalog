@@ -4,6 +4,8 @@
 [![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![No Frameworks](https://img.shields.io/badge/No-Frameworks-red?style=for-the-badge)](https://en.wikipedia.org/wiki/Plain_Vanilla)
 
+**🌐 Live Site:** [figarist.github.io/lego-catalog](https://figarist.github.io/lego-catalog/)
+
 An engaging, high-performance, and offline-first catalog of instructions for **LEGO WeDo 2.0**. Designed for kids and robotics educators, this app features a Roblox-style UI with gamification elements like favorites, ratings, and a built-in "Instructions Roulette".
 
 ---
