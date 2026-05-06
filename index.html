@@ -19,20 +19,25 @@
                 </div>
                 <div class="logo-text">
                     <strong>🧱 LEGO WeDo 2.0</strong>
-                    <small>Каталог інструкцій</small>
+                    <small data-i18n="app_subtitle">Каталог інструкцій</small>
                 </div>
+            </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" data-lang="uk">UK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
             </div>
             <div class="search-wrap">
                 <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.47 6.47 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                <input type="text" id="searchInput" placeholder="🔎 Знайди свою модель..." autocomplete="off">
+                <input type="text" id="searchInput" placeholder="🔎 Знайди свою модель..." data-i18n="search_placeholder" autocomplete="off">
                 <button id="clearSearch" class="clear-btn hidden" aria-label="Очистити">&times;</button>
             </div>
             <div class="header-stats">
-                <button id="navFav" class="nav-fav-btn" title="Моє обране">
+                <button id="navFav" class="nav-fav-btn" title="Моє обране" data-i18n-title="nav_favorites">
                     <span class="nav-fav-icon">❤️</span>
                     <span id="navFavCount" class="nav-fav-count">0</span>
                 </button>
-                <div class="stat-item" title="Зібрано моделей (натисніть, щоб переглянути)" id="navBuilt" style="cursor:pointer">
+                <div class="stat-item" title="Зібрано моделей" data-i18n-title="nav_built" id="navBuilt" style="cursor:pointer">
                     <span class="stat-icon">✅</span>
                     <span class="stat-text"><span id="builtCount">0</span> / <span id="totalCount">0</span></span>
                 </div>
@@ -42,7 +47,7 @@
 
     <div class="layout">
         <nav class="sidebar" id="sidebar">
-            <div class="sidebar-title">🎮 Категорії</div>
+            <div class="sidebar-title" data-i18n="sidebar_categories">🎮 Категорії</div>
             <ul id="categoryList"></ul>
         </nav>
 
@@ -52,16 +57,16 @@
                 <section class="hero-section">
                     <div class="hero-banner">
                         <div class="hero-content">
-                            <h1>Привіт, Майстер! 👋</h1>
-                            <p>Що будемо будувати сьогодні?</p>
-                            <button id="btnRandom" class="hero-random-btn">🎲 Випадкова модель</button>
+                            <h1 data-i18n="hero_title">Привіт, Майстер! 👋</h1>
+                            <p data-i18n="hero_subtitle">Що будемо будувати сьогодні?</p>
+                            <button id="btnRandom" class="hero-random-btn" data-i18n="btn_random">🎲 Випадкова модель</button>
                         </div>
                     </div>
                 </section>
 
                 <section class="trending-section horizontal-row-wrap">
                     <div class="section-header">
-                        <h3>🔥 Зараз у тренді</h3>
+                        <h3 data-i18n="section_trending">🔥 Зараз у тренді</h3>
                         <div class="scroll-controls">
                             <button class="scroll-btn prev" onclick="sideScroll('trendingGrid', 'left')">‹</button>
                             <button class="scroll-btn next" onclick="sideScroll('trendingGrid', 'right')">›</button>
@@ -72,7 +77,7 @@
 
                 <section class="genres-section horizontal-row-wrap">
                     <div class="section-header">
-                        <h3>🎮 Популярні категорії</h3>
+                        <h3 data-i18n="section_popular_cats">🎮 Популярні категорії</h3>
                         <div class="scroll-controls">
                             <button class="scroll-btn prev" onclick="sideScroll('genreGrid', 'left')">‹</button>
                             <button class="scroll-btn next" onclick="sideScroll('genreGrid', 'right')">›</button>
@@ -83,7 +88,7 @@
 
                 <section class="recommended-section">
                     <div class="section-header">
-                        <h3>✨ Рекомендовано для тебе</h3>
+                        <h3 data-i18n="section_recommended">✨ Рекомендовано для тебе</h3>
                     </div>
                     <div id="recommendedGrid" class="grid"></div>
                 </section>
@@ -105,8 +110,8 @@
                 <div id="grid" class="grid"></div>
                 <div id="empty" class="empty hidden">
                     <div class="empty-emoji">🤔</div>
-                    <h3>Нічого не знайдено!</h3>
-                    <p>Спробуй іншу назву або категорію 😊</p>
+                    <h3 data-i18n="empty_title">Нічого не знайдено!</h3>
+                    <p data-i18n="empty_text">Спробуй іншу назву або категорію 😊</p>
                 </div>
             </div>
         </main>
@@ -122,7 +127,7 @@
                 <div class="modal-cats" id="modalCats"></div>
                 <div class="modal-actions-row">
                     <div class="rating-container">
-                        <span class="rating-label">Оціни модель:</span>
+                        <span class="rating-label" data-i18n="modal_rate">Оціни модель:</span>
                         <div class="star-rating" id="modalRating">
                             <span class="star" data-value="5">★</span>
                             <span class="star" data-value="4">★</span>
@@ -134,12 +139,12 @@
                     <label class="built-toggle">
                         <input type="checkbox" id="modalBuilt">
                         <span class="toggle-slider"></span>
-                        <span class="toggle-label">Я це зібрав! ✅</span>
+                        <span class="toggle-label" data-i18n="modal_built_checkbox">Я це зібрав! ✅</span>
                     </label>
                 </div>
                 <a class="modal-open-btn" id="modalOpenBtn" href="#" target="_blank">
                     <span class="btn-icon">📖</span>
-                    Відкрити інструкцію
+                    <span data-i18n="modal_open_btn">Відкрити інструкцію</span>
                 </a>
             </div>
         </div>
@@ -149,13 +154,13 @@
     <div class="roulette-overlay" id="rouletteOverlay">
         <div class="roulette-modal">
             <button class="modal-close" id="rouletteClose">&times;</button>
-            <h2 class="roulette-title">🎰 Рулетка Інструкцій</h2>
+            <h2 class="roulette-title" data-i18n="roulette_title">🎰 Рулетка Інструкцій</h2>
             <div class="roulette-window">
                 <div class="roulette-center-line"></div>
                 <div class="roulette-strip" id="rouletteStrip"></div>
             </div>
             <div class="roulette-action">
-                <button id="rouletteActionBtn" class="hero-random-btn hidden">Відкрити цю модель!</button>
+                <button id="rouletteActionBtn" class="hero-random-btn hidden" data-i18n="roulette_open">Відкрити цю модель!</button>
             </div>
         </div>
     </div>
@@ -164,19 +169,19 @@
     <div class="disclaimer-overlay" id="disclaimerOverlay">
         <div class="disclaimer-modal">
             <div class="disclaimer-icon">⚠️</div>
-            <h2>Увага! Важлива інформація</h2>
+            <h2 data-i18n="disclaimer_title">Увага! Важлива інформація</h2>
             <div class="disclaimer-text">
-                <p>Цей каталог створений <strong>виключно в освітніх та ознайомлювальних цілях</strong> для використання на уроках робототехніки.</p>
-                <p>Усі інструкції, зображення та матеріали належать їхнім законним правовласникам — компанії <strong>LEGO Group</strong> та авторам оригінальних проєктів. Матеріали зібрані з <strong>публічно доступних джерел</strong> мережі Інтернет.</p>
-                <p>Власник каталогу <strong>не несе жодної відповідальності</strong> за використання представлених матеріалів.</p>
-                <p>Натискаючи «Прийняти», ви підтверджуєте, що:</p>
+                <p data-i18n="disclaimer_p1">Цей каталог створений виключно в освітніх та ознайомлювальних цілях для використання на уроках робототехніки.</p>
+                <p data-i18n="disclaimer_p2">Усі інструкції, зображення та матеріали належать їхнім законним правовласникам — компанії LEGO Group та авторам оригінальних проєктів.</p>
+                <p data-i18n="disclaimer_p3">Власник каталогу не несе жодної відповідальності за використання представлених матеріалів.</p>
+                <p data-i18n="disclaimer_p4">Натискаючи «Прийняти», ви підтверджуєте, що:</p>
                 <ul>
-                    <li>Ознайомлені з <a href="legal.html" style="color:var(--green);font-weight:700">умовами використання</a></li>
-                    <li>Використовуєте матеріали виключно для особистого навчання</li>
-                    <li>Не будете розповсюджувати матеріали з комерційною метою</li>
+                    <li data-i18n="disclaimer_li_1">Ознайомлені з умовами використання</li>
+                    <li data-i18n="disclaimer_li_2">Використовуєте матеріали виключно для особистого навчання</li>
+                    <li data-i18n="disclaimer_li_3">Не будете розповсюджувати матеріали з комерційною метою</li>
                 </ul>
             </div>
-            <button class="disclaimer-accept" id="disclaimerAccept">✅ Прийняти та продовжити</button>
+            <button class="disclaimer-accept" id="disclaimerAccept" data-i18n="disclaimer_accept">✅ Прийняти та продовжити</button>
         </div>
     </div>
 
@@ -186,25 +191,26 @@
             <div class="footer-brand">
                 <span class="footer-logo">🧱</span>
                 <div>
-                    <strong>LEGO WeDo 2.0 — Каталог інструкцій</strong>
-                    <small>Некомерційний освітній проєкт</small>
+                    <strong data-i18n="footer_brand_title">LEGO WeDo 2.0 — Каталог інструкцій</strong>
+                    <small data-i18n="footer_brand_subtitle">Некомерційний освітній проєкт</small>
                 </div>
             </div>
             <div class="footer-links">
-                <a href="legal.html">⚖️ Правова інформація</a>
-                <a href="legal.html#dmca">🗑️ Запит на видалення</a>
+                <a href="legal.html" data-i18n="footer_legal">⚖️ Правова інформація</a>
+                <a href="legal.html#dmca" data-i18n="footer_dmca">🗑️ Запит на видалення</a>
             </div>
             <div class="footer-copy">
-                <p>© 2024–2026. Усі торговельні марки належать їхнім правовласникам.</p>
-                <p>LEGO® — зареєстрована торговельна марка LEGO Group. Цей сайт не є продуктом LEGO Group.</p>
+                <p data-i18n="footer_copy_1">© 2024–2026. Усі торговельні марки належать їхнім правовласникам.</p>
+                <p data-i18n="footer_copy_2">LEGO® — зареєстрована торговельна марка LEGO Group. Цей сайт не є продуктом LEGO Group.</p>
             </div>
         </div>
     </footer>
 
-    <button id="scrollTop" class="scroll-top hidden" aria-label="Нагору">↑</button>
+    <button id="scrollTop" class="scroll-top hidden" aria-label="Нагору" data-i18n="scroll_top">↑</button>
 
-    <script src="data.js"></script>
+    <script src="data_localized.js"></script>
     <script src="store.js"></script>
+    <script src="translations.js"></script>
     <script src="roulette.js"></script>
     <script src="app.js"></script>
 </body>
