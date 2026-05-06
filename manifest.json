@@ -1,9 +1,13 @@
 {
-  "name": "LEGO WeDo Catalog",
+  "name": "LEGO WeDo 2.0 — Catalog",
   "short_name": "WeDo Catalog",
   "description": "Catalog of instructions for building LEGO WeDo 2.0 models",
   "start_url": "./index.html",
   "display": "standalone",
+  "orientation": "any",
+  "lang": "uk",
+  "scope": "./",
+  "categories": ["education", "kids"],
   "background_color": "#1a1a2e",
   "theme_color": "#1a1a2e",
   "icons": [
@@ -16,6 +20,12 @@
       "src": "icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ]
 }

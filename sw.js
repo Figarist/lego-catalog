@@ -1,7 +1,8 @@
-const CACHE_NAME = 'wedo-catalog-v1';
+const CACHE_NAME = 'wedo-catalog-v20260506';
 const ASSETS = [
   './',
   './index.html',
+  './legal.html',
   './app.css',
   './app.js',
   './data_localized.js',
