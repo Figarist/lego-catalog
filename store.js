@@ -45,6 +45,12 @@ window.LegoStore = (function() {
         let changed = false;
         const builtCount = builtItems.length;
 
+        // Build lookup map once for O(1) access
+        const itemMap = new Map();
+        for (let i = 0; i < allData.length; i++) {
+            itemMap.set(allData[i].p, allData[i]);
+        }
+
         for (let i = 0; i < ACHIEVEMENTS_DATA.length; i++) {
             const achievement = ACHIEVEMENTS_DATA[i];
             if (unlockedAchievements.includes(achievement.id)) continue;
@@ -53,7 +59,7 @@ window.LegoStore = (function() {
             if (achievement.category) {
                 let count = 0;
                 for (let j = 0; j < builtItems.length; j++) {
-                    const item = allData.find(d => d.p === builtItems[j]);
+                    const item = itemMap.get(builtItems[j]);
                     if (item && item.ac && item.ac.includes(achievement.category)) {
                         count++;
                     }
@@ -130,14 +136,22 @@ window.LegoStore = (function() {
                 return file.split('.')[0].split('-')[0].toLowerCase(); // basic slug
             };
 
+            // Build lookup structures once — O(n) instead of O(n*m)
+            const knownPaths = new Set(legoData.map(item => item.p));
+            const slugToItem = new Map();
+            legoData.forEach(item => {
+                const pSlug = getSlug(item.p);
+                const iSlug = getSlug(item.i);
+                if (pSlug && !slugToItem.has(pSlug)) slugToItem.set(pSlug, item);
+                if (iSlug && !slugToItem.has(iSlug)) slugToItem.set(iSlug, item);
+            });
+
             const healArray = (arr) => {
                 for (let i = 0; i < arr.length; i++) {
                     const oldId = arr[i];
-                    // If ID not found in current data
-                    if (!legoData.find(item => item.p === oldId)) {
+                    if (!knownPaths.has(oldId)) {
                         const oldSlug = getSlug(oldId);
-                        // Try to find by slug in current data
-                        const match = legoData.find(item => getSlug(item.p) === oldSlug || getSlug(item.i) === oldSlug);
+                        const match = slugToItem.get(oldSlug);
                         if (match) {
                             arr[i] = match.p;
                             changed = true;
@@ -151,9 +165,9 @@ window.LegoStore = (function() {
 
             // Heal ratings keys
             for (const oldId in ratings) {
-                if (!legoData.find(item => item.p === oldId)) {
+                if (!knownPaths.has(oldId)) {
                     const oldSlug = getSlug(oldId);
-                    const match = legoData.find(item => getSlug(item.p) === oldSlug || getSlug(item.i) === oldSlug);
+                    const match = slugToItem.get(oldSlug);
                     if (match) {
                         ratings[match.p] = ratings[oldId];
                         delete ratings[oldId];

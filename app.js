@@ -23,6 +23,18 @@ function debounce(func, delay) {
   };
 }
 
+// Utility: Escape HTML to prevent XSS
+function escapeHTML(str) {
+  if (!str) return '';
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// Category key constants (avoid hardcoded Ukrainian strings in logic)
+const CAT_KEY_NEW = 'Нові інструкції';
+const CAT_KEY_OFFICIAL = 'Офіційні інструкції LEGO';
+
 document.addEventListener('DOMContentLoaded', () => {
   const $ = id => document.getElementById(id);
   const t = key => (I18N_DATA[LegoStore.getLang()] && I18N_DATA[LegoStore.getLang()][key]) || key;
@@ -40,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const builtCountEl = $('builtCount');
   const totalEl = $('totalCount');
   const btnGrid = $('btnGrid');
-  const btnList = $('btnList');
+
   const scrollBtn = $('scrollTop');
   const contentEl = $('content');
 
@@ -186,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // SEO and Browser Tab Title
     if (I18N_DATA[lang]) {
-      if (I18N_DATA[lang].app_page_title && window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+      if (I18N_DATA[lang].app_page_title && (window.location.pathname.includes('index.html') || window.location.pathname === '/')) {
         document.title = I18N_DATA[lang].app_page_title;
       } else if (I18N_DATA[lang].legal_page_title && window.location.pathname.includes('legal.html')) {
         document.title = I18N_DATA[lang].legal_page_title;
@@ -219,12 +231,21 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Localized aria-labels
+    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+      const key = el.dataset.i18nAria;
+      if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+        el.setAttribute('aria-label', I18N_DATA[lang][key]);
+      }
+    });
+
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
 
     // Refresh dynamic content
+    rebuildSearchIndex();
     renderCategories();
     if (activeCat === 'home') renderHome();
     else switchView(activeCat, '', ''); // refresh current view
@@ -285,7 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const adding = LegoStore.toggleFavorite(id);
     if (adding && event) animateFlyingHeart(event.currentTarget);
     updateGlobalUI();
-    renderCategories(); // Update count in sidebar
     if (activeCat === 'favorites') renderGrid();
     else updateCardUI(id);
   }
@@ -332,6 +352,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   totalEl.textContent = LEGO_DATA.length;
 
+  // Pre-built search index for fast filtering
+  let searchIndex = [];
+  function rebuildSearchIndex() {
+    searchIndex = LEGO_DATA.map(item => {
+      const title = getLocalized(item.t).toLowerCase();
+      const cat = getLocalizedCat(item.c).toLowerCase();
+      const allCats = item.ac.map(a => getLocalizedCat(a).toLowerCase()).join(' ');
+      return title + ' ' + cat + ' ' + allCats;
+    });
+  }
+  rebuildSearchIndex();
+
   // Render categories in sidebar
   function renderCategories() {
     catList.innerHTML = '';
@@ -342,15 +374,13 @@ document.addEventListener('DOMContentLoaded', () => {
     catList.appendChild(homeLi);
     
     // 2. New
-    const newCatKey = 'Нові інструкції';
-    if (catCounts[newCatKey]) {
-      catList.appendChild(makeCatItem(newCatKey, t('sidebar_new').replace('🆕 ', ''), catCounts[newCatKey], '🆕'));
+    if (catCounts[CAT_KEY_NEW]) {
+      catList.appendChild(makeCatItem(CAT_KEY_NEW, t('sidebar_new').replace('🆕 ', ''), catCounts[CAT_KEY_NEW], '🆕'));
     }
 
     // 3. Official
-    const offCatKey = 'Офіційні інструкції LEGO';
-    if (catCounts[offCatKey]) {
-      catList.appendChild(makeCatItem(offCatKey, t('sidebar_official').replace('📋 ', ''), catCounts[offCatKey], '📋'));
+    if (catCounts[CAT_KEY_OFFICIAL]) {
+      catList.appendChild(makeCatItem(CAT_KEY_OFFICIAL, t('sidebar_official').replace('📋 ', ''), catCounts[CAT_KEY_OFFICIAL], '📋'));
     }
 
     // 4. All
@@ -358,7 +388,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Rest
     sortedCats.forEach(cat => {
-      if (cat === newCatKey || cat === offCatKey) return; // Skip pinned
+      if (cat === CAT_KEY_NEW || cat === CAT_KEY_OFFICIAL) return; // Skip pinned
       const emoji = CATEGORY_EMOJI[cat] || '📁';
       catList.appendChild(makeCatItem(cat, getLocalizedCat(cat), catCounts[cat], emoji));
     });
@@ -494,7 +524,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // NEW Badge
-    if (item.ac.includes('Нові інструкції')) {
+    if (item.ac.includes(CAT_KEY_NEW)) {
       const newBadge = document.createElement('div');
       newBadge.className = 'new-badge';
       newBadge.textContent = 'NEW';
@@ -528,7 +558,7 @@ document.addEventListener('DOMContentLoaded', () => {
     body.className = 'card-body';
     const titleText = getLocalized(item.t);
     const catText = getLocalizedCat(item.c);
-    body.innerHTML = `<div class="card-title" title="${titleText}">${titleText}</div><div class="card-cat">${catText}</div>`;
+    body.innerHTML = `<div class="card-title" title="${escapeHTML(titleText)}">${escapeHTML(titleText)}</div><div class="card-cat">${escapeHTML(catText)}</div>`;
 
     div.appendChild(imgDiv);
     div.appendChild(body);
@@ -546,12 +576,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
 
-    // If there is a query, search globally (or within favorites if active)
-    return LEGO_DATA.filter(item => {
-      const title = getLocalized(item.t).toLowerCase();
-      const matchQ = title.includes(query) || 
-                     getLocalizedCat(item.c).toLowerCase().includes(query) ||
-                     item.ac.some(a => getLocalizedCat(a).toLowerCase().includes(query));
+    // Use pre-built search index for fast matching
+    return LEGO_DATA.filter((item, idx) => {
+      const matchQ = searchIndex[idx].includes(query);
       
       if (activeCat === 'favorites') return matchQ && LegoStore.isFavorite(item.p);
       if (activeCat === 'built') return matchQ && LegoStore.isBuilt(item.p);
@@ -585,9 +612,9 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModal(item) {
     const lang = LegoStore.getLang();
     if (item.i) {
-      modalImg.innerHTML = `<img src="${item.i}" alt="${getLocalized(item.t)}">`;
+      modalImg.innerHTML = `<img src="${escapeHTML(item.i)}" alt="${escapeHTML(getLocalized(item.t))}">`;
     } else {
-      modalImg.innerHTML = `<div class="no-img"><span class="no-img-icon">📋</span><br>${t('label_official_full')}</div>`;
+      modalImg.innerHTML = `<div class="no-img"><span class="no-img-icon">📋</span><br>${escapeHTML(t('label_official_full'))}</div>`;
     }
     modalTitle.textContent = getLocalized(item.t);
     modalCats.innerHTML = '';
@@ -650,6 +677,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
+    // Focus trap: focus the close button when modal opens
+    setTimeout(() => modalClose.focus(), 100);
   }
 
   function closeModal() {
@@ -657,12 +686,31 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
+  // Focus trap for modal
+  const modal = $('modal');
+  modal.addEventListener('keydown', e => {
+    if (e.key !== 'Tab') return;
+    const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    if (focusable.length === 0) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
   modalClose.addEventListener('click', closeModal);
   modalOverlay.addEventListener('click', e => {
     if (e.target === modalOverlay) closeModal();
   });
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      closeModal();
+      // Also close roulette
+      rouletteOverlay.classList.remove('active');
+    }
   });
 
   // Search
@@ -778,14 +826,26 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('Share failed:', err);
       }
     } else {
-      // Fallback: Copy to clipboard
-      const dummy = document.createElement('input');
-      document.body.appendChild(dummy);
-      dummy.value = shareData.url;
-      dummy.select();
-      document.execCommand('copy');
-      document.body.removeChild(dummy);
-      alert('Link copied to clipboard!');
+      // Fallback: Copy to clipboard (modern API)
+      try {
+        await navigator.clipboard.writeText(shareData.url);
+      } catch (e) {
+        // Legacy fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = shareData.url;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+      // Show localized toast instead of alert()
+      const toast = document.createElement('div');
+      toast.className = 'update-toast';
+      toast.innerHTML = `<div class="toast-content"><span>📋 ${t('link_copied')}</span></div>`;
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 3000);
     }
   }
 });
