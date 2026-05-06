@@ -6,7 +6,23 @@ window.LegoStore = (function() {
     let builtItems = JSON.parse(localStorage.getItem('lego_built') || '[]');
     let ratings = JSON.parse(localStorage.getItem('lego_ratings') || '{}');
     let unlockedAchievements = JSON.parse(localStorage.getItem('lego_achievements') || '[]');
-    let currentLang = localStorage.getItem('app_lang') || 'uk';
+    let currentLang = localStorage.getItem('app_lang');
+
+    // Auto-detection logic for first-time visitors
+    if (!currentLang) {
+        const navLang = (navigator.language || navigator.userLanguage || 'uk').toLowerCase();
+        if (navLang.includes('pl')) {
+            currentLang = 'pl';
+        } else if (navLang.includes('en')) {
+            currentLang = 'en';
+        } else if (navLang.includes('ru')) {
+            currentLang = 'ru';
+        } else {
+            currentLang = 'uk'; // Fallback/Default
+        }
+        localStorage.setItem('app_lang', currentLang);
+    }
+
 
     function saveFavs() {
         localStorage.setItem('lego_favs', JSON.stringify(favorites));
