@@ -5,6 +5,7 @@ window.LegoStore = (function() {
     let favorites = JSON.parse(localStorage.getItem('lego_favs') || '[]');
     let builtItems = JSON.parse(localStorage.getItem('lego_built') || '[]');
     let ratings = JSON.parse(localStorage.getItem('lego_ratings') || '{}');
+    let currentLang = localStorage.getItem('app_lang') || 'uk';
 
     function saveFavs() {
         localStorage.setItem('lego_favs', JSON.stringify(favorites));
@@ -22,6 +23,12 @@ window.LegoStore = (function() {
         getFavorites: () => favorites,
         getBuiltItems: () => builtItems,
         getRatings: () => ratings,
+        getLang: () => currentLang,
+
+        setLang: (lang) => {
+            currentLang = lang;
+            localStorage.setItem('app_lang', lang);
+        },
 
         toggleFavorite: (id) => {
             const idx = favorites.indexOf(id);

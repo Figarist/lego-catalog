@@ -57,12 +57,65 @@ document.addEventListener('DOMContentLoaded', () => {
   let activeCat = 'home';
   let query = '';
 
+  function getLocalized(val) {
+    if (typeof val === 'object' && val !== null) {
+      const lang = LegoStore.getLang();
+      return val[lang] || val['uk'];
+    }
+    return val;
+  }
+
+  function getLocalizedCat(cat) {
+    const lang = LegoStore.getLang();
+    return (CATEGORY_MAP[cat] && CATEGORY_MAP[cat][lang]) || cat;
+  }
+
   function updateGlobalUI() {
     if (navFavCount) navFavCount.textContent = LegoStore.getFavorites().length;
     if (navFav) navFav.classList.toggle('has-items', LegoStore.getFavorites().length > 0);
     if (builtCountEl) builtCountEl.textContent = LegoStore.getBuiltItems().length;
     if (navBuilt) navBuilt.classList.toggle('has-items', LegoStore.getBuiltItems().length > 0);
   }
+
+  function updateUI() {
+    const lang = LegoStore.getLang();
+    document.documentElement.lang = lang;
+
+    // Static text
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+        if (el.tagName === 'INPUT') el.placeholder = I18N_DATA[lang][key];
+        else el.textContent = I18N_DATA[lang][key];
+      }
+    });
+
+    // Titles (tooltips)
+    document.querySelectorAll('[data-i18n-title]').forEach(el => {
+      const key = el.dataset.i18nTitle;
+      if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+        el.title = I18N_DATA[lang][key];
+      }
+    });
+
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Refresh dynamic content
+    renderCategories();
+    if (activeCat === 'home') renderHome();
+    else switchView(activeCat, '', ''); // refresh current view
+  }
+
+  // Lang Switcher Listeners
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      LegoStore.setLang(btn.dataset.lang);
+      updateUI();
+    });
+  });
 
   function updateCardUI(id) {
     const cards = document.querySelectorAll('.card');
@@ -74,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isBuilt && !badge) {
           badge = document.createElement('div');
           badge.className = 'built-badge';
-          badge.innerHTML = '✅ ЗІБРАНО';
+          badge.innerHTML = I18N_DATA[LegoStore.getLang()].built_badge;
           card.appendChild(badge);
         } else if (!isBuilt && badge) {
           badge.remove();
@@ -163,30 +216,30 @@ document.addEventListener('DOMContentLoaded', () => {
     catList.innerHTML = '';
     
     // 1. Головна (Hub)
-    const homeLi = makeCatItem('home', 'Головна', '', '🏠');
+    const homeLi = makeCatItem('home', getLocalizedCat('Головна'), '', '🏠');
     homeLi.classList.add('home-item');
     catList.appendChild(homeLi);
     
     // 2. Нові інструкції
     const newCat = 'Нові інструкції';
     if (catCounts[newCat]) {
-      catList.appendChild(makeCatItem(newCat, newCat, catCounts[newCat], '🆕'));
+      catList.appendChild(makeCatItem(newCat, getLocalizedCat(newCat), catCounts[newCat], '🆕'));
     }
 
     // 3. Офіційні інструкції
     const offCat = 'Офіційні інструкції LEGO';
     if (catCounts[offCat]) {
-      catList.appendChild(makeCatItem(offCat, offCat, catCounts[offCat], '📋'));
+      catList.appendChild(makeCatItem(offCat, getLocalizedCat(offCat), catCounts[offCat], '📋'));
     }
 
     // 4. Всі моделі
-    catList.appendChild(makeCatItem('all', 'Всі моделі', LEGO_DATA.length, '🎯'));
+    catList.appendChild(makeCatItem('all', getLocalizedCat('Всі моделі'), LEGO_DATA.length, '🎯'));
 
     // 5. Решта категорій (Алфавіт)
     sortedCats.forEach(cat => {
       if (cat === newCat || cat === offCat) return; // Skip pinned
       const emoji = CATEGORY_EMOJI[cat] || '📁';
-      catList.appendChild(makeCatItem(cat, cat, catCounts[cat], emoji));
+      catList.appendChild(makeCatItem(cat, getLocalizedCat(cat), catCounts[cat], emoji));
     });
     
     const favCount = LegoStore.getFavorites().length;
@@ -198,6 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function makeCatItem(key, label, count, emoji) {
     const li = document.createElement('li');
     li.className = 'cat-item' + (activeCat === key ? ' active' : '');
+    li.dataset.key = key; // Add key for precise active tracking
     const countHtml = count !== '' ? '<span class="cnt">' + count + '</span>' : '';
     li.innerHTML = '<span><span class="emoji">' + emoji + '</span>' + label + '</span>' + countHtml;
     li.addEventListener('click', () => {
@@ -209,12 +263,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function switchView(key, label, emoji) {
     activeCat = key;
     query = ''; searchInput.value = ''; clearBtn.classList.add('hidden');
+    
     document.querySelectorAll('.cat-item').forEach(el => el.classList.remove('active'));
-
-    const items = document.querySelectorAll('.cat-item');
-    items.forEach(item => {
-      if (item.textContent.includes(label)) item.classList.add('active');
-    });
+    const activeItem = document.querySelector(`.cat-item[data-key="${key}"]`);
+    if (activeItem) activeItem.classList.add('active');
 
     if (key === 'home') {
       homeView.classList.remove('hidden');
@@ -223,7 +275,14 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       homeView.classList.add('hidden');
       gridView.classList.remove('hidden');
-      titleEl.textContent = (key === 'all' ? '🏆 Всі моделі' : (key === 'favorites' ? '❤️ Обране' : (key === 'built' ? '✅ Зібрані моделі' : emoji + ' ' + label)));
+      
+      let viewTitle = '';
+      if (key === 'all') viewTitle = t('view_all');
+      else if (key === 'favorites') viewTitle = t('view_favorites');
+      else if (key === 'built') viewTitle = t('view_built');
+      else viewTitle = (emoji ? emoji + ' ' : '') + getLocalizedCat(label);
+      
+      titleEl.textContent = viewTitle;
       renderGrid();
     }
     if (window.innerWidth <= 900) contentEl.scrollTo({ top: 0, behavior: 'smooth' });
@@ -256,7 +315,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const div = document.createElement('div');
       div.className = 'genre-card';
       const emoji = CATEGORY_EMOJI[cat] || '📁';
-      div.innerHTML = '<div class="genre-emoji">' + emoji + '</div><div class="genre-name">' + cat + '</div><div class="genre-count">' + catCounts[cat] + ' моделі</div>';
+      const catTitle = getLocalizedCat(cat);
+      div.innerHTML = `<div class="genre-emoji">${emoji}</div><div class="genre-name">${catTitle}</div><div class="genre-count">${catCounts[cat]} ${I18N_DATA[LegoStore.getLang()].models_count}</div>`;
       div.addEventListener('click', () => switchView(cat, cat, emoji));
       genreGrid.appendChild(div);
     });
@@ -273,7 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isTrending) {
         const trendBadge = document.createElement('div');
         trendBadge.className = 'trend-badge';
-        trendBadge.textContent = '🔥 ТРЕНД';
+        trendBadge.textContent = I18N_DATA[LegoStore.getLang()].trend_badge;
         card.appendChild(trendBadge);
       }
       container.appendChild(card);
@@ -300,7 +360,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (LegoStore.isBuilt(item.p)) {
       const badge = document.createElement('div');
       badge.className = 'built-badge';
-      badge.innerHTML = '✅ ЗІБРАНО';
+      badge.innerHTML = I18N_DATA[LegoStore.getLang()].built_badge;
       div.appendChild(badge);
     }
 
@@ -327,7 +387,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (item.i) {
       const img = document.createElement('img');
       img.loading = 'lazy';
-      img.alt = item.t;
+      img.alt = getLocalized(item.t);
       img.src = item.i;
       img.onerror = function() {
         this.parentElement.innerHTML = '<div class="no-img"><span class="no-img-icon">📋</span>Інструкція</div>';
@@ -344,7 +404,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const body = document.createElement('div');
     body.className = 'card-body';
-    body.innerHTML = '<div class="card-title" title="' + item.t + '">' + item.t + '</div><div class="card-cat">' + item.c + '</div>';
+    const titleText = getLocalized(item.t);
+    const catText = getLocalizedCat(item.c);
+    body.innerHTML = `<div class="card-title" title="${titleText}">${titleText}</div><div class="card-cat">${catText}</div>`;
 
     div.appendChild(imgDiv);
     div.appendChild(body);
@@ -364,9 +426,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // If there is a query, search globally (or within favorites if active)
     return LEGO_DATA.filter(item => {
-      const matchQ = item.t.toLowerCase().includes(query) || 
-                     item.c.toLowerCase().includes(query) ||
-                     item.ac.some(a => a.toLowerCase().includes(query));
+      const title = getLocalized(item.t).toLowerCase();
+      const matchQ = title.includes(query) || 
+                     getLocalizedCat(item.c).toLowerCase().includes(query) ||
+                     item.ac.some(a => getLocalizedCat(a).toLowerCase().includes(query));
       
       if (activeCat === 'favorites') return matchQ && LegoStore.isFavorite(item.p);
       if (activeCat === 'built') return matchQ && LegoStore.isBuilt(item.p);
@@ -394,31 +457,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === MODAL ===
   function openModal(item) {
+    const lang = LegoStore.getLang();
     if (item.i) {
-      modalImg.innerHTML = '<img src="' + item.i + '" alt="' + item.t + '">';
+      modalImg.innerHTML = `<img src="${item.i}" alt="${getLocalized(item.t)}">`;
     } else {
       modalImg.innerHTML = '<div class="no-img"><span class="no-img-icon">📋</span><br>Офіційна інструкція LEGO</div>';
     }
-    modalTitle.textContent = item.t;
+    modalTitle.textContent = getLocalized(item.t);
     modalCats.innerHTML = '';
     item.ac.forEach(cat => {
       const catEmoji = CATEGORY_EMOJI[cat] || '📁';
       const tag = document.createElement('span');
       tag.className = 'modal-cat-tag';
-      tag.textContent = catEmoji + ' ' + cat;
+      tag.textContent = catEmoji + ' ' + getLocalizedCat(cat);
       modalCats.appendChild(tag);
     });
 
     // Add Heart to Modal
     const modalFavBtn = document.createElement('button');
     modalFavBtn.className = 'modal-fav-btn' + (LegoStore.isFavorite(item.p) ? ' active' : '');
-    modalFavBtn.innerHTML = '<span>❤️</span> ' + (LegoStore.isFavorite(item.p) ? 'В обраному' : 'Додати в обране');
+    const isFav = LegoStore.isFavorite(item.p);
+    modalFavBtn.innerHTML = '<span>❤️</span> ' + (isFav ? I18N_DATA[lang].view_favorites : I18N_DATA[lang].nav_favorites);
     
     modalFavBtn.onclick = (e) => {
       handleToggleFavorite(item.p, e);
-      const isFav = LegoStore.isFavorite(item.p);
-      modalFavBtn.classList.toggle('active', isFav);
-      modalFavBtn.innerHTML = '<span>❤️</span> ' + (isFav ? 'В обраному' : 'Додати в обране');
+      const nowFav = LegoStore.isFavorite(item.p);
+      modalFavBtn.classList.toggle('active', nowFav);
+      modalFavBtn.innerHTML = '<span>❤️</span> ' + (nowFav ? I18N_DATA[lang].view_favorites : I18N_DATA[lang].nav_favorites);
     };
     modalCats.appendChild(modalFavBtn);
 
@@ -533,8 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Init
   LegoStore.healData(LEGO_DATA);
-  renderCategories();
-  renderHome();
+  updateUI();
   initDragScroll();
 
   // === ROULETTE LOGIC ===
