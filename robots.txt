@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://figarist.github.io/lego-catalog/sitemap.xml
