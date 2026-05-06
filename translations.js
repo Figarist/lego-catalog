@@ -5,7 +5,7 @@ const I18N_DATA = {
     "uk": {
         "app_title": "LEGO WeDo 2.0 — Каталог інструкцій 🧱",
         "app_subtitle": "Каталог інструкцій",
-        "search_placeholder": "🔎 Знайди свою модель...",
+        "search_placeholder": "Знайди свою модель...",
         "nav_favorites": "Моє обране",
         "nav_built": "Зібрано моделей",
         "sidebar_categories": "🎮 Категорії",
@@ -87,7 +87,7 @@ const I18N_DATA = {
     "en": {
         "app_title": "LEGO WeDo 2.0 — Instructions Catalog 🧱",
         "app_subtitle": "Instructions Catalog",
-        "search_placeholder": "🔎 Find your model...",
+        "search_placeholder": "Find your model...",
         "nav_favorites": "My Favorites",
         "nav_built": "Models Built",
         "sidebar_categories": "🎮 Categories",
@@ -169,7 +169,7 @@ const I18N_DATA = {
     "ru": {
         "app_title": "LEGO WeDo 2.0 — Каталог инструкций 🧱",
         "app_subtitle": "Каталог инструкций",
-        "search_placeholder": "🔎 Найди свою модель...",
+        "search_placeholder": "Найди свою модель...",
         "nav_favorites": "Мое избранное",
         "nav_built": "Собрано моделей",
         "sidebar_categories": "🎮 Категории",
@@ -251,7 +251,7 @@ const I18N_DATA = {
     "pl": {
         "app_title": "LEGO WeDo 2.0 — Katalog instrukcji 🧱",
         "app_subtitle": "Katalog instrukcji",
-        "search_placeholder": "🔎 Znajdź swój model...",
+        "search_placeholder": "Znajdź swój model...",
         "nav_favorites": "Moje ulubione",
         "nav_built": "Zbudowane modele",
         "sidebar_categories": "🎮 Kategorie",
