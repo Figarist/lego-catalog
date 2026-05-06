@@ -164,12 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function getLocalized(val) {
-    if (typeof val === 'object' && val !== null) {
-      const lang = LegoStore.getLang();
-      return val[lang] || val['uk'];
-    }
-    return val;
+    return LegoStore.getLocalized(val);
   }
+
 
   function getLocalizedCat(cat) {
     const lang = LegoStore.getLang();
@@ -187,6 +184,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const lang = LegoStore.getLang();
     document.documentElement.lang = lang;
 
+    // SEO and Browser Tab Title
+    if (I18N_DATA[lang]) {
+      if (I18N_DATA[lang].app_page_title && window.location.pathname.includes('index.html') || window.location.pathname === '/') {
+        document.title = I18N_DATA[lang].app_page_title;
+      } else if (I18N_DATA[lang].legal_page_title && window.location.pathname.includes('legal.html')) {
+        document.title = I18N_DATA[lang].legal_page_title;
+      }
+      
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc && I18N_DATA[lang].app_meta_desc) {
+        metaDesc.content = I18N_DATA[lang].app_meta_desc;
+      }
+    }
+
     // Static text
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
@@ -196,7 +207,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Titles (tooltips)
+    // Aria Labels and Titles (tooltips)
+    document.querySelectorAll('[aria-label]').forEach(el => {
+      if (el.id === 'clearSearch') el.setAttribute('aria-label', t('aria_clear'));
+    });
+
     document.querySelectorAll('[data-i18n-title]').forEach(el => {
       const key = el.dataset.i18nTitle;
       if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
@@ -321,29 +336,29 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderCategories() {
     catList.innerHTML = '';
     
-    // 1. Головна (Hub)
-    const homeLi = makeCatItem('home', getLocalizedCat('Головна'), '', '🏠');
+    // 1. Home
+    const homeLi = makeCatItem('home', t('sidebar_home').replace('🏠 ', ''), '', '🏠');
     homeLi.classList.add('home-item');
     catList.appendChild(homeLi);
     
-    // 2. Нові інструкції
-    const newCat = 'Нові інструкції';
-    if (catCounts[newCat]) {
-      catList.appendChild(makeCatItem(newCat, getLocalizedCat(newCat), catCounts[newCat], '🆕'));
+    // 2. New
+    const newCatKey = 'Нові інструкції';
+    if (catCounts[newCatKey]) {
+      catList.appendChild(makeCatItem(newCatKey, t('sidebar_new').replace('🆕 ', ''), catCounts[newCatKey], '🆕'));
     }
 
-    // 3. Офіційні інструкції
-    const offCat = 'Офіційні інструкції LEGO';
-    if (catCounts[offCat]) {
-      catList.appendChild(makeCatItem(offCat, getLocalizedCat(offCat), catCounts[offCat], '📋'));
+    // 3. Official
+    const offCatKey = 'Офіційні інструкції LEGO';
+    if (catCounts[offCatKey]) {
+      catList.appendChild(makeCatItem(offCatKey, t('sidebar_official').replace('📋 ', ''), catCounts[offCatKey], '📋'));
     }
 
-    // 4. Всі моделі
-    catList.appendChild(makeCatItem('all', getLocalizedCat('Всі моделі'), LEGO_DATA.length, '🎯'));
+    // 4. All
+    catList.appendChild(makeCatItem('all', t('sidebar_all').replace('🎯 ', ''), LEGO_DATA.length, '🎯'));
 
-    // 5. Решта категорій (Алфавіт)
+    // 5. Rest
     sortedCats.forEach(cat => {
-      if (cat === newCat || cat === offCat) return; // Skip pinned
+      if (cat === newCatKey || cat === offCatKey) return; // Skip pinned
       const emoji = CATEGORY_EMOJI[cat] || '📁';
       catList.appendChild(makeCatItem(cat, getLocalizedCat(cat), catCounts[cat], emoji));
     });
@@ -398,13 +413,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Header Fav click
   if (navFav) {
     navFav.addEventListener('click', () => {
-      switchView('favorites', 'Обране', '❤️');
+      switchView('favorites', t('view_favorites'), '❤️');
     });
   }
 
   if (navBuilt) {
     navBuilt.addEventListener('click', () => {
-      switchView('built', 'Зібрані моделі', '✅');
+      switchView('built', t('view_built'), '✅');
     });
   }
 
@@ -497,11 +512,11 @@ document.addEventListener('DOMContentLoaded', () => {
       img.alt = getLocalized(item.t);
       img.src = item.i;
       img.onerror = function() {
-        this.parentElement.innerHTML = '<div class="no-img"><span class="no-img-icon">📋</span>Інструкція</div>';
+        this.parentElement.innerHTML = `<div class="no-img"><span class="no-img-icon">📋</span>${t('label_instruction')}</div>`;
       };
       imgDiv.appendChild(img);
     } else {
-      imgDiv.innerHTML = '<div class="no-img"><span class="no-img-icon">📋</span>Офіційна<br>інструкція</div>';
+      imgDiv.innerHTML = `<div class="no-img"><span class="no-img-icon">📋</span>${t('label_official')}</div>`;
     }
 
     const badge = document.createElement('div');
@@ -572,7 +587,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (item.i) {
       modalImg.innerHTML = `<img src="${item.i}" alt="${getLocalized(item.t)}">`;
     } else {
-      modalImg.innerHTML = '<div class="no-img"><span class="no-img-icon">📋</span><br>Офіційна інструкція LEGO</div>';
+      modalImg.innerHTML = `<div class="no-img"><span class="no-img-icon">📋</span><br>${t('label_official_full')}</div>`;
     }
     modalTitle.textContent = getLocalized(item.t);
     modalCats.innerHTML = '';
@@ -712,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Logo click = reset to home
   $('logoHome').addEventListener('click', () => {
-    switchView('home', '🏠 Головна', '🏠');
+    switchView('home', t('sidebar_home'), '🏠');
   });
 
   // Init

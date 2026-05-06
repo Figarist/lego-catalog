@@ -111,6 +111,12 @@ window.LegoStore = (function() {
         isFavorite: (id) => favorites.includes(id),
         isBuilt: (id) => builtItems.includes(id),
         getRating: (id) => ratings[id] || 0,
+        
+        getLocalized: (obj) => {
+            if (!obj) return '';
+            if (typeof obj === 'string') return obj;
+            return obj[currentLang] || obj['uk'] || Object.values(obj)[0] || '';
+        },
 
         // Data healing logic to match old IDs (paths) to new IDs (URLs)
         healData: (legoData) => {

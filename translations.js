@@ -74,7 +74,15 @@ const I18N_DATA = {
         "toast_update_btn": "Оновити",
         "share_error": "Не вдалося поділитися",
         "achievement_unlocked": "Досягнення отримано!",
-        "my_badges": "Мої значки"
+        "my_badges": "Мої значки",
+        "app_page_title": "LEGO WeDo 2.0 — Каталог інструкцій 🧱",
+        "legal_page_title": "Правова інформація — LEGO WeDo 2.0",
+        "app_meta_desc": "Каталог інструкцій для складання моделей Lego WeDo 2.0 українською мовою",
+        "aria_clear": "Очистити",
+        "label_instruction": "Інструкція",
+        "label_official": "Офіційна інструкція",
+        "label_official_full": "Офіційна інструкція LEGO",
+        "legal_update_prefix": "📅 Останнє оновлення: "
     },
     "en": {
         "app_title": "LEGO WeDo 2.0 — Instructions Catalog 🧱",
@@ -148,7 +156,15 @@ const I18N_DATA = {
         "toast_update_btn": "Refresh",
         "share_error": "Could not share",
         "achievement_unlocked": "Achievement Unlocked!",
-        "my_badges": "My Badges"
+        "my_badges": "My Badges",
+        "app_page_title": "LEGO WeDo 2.0 — Instructions Catalog 🧱",
+        "legal_page_title": "Legal Information — LEGO WeDo 2.0",
+        "app_meta_desc": "Instructions catalog for building Lego WeDo 2.0 models in English",
+        "aria_clear": "Clear",
+        "label_instruction": "Instruction",
+        "label_official": "Official instruction",
+        "label_official_full": "Official LEGO instruction",
+        "legal_update_prefix": "📅 Last updated: "
     },
     "ru": {
         "app_title": "LEGO WeDo 2.0 — Каталог инструкций 🧱",
@@ -222,7 +238,15 @@ const I18N_DATA = {
         "toast_update_btn": "Обновить",
         "share_error": "Не удалось поделиться",
         "achievement_unlocked": "Достижение получено!",
-        "my_badges": "Мои значки"
+        "my_badges": "Мои значки",
+        "app_page_title": "LEGO WeDo 2.0 — Каталог инструкций 🧱",
+        "legal_page_title": "Правовая информация — LEGO WeDo 2.0",
+        "app_meta_desc": "Каталог инструкций для сборки моделей Lego WeDo 2.0 на русском языке",
+        "aria_clear": "Очистить",
+        "label_instruction": "Инструкция",
+        "label_official": "Официальная инструкция",
+        "label_official_full": "Официальная инструкция LEGO",
+        "legal_update_prefix": "📅 Последнее обновление: "
     },
     "pl": {
         "app_title": "LEGO WeDo 2.0 — Katalog instrukcji 🧱",
@@ -296,8 +320,17 @@ const I18N_DATA = {
         "toast_update_btn": "Odśwież",
         "share_error": "Nie udało się udostępnić",
         "achievement_unlocked": "Osiągnięcie odblokowane!",
-        "my_badges": "Moje odznaki"
+        "my_badges": "Moje odznaki",
+        "app_page_title": "LEGO WeDo 2.0 — Katalog instrukcji 🧱",
+        "legal_page_title": "Informacje prawne — LEGO WeDo 2.0",
+        "app_meta_desc": "Katalog instrukcji do budowania modeli Lego WeDo 2.0 w języku polskim",
+        "aria_clear": "Wyczyść",
+        "label_instruction": "Instrukcja",
+        "label_official": "Oficjalna instrukcja",
+        "label_official_full": "Oficjalna instrukcja LEGO",
+        "legal_update_prefix": "📅 Ostatnia aktualizacja: "
     }
+
 
 };
 
