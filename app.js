@@ -107,6 +107,62 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   registerSW();
 
+  // Achievement Toast
+  window.addEventListener('achievementUnlocked', (e) => {
+    showAchievementToast(e.detail.id);
+  });
+
+  function showAchievementToast(id) {
+    const lang = LegoStore.getLang();
+    const ach = ACHIEVEMENTS_DATA.find(a => a.id === id);
+    if (!ach) return;
+    
+    const toast = document.createElement('div');
+    toast.className = 'achievement-toast';
+    toast.innerHTML = `
+      <div class="ach-icon">${ach.icon}</div>
+      <div class="ach-text">
+        <div class="ach-label">${t('achievement_unlocked')}</div>
+        <div class="ach-title">${I18N_ACHIEVEMENTS[lang][id + '_title']}</div>
+      </div>
+    `;
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+      toast.classList.add('out');
+      setTimeout(() => toast.remove(), 500);
+    }, 4000);
+  }
+
+  function renderAchievementsGrid() {
+    const unlocked = LegoStore.getUnlockedAchievements();
+    const lang = LegoStore.getLang();
+    const container = document.createElement('div');
+    container.className = 'badges-container';
+    container.innerHTML = `<h2 class="badges-header">${t('my_badges')}</h2>`;
+    
+    const bGrid = document.createElement('div');
+    bGrid.className = 'badges-grid';
+    
+    ACHIEVEMENTS_DATA.forEach(ach => {
+      const isUnlocked = unlocked.includes(ach.id);
+      const achI18n = I18N_ACHIEVEMENTS[lang];
+      const badge = document.createElement('div');
+      badge.className = 'badge-item' + (isUnlocked ? ' unlocked' : ' locked');
+      badge.innerHTML = `
+        <div class="badge-emoji">${ach.icon}${isUnlocked ? '' : '<span class="lock">🔒</span>'}</div>
+        <div class="badge-meta">
+          <div class="badge-title">${achI18n[ach.id + '_title']}</div>
+          <div class="badge-desc">${achI18n[ach.id + '_desc']}</div>
+        </div>
+      `;
+      bGrid.appendChild(badge);
+    });
+    
+    container.appendChild(bGrid);
+    return container;
+  }
+
   function getLocalized(val) {
     if (typeof val === 'object' && val !== null) {
       const lang = LegoStore.getLang();
@@ -205,7 +261,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function handleToggleBuilt(id) {
-    LegoStore.toggleBuilt(id);
+    LegoStore.toggleBuilt(id, LEGO_DATA);
     updateGlobalUI();
     updateCardUI(id);
   }
@@ -493,13 +549,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = getFiltered();
     grid.innerHTML = '';
 
-    if (items.length === 0) {
+    if (items.length === 0 && activeCat !== 'built') {
       emptyEl.classList.remove('hidden');
       return;
     }
     emptyEl.classList.add('hidden');
 
     const fragment = document.createDocumentFragment();
+    if (activeCat === 'built') {
+      fragment.appendChild(renderAchievementsGrid());
+    }
+
     items.forEach((item, i) => {
       fragment.appendChild(createCard(item, i));
     });

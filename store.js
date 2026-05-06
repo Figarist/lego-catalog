@@ -5,6 +5,7 @@ window.LegoStore = (function() {
     let favorites = JSON.parse(localStorage.getItem('lego_favs') || '[]');
     let builtItems = JSON.parse(localStorage.getItem('lego_built') || '[]');
     let ratings = JSON.parse(localStorage.getItem('lego_ratings') || '{}');
+    let unlockedAchievements = JSON.parse(localStorage.getItem('lego_achievements') || '[]');
     let currentLang = localStorage.getItem('app_lang') || 'uk';
 
     function saveFavs() {
@@ -19,9 +20,46 @@ window.LegoStore = (function() {
         localStorage.setItem('lego_ratings', JSON.stringify(ratings));
     }
 
+    function saveAchievements() {
+        localStorage.setItem('lego_achievements', JSON.stringify(unlockedAchievements));
+    }
+
+    function checkAchievements(allData) {
+        if (!allData) return;
+        let changed = false;
+        const builtCount = builtItems.length;
+
+        for (let i = 0; i < ACHIEVEMENTS_DATA.length; i++) {
+            const achievement = ACHIEVEMENTS_DATA[i];
+            if (unlockedAchievements.includes(achievement.id)) continue;
+
+            let met = false;
+            if (achievement.category) {
+                let count = 0;
+                for (let j = 0; j < builtItems.length; j++) {
+                    const item = allData.find(d => d.p === builtItems[j]);
+                    if (item && item.ac && item.ac.includes(achievement.category)) {
+                        count++;
+                    }
+                }
+                if (count >= achievement.count) met = true;
+            } else {
+                if (builtCount >= achievement.count) met = true;
+            }
+
+            if (met) {
+                unlockedAchievements.push(achievement.id);
+                changed = true;
+                window.dispatchEvent(new CustomEvent('achievementUnlocked', { detail: { id: achievement.id } }));
+            }
+        }
+        if (changed) saveAchievements();
+    }
+
     return {
         getFavorites: () => favorites,
         getBuiltItems: () => builtItems,
+        getUnlockedAchievements: () => unlockedAchievements,
         getRatings: () => ratings,
         getLang: () => currentLang,
 
@@ -39,12 +77,13 @@ window.LegoStore = (function() {
             return adding;
         },
 
-        toggleBuilt: (id) => {
+        toggleBuilt: (id, allData) => {
             const idx = builtItems.indexOf(id);
             const adding = idx === -1;
             if (adding) builtItems.push(id);
             else builtItems.splice(idx, 1);
             saveBuilt();
+            if (adding) checkAchievements(allData);
             return adding;
         },
 

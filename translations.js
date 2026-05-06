@@ -72,7 +72,9 @@ const I18N_DATA = {
         "btn_share": "Поділитися",
         "toast_update_text": "Доступні нові інструкції!",
         "toast_update_btn": "Оновити",
-        "share_error": "Не вдалося поділитися"
+        "share_error": "Не вдалося поділитися",
+        "achievement_unlocked": "Досягнення отримано!",
+        "my_badges": "Мої значки"
     },
     "en": {
         "app_title": "LEGO WeDo 2.0 — Instructions Catalog 🧱",
@@ -144,7 +146,9 @@ const I18N_DATA = {
         "btn_share": "Share",
         "toast_update_text": "New instructions available!",
         "toast_update_btn": "Refresh",
-        "share_error": "Could not share"
+        "share_error": "Could not share",
+        "achievement_unlocked": "Achievement Unlocked!",
+        "my_badges": "My Badges"
     },
     "ru": {
         "app_title": "LEGO WeDo 2.0 — Каталог инструкций 🧱",
@@ -216,7 +220,56 @@ const I18N_DATA = {
         "btn_share": "Поделиться",
         "toast_update_text": "Доступны новые инструкции!",
         "toast_update_btn": "Обновить",
-        "share_error": "Не удалось поделиться"
+        "share_error": "Не удалось поделиться",
+        "achievement_unlocked": "Достижение получено!",
+        "my_badges": "Мои значки"
+    }
+};
+
+const ACHIEVEMENTS_DATA = [
+    { id: 'first_step', icon: '🧱', count: 1 },
+    { id: 'junior_engineer', icon: '🥉', count: 5 },
+    { id: 'space_ranger', icon: '🚀', count: 5, category: 'Космос' },
+    { id: 'zoologist', icon: '🐾', count: 5, category: 'Тварини' },
+    { id: 'master_builder', icon: '👑', count: 50 }
+];
+
+const I18N_ACHIEVEMENTS = {
+    "uk": {
+        "first_step_title": "Перший крок",
+        "first_step_desc": "Зібрано 1 модель",
+        "junior_engineer_title": "Початківець-інженер 🥉",
+        "junior_engineer_desc": "Зібрано 5 моделей",
+        "space_ranger_title": "Космічний рейнджер 🚀",
+        "space_ranger_desc": "5 моделей із категорії Космос",
+        "zoologist_title": "Зоолог 🐾",
+        "zoologist_desc": "5 моделей із категорії Тварини",
+        "master_builder_title": "Майстер конструктора 👑",
+        "master_builder_desc": "Зібрано 50 моделей"
+    },
+    "en": {
+        "first_step_title": "First Step",
+        "first_step_desc": "1 model built",
+        "junior_engineer_title": "Junior Engineer 🥉",
+        "junior_engineer_desc": "5 total models built",
+        "space_ranger_title": "Space Ranger 🚀",
+        "space_ranger_desc": "5 Space category models built",
+        "zoologist_title": "Zoologist 🐾",
+        "zoologist_desc": "5 Animals category models built",
+        "master_builder_title": "Master Builder 👑",
+        "master_builder_desc": "50 total models built"
+    },
+    "ru": {
+        "first_step_title": "Первый шаг",
+        "first_step_desc": "Собрана 1 модель",
+        "junior_engineer_title": "Начинающий инженер 🥉",
+        "junior_engineer_desc": "Собрано 5 моделей",
+        "space_ranger_title": "Космический рейнджер 🚀",
+        "space_ranger_desc": "5 моделей из категории Космос",
+        "zoologist_title": "Зоолог 🐾",
+        "zoologist_desc": "5 моделей из категории Животные",
+        "master_builder_title": "Мастер конструктора 👑",
+        "master_builder_desc": "Собрано 50 моделей"
     }
 };
 
