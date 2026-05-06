@@ -32,9 +32,9 @@
                     <span class="nav-fav-icon">❤️</span>
                     <span id="navFavCount" class="nav-fav-count">0</span>
                 </button>
-                <div class="stat-item">
-                    <span class="stat-icon">🎯</span>
-                    <span class="stat-text"><span id="shownCount">0</span> / <span id="totalCount">0</span></span>
+                <div class="stat-item" title="Зібрано моделей (натисніть, щоб переглянути)" id="navBuilt" style="cursor:pointer">
+                    <span class="stat-icon">✅</span>
+                    <span class="stat-text"><span id="builtCount">0</span> / <span id="totalCount">0</span></span>
                 </div>
             </div>
         </div>
@@ -54,6 +54,7 @@
                         <div class="hero-content">
                             <h1>Привіт, Майстер! 👋</h1>
                             <p>Що будемо будувати сьогодні?</p>
+                            <button id="btnRandom" class="hero-random-btn">🎲 Випадкова модель</button>
                         </div>
                     </div>
                 </section>
@@ -119,10 +120,42 @@
             <div class="modal-info">
                 <div class="modal-title" id="modalTitle"></div>
                 <div class="modal-cats" id="modalCats"></div>
+                <div class="modal-actions-row">
+                    <div class="rating-container">
+                        <span class="rating-label">Оціни модель:</span>
+                        <div class="star-rating" id="modalRating">
+                            <span class="star" data-value="5">★</span>
+                            <span class="star" data-value="4">★</span>
+                            <span class="star" data-value="3">★</span>
+                            <span class="star" data-value="2">★</span>
+                            <span class="star" data-value="1">★</span>
+                        </div>
+                    </div>
+                    <label class="built-toggle">
+                        <input type="checkbox" id="modalBuilt">
+                        <span class="toggle-slider"></span>
+                        <span class="toggle-label">Я це зібрав! ✅</span>
+                    </label>
+                </div>
                 <a class="modal-open-btn" id="modalOpenBtn" href="#" target="_blank">
                     <span class="btn-icon">📖</span>
                     Відкрити інструкцію
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Roulette Overlay -->
+    <div class="roulette-overlay" id="rouletteOverlay">
+        <div class="roulette-modal">
+            <button class="modal-close" id="rouletteClose">&times;</button>
+            <h2 class="roulette-title">🎰 Рулетка Інструкцій</h2>
+            <div class="roulette-window">
+                <div class="roulette-center-line"></div>
+                <div class="roulette-strip" id="rouletteStrip"></div>
+            </div>
+            <div class="roulette-action">
+                <button id="rouletteActionBtn" class="hero-random-btn hidden">Відкрити цю модель!</button>
             </div>
         </div>
     </div>
@@ -171,6 +204,8 @@
     <button id="scrollTop" class="scroll-top hidden" aria-label="Нагору">↑</button>
 
     <script src="data.js"></script>
+    <script src="store.js"></script>
+    <script src="roulette.js"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const clearBtn = $('clearSearch');
   const titleEl = $('currentTitle');
   const emptyEl = $('empty');
-  const shownEl = $('shownCount');
+  const builtCountEl = $('builtCount');
   const totalEl = $('totalCount');
   const btnGrid = $('btnGrid');
   const btnList = $('btnList');
@@ -42,45 +42,83 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalOpenBtn = $('modalOpenBtn');
   const modalClose = $('modalClose');
 
+  // Roulette elements
+  const btnRandom = $('btnRandom');
+  const rouletteOverlay = $('rouletteOverlay');
+  const rouletteClose = $('rouletteClose');
+  const rouletteStrip = $('rouletteStrip');
+  const rouletteActionBtn = $('rouletteActionBtn');
+  let rouletteWinningItem = null;
+
   const navFav = $('navFav');
   const navFavCount = $('navFavCount');
+  const navBuilt = $('navBuilt');
 
   let activeCat = 'home';
   let query = '';
-  
-  // Favorites logic
-  let favorites = JSON.parse(localStorage.getItem('lego_favs') || '[]');
-  
-  function saveFavs() {
-    localStorage.setItem('lego_favs', JSON.stringify(favorites));
-    if (navFavCount) navFavCount.textContent = favorites.length;
-    if (navFav) navFav.classList.toggle('has-items', favorites.length > 0);
+
+  function updateGlobalUI() {
+    if (navFavCount) navFavCount.textContent = LegoStore.getFavorites().length;
+    if (navFav) navFav.classList.toggle('has-items', LegoStore.getFavorites().length > 0);
+    if (builtCountEl) builtCountEl.textContent = LegoStore.getBuiltItems().length;
+    if (navBuilt) navBuilt.classList.toggle('has-items', LegoStore.getBuiltItems().length > 0);
   }
 
-  function toggleFavorite(id, event) {
-    const idx = favorites.indexOf(id);
-    const isAdding = idx === -1;
-    
-    if (isAdding) {
-      favorites.push(id);
-      if (event) animateFlyingHeart(event.currentTarget);
-    } else {
-      favorites.splice(idx, 1);
-    }
-    
-    saveFavs();
+  function updateCardUI(id) {
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      if (card.dataset.id === id) {
+        // Update Built Badge
+        let badge = card.querySelector('.built-badge');
+        const isBuilt = LegoStore.isBuilt(id);
+        if (isBuilt && !badge) {
+          badge = document.createElement('div');
+          badge.className = 'built-badge';
+          badge.innerHTML = '✅ ЗІБРАНО';
+          card.appendChild(badge);
+        } else if (!isBuilt && badge) {
+          badge.remove();
+        }
+
+        // Update Rating
+        let ratingTag = card.querySelector('.card-rating');
+        const val = LegoStore.getRating(id);
+        if (val && !ratingTag) {
+          ratingTag = document.createElement('div');
+          ratingTag.className = 'card-rating';
+          card.appendChild(ratingTag);
+        }
+        if (val) {
+          ratingTag.innerHTML = '★ ' + val;
+        } else if (ratingTag) {
+          ratingTag.remove();
+        }
+
+        // Update Heart
+        const heart = card.querySelector('.fav-btn');
+        if (heart) heart.classList.toggle('active', LegoStore.isFavorite(id));
+      }
+    });
+  }
+
+  function handleToggleBuilt(id) {
+    LegoStore.toggleBuilt(id);
+    updateGlobalUI();
+    updateCardUI(id);
+  }
+
+  function handleToggleFavorite(id, event) {
+    const adding = LegoStore.toggleFavorite(id);
+    if (adding && event) animateFlyingHeart(event.currentTarget);
+    updateGlobalUI();
     renderCategories(); // Update count in sidebar
     if (activeCat === 'favorites') renderGrid();
-    else {
-      // Refresh current view cards to update hearts
-      const cards = document.querySelectorAll('.card');
-      cards.forEach(card => {
-        if (card.dataset.id === id) {
-          const heart = card.querySelector('.fav-btn');
-          if (heart) heart.classList.toggle('active', isAdding);
-        }
-      });
-    }
+    else updateCardUI(id);
+  }
+
+  function handleSetRating(id, val) {
+    LegoStore.setRating(id, val);
+    updateCardUI(id);
   }
 
   function animateFlyingHeart(startEl) {
@@ -151,9 +189,10 @@ document.addEventListener('DOMContentLoaded', () => {
       catList.appendChild(makeCatItem(cat, cat, catCounts[cat], emoji));
     });
     
-    const favCount = favorites.length;
+    const favCount = LegoStore.getFavorites().length;
     if (navFavCount) navFavCount.textContent = favCount;
     if (navFav) navFav.classList.toggle('has-items', favCount > 0);
+    updateGlobalUI();
   }
 
   function makeCatItem(key, label, count, emoji) {
@@ -184,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       homeView.classList.add('hidden');
       gridView.classList.remove('hidden');
-      titleEl.textContent = (key === 'all' ? '🏆 Всі моделі' : (key === 'favorites' ? '❤️ Обране' : emoji + ' ' + label));
+      titleEl.textContent = (key === 'all' ? '🏆 Всі моделі' : (key === 'favorites' ? '❤️ Обране' : (key === 'built' ? '✅ Зібрані моделі' : emoji + ' ' + label)));
       renderGrid();
     }
     if (window.innerWidth <= 900) contentEl.scrollTo({ top: 0, behavior: 'smooth' });
@@ -195,6 +234,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navFav) {
     navFav.addEventListener('click', () => {
       switchView('favorites', 'Обране', '❤️');
+    });
+  }
+
+  if (navBuilt) {
+    navBuilt.addEventListener('click', () => {
+      switchView('built', 'Зібрані моделі', '✅');
     });
   }
 
@@ -243,13 +288,29 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Heart Button
     const favBtn = document.createElement('button');
-    favBtn.className = 'fav-btn' + (favorites.includes(item.p) ? ' active' : '');
+    favBtn.className = 'fav-btn' + (LegoStore.isFavorite(item.p) ? ' active' : '');
     favBtn.innerHTML = '❤️';
     favBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      toggleFavorite(item.p, e);
+      handleToggleFavorite(item.p, e);
     });
     div.appendChild(favBtn);
+
+    // Built Badge
+    if (LegoStore.isBuilt(item.p)) {
+      const badge = document.createElement('div');
+      badge.className = 'built-badge';
+      badge.innerHTML = '✅ ЗІБРАНО';
+      div.appendChild(badge);
+    }
+
+    // Rating Badge
+    if (LegoStore.getRating(item.p)) {
+      const rBadge = document.createElement('div');
+      rBadge.className = 'card-rating';
+      rBadge.innerHTML = '★ ' + LegoStore.getRating(item.p);
+      div.appendChild(rBadge);
+    }
 
     // NEW Badge
     if (item.ac.includes('Нові інструкції')) {
@@ -295,7 +356,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!query) {
       return LEGO_DATA.filter(item => {
         if (activeCat === 'all' || activeCat === 'home') return true;
-        if (activeCat === 'favorites') return favorites.includes(item.p);
+        if (activeCat === 'favorites') return LegoStore.isFavorite(item.p);
+        if (activeCat === 'built') return LegoStore.isBuilt(item.p);
         return item.ac.includes(activeCat);
       });
     }
@@ -306,7 +368,8 @@ document.addEventListener('DOMContentLoaded', () => {
                      item.c.toLowerCase().includes(query) ||
                      item.ac.some(a => a.toLowerCase().includes(query));
       
-      if (activeCat === 'favorites') return matchQ && favorites.includes(item.p);
+      if (activeCat === 'favorites') return matchQ && LegoStore.isFavorite(item.p);
+      if (activeCat === 'built') return matchQ && LegoStore.isBuilt(item.p);
       return matchQ;
     });
   }
@@ -315,7 +378,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderGrid() {
     const items = getFiltered();
     grid.innerHTML = '';
-    shownEl.textContent = items.length;
 
     if (items.length === 0) {
       emptyEl.classList.remove('hidden');
@@ -349,18 +411,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Add Heart to Modal
     const modalFavBtn = document.createElement('button');
-    modalFavBtn.className = 'modal-fav-btn' + (favorites.includes(item.p) ? ' active' : '');
-    modalFavBtn.innerHTML = '<span>❤️</span> ' + (favorites.includes(item.p) ? 'В обраному' : 'Додати в обране');
+    modalFavBtn.className = 'modal-fav-btn' + (LegoStore.isFavorite(item.p) ? ' active' : '');
+    modalFavBtn.innerHTML = '<span>❤️</span> ' + (LegoStore.isFavorite(item.p) ? 'В обраному' : 'Додати в обране');
     
     modalFavBtn.onclick = (e) => {
-      toggleFavorite(item.p, e);
-      const isFav = favorites.includes(item.p);
+      handleToggleFavorite(item.p, e);
+      const isFav = LegoStore.isFavorite(item.p);
       modalFavBtn.classList.toggle('active', isFav);
       modalFavBtn.innerHTML = '<span>❤️</span> ' + (isFav ? 'В обраному' : 'Додати в обране');
     };
     modalCats.appendChild(modalFavBtn);
 
     modalOpenBtn.href = item.p;
+
+    // Built toggle in modal
+    const modalBuiltInput = $('modalBuilt');
+    modalBuiltInput.checked = LegoStore.isBuilt(item.p);
+    modalBuiltInput.onclick = () => {
+      handleToggleBuilt(item.p);
+    };
+
+    // Rating in modal
+    const stars = document.querySelectorAll('#modalRating .star');
+    const currentRating = LegoStore.getRating(item.p);
+    
+    function renderStars(val) {
+      stars.forEach(s => {
+        s.classList.toggle('active', parseInt(s.dataset.value) <= val);
+      });
+    }
+    renderStars(currentRating);
+
+    stars.forEach(star => {
+      star.onclick = () => {
+        const val = parseInt(star.dataset.value);
+        handleSetRating(item.p, val);
+        renderStars(val);
+      };
+    });
+
     modalOverlay.classList.add('active');
     document.body.style.overflow = 'hidden';
   }
@@ -443,9 +532,38 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Init
+  LegoStore.healData(LEGO_DATA);
   renderCategories();
   renderHome();
   initDragScroll();
+
+  // === ROULETTE LOGIC ===
+  if (btnRandom) {
+    btnRandom.addEventListener('click', () => {
+      LegoRoulette.start({
+        overlay: rouletteOverlay,
+        strip: rouletteStrip,
+        actionBtn: rouletteActionBtn,
+        data: LEGO_DATA,
+        onWin: (item) => {
+          rouletteWinningItem = item;
+        }
+      });
+    });
+  }
+
+  if (rouletteClose) {
+    rouletteClose.addEventListener('click', () => {
+      rouletteOverlay.classList.remove('active');
+    });
+  }
+
+  if (rouletteActionBtn) {
+    rouletteActionBtn.addEventListener('click', () => {
+      rouletteOverlay.classList.remove('active');
+      if (rouletteWinningItem) openModal(rouletteWinningItem);
+    });
+  }
 });
 
 // Horizontal scroll helper for buttons
