@@ -15,7 +15,7 @@ This file provides the technical context for AI assistants to understand the arc
 
 ### 1. `app.js` (The Engine)
 The central controller for UI rendering and events.
-- **Search Logic**: Debounced (300ms) to prevent UI thread blocking on mobile.
+- **Search Logic**: Uses a pre-computed search index string array mapped to `LEGO_DATA` for O(1) per-item matching. Debounced (300ms) to prevent UI thread blocking.
 - **Rendering**: Fragment-based DOM insertion for performance.
 - **PWA**: Manages SW registration and version update notifications (Toast UI).
 - **Share**: Implements Web Share API with clipboard fallback.
@@ -23,7 +23,7 @@ The central controller for UI rendering and events.
 ### 2. `store.js` (State Manager)
 A dedicated wrapper for `LocalStorage`.
 - **Schema**: Stores `favorites` (Array of paths), `built` (Array of paths), `ratings` (Object), and `lang` (String).
-- **Data Healing**: On init, it validates stored IDs against the current `LEGO_DATA` to ensure no dead links persist.
+- **Data Healing & Lookups**: Validates stored IDs against current `LEGO_DATA` using O(1) `Set`/`Map` lookups, preventing loops and dead links.
 
 ### 3. `translations.js` (i18n Dictionary)
 The source of truth for UI text.
@@ -54,7 +54,7 @@ The app uses the **instruction path (`p`)** as the primary unique identifier for
 
 1.  **HTML**: Elements use `data-i18n="key"` for static text.
 2.  **Logic**: `updateUI()` iterates through these elements and populates `textContent` or `placeholder`.
-3.  **Dynamic Content**: For `LEGO_DATA`, the helper `getLocalized(item.t)` is used to select the correct string from the `{uk, en, ru}` object based on current state.
+3.  **Dynamic Content**: For `LEGO_DATA`, the helper `getLocalized(item.t)` is used to select the correct string from the `{uk, en, ru, pl}` object based on current state.
 
 ---
 

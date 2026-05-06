@@ -16,7 +16,8 @@ This project was built to solve a specific problem: providing quick, localized, 
 
 - **Kid-Friendly**: Visual-heavy "Roblox-like" grid for easy navigation.
 - **Offline-First**: Fully functional without an internet connection (once cached).
-- **Multilingual**: Supports Ukrainian, English, and Russian out of the box.
+- **Multilingual**: Supports Ukrainian, English, Russian, and Polish out of the box.
+- **SEO Ready**: Includes structured `sitemap.xml` and `robots.txt` for search engine indexing.
 - **Performance**: Optimized for older tablets and low-bandwidth environments.
 
 ---
