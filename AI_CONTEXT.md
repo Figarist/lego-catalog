@@ -1,65 +1,68 @@
-# 🤖 AI Context & Developer Guide | LEGO WeDo 2.0 Catalog
+# 🤖 AI CONTEXT: LEGO WeDo 2.0 Catalog Architect
 
-This document provides the essential architectural context for any AI assistant or developer working on this project. It defines the "Source of Truth" for our custom implementations.
+This file provides the technical context for AI assistants to understand the architecture, rules, and logic of this codebase.
 
-## 🚀 Project Overview
-- **Purpose**: A high-performance, kids-friendly instruction catalog for LEGO WeDo 2.0 robotics.
-- **UI Paradigm**: Modern "Game-Hub" aesthetics (inspired by Roblox/Steam), featuring dark mode, glassmorphism, and responsive grids.
-- **Constraints**: 
-  - **Offline-First**: Must run locally without a server.
-  - **No Frameworks**: Pure Vanilla JS, CSS3, and HTML5 only. 
-  - **No Build Tools**: No Webpack/Babel. Files are served as-is via CDN/local paths.
+## 🛑 Strict Rules
+
+1.  **Zero Dependencies**: No frameworks (React, Vue, Svelte), no external libraries (jQuery, i18next, Axios).
+2.  **Pure Vanilla**: Logic must remain in pure JavaScript (ES6+). Styling must remain in standard CSS.
+3.  **Core Integrity**: Do not break the connection between `data_localized.js` and `store.js`.
+4.  **No Cache for PDFs**: The Service Worker must **NOT** cache external Google Drive PDF links.
+
+---
 
 ## 🏗 Architecture Breakdown
 
-### 📂 Core Files
-- `index.html`: The main entry point. Uses `data-i18n` attributes for UI strings.
-- `app.js`: The "Engine". Handles DOM manipulation, routing (views switching), and search logic.
-- `store.js`: The "State Manager". Encapsulates `localStorage` access and business logic for Favorites/Built status.
-- `translations.js`: The "I18n Store". Contains `I18N_DATA` (UI strings) and `CATEGORY_MAP`.
-- `data_localized.js`: The "Database". A flat array of ~600 objects (`LEGO_DATA`) with localized titles and metadata.
-- `roulette.js`: A standalone module for the "Instructions Roulette" animation.
+### 1. `app.js` (The Engine)
+The central controller for UI rendering and events.
+- **Search Logic**: Debounced (300ms) to prevent UI thread blocking on mobile.
+- **Rendering**: Fragment-based DOM insertion for performance.
+- **PWA**: Manages SW registration and version update notifications (Toast UI).
+- **Share**: Implements Web Share API with clipboard fallback.
 
-## 🌍 Custom i18n System
-We use a lightweight, attribute-driven localization engine instead of external libraries.
+### 2. `store.js` (State Manager)
+A dedicated wrapper for `LocalStorage`.
+- **Schema**: Stores `favorites` (Array of paths), `built` (Array of paths), `ratings` (Object), and `lang` (String).
+- **Data Healing**: On init, it validates stored IDs against the current `LEGO_DATA` to ensure no dead links persist.
 
-### 1. Static UI Localization
-Elements are tagged with `data-i18n="KEY"`. The `app.js` engine iterates through these on language change and updates `textContent`, `placeholder`, or `title`.
+### 3. `translations.js` (i18n Dictionary)
+The source of truth for UI text.
+- **Structure**: `I18N_DATA` nested by language code.
+- **Helper**: `t(key)` function retrieves the translation based on `LegoStore.getLang()`.
 
-### 2. Data Structure (`translations.js`)
-```javascript
-const I18N_DATA = {
-    "uk": { "nav_favorites": "Моє обране", ... },
-    "en": { "nav_favorites": "My Favorites", ... },
-    "ru": { "nav_favorites": "Мое избранное", ... }
-};
-```
+### 4. `sw.js` (PWA Service Worker)
+Handles the offline-first experience.
+- **Strategy**: **Stale-While-Revalidate**. Serves from cache immediately, then fetches updates in the background.
+- **Scope**: Caches the "App Shell" (HTML, CSS, JS, UI Images).
+- **Update Logic**: Listens for `SKIP_WAITING` message to allow the new worker to take control.
 
-### 3. Localized Models (`data_localized.js`)
-Titles are objects, NOT strings:
-```javascript
-{
-    "t": { "uk": "Кіт", "en": "Cat", "ru": "Кот" },
-    "c": "Тварини", // Reference key for CATEGORY_MAP
-    "p": "https://drive.google.com/..." // This is the UNIQUE ID for storage
-}
-```
+### 5. `roulette.js` (Gamification)
+Logic for the "Gacha" style random model picker.
+- **Centering**: Uses scroll-to-index logic with easing.
 
-## 💾 State Management & Data Healing
+---
 
-### 1. Persistence
-State is managed via `LegoStore` module. It persists:
-- `app_lang`: Current UI language.
-- `lego_favs`: Array of IDs (`item.p`).
-- `lego_built`: Array of IDs (`item.p`).
+## 💾 State & Data Persistence
 
-### 2. Data Healing Concept (CRITICAL)
-Since the catalog is often updated with new links or structure, `LegoStore.healData()` ensures that user progress isn't lost if URLs or slugs change. 
-- It maps old unique identifiers (legacy slugs) to new `p` (URL) identifiers.
-- **Rule**: Always use `item.p` as the primary key for state, but never assume it is immutable.
+The app uses the **instruction path (`p`)** as the primary unique identifier for models.
+- **Critical**: If a model's path in `data_localized.js` changes, the `store.js` must handle the migration (Data Healing) to avoid loss of "Favorites" or "Built" status.
+- **Validation**: `LegoStore.healData()` runs on every page load.
 
-## 🎯 Development Principles
-1. **Performance**: Use `DocumentFragment` for heavy grid rendering.
-2. **Laziness**: Images must use `loading="lazy"`.
-3. **Safety**: Always use `getLocalized(item.t)` and `getLocalizedCat(item.c)` helpers instead of direct access to ensure fallback safety.
-4. **Style**: Stick to CSS variables defined in `:root` for consistency.
+---
+
+## 🌍 Custom i18n Implementation
+
+1.  **HTML**: Elements use `data-i18n="key"` for static text.
+2.  **Logic**: `updateUI()` iterates through these elements and populates `textContent` or `placeholder`.
+3.  **Dynamic Content**: For `LEGO_DATA`, the helper `getLocalized(item.t)` is used to select the correct string from the `{uk, en, ru}` object based on current state.
+
+---
+
+## ⚡ Performance & Optimization
+
+- **Image Lazy Loading**: Card images use `loading="lazy"` and `decoding="async"`.
+- **Grid Layout**: CSS Grid with `repeat(auto-fill, ...)` for responsive cards without media queries overload.
+- **Debounce**: All input-heavy operations are debounced to maintain 60fps interaction on tablets.
+
+---
+*Note: Always verify I18N_DATA availability before calling t() or getLocalized().*
