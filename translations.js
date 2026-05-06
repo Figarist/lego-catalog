@@ -68,7 +68,11 @@ const I18N_DATA = {
         "legal_section_8": "8. Конфіденційність",
         "legal_section_8_text": "Каталог не збирає та не передає жодних персональних даних користувачів.",
         "legal_contact_title": "📬 Зворотний зв'язок",
-        "legal_contact_text": "Якщо у вас є питання або запити на видалення матеріалів, будь ласка, зв'яжіться з автором через адміністрацію навчального закладу."
+        "legal_contact_text": "Якщо у вас є питання або запити на видалення матеріалів, будь ласка, зв'яжіться з автором через адміністрацію навчального закладу.",
+        "btn_share": "Поділитися",
+        "toast_update_text": "Доступні нові інструкції!",
+        "toast_update_btn": "Оновити",
+        "share_error": "Не вдалося поділитися"
     },
     "en": {
         "app_title": "LEGO WeDo 2.0 — Instructions Catalog 🧱",
@@ -136,7 +140,11 @@ const I18N_DATA = {
         "legal_section_8": "8. Privacy",
         "legal_section_8_text": "The catalog does not collect or transmit any personal data of users.",
         "legal_contact_title": "📬 Contact Us",
-        "legal_contact_text": "If you have any questions or takedown requests, please contact the author through the administration of the educational institution."
+        "legal_contact_text": "If you have any questions or takedown requests, please contact the author through the administration of the educational institution.",
+        "btn_share": "Share",
+        "toast_update_text": "New instructions available!",
+        "toast_update_btn": "Refresh",
+        "share_error": "Could not share"
     },
     "ru": {
         "app_title": "LEGO WeDo 2.0 — Каталог инструкций 🧱",
@@ -204,7 +212,11 @@ const I18N_DATA = {
         "legal_section_8": "8. Конфиденциальность",
         "legal_section_8_text": "Каталог не собирает и не передает никаких персональных данных пользователей.",
         "legal_contact_title": "📬 Обратная связь",
-        "legal_contact_text": "Если у вас есть вопросы или запросы на удаление материалов, пожалуйста, свяжитесь с автором через администрацию учебного заведения."
+        "legal_contact_text": "Если у вас есть вопросы или запросы на удаление материалов, пожалуйста, свяжитесь с автором через администрацию учебного заведения.",
+        "btn_share": "Поделиться",
+        "toast_update_text": "Доступны новые инструкции!",
+        "toast_update_btn": "Обновить",
+        "share_error": "Не удалось поделиться"
     }
 };
 
