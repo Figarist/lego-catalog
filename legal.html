@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Legal — LEGO WeDo 2.0</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="app.css">
     <style>
         body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;margin:0;padding:0}
@@ -58,6 +59,13 @@
 <body>
     <div class="legal-page">
         <a href="index.html" class="legal-back" data-i18n="legal_back">← Повернутися до каталогу</a>
+
+        <div class="lang-switcher" style="display:flex;gap:4px;margin-bottom:20px;justify-content:center;background:rgba(0,0,0,.2);padding:4px;border-radius:12px;border:1px solid rgba(255,255,255,.1);width:fit-content;margin-left:auto;margin-right:auto">
+            <button class="lang-btn" data-lang="uk">UK</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="pl">PL</button>
+        </div>
 
         <div class="legal-hero">
             <div class="legal-hero-icon">⚖️</div>
@@ -137,8 +145,24 @@
                     el.textContent = I18N_DATA[lang][key];
                 }
             });
+
+            // Update active lang button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
         }
-        document.addEventListener('DOMContentLoaded', updateLegalUI);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            updateLegalUI();
+
+            // Lang switcher
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    LegoStore.setLang(btn.dataset.lang);
+                    updateLegalUI();
+                });
+            });
+        });
     </script>
 </body>
 </html>

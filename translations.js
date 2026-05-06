@@ -82,7 +82,8 @@ const I18N_DATA = {
         "label_instruction": "Інструкція",
         "label_official": "Офіційна інструкція",
         "label_official_full": "Офіційна інструкція LEGO",
-        "legal_update_prefix": "📅 Останнє оновлення: "
+        "legal_update_prefix": "📅 Останнє оновлення: ",
+        "link_copied": "Посилання скопійовано!"
     },
     "en": {
         "app_title": "LEGO WeDo 2.0 — Instructions Catalog 🧱",
@@ -164,7 +165,8 @@ const I18N_DATA = {
         "label_instruction": "Instruction",
         "label_official": "Official instruction",
         "label_official_full": "Official LEGO instruction",
-        "legal_update_prefix": "📅 Last updated: "
+        "legal_update_prefix": "📅 Last updated: ",
+        "link_copied": "Link copied!"
     },
     "ru": {
         "app_title": "LEGO WeDo 2.0 — Каталог инструкций 🧱",
@@ -246,7 +248,8 @@ const I18N_DATA = {
         "label_instruction": "Инструкция",
         "label_official": "Официальная инструкция",
         "label_official_full": "Официальная инструкция LEGO",
-        "legal_update_prefix": "📅 Последнее обновление: "
+        "legal_update_prefix": "📅 Последнее обновление: ",
+        "link_copied": "Ссылка скопирована!"
     },
     "pl": {
         "app_title": "LEGO WeDo 2.0 — Katalog instrukcji 🧱",
@@ -328,7 +331,8 @@ const I18N_DATA = {
         "label_instruction": "Instrukcja",
         "label_official": "Oficjalna instrukcja",
         "label_official_full": "Oficjalna instrukcja LEGO",
-        "legal_update_prefix": "📅 Ostatnia aktualizacja: "
+        "legal_update_prefix": "📅 Ostatnia aktualizacja: ",
+        "link_copied": "Link skopiowany!"
     }
 
 
@@ -422,4 +426,4 @@ const CATEGORY_MAP = {
 };
 
 
-const CATEGORY_EMOJI = {"Автомобілі, мотоцикли": "🚗", "Військова техніка": "🪖", "Динозаври": "🦕", "Тварини": "🐾", "Зоряні війни": "⭐", "Кораблі": "🚢", "Космос": "🚀", "Люди": "👤", "Механізми": "⚙️", "Міні-моделі": "🔹", "Моделі без смартхаба": "📦", "Моделі для змагань": "🏆", "Комахи": "🐛", "Новорічні": "🎄", "Офіційні інструкції LEGO": "📋", "Птахи": "🐦", "Рослини": "🌱", "Моделі, що малюють": "🎨", "Роботи": "🤖", "Літаки, вертольоти": "✈️", "Спецтехніка": "🚜", "Спорт": "⚽", "Транспорт": "🚌", "Крокуючі": "🦿", "Нові інструкції": "🆕"};
+const CATEGORY_EMOJI = {"Автомобілі, мотоцикли": "🚗", "Військова техніка": "🪖", "Динозаври": "🦕", "Тварини": "🐾", "Зоряні війни": "⭐", "Кораблі": "🚢", "Космос": "🚀", "Люди": "👤", "Механізми": "⚙️", "Міні-моделі": "🔹", "Моделі без смартхаба": "📦", "Моделі для змагань": "🏆", "Комахи": "🐛", "Новорічні": "🎄", "Офіційні інструкції LEGO": "📋", "Птахи": "🐦", "Рослини": "🌱", "Моделі, що малюють": "🎨", "Роботи": "🤖", "Літаки, вертольоти": "✈️", "Спецтехніка": "🚜", "Спорт": "⚽", "Транспорт": "🚌", "Крокуючі": "🦿", "Нові інструкції": "🆕", "Різне": "🗂️"};
