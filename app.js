@@ -14,8 +14,18 @@
   }
 })();
 
+// Utility: Debounce
+function debounce(func, delay) {
+  let timeout;
+  return function(...args) {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), delay);
+  };
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const $ = id => document.getElementById(id);
+  const t = key => (I18N_DATA[LegoStore.getLang()] && I18N_DATA[LegoStore.getLang()][key]) || key;
   const gridView = $('gridView');
   const homeView = $('homeView');
   const trendingGrid = $('trendingGrid');
@@ -56,6 +66,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let activeCat = 'home';
   let query = '';
+
+  // --- SW Update Toast ---
+  function showUpdateToast(reg) {
+    const toast = document.createElement('div');
+    toast.className = 'update-toast';
+    toast.innerHTML = `
+      <div class="toast-content">
+        <span>${t('toast_update_text')}</span>
+        <button id="updateNow">${t('toast_update_btn')}</button>
+      </div>
+    `;
+    document.body.appendChild(toast);
+
+    document.getElementById('updateNow').addEventListener('click', () => {
+      if (reg.waiting) {
+        reg.waiting.postMessage('SKIP_WAITING');
+      }
+      toast.remove();
+    });
+  }
+
+  function registerSW() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js').then(reg => {
+        reg.addEventListener('updatefound', () => {
+          const newWorker = reg.installing;
+          newWorker.addEventListener('statechange', () => {
+            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+              showUpdateToast(reg);
+            }
+          });
+        });
+      });
+
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    }
+  }
+  registerSW();
 
   function getLocalized(val) {
     if (typeof val === 'object' && val !== null) {
@@ -387,6 +437,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (item.i) {
       const img = document.createElement('img');
       img.loading = 'lazy';
+      img.decoding = 'async';
       img.alt = getLocalized(item.t);
       img.src = item.i;
       img.onerror = function() {
@@ -487,6 +538,13 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     modalCats.appendChild(modalFavBtn);
 
+    // Add Share to Modal
+    const modalShareBtn = document.createElement('button');
+    modalShareBtn.className = 'modal-share-btn';
+    modalShareBtn.innerHTML = `<span>🔗</span> ${t('btn_share')}`;
+    modalShareBtn.onclick = () => handleShare(item);
+    modalCats.appendChild(modalShareBtn);
+
     modalOpenBtn.href = item.p;
 
     // Built toggle in modal
@@ -533,7 +591,8 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Search
-  searchInput.addEventListener('input', e => {
+  // Search with Debounce
+  searchInput.addEventListener('input', debounce(e => {
     query = e.target.value.toLowerCase().trim();
     if (query) {
       if (activeCat === 'home') {
@@ -552,7 +611,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderGrid();
       }
     }
-  });
+  }, 300));
   clearBtn.addEventListener('click', () => {
     query = ''; searchInput.value = ''; clearBtn.classList.add('hidden');
     if (activeCat === 'home') {
@@ -627,6 +686,32 @@ document.addEventListener('DOMContentLoaded', () => {
       rouletteOverlay.classList.remove('active');
       if (rouletteWinningItem) openModal(rouletteWinningItem);
     });
+  }
+
+  // --- Share Logic ---
+  async function handleShare(item) {
+    const shareData = {
+      title: getLocalized(item.t),
+      text: `${getLocalized(item.t)} - LEGO WeDo 2.0 Catalog`,
+      url: window.location.href
+    };
+
+    if (navigator.share) {
+      try {
+        await navigator.share(shareData);
+      } catch (err) {
+        console.log('Share failed:', err);
+      }
+    } else {
+      // Fallback: Copy to clipboard
+      const dummy = document.createElement('input');
+      document.body.appendChild(dummy);
+      dummy.value = shareData.url;
+      dummy.select();
+      document.execCommand('copy');
+      document.body.removeChild(dummy);
+      alert('Link copied to clipboard!');
+    }
   }
 });
 
