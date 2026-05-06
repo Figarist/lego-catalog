@@ -1103,7 +1103,7 @@ body::before{
   color:#fff;border-color:var(--green);background:var(--surface2);
   transform:translateY(-2px);
 }
-.footer-copy{color:var(--text2);font-size:.78rem;line-height:1.7;opacity:.7}
+.footer-copy{color:var(--text2);font-size:.78rem;line-height:1.7;opacity:.85}
 .footer-copy p{margin:2px 0}
 
 /* === PWA UPDATE TOAST === */
