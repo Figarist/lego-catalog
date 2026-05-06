@@ -198,10 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // SEO and Browser Tab Title
     if (I18N_DATA[lang]) {
-      if (I18N_DATA[lang].app_page_title && (window.location.pathname.includes('index.html') || window.location.pathname === '/')) {
-        document.title = I18N_DATA[lang].app_page_title;
-      } else if (I18N_DATA[lang].legal_page_title && window.location.pathname.includes('legal.html')) {
-        document.title = I18N_DATA[lang].legal_page_title;
+      if (window.location.pathname.includes('legal.html')) {
+        if (I18N_DATA[lang].legal_page_title) document.title = I18N_DATA[lang].legal_page_title;
+      } else {
+        if (I18N_DATA[lang].app_page_title) document.title = I18N_DATA[lang].app_page_title;
       }
       
       const metaDesc = document.querySelector('meta[name="description"]');
