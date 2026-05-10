@@ -2,10 +2,26 @@
  * Store.js - handles data persistence and state management
  */
 window.LegoStore = (function() {
-    let favorites = JSON.parse(localStorage.getItem('lego_favs') || '[]');
-    let builtItems = JSON.parse(localStorage.getItem('lego_built') || '[]');
-    let ratings = JSON.parse(localStorage.getItem('lego_ratings') || '{}');
-    let unlockedAchievements = JSON.parse(localStorage.getItem('lego_achievements') || '[]');
+    // Safe JSON.parse — prevents site crash if localStorage data is corrupted
+    function safeGet(key, fallback) {
+        try {
+            const raw = localStorage.getItem(key);
+            if (raw === null) return fallback;
+            const parsed = JSON.parse(raw);
+            // Validate expected type
+            if (fallback !== null && typeof parsed !== typeof fallback) return fallback;
+            return parsed !== null ? parsed : fallback;
+        } catch (e) {
+            console.warn('[LegoStore] Corrupted localStorage key "' + key + '", resetting.');
+            localStorage.removeItem(key);
+            return fallback;
+        }
+    }
+
+    let favorites = safeGet('lego_favs', []);
+    let builtItems = safeGet('lego_built', []);
+    let ratings = safeGet('lego_ratings', {});
+    let unlockedAchievements = safeGet('lego_achievements', []);
     let currentLang = localStorage.getItem('app_lang');
 
     // Auto-detection logic for first-time visitors
