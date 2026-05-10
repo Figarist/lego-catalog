@@ -22,10 +22,20 @@ window.LegoStore = (function() {
     let builtItems = safeGet('lego_built', []);
     let ratings = safeGet('lego_ratings', {});
     let unlockedAchievements = safeGet('lego_achievements', []);
+    // SEO Language overriding via URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlLang = urlParams.get('lang');
+    const supportedLangs = ['uk', 'en', 'ru', 'pl'];
+
     let currentLang = localStorage.getItem('app_lang');
 
+    // If URL has a valid language, use it and save it
+    if (urlLang && supportedLangs.includes(urlLang)) {
+        currentLang = urlLang;
+        localStorage.setItem('app_lang', currentLang);
+    } 
     // Auto-detection logic for first-time visitors
-    if (!currentLang) {
+    else if (!currentLang) {
         const navLang = (navigator.language || navigator.userLanguage || 'uk').toLowerCase();
         if (navLang.includes('pl')) {
             currentLang = 'pl';
