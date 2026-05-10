@@ -10,6 +10,10 @@
   "categories": ["education", "kids"],
   "background_color": "#1a1a2e",
   "theme_color": "#1a1a2e",
+  "author": {
+    "name": "Ігор Сівочка",
+    "url": "https://figarist.github.io"
+  },
   "icons": [
     {
       "src": "icons/icon-192x192.png",
