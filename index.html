@@ -96,10 +96,10 @@
                 </div>
             </div>
             <div class="lang-switcher">
-                <button class="lang-btn" data-lang="uk">UK</button>
-                <button class="lang-btn" data-lang="en">EN</button>
-                <button class="lang-btn" data-lang="ru">RU</button>
-                <button class="lang-btn" data-lang="pl">PL</button>
+                <button class="lang-btn" data-lang="uk">🇺🇦 UK</button>
+                <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
+                <button class="lang-btn" data-lang="ru">🇷🇺 RU</button>
+                <button class="lang-btn" data-lang="pl">🇵🇱 PL</button>
             </div>
 
             <div class="search-wrap">
@@ -184,9 +184,19 @@
                 </div>
                 <div id="grid" class="grid"></div>
                 <div id="empty" class="empty hidden">
-                    <div class="empty-emoji">🤔</div>
-                    <h3 data-i18n="empty_title">Нічого не знайдено!</h3>
-                    <p data-i18n="empty_text">Спробуй іншу назву або категорію 😊</p>
+                    <div class="empty-emoji" id="emptyEmoji">🤔</div>
+                    <h3 id="emptyTitle" data-i18n="empty_title">Нічого не знайдено!</h3>
+                    <p id="emptyText" data-i18n="empty_text">Спробуй іншу назву або категорію 😊</p>
+                    <div class="empty-chips" id="emptyChips">
+                        <button class="empty-chip" data-search="Динозавр" data-i18n="empty_chip_dino">🦖 Динозаври</button>
+                        <button class="empty-chip" data-search="Робот" data-i18n="empty_chip_robots">🤖 Роботи</button>
+                        <button class="empty-chip" data-search="Авто" data-i18n="empty_chip_cars">🏎️ Авто</button>
+                        <button class="empty-chip" data-search="Тварини" data-i18n="empty_chip_animals">🐾 Тварини</button>
+                    </div>
+                    <div class="empty-actions" id="emptyActions">
+                        <button id="emptyResetBtn" class="empty-action-btn" data-i18n="empty_reset_btn">Скинути пошук 🔄</button>
+                        <button id="emptyRandomBtn" class="empty-action-btn empty-action-btn-accent" data-i18n="empty_random_btn">Випадкова модель 🎲</button>
+                    </div>
                 </div>
             </div>
         </main>
@@ -239,6 +249,7 @@
             </div>
             <div class="roulette-action">
                 <button id="rouletteActionBtn" class="hero-random-btn hidden" data-i18n="roulette_open">Відкрити цю модель!</button>
+                <button id="rouletteRerollBtn" class="hero-random-btn roulette-reroll-btn hidden" data-i18n="roulette_reroll">Крутити ще раз! 🔄</button>
             </div>
         </div>
     </div>
@@ -246,20 +257,21 @@
     <!-- Disclaimer Modal -->
     <div class="disclaimer-overlay" id="disclaimerOverlay">
         <div class="disclaimer-modal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
-            <div class="disclaimer-icon">⚠️</div>
-            <h2 id="disclaimerTitle" data-i18n="disclaimer_title">Увага! Важлива інформація</h2>
+            <div class="disclaimer-icon">🤖</div>
+            <h2 id="disclaimerTitle" data-i18n="disclaimer_title">Правила Клубу Юних Інженерів 🧱</h2>
             <div class="disclaimer-text">
-                <p data-i18n="disclaimer_p1">Цей каталог створений виключно в освітніх та ознайомлювальних цілях для використання на уроках робототехніки.</p>
-                <p data-i18n="disclaimer_p2">Усі інструкції, зображення та матеріали належать їхнім законним правовласникам — компанії LEGO Group та авторам оригінальних проєктів.</p>
-                <p data-i18n="disclaimer_p3">Власник каталогу не несе жодної відповідальності за використання представлених матеріалів.</p>
-                <p data-i18n="disclaimer_p4">Натискаючи «Прийняти», ви підтверджуєте, що:</p>
+                <p data-i18n="disclaimer_p1">Привіт, Будівельнику! Цей каталог створений виключно для навчання, творчості та уроків робототехніки.</p>
+                <p data-i18n="disclaimer_p2">Усі інструкції, зображення та матеріали належать компанії LEGO Group та авторам оригінальних проєктів.</p>
+                <p data-i18n="disclaimer_p3">Каталог є повністю безкоштовним освітнім помічником для дітей та вчителів.</p>
+                <p data-i18n="disclaimer_p4">Натискаючи «Поїхали», ти підтверджуєш, що:</p>
                 <ul>
-                    <li data-i18n="disclaimer_li_1">Ознайомлені з умовами використання</li>
-                    <li data-i18n="disclaimer_li_2">Використовуєте матеріали виключно для особистого навчання</li>
-                    <li data-i18n="disclaimer_li_3">Не будете розповсюджувати матеріали з комерційною метою</li>
+                    <li data-i18n="disclaimer_li_1">🎓 Використовуєш матеріали для власного навчання та творчості</li>
+                    <li data-i18n="disclaimer_li_2">🧱 Поважаєш авторські права творців моделей та LEGO Group</li>
+                    <li data-i18n="disclaimer_li_3">🤝 Граєш чесно: без комерційного продажу чи розповсюдження</li>
                 </ul>
+                <p class="disclaimer-legal-note"><a href="legal.html" data-i18n="footer_legal">⚖️ Правова інформація & DMCA</a></p>
             </div>
-            <button class="disclaimer-accept" id="disclaimerAccept" data-i18n="disclaimer_accept">✅ Прийняти та продовжити</button>
+            <button class="disclaimer-accept" id="disclaimerAccept" data-i18n="disclaimer_accept">🚀 Поїхали конструювати!</button>
         </div>
     </div>
 
@@ -286,6 +298,7 @@
     </footer>
 
     <button id="scrollTop" class="scroll-top hidden" aria-label="Нагору" data-i18n-aria="scroll_top">↑</button>
+    <canvas id="confettiCanvas" class="confetti-canvas"></canvas>
 
     <script src="data_localized.js"></script>
     <script src="store.js"></script>
