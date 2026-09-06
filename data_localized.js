@@ -5276,7 +5276,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1D-FPLopVbptlu62NPTTbJnLkHjjS07rF/preview",
-  "i": "Моделі/інструкції/зображення/traktor-258.jpg"
+  "i": "Моделі/інструкції/зображення/traktor-258.png"
  },
  {
   "t": {
@@ -5444,7 +5444,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1aJ3Kxl2Eq7uzyJTeRQLA5qhI2El4nLZp/preview",
-  "i": "Моделі/інструкції/зображення/robo-ruka-359.jpg"
+  "i": "Моделі/інструкції/зображення/robo-ruka-359.png"
  },
  {
   "t": {
@@ -5486,7 +5486,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/19oIfkQRJi4WcZDAEogIs5SjZFj3WHAeO/preview",
-  "i": "Моделі/інструкції/зображення/bashtovyy-kran-336.jpg"
+  "i": "Моделі/інструкції/зображення/bashtovyy-kran-336.png"
  },
  {
   "t": {
@@ -5738,7 +5738,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1x6aF6XespwXnmfY3jBIG-jNE1QTprk-a/preview",
-  "i": "Моделі/інструкції/зображення/lift-450.jpg"
+  "i": "Моделі/інструкції/зображення/lift-450.png"
  },
  {
   "t": {
@@ -6130,7 +6130,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1yiLZBvbjtUtxIDxcXaMaHS8IrrBlI_Om/preview",
-  "i": "Моделі/інструкції/зображення/zauropod-75.jpg"
+  "i": "Моделі/інструкції/зображення/zauropod-75.png"
  },
  {
   "t": {
@@ -6228,7 +6228,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1uwWZBbo4t6VXJEcMQkylWAjo23-8q5KB/preview",
-  "i": "Моделі/інструкції/зображення/lyzhnyk-87.jpg"
+  "i": "Моделі/інструкції/зображення/lyzhnyk-87.png"
  },
  {
   "t": {
@@ -6564,7 +6564,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1djIrwSHsJT9camWfPRpy66TxJFOQYWMq/preview",
-  "i": "Моделі/інструкції/зображення/kombayn-251.jpg"
+  "i": "Моделі/інструкції/зображення/kombayn-251.png"
  },
  {
   "t": {
@@ -6844,7 +6844,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1dujOtFCIBRPCoop8AA7dvwgOA45tgtZF/preview",
-  "i": "Моделі/інструкції/зображення/novorichna-yalynka-429.jpg"
+  "i": "Моделі/інструкції/зображення/novorichna-yalynka-429.png"
  },
  {
   "t": {
@@ -7040,7 +7040,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1_Ce_kIoDStSWBo10BkS_r8oV7TmGFDh1/preview",
-  "i": "Моделі/інструкції/зображення/povorot-458.jpg"
+  "i": "Моделі/інструкції/зображення/povorot-458.png"
  },
  {
   "t": {
@@ -7250,7 +7250,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1JdHGPTS0mYWLz5KqgDTJqc2NAjG_E2Ev/preview",
-  "i": "Моделі/інструкції/зображення/katapulta-266.jpg"
+  "i": "Моделі/інструкції/зображення/katapulta-266.png"
  },
  {
   "t": {
@@ -7558,7 +7558,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1E4u-TI3LsZoQFTcYHGxj3Zkx3qMfaA9b/preview",
-  "i": "Моделі/інструкції/зображення/maylo-z-datchykom-peremishchennya-453.jpg"
+  "i": "Моделі/інструкції/зображення/maylo-z-datchykom-peremishchennya-453.png"
  },
  {
   "t": {
@@ -7698,7 +7698,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1c3FkIqunUfHwnqjrZeDkhLXWvg2_0aVs/preview",
-  "i": "Моделі/інструкції/зображення/vertolit-434.jpg"
+  "i": "Моделі/інструкції/зображення/vertolit-434.png"
  },
  {
   "t": {
@@ -7810,7 +7810,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1GhcDcWFayolDZOyVIZvkI9PgGx8x86Mf/preview",
-  "i": "Моделі/інструкції/зображення/ventylyator-433.jpg"
+  "i": "Моделі/інструкції/зображення/ventylyator-433.png"
  },
  {
   "t": {
@@ -8020,7 +8020,7 @@ const LEGO_DATA = [
    "Різне"
   ],
   "p": "https://drive.google.com/file/d/1N7689nNfaif1MqVD6dwgRxBtyc95LmhR/preview",
-  "i": "Моделі/інструкції/зображення/honochnyy-avtomobil-437.jpg"
+  "i": "Моделі/інструкції/зображення/honochnyy-avtomobil-437.png"
  },
  {
   "t": {

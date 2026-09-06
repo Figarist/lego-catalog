@@ -3,8 +3,22 @@
  */
 window.LegoRoulette = (function() {
     let winningItem = null;
+    let spinTimer = null;
+    let winTimer = null;
+
+    function cancel() {
+        if (spinTimer) {
+            clearTimeout(spinTimer);
+            spinTimer = null;
+        }
+        if (winTimer) {
+            clearTimeout(winTimer);
+            winTimer = null;
+        }
+    }
 
     function start(config) {
+        cancel();
         const { overlay, strip, actionBtn, data, onWin } = config;
 
         overlay.classList.add('active');
@@ -32,18 +46,35 @@ window.LegoRoulette = (function() {
             card.className = 'roulette-card';
             card.id = 'r-card-' + idx;
             
-            let imgHtml = item.i ? `<img src="${item.i}" alt="">` : '<div class="no-img">📋</div>';
             const localizedTitle = LegoStore.getLocalized(item.t);
-            card.innerHTML = `${imgHtml}<div class="roulette-card-title">${localizedTitle}</div>`;
+            if (item.i) {
+                const img = document.createElement('img');
+                img.src = item.i;
+                img.alt = localizedTitle;
+                card.appendChild(img);
+            } else {
+                const noImg = document.createElement('div');
+                noImg.className = 'no-img';
+                noImg.textContent = '📋';
+                card.appendChild(noImg);
+            }
+            
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'roulette-card-title';
+            titleDiv.textContent = localizedTitle;
+            card.appendChild(titleDiv);
+
             fragment.appendChild(card);
         });
         strip.appendChild(fragment);
 
         // Wait for render then spin
-        setTimeout(() => {
-            const cardWidth = 160;
-            const windowWidth = document.querySelector('.roulette-window').offsetWidth;
+        spinTimer = setTimeout(() => {
             const winnerCard = document.getElementById('r-card-' + WINNER_INDEX);
+            if (!winnerCard) return;
+            const cardWidth = winnerCard.offsetWidth || 160;
+            const rouletteWindow = document.querySelector('.roulette-window');
+            const windowWidth = (rouletteWindow && rouletteWindow.offsetWidth) || 600;
             const targetOffset = winnerCard.offsetLeft;
             
             const randomJitter = Math.floor(Math.random() * 80) - 40;
@@ -53,7 +84,7 @@ window.LegoRoulette = (function() {
             strip.style.transition = `transform ${duration}ms cubic-bezier(0.15, 0.9, 0.1, 1)`;
             strip.style.transform = `translateX(${finalTranslate}px)`;
 
-            setTimeout(() => {
+            winTimer = setTimeout(() => {
                 winnerCard.classList.add('winner');
                 actionBtn.classList.remove('hidden');
                 if (onWin) onWin(winningItem);
@@ -63,6 +94,7 @@ window.LegoRoulette = (function() {
 
     return {
         start: start,
+        cancel: cancel,
         getWinningItem: () => winningItem
     };
 })();

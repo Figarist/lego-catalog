@@ -426,7 +426,9 @@ const CATEGORY_MAP = {
     "Нові інструкції": { uk: "Нові інструкції", en: "New Instructions", ru: "Новые инструкции", pl: "Nowe instrukcje" },
     "Різне": { uk: "Різне", en: "Miscellaneous", ru: "Разное", pl: "Różne" },
     "Зоряні війни": { uk: "Зоряні війни", en: "Star Wars", ru: "Звездные войны", pl: "Gwiezdne Wojny" },
-    "Крокуючі": { uk: "Крокуючі", en: "Walkers", ru: "Шагающие", pl: "Kroczące" }
+    "Крокуючі": { uk: "Крокуючі", en: "Walkers", ru: "Шагающие", pl: "Kroczące" },
+    "Птахи": { uk: "Птахи", en: "Birds", ru: "Птицы", pl: "Ptaki" },
+    "Моделі, що малюють": { uk: "Моделі, що малюють", en: "Drawing Models", ru: "Рисующие модели", pl: "Modele rysujące" }
 };
 
 
