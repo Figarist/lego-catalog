@@ -19,10 +19,11 @@ window.LegoRoulette = (function() {
 
     function start(config) {
         cancel();
-        const { overlay, strip, actionBtn, data, onWin } = config;
+        const { overlay, strip, actionBtn, rerollBtn, data, onWin } = config;
 
         overlay.classList.add('active');
         actionBtn.classList.add('hidden');
+        if (rerollBtn) rerollBtn.classList.add('hidden');
         strip.style.transition = 'none';
         strip.style.transform = 'translateX(0px)';
         strip.innerHTML = '';
@@ -87,6 +88,7 @@ window.LegoRoulette = (function() {
             winTimer = setTimeout(() => {
                 winnerCard.classList.add('winner');
                 actionBtn.classList.remove('hidden');
+                if (rerollBtn) rerollBtn.classList.remove('hidden');
                 if (onWin) onWin(winningItem);
             }, duration + 100);
         }, 100);
