@@ -12,7 +12,8 @@ const ASSETS = [
   './manifest.json',
   './favicon.svg',
   './icons/icon-192x192.png',
-  './icons/icon-512x512.png'
+  './icons/icon-512x512.png',
+  './icons/wedy_mascot.png'
 ];
 
 // Install Event
