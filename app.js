@@ -61,6 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalImg = $('modalImg');
   const modalTitle = $('modalTitle');
   const modalCats = $('modalCats');
+  const modalItemActions = $('modalItemActions');
   const modalOpenBtn = $('modalOpenBtn');
   const modalClose = $('modalClose');
 
@@ -404,7 +405,7 @@ document.addEventListener('DOMContentLoaded', () => {
     li.className = 'cat-item' + (activeCat === key ? ' active' : '');
     li.dataset.key = key; // Add key for precise active tracking
     const countHtml = count !== '' ? '<span class="cnt">' + count + '</span>' : '';
-    li.innerHTML = '<span><span class="emoji">' + emoji + '</span>' + label + '</span>' + countHtml;
+    li.innerHTML = '<span class="cat-label"><span class="emoji">' + emoji + '</span><span class="cat-name">' + escapeHTML(label) + '</span></span>' + countHtml;
     li.addEventListener('click', () => {
       switchView(key, label, emoji);
     });
@@ -618,6 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     modalTitle.textContent = getLocalized(item.t);
     modalCats.innerHTML = '';
+    if (modalItemActions) modalItemActions.innerHTML = '';
     item.ac.forEach(cat => {
       const catEmoji = CATEGORY_EMOJI[cat] || '📁';
       const tag = document.createElement('span');
@@ -638,14 +640,14 @@ document.addEventListener('DOMContentLoaded', () => {
       modalFavBtn.classList.toggle('active', nowFav);
       modalFavBtn.innerHTML = '<span>❤️</span> ' + (nowFav ? I18N_DATA[lang].view_favorites : I18N_DATA[lang].nav_favorites);
     };
-    modalCats.appendChild(modalFavBtn);
+    if (modalItemActions) modalItemActions.appendChild(modalFavBtn);
 
     // Add Share to Modal
     const modalShareBtn = document.createElement('button');
     modalShareBtn.className = 'modal-share-btn';
     modalShareBtn.innerHTML = `<span>🔗</span> ${t('btn_share')}`;
     modalShareBtn.onclick = () => handleShare(item);
-    modalCats.appendChild(modalShareBtn);
+    if (modalItemActions) modalItemActions.appendChild(modalShareBtn);
 
     modalOpenBtn.href = item.p;
 
@@ -708,8 +710,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
       closeModal();
-      // Also close roulette
-      rouletteOverlay.classList.remove('active');
+      closeRoulette();
     }
   });
 
@@ -798,25 +799,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (rouletteClose) {
-    rouletteClose.addEventListener('click', () => {
-      rouletteOverlay.classList.remove('active');
-    });
+  function closeRoulette() {
+    rouletteOverlay.classList.remove('active');
+    if (window.LegoRoulette && window.LegoRoulette.cancel) {
+      window.LegoRoulette.cancel();
+    }
   }
+
+  if (rouletteClose) {
+    rouletteClose.addEventListener('click', closeRoulette);
+  }
+
+  rouletteOverlay.addEventListener('click', (e) => {
+    if (e.target === rouletteOverlay) closeRoulette();
+  });
 
   if (rouletteActionBtn) {
     rouletteActionBtn.addEventListener('click', () => {
-      rouletteOverlay.classList.remove('active');
+      closeRoulette();
       if (rouletteWinningItem) openModal(rouletteWinningItem);
     });
   }
 
-  // --- Share Logic ---
+  // --- Share Logic with Deep Linking ---
   async function handleShare(item) {
+    const shareUrl = new URL(window.location.origin + window.location.pathname);
+    shareUrl.searchParams.set('model', encodeURIComponent(item.p));
+    const lang = LegoStore.getLang();
+    if (lang) shareUrl.searchParams.set('lang', lang);
+
     const shareData = {
       title: getLocalized(item.t),
       text: `${getLocalized(item.t)} - LEGO WeDo 2.0 Catalog`,
-      url: window.location.href
+      url: shareUrl.toString()
     };
 
     if (navigator.share) {
@@ -846,6 +861,16 @@ document.addEventListener('DOMContentLoaded', () => {
       toast.innerHTML = `<div class="toast-content"><span>📋 ${t('link_copied')}</span></div>`;
       document.body.appendChild(toast);
       setTimeout(() => toast.remove(), 3000);
+    }
+  }
+
+  // Deep Link Auto-Open
+  const targetModelParam = urlParams.get('model');
+  if (targetModelParam) {
+    const decoded = decodeURIComponent(targetModelParam);
+    const found = LEGO_DATA.find(x => x.p === decoded || x.p.includes(decoded));
+    if (found) {
+      setTimeout(() => openModal(found), 250);
     }
   }
 });

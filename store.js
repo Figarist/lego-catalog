@@ -147,7 +147,7 @@ window.LegoStore = (function() {
         getLocalized: (obj) => {
             if (!obj) return '';
             if (typeof obj === 'string') return obj;
-            return obj[currentLang] || obj['uk'] || Object.values(obj)[0] || '';
+            return obj[currentLang] || (currentLang === 'pl' ? (obj['en'] || obj['uk']) : (obj['uk'] || obj['en'])) || Object.values(obj)[0] || '';
         },
 
         // Data healing logic to match old IDs (paths) to new IDs (URLs)

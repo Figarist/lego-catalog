@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20260506';
+const CACHE_NAME = 'wedo-catalog-v20260906';
 const ASSETS = [
   './',
   './index.html',
@@ -9,7 +9,10 @@ const ASSETS = [
   './store.js',
   './translations.js',
   './roulette.js',
-  './manifest.json'
+  './manifest.json',
+  './favicon.svg',
+  './icons/icon-192x192.png',
+  './icons/icon-512x512.png'
 ];
 
 // Install Event
@@ -34,7 +37,7 @@ self.addEventListener('activate', event => {
   );
 });
 
-// Fetch Event - Stale-While-Revalidate
+// Fetch Event - Stale-While-Revalidate with offline safety
 self.addEventListener('fetch', event => {
   // Skip external Google Drive links and other non-local requests
   if (!event.request.url.startsWith(self.location.origin)) {
@@ -45,8 +48,13 @@ self.addEventListener('fetch', event => {
     caches.open(CACHE_NAME).then(cache => {
       return cache.match(event.request).then(response => {
         const fetchPromise = fetch(event.request).then(networkResponse => {
-          cache.put(event.request, networkResponse.clone());
+          if (networkResponse && networkResponse.status === 200 && (networkResponse.type === 'basic' || networkResponse.type === 'cors')) {
+            cache.put(event.request, networkResponse.clone());
+          }
           return networkResponse;
+        }).catch(() => {
+          // Offline fallback: return cached response if available
+          return response;
         });
         return response || fetchPromise;
       });
