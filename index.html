@@ -34,7 +34,8 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#1a1a2e">
     
-    <!-- iOS PWA Support -->
+    <!-- PWA Support -->
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="WeDo Catalog">
@@ -142,8 +143,8 @@
                     <div class="section-header">
                         <h3 data-i18n="section_trending">🔥 Зараз у тренді</h3>
                         <div class="scroll-controls">
-                            <button class="scroll-btn prev" onclick="sideScroll('trendingGrid', 'left')">‹</button>
-                            <button class="scroll-btn next" onclick="sideScroll('trendingGrid', 'right')">›</button>
+                            <button class="scroll-btn prev" aria-label="Попередні" onclick="sideScroll('trendingGrid', 'left')">‹</button>
+                            <button class="scroll-btn next" aria-label="Наступні" onclick="sideScroll('trendingGrid', 'right')">›</button>
                         </div>
                     </div>
                     <div id="trendingGrid" class="horizontal-scroll"></div>
@@ -153,8 +154,8 @@
                     <div class="section-header">
                         <h3 data-i18n="section_popular_cats">🎮 Популярні категорії</h3>
                         <div class="scroll-controls">
-                            <button class="scroll-btn prev" onclick="sideScroll('genreGrid', 'left')">‹</button>
-                            <button class="scroll-btn next" onclick="sideScroll('genreGrid', 'right')">›</button>
+                            <button class="scroll-btn prev" aria-label="Попередні" onclick="sideScroll('genreGrid', 'left')">‹</button>
+                            <button class="scroll-btn next" aria-label="Наступні" onclick="sideScroll('genreGrid', 'right')">›</button>
                         </div>
                     </div>
                     <div id="genreGrid" class="genre-row"></div>
@@ -193,12 +194,15 @@
 
     <!-- Modal for model preview -->
     <div class="modal-overlay" id="modalOverlay">
-        <div class="modal" id="modal">
-            <button class="modal-close" id="modalClose">&times;</button>
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Закрити">&times;</button>
             <div class="modal-img" id="modalImg"></div>
             <div class="modal-info">
                 <div class="modal-title" id="modalTitle"></div>
-                <div class="modal-cats" id="modalCats"></div>
+                <div class="modal-meta-row">
+                    <div class="modal-cats" id="modalCats"></div>
+                    <div class="modal-item-actions" id="modalItemActions"></div>
+                </div>
                 <div class="modal-actions-row">
                     <div class="rating-container">
                         <span class="rating-label" data-i18n="modal_rate">Оціни модель:</span>
@@ -226,9 +230,9 @@
 
     <!-- Roulette Overlay -->
     <div class="roulette-overlay" id="rouletteOverlay">
-        <div class="roulette-modal">
-            <button class="modal-close" id="rouletteClose">&times;</button>
-            <h2 class="roulette-title" data-i18n="roulette_title">🎰 Рулетка Інструкцій</h2>
+        <div class="roulette-modal" role="dialog" aria-modal="true" aria-labelledby="rouletteTitle">
+            <button class="modal-close" id="rouletteClose" aria-label="Закрити">&times;</button>
+            <h2 class="roulette-title" id="rouletteTitle" data-i18n="roulette_title">🎰 Рулетка Інструкцій</h2>
             <div class="roulette-window">
                 <div class="roulette-center-line"></div>
                 <div class="roulette-strip" id="rouletteStrip"></div>
@@ -241,9 +245,9 @@
 
     <!-- Disclaimer Modal -->
     <div class="disclaimer-overlay" id="disclaimerOverlay">
-        <div class="disclaimer-modal">
+        <div class="disclaimer-modal" role="dialog" aria-modal="true" aria-labelledby="disclaimerTitle">
             <div class="disclaimer-icon">⚠️</div>
-            <h2 data-i18n="disclaimer_title">Увага! Важлива інформація</h2>
+            <h2 id="disclaimerTitle" data-i18n="disclaimer_title">Увага! Важлива інформація</h2>
             <div class="disclaimer-text">
                 <p data-i18n="disclaimer_p1">Цей каталог створений виключно в освітніх та ознайомлювальних цілях для використання на уроках робототехніки.</p>
                 <p data-i18n="disclaimer_p2">Усі інструкції, зображення та матеріали належать їхнім законним правовласникам — компанії LEGO Group та авторам оригінальних проєктів.</p>
