@@ -992,6 +992,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // --- WeDy Mascot Interactivity ---
+  const heroMascot = $('heroMascot');
+  const mascotBubble = $('mascotBubble');
+  const mascotQuotes = {
+    uk: [
+      "Готовий будувати? Тисни сюди! 🚀",
+      "Спробуй Колесо Інструкцій! 🎡",
+      "Зубчаста передача — це суперсила! ⚙️",
+      "Ти майстерний інженер! 🌟",
+      "Пам'ятай про фіксацію балок! 📐",
+      "Я вірю в твого нового робота! 🤖",
+      "LEGO WeDo 2.0 — найкращий набір! 🧱"
+    ],
+    en: [
+      "Ready to build? Tap here! 🚀",
+      "Try the Model Wheel! 🎡",
+      "Gears are a true superpower! ⚙️",
+      "You are a master builder! 🌟",
+      "Don't forget to lock the beams! 📐",
+      "I believe in your new robot! 🤖"
+    ],
+    ru: [
+      "Готов строить? Жми сюда! 🚀",
+      "Попробуй Колесо Инструкций! 🎡",
+      "Зубчатая передача — суперсила! ⚙️",
+      "Ты классный инженер! 🌟",
+      "Помни про фиксацию балок! 📐"
+    ],
+    pl: [
+      "Gotowy do budowania? Kliknij tutaj! 🚀",
+      "Wypróbuj Koło Instrukcji! 🎡",
+      "Przekładnia zębata to supermoc! ⚙️",
+      "Jesteś mistrzem inżynierii! 🌟"
+    ]
+  };
+
+  let mascotQuoteIdx = 0;
+  if (heroMascot) {
+    heroMascot.addEventListener('click', (e) => {
+      const rect = heroMascot.getBoundingClientRect();
+      if (typeof triggerLegoConfetti === 'function') {
+        triggerLegoConfetti(rect.left + rect.width / 2, rect.top + 30);
+      }
+      
+      const mascotImgEl = $('mascotImg');
+      if (mascotImgEl) {
+        mascotImgEl.classList.remove('mascot-jump');
+        void mascotImgEl.offsetWidth;
+        mascotImgEl.classList.add('mascot-jump');
+      }
+
+      if (mascotBubble) {
+        const lang = LegoStore.getLang();
+        const quotes = mascotQuotes[lang] || mascotQuotes.uk;
+        mascotQuoteIdx = (mascotQuoteIdx + 1) % quotes.length;
+        mascotBubble.textContent = quotes[mascotQuoteIdx];
+        mascotBubble.style.display = 'block';
+        mascotBubble.style.transform = 'scale(1.15)';
+        setTimeout(() => {
+          mascotBubble.style.transform = 'scale(1)';
+        }, 300);
+      }
+    });
+  }
+
   // --- Share Logic with Deep Linking ---
   async function handleShare(item) {
     const shareUrl = new URL(window.location.origin + window.location.pathname);
