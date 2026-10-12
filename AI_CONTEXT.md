@@ -58,6 +58,16 @@ The app uses the **instruction path (`p`)** as the primary unique identifier for
 
 ---
 
+## 🎨 Design Rules («Friendly Arcade»)
+
+The visual appearance follows the unified **«Friendly Arcade»** design system documented in [`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md).
+- **Tokens**: Always use `:root` CSS custom properties (`--bg`, `--surface`, `--card`, `--green`, `--on-green`, `--r-md`, `--r-pill`).
+- **Contrast & WCAG AA**: Text on `--green` and buttons must maintain ≥ 4.5:1 ratio (use `--on-green` on green backgrounds).
+- **Zero Inline Styles**: Do not use `style="..."` for cursor, colors, or visual effects; use utility/semantic CSS classes.
+- **Accessibility**: Support `:focus-visible` with a cyan outline and honor `@media (prefers-reduced-motion: reduce)`.
+
+---
+
 ## ⚡ Performance & Optimization
 
 - **Image Lazy Loading**: Card images use `loading="lazy"` and `decoding="async"`.
