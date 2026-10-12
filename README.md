@@ -4,7 +4,8 @@
 [![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![No Frameworks](https://img.shields.io/badge/No-Frameworks-red?style=for-the-badge)](https://en.wikipedia.org/wiki/Plain_Vanilla)
 
-**🌐 Live Site:** [figarist.github.io/lego-catalog](https://figarist.github.io/lego-catalog/)
+**🌐 Live Site:** [sivochka.com/lego-catalog](https://sivochka.com/lego-catalog/)
+**👨‍🏫 Author & Tutoring:** [sivochka.com](https://sivochka.com/) | [sivochka.com/tutoring](https://sivochka.com/tutoring/)
 
 An engaging, high-performance, and offline-first catalog of instructions for **LEGO WeDo 2.0**. Designed for kids and robotics educators, this app features a Roblox-style UI with gamification elements like favorites, ratings, and a built-in "Instructions Roulette".
 
@@ -73,13 +74,14 @@ Models are stored in `data_localized.js`. Each model is an object with localized
 
 ---
 
-## ⚖️ Legal Disclaimer
+## ⚖️ Legal Disclaimer & LEGO® Fair Play Policy
+ 
+This catalog is an **open non-commercial educational project** created for robotics teachers, schools, and STEM clubs.
 
-This catalog is a **non-commercial educational project** created for robotics classes.
-
-- **Copyright**: All instructions, images, and materials belong to their legal owners, including **The LEGO Group**.
-- **Fair Use**: This project is intended for educational purposes under Fair Use principles. 
-- **Affiliation**: This site is not a product of the LEGO Group and is not officially endorsed by them.
+- **Trademark Notice**: LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site. / LEGO® є торговою маркою LEGO Group, яка не спонсорує, не авторизує та не підтримує цей сайт.
+- **Copyright**: All building instructions, images, and materials belong to their legal owners and creators.
+- **Fair Use**: This project is intended solely for non-commercial educational purposes under Fair Use principles.
+- **Affiliation**: This site is not a product of the LEGO Group and is not officially endorsed or sponsored by them. No commercial sale of sets or official LEGO Education courses takes place here.
 
 ---
-*Built with ❤️ for young masters and future engineers.*
+*Built with ❤️ for young masters, robotics educators, and future engineers.*
