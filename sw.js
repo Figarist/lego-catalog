@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261012-funnel-seo';
+const CACHE_NAME = 'wedo-catalog-v20261012-friendly-arcade';
 const ASSETS = [
   './',
   './index.html',
