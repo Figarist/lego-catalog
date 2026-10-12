@@ -29,6 +29,7 @@
   --orange:#ff6b35;
   --pink:#ff6b9d;
   --cyan:#00d2ff;
+  --on-cyan:#061e38;
   --accent-forge:#f59e0b;
 
   /* --- 4. ТИПОГРАФІКА ТА ТЕКСТ (WCAG AA) --- */
@@ -286,7 +287,7 @@ body{
 
 /* === CARD (Roblox game-tile style) === */
 .card{
-  background:var(--card);border-radius:var(--radius);overflow:hidden;
+  background:var(--card);border-radius:var(--r-md);overflow:hidden;
   text-decoration:none;color:inherit;
   border:3px solid transparent;
   transition:all .3s cubic-bezier(.25,.8,.25,1);
@@ -438,7 +439,7 @@ body{
   cursor:pointer;font-size:1.5rem;font-weight:900;
   transition:all .2s;border:2px solid transparent;
 }
-.scroll-btn:hover{background:var(--green);transform:scale(1.1)}
+.scroll-btn:hover{background:var(--green);color:var(--on-green);transform:scale(1.1)}
 .scroll-btn:active{transform:scale(.9)}
 
 /* Hero Banner */
@@ -446,7 +447,7 @@ body{
 .hero-banner{
   width:100%;min-height:180px;height:auto;
   background:linear-gradient(45deg,var(--purple),var(--blue));
-  border-radius:var(--radius-lg);
+  border-radius:var(--r-lg);
   display:flex;align-items:center;justify-content:space-between;padding:16px 40px;
   position:relative;overflow:hidden;
   border:4px solid rgba(255,255,255,.1);
@@ -498,7 +499,7 @@ body{
   position:absolute;top:10px;right:130px;
   background:rgba(15,23,42,.88);backdrop-filter:blur(8px);
   color:#fff;border:2px solid var(--green);
-  padding:8px 14px;border-radius:16px 16px 4px 16px;
+  padding:8px 14px;border-radius:var(--r-md) var(--r-md) var(--r-xs) var(--r-md);
   font-size:.82rem;font-weight:800;white-space:nowrap;
   box-shadow:0 6px 20px rgba(0,0,0,.4);
   pointer-events:none;transition:all .3s ease;
@@ -540,7 +541,7 @@ body{
 .genre-row::-webkit-scrollbar{display:none}
 .genre-card{
   background:var(--surface);border:3px solid var(--surface2);
-  border-radius:var(--radius);padding:24px;
+  border-radius:var(--r-md);padding:24px;
   display:flex;flex-direction:column;align-items:center;text-align:center;
   cursor:pointer;transition:all .3s cubic-bezier(.25,.8,.25,1);
   width:200px;flex-shrink:0;
@@ -579,7 +580,7 @@ body{
 
 .modal{
   background:linear-gradient(145deg,var(--bg2),var(--surface));
-  border-radius:var(--radius-lg);
+  border-radius:var(--r-lg);
   border:3px solid var(--green);
   box-shadow:0 20px 80px rgba(0,210,106,.2),0 0 120px rgba(0,210,106,.06);
   width:94vw;max-width:960px;
@@ -592,20 +593,20 @@ body{
 
 .modal-close{
   position:absolute;top:16px;right:16px;z-index:10;
-  background:var(--red);border:none;color:#fff;
-  width:48px;height:48px;border-radius:50%;
-  cursor:pointer;font-size:1.6rem;font-weight:900;
+  background:var(--surface2);border:none;color:var(--text2);
+  width:36px;height:36px;border-radius:50%;
+  cursor:pointer;font-size:18px;font-weight:900;
   display:flex;align-items:center;justify-content:center;
   transition:all .2s;
-  box-shadow:0 4px 15px rgba(255,71,87,.4);
+  box-shadow:var(--shadow-sm);
 }
-.modal-close:hover{background:#ff2e43;transform:scale(1.1) rotate(90deg)}
+.modal-close:hover{background:var(--red);color:#fff;transform:scale(1.1)}
 
 .modal-img{
   width:100%;height:55vh;
   background:linear-gradient(135deg,#e8f4f8,#fff);
   display:flex;align-items:center;justify-content:center;
-  padding:24px;border-radius:var(--radius-lg) var(--radius-lg) 0 0;
+  padding:24px;border-radius:var(--r-lg) var(--r-lg) 0 0;
   overflow:hidden;position:relative;
 }
 .modal-img img{
@@ -722,7 +723,7 @@ body{
 }
 .empty-action-btn-accent{
   background:linear-gradient(135deg,var(--yellow),#ff9f1a);
-  color:#1a1a2e;border:none;
+  color:var(--on-yellow);border:none;
   box-shadow:0 4px 15px rgba(255,195,18,.35);
 }
 .empty-action-btn-accent:hover{
@@ -814,7 +815,7 @@ body::before{
   gap: 20px;
   background: rgba(255,255,255,0.05);
   padding: 12px 20px;
-  border-radius: 16px;
+  border-radius: var(--r-md);
   border: 1px solid var(--border);
   margin-top: 5px;
 }
@@ -873,7 +874,7 @@ body::before{
   width: 50px;
   height: 26px;
   background: var(--surface2);
-  border-radius: 30px;
+  border-radius: var(--r-pill);
   position: relative;
   transition: 0.3s;
   border: 2px solid var(--border);
@@ -1012,7 +1013,7 @@ body::before{
   width: 90vw;
   max-width: 1000px;
   background: linear-gradient(145deg, var(--bg2), var(--surface));
-  border-radius: var(--radius-lg);
+  border-radius: var(--r-lg);
   border: 4px solid var(--yellow);
   box-shadow: 0 0 50px rgba(255,195,18,0.3), inset 0 0 20px rgba(255,195,18,0.1);
   padding: 30px;
@@ -1039,7 +1040,7 @@ body::before{
   width: 100%;
   height: 220px;
   background: rgba(0,0,0,0.4);
-  border-radius: var(--radius);
+  border-radius: var(--r-md);
   border: 3px solid var(--surface2);
   overflow: hidden;
   position: relative;
@@ -1102,7 +1103,7 @@ body::before{
   height: 180px;
   flex-shrink: 0;
   background: var(--card);
-  border-radius: var(--radius);
+  border-radius: var(--r-md);
   border: 3px solid transparent;
   display: flex;
   flex-direction: column;
@@ -1399,7 +1400,7 @@ body::before{
 .about-modal{
   background:linear-gradient(160deg,#16213e 0%,#0f3460 100%);
   border:2px solid rgba(0,210,106,.4);
-  border-radius:var(--radius-lg);
+  border-radius:var(--r-lg);
   max-width:620px;width:100%;
   padding:36px 30px 28px;
   position:relative;
@@ -1514,7 +1515,7 @@ body::before{
   transform: translateX(-50%);
   background: var(--surface);
   border: 3px solid var(--green);
-  border-radius: var(--radius);
+  border-radius: var(--r-md);
   padding: 16px 24px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.5);
   z-index: 9999;
@@ -1562,7 +1563,7 @@ body::before{
 /* Modal Share Button */
 .modal-share-btn {
   background: linear-gradient(135deg, var(--blue), var(--cyan));
-  color: #fff;
+  color: var(--on-cyan);
   border: none;
   padding: 8px 20px;
   border-radius: var(--r-pill);
@@ -1799,7 +1800,7 @@ body::before{
 }
 .badge--new {
   background: linear-gradient(135deg, var(--cyan), var(--blue));
-  color: #fff;
+  color: var(--on-cyan);
 }
 .badge--hot {
   background: linear-gradient(135deg, var(--red), var(--orange));
@@ -1812,5 +1813,13 @@ body::before{
 .badge--warn {
   background: var(--yellow);
   color: var(--on-yellow);
+}
+
+/* === MOBILE TOUCH TARGETS (WCAG AAA >= 44px) === */
+@media (hover: none) and (pointer: coarse) {
+  .btn, .pill, .chip, .lang-btn, .fav-btn, .vt, .scroll-btn, .clear-btn, .modal-close {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
