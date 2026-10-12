@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20260906-child-ux';
+const CACHE_NAME = 'wedo-catalog-v20261012-funnel-seo';
 const ASSETS = [
   './',
   './index.html',
