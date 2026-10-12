@@ -18,24 +18,25 @@
     <meta property="og:title" content="Правова інформація — LEGO WeDo 2.0">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sivochka.com/lego-catalog/legal.html">
+    <meta name="theme-color" content="#1a1a2e">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="app.css">
     <style>
-        body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;margin:0;padding:0}
+        body{background:var(--bg);color:var(--text);font-family:var(--font-sans);margin:0;padding:0}
         .legal-page{max-width:860px;margin:0 auto;padding:40px 24px 80px}
         .legal-back{
             display:inline-flex;align-items:center;gap:10px;
             background:var(--surface2);color:#fff;
-            padding:12px 24px;border-radius:14px;border:2px solid var(--green);
+            padding:12px 24px;border-radius:var(--r-pill);border:2px solid var(--green);
             text-decoration:none;font-weight:800;font-size:1rem;
             transition:all .2s;margin-bottom:32px;
             box-shadow:0 4px 14px rgba(0,210,106,.2);
         }
-        .legal-back:hover{background:var(--green);color:#fff;transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,210,106,.4)}
+        .legal-back:hover{background:var(--green);color:var(--on-green);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,210,106,.4)}
         .legal-hero{
             text-align:center;padding:48px 32px;margin-bottom:40px;
             background:linear-gradient(160deg,#1a1a2e,#0f3460);
-            border-radius:24px;border:3px solid var(--yellow);
+            border-radius:var(--r-lg);border:3px solid var(--yellow);
             box-shadow:0 15px 50px rgba(0,0,0,.4);
         }
         .legal-hero-icon{font-size:4rem;margin-bottom:12px}
@@ -44,7 +45,7 @@
         .legal-updated{
             text-align:center;color:var(--text2);font-size:.85rem;
             margin-bottom:40px;padding:12px;
-            background:var(--surface);border-radius:12px;border:1px solid var(--border);
+            background:var(--surface);border-radius:var(--r-md);border:1px solid var(--border);
         }
         .legal-section{margin-bottom:36px}
         .legal-section h2{
@@ -59,7 +60,7 @@
         }
         .legal-section strong{color:#fff}
         .legal-contact{
-            background:var(--surface);border-radius:20px;padding:32px;
+            background:var(--surface);border-radius:var(--r-lg);padding:32px;
             border:2px solid var(--border);text-align:center;margin-top:40px;
         }
         .legal-contact h3{color:var(--green);font-size:1.2rem;margin-bottom:12px}
@@ -75,7 +76,7 @@
     <div class="legal-page">
         <a href="index.html" class="legal-back" data-i18n="legal_back">← Повернутися до каталогу</a>
 
-        <div class="lang-switcher" style="display:flex;gap:4px;margin-bottom:20px;justify-content:center;background:rgba(0,0,0,.2);padding:4px;border-radius:12px;border:1px solid rgba(255,255,255,.1);width:fit-content;margin-left:auto;margin-right:auto">
+        <div class="lang-switcher" style="display:flex;gap:4px;margin-bottom:20px;justify-content:center;background:rgba(0,0,0,.2);padding:4px;border-radius:var(--r-md);border:1px solid rgba(255,255,255,.1);width:fit-content;margin-left:auto;margin-right:auto">
             <button class="lang-btn" data-lang="uk">UK</button>
             <button class="lang-btn" data-lang="en">EN</button>
             <button class="lang-btn" data-lang="ru">RU</button>
@@ -143,16 +144,19 @@
             <h3 data-i18n="legal_contact_title">📬 Зворотний зв'язок</h3>
             <p data-i18n="legal_contact_text">Якщо у вас є питання або запити на видалення матеріалів, будь ласка, напишіть нам на електронну пошту:</p>
             <p style="margin-top:12px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-                <a href="mailto:igorsivoch@gmail.com" style="color:var(--green);font-weight:900;font-size:1.1rem;text-decoration:none;border:2px solid var(--green);padding:8px 20px;border-radius:10px;display:inline-block">✉️ igorsivoch@gmail.com</a>
-                <a href="https://sivochka.com/" target="_blank" rel="noopener noreferrer" style="color:var(--yellow);font-weight:900;font-size:1.1rem;text-decoration:none;border:2px solid var(--yellow);padding:8px 20px;border-radius:10px;display:inline-block">🌐 sivochka.com</a>
-                <a href="https://sivochka.com/tutoring/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:900;font-size:1.1rem;text-decoration:none;border:2px solid var(--cyan);padding:8px 20px;border-radius:10px;display:inline-block">🎓 sivochka.com/tutoring</a>
+                <a href="mailto:igorsivoch@gmail.com" style="color:var(--green);font-weight:900;font-size:1.1rem;text-decoration:none;border:2px solid var(--green);padding:8px 20px;border-radius:var(--r-sm);display:inline-block">✉️ igorsivoch@gmail.com</a>
+                <a href="https://sivochka.com/" target="_blank" rel="noopener noreferrer" style="color:var(--yellow);font-weight:900;font-size:1.1rem;text-decoration:none;border:2px solid var(--yellow);padding:8px 20px;border-radius:var(--r-sm);display:inline-block">🌐 sivochka.com</a>
+                <a href="https://sivochka.com/tutoring/" target="_blank" rel="noopener noreferrer" style="color:var(--cyan);font-weight:900;font-size:1.1rem;text-decoration:none;border:2px solid var(--cyan);padding:8px 20px;border-radius:var(--r-sm);display:inline-block">🎓 sivochka.com/tutoring</a>
             </p>
         </div>
 
         <div class="legal-footer">
             <p data-i18n="footer_copy_1">© 2024–2026 LEGO WeDo 2.0 — Каталог інструкцій.</p>
             <p data-i18n="lego_fair_play_disclaimer">LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site. / LEGO® є торговою маркою LEGO Group, яка не спонсорує, не авторизує та не підтримує цей сайт.</p>
-            <p style="margin-top:8px">Автор: <a href="https://sivochka.com/" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;font-weight:700">Ігор Сівочка (sivochka.com ↗)</a></p>
+            <p style="margin-top:10px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
+                <span>Автор: <a href="https://sivochka.com/" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;font-weight:700">Ігор Сівочка (sivochka.com ↗)</a></span>
+                <a href="https://github.com/Figarist/friendly-arcade" target="_blank" rel="noopener noreferrer" class="badge" style="background:var(--surface2);color:var(--cyan);border:1px solid var(--border);text-decoration:none;padding:4px 10px;font-size:.78rem">🎮 Friendly Arcade UI ↗</a>
+            </p>
         </div>
     </div>
 
