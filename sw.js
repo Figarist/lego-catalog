@@ -1,8 +1,9 @@
-const CACHE_NAME = 'wedo-catalog-v20261012-friendly-arcade-v5';
+const CACHE_NAME = 'wedo-catalog-v20261104-friendly-arcade-v2.1.0';
 const ASSETS = [
   './',
   './index.html',
   './legal.html',
+  './vendor/friendly-arcade/tokens.css',
   './app.css',
   './app.js',
   './data_localized.js',
