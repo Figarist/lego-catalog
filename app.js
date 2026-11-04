@@ -119,6 +119,10 @@ document.addEventListener('DOMContentLoaded', () => {
   function registerSW() {
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('./sw.js').then(reg => {
+        // A worker installed on an earlier visit is still waiting: offer it again, or the old version sticks
+        if (reg.waiting && navigator.serviceWorker.controller) {
+          showUpdateToast(reg);
+        }
         reg.addEventListener('updatefound', () => {
           const newWorker = reg.installing;
           newWorker.addEventListener('statechange', () => {
