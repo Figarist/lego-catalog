@@ -1153,7 +1153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Share Logic with Deep Linking ---
   async function handleShare(item) {
     const shareUrl = new URL(window.location.origin + window.location.pathname);
-    shareUrl.searchParams.set('model', encodeURIComponent(item.p));
+    shareUrl.searchParams.set('model', item.p);
     const lang = LegoStore.getLang();
     if (lang) shareUrl.searchParams.set('lang', lang);
 
@@ -1194,10 +1194,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Deep Link Auto-Open
-  const targetModelParam = urlParams.get('model');
+  // Older share links were encoded twice, so decode once more when possible (a stray '%' would throw)
+  let targetModelParam = new URLSearchParams(window.location.search).get('model');
   if (targetModelParam) {
-    const decoded = decodeURIComponent(targetModelParam);
-    const found = LEGO_DATA.find(x => x.p === decoded || x.p.includes(decoded));
+    try { targetModelParam = decodeURIComponent(targetModelParam); } catch { /* already plain */ }
+    const found = LEGO_DATA.find(x => x.p === targetModelParam || x.p.includes(targetModelParam));
     if (found) {
       setTimeout(() => openModal(found), 250);
     }

@@ -8,6 +8,7 @@ This file provides the technical context for AI assistants to understand the arc
 2.  **Pure Vanilla**: Logic must remain in pure JavaScript (ES6+). Styling must remain in standard CSS.
 3.  **Core Integrity**: Do not break the connection between `data_localized.js` and `store.js`.
 4.  **No Cache for PDFs**: The Service Worker must **NOT** cache external Google Drive PDF links.
+5.  **Design tokens come from Friendly Arcade**: `vendor/friendly-arcade/` is a byte-for-byte copy of a tagged release (see `VERSION`), linked before `app.css`. Never edit it and never copy palette values into `app.css` (only aliases like `--radius: var(--r-md)`). Update with `scripts/update-friendly-arcade.sh vX.Y.Z`, then bump `CACHE_NAME` in `sw.js`. CI (`.github/workflows/friendly-arcade.yml`) fails if the copy drifts. In Friendly Arcade `--red` is the dark button red (white text); the bright heart/favourite red is `--red-bright`.
 
 ---
 
