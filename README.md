@@ -4,8 +4,9 @@
 [![Vanilla JS](https://img.shields.io/badge/Vanilla-JS-yellow?style=for-the-badge&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![No Frameworks](https://img.shields.io/badge/No-Frameworks-red?style=for-the-badge)](https://en.wikipedia.org/wiki/Plain_Vanilla)
 
-**🌐 Live Site:** [sivochka.com/lego-catalog](https://sivochka.com/lego-catalog/)
-**👨‍🏫 Author & Tutoring:** [sivochka.com](https://sivochka.com/) | [sivochka.com](https://sivochka.com/)
+- **🌐 Live Web App:** [sivochka.com/lego-catalog/](https://sivochka.com/lego-catalog/)
+- **📖 Engineering & Pedagogical Guide:** [597 LEGO WeDo 2.0 Building Instructions in a Fast PWA (EN)](https://sivochka.com/blog/lego-wedo-2-0-instructions-catalog/) · [Українською (UK)](https://sivochka.com/uk/blog/lego-wedo-2-0-instructions-catalog/)
+- **👨‍🏫 Author & sivochka.com:** [sivochka.com](https://sivochka.com/) · [sivochka.com/](https://sivochka.com/)
 
 An engaging, high-performance, and offline-first catalog of instructions for **LEGO WeDo 2.0**. Designed for kids and robotics educators, this app features a Roblox-style UI with gamification elements like favorites, ratings, and a built-in "Instructions Roulette".
 
@@ -82,6 +83,20 @@ This catalog is an **open non-commercial educational project** created for robot
 - **Copyright**: All building instructions, images, and materials belong to their legal owners and creators.
 - **Fair Use**: This project is intended solely for non-commercial educational purposes under Fair Use principles.
 - **Affiliation**: This site is not a product of the LEGO Group and is not officially endorsed or sponsored by them. No commercial sale of sets or official LEGO Education courses takes place here.
+
+---
+
+## 👨‍🏫 Author & Ecosystem (`Ihor Sivochka / Figarist`)
+
+Created by **Ihor Sivochka (Ігор Сівочка / Figarist)** — Computer Science Teacher, Certified Unity Developer, and EdTech Toolmaker.
+
+- 🌐 **Main Hub & Blog:** [sivochka.com](https://sivochka.com/) · [LEGO WeDo 2.0 Catalog Guide](https://sivochka.com/blog/lego-wedo-2-0-instructions-catalog/)
+- 🎓 **1-on-1 Programming Mentoring (Unity/C#, Python, Scratch, CS):** [sivochka.com/](https://sivochka.com/) · [Українською](https://sivochka.com/)
+- 🎛️ **OGCruncher:** [sivochka.com/OGCruncher/](https://sivochka.com/OGCruncher/) ([Repo](https://github.com/Figarist/OGCruncher)) — retro 8-bit/16-bit audio bit-crusher & game SFX optimizer
+- ⚒️ **3D Club Studio (`3D Кузня Чудес`):** [sivochka.com/3d-club-studio/](https://sivochka.com/3d-club-studio/) ([Repo](https://github.com/Figarist/3d-club-studio)) — offline browser 3D studio & support-free STL generator
+- 🤫 **Quiet Class (`Тихий Клас`):** [sivochka.com/bouncy/](https://sivochka.com/bouncy/) ([Repo](https://github.com/Figarist/bouncy)) — gamified Web Audio DSP classroom noise meter
+- 🎨 **Friendly Arcade UI:** [Figarist/friendly-arcade](https://github.com/Figarist/friendly-arcade) — zero-dependency WCAG AAA design system powering these apps
+- 📺 **YouTube:** [Figarist](https://sivochka.com/) · 💬 **Info:** [Figarist](https://sivochka.com/) · 💻 **GitHub:** [@Figarist](https://github.com/Figarist)
 
 ---
 *Built with ❤️ for young masters, robotics educators, and future engineers.*
