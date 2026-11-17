@@ -68,7 +68,7 @@ Models are stored in `data_localized.js`. Each model is an object with localized
 ## 🔎 Static Category Pages & Sitemap
 
 The app itself is rendered by JavaScript, so crawlable landing pages are generated from the same data:
-`c/<category-slug>/index.html` (one Ukrainian page per category, every model listed with its thumbnail and instruction link), the category link block in `index.html` (between the `GENERATED:category-links` markers) and `sitemap.xml`.
+`c/<category-slug>/index.html` (one Ukrainian page per category, every model listed with its thumbnail and instruction link), the same pages in English and Russian under `en/c/<category-slug>/` and `ru/c/<category-slug>/` (reciprocal hreflang, x-default → Ukrainian), the Ukrainian category link block in `index.html` (between the `GENERATED:category-links` markers) and `sitemap.xml`.
 
 After changing `data_localized.js` or category names in `translations.js`, re-run (Node 18+, no dependencies):
 
@@ -77,7 +77,7 @@ node scripts/generate-pages.mjs          # rewrite generated files (idempotent)
 node scripts/generate-pages.mjs --check  # exit 1 if generated files are out of date
 ```
 
-Never edit files under `c/` by hand. Slugs are transliterated from the Ukrainian category name (KMU 2010), so renaming a category changes its URL.
+Never edit files under `c/`, `en/c/` or `ru/c/` by hand. Slugs are transliterated from the Ukrainian category name (KMU 2010), so renaming a category changes its URL.
 
 ---
 
