@@ -22,18 +22,35 @@ window.LegoStore = (function() {
     let builtItems = safeGet('lego_built', []);
     let ratings = safeGet('lego_ratings', {});
     let unlockedAchievements = safeGet('lego_achievements', []);
-    // SEO Language overriding via URL parameter
+    // SEO Language overriding via URL parameter (cleaned immediately via replaceState to avoid duplicate URLs)
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
     const supportedLangs = ['uk', 'en', 'ru', 'pl'];
 
     let currentLang = localStorage.getItem('app_lang');
+    let refLang = null;
+    try {
+        if (document.referrer) {
+            const refPath = new URL(document.referrer).pathname;
+            const m = refPath.match(/\/lego-catalog\/(?:(en|ru|pl)\/)?c\//);
+            if (m) refLang = m[1] || 'uk';
+        }
+    } catch (e) { /* ignore invalid referrer */ }
 
-    // If URL has a valid language, use it and save it
+    // If URL has a valid language, use it, save it, and strip ?lang= from the address bar
     if (urlLang && supportedLangs.includes(urlLang)) {
         currentLang = urlLang;
         localStorage.setItem('app_lang', currentLang);
-    } 
+        if (window.history && window.history.replaceState) {
+            urlParams.delete('lang');
+            const qs = urlParams.toString();
+            const cleanUrl = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
+            try { window.history.replaceState(null, '', cleanUrl); } catch (e) { /* ignore */ }
+        }
+    } else if (refLang && supportedLangs.includes(refLang)) {
+        currentLang = refLang;
+        localStorage.setItem('app_lang', currentLang);
+    }
     // Auto-detection logic for first-time visitors
     else if (!currentLang) {
         const navLang = (navigator.language || navigator.userLanguage || 'uk').toLowerCase();

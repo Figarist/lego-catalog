@@ -4,7 +4,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "AT-AT",
    "en": "AT-AT",
-   "ru": "AT-AT"
+   "ru": "AT-AT",
+   "pl": "AT-AT"
   },
   "c": "Роботи",
   "ac": [
@@ -19,7 +20,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "AT-ST",
    "en": "AT-ST",
-   "ru": "AT-ST"
+   "ru": "AT-ST",
+   "pl": "AT-ST"
   },
   "c": "Роботи",
   "ac": [
@@ -34,7 +36,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "R2D2",
    "en": "R2D2",
-   "ru": "R2D2"
+   "ru": "R2D2",
+   "pl": "R2D2"
   },
   "c": "Роботи",
   "ac": [
@@ -48,7 +51,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "X-wing",
    "en": "X-wing",
-   "ru": "X-wing"
+   "ru": "X-wing",
+   "pl": "X-wing"
   },
   "c": "Космос",
   "ac": [
@@ -62,7 +66,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Авто-шоу",
    "en": "Auto Show",
-   "ru": "Авто-шоу"
+   "ru": "Авто-шоу",
+   "pl": "Pokaz samochodowy"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -76,7 +81,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автобус",
    "en": "Bus",
-   "ru": "Автобус"
+   "ru": "Автобус",
+   "pl": "Autobus"
   },
   "c": "Транспорт",
   "ac": [
@@ -89,7 +95,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автовишка",
    "en": "Cherry Picker Truck",
-   "ru": "Автовышка"
+   "ru": "Автовышка",
+   "pl": "Podnośnik koszowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -103,7 +110,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автоматичні ворота",
    "en": "Automatic Gate",
-   "ru": "Автоматические ворота"
+   "ru": "Автоматические ворота",
+   "pl": "Brama automatyczna"
   },
   "c": "Механізми",
   "ac": [
@@ -116,7 +124,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автомобіль",
    "en": "Car",
-   "ru": "Автомобиль"
+   "ru": "Автомобиль",
+   "pl": "Samochód"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -129,7 +138,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автомобіль \"Гелік\"",
    "en": "Car \"Gelik\"",
-   "ru": "Автомобиль \"Гелик\""
+   "ru": "Автомобиль \"Гелик\"",
+   "pl": "Samochód terenowy „Gelik”"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -142,7 +152,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автомобіль Тесла",
    "en": "Tesla Car",
-   "ru": "Автомобиль Тесла"
+   "ru": "Автомобиль Тесла",
+   "pl": "Samochód Tesla"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -155,7 +166,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Аероплан",
    "en": "Aeroplane",
-   "ru": "Аэроплан"
+   "ru": "Аэроплан",
+   "pl": "Aeroplan"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -168,7 +180,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Акула",
    "en": "Shark",
-   "ru": "Акула"
+   "ru": "Акула",
+   "pl": "Rekin"
   },
   "c": "Тварини",
   "ac": [
@@ -181,7 +194,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ангел",
    "en": "Angel",
-   "ru": "Ангел"
+   "ru": "Ангел",
+   "pl": "Anioł"
   },
   "c": "Механізми",
   "ac": [
@@ -194,7 +208,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Андроїд",
    "en": "Android",
-   "ru": "Андроид"
+   "ru": "Андроид",
+   "pl": "Android"
   },
   "c": "Механізми",
   "ac": [
@@ -209,7 +224,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Анкілозавр",
    "en": "Ankylosaurus",
-   "ru": "Анкилозавр"
+   "ru": "Анкилозавр",
+   "pl": "Ankylozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -223,7 +239,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Анігілятор",
    "en": "Annihilator",
-   "ru": "Аннигилятор"
+   "ru": "Аннигилятор",
+   "pl": "Anihilator"
   },
   "c": "Роботи",
   "ac": [
@@ -237,7 +254,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Артроплевра",
    "en": "Arthropleura",
-   "ru": "Артроплевра"
+   "ru": "Артроплевра",
+   "pl": "Artropleura"
   },
   "c": "Динозаври",
   "ac": [
@@ -251,7 +269,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бабка",
    "en": "Dragonfly",
-   "ru": "Стрекоза"
+   "ru": "Стрекоза",
+   "pl": "Ważka"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -265,7 +284,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баггі",
    "en": "Buggy",
-   "ru": "Багги"
+   "ru": "Багги",
+   "pl": "Buggy"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -279,7 +299,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Банкомат",
    "en": "ATM",
-   "ru": "Банкомат"
+   "ru": "Банкомат",
+   "pl": "Bankomat"
   },
   "c": "Механізми",
   "ac": [
@@ -292,7 +313,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баскет-бот",
    "en": "Basketbot",
-   "ru": "Баскет-бот"
+   "ru": "Баскет-бот",
+   "pl": "Basket-bot"
   },
   "c": "Спорт",
   "ac": [
@@ -305,7 +327,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Батискаф",
    "en": "Bathyscaphe",
-   "ru": "Батискаф"
+   "ru": "Батискаф",
+   "pl": "Batyskaf"
   },
   "c": "Кораблі",
   "ac": [
@@ -318,7 +341,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баштовий кран",
    "en": "Tower Crane",
-   "ru": "Башенный кран"
+   "ru": "Башенный кран",
+   "pl": "Żuraw wieżowy"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -331,7 +355,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бензопила",
    "en": "Chainsaw",
-   "ru": "Бензопила"
+   "ru": "Бензопила",
+   "pl": "Piła łańcuchowa"
   },
   "c": "Механізми",
   "ac": [
@@ -344,7 +369,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бетмобіль",
    "en": "Batmobile",
-   "ru": "Бэтмобиль"
+   "ru": "Бэтмобиль",
+   "pl": "Batmobil"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -358,7 +384,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бик",
    "en": "Bull",
-   "ru": "Бык"
+   "ru": "Бык",
+   "pl": "Byk"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -372,7 +399,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Богомол",
    "en": "Praying Mantis",
-   "ru": "Богомол"
+   "ru": "Богомол",
+   "pl": "Modliszka"
   },
   "c": "Комахи",
   "ac": [
@@ -385,7 +413,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Божевільний смітник",
    "en": "Crazy Trash Can",
-   "ru": "Безумная мусорка"
+   "ru": "Безумная мусорка",
+   "pl": "Szalony kosz na śmieci"
   },
   "c": "Роботи",
   "ac": [
@@ -398,7 +427,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Боксер",
    "en": "Boxer",
-   "ru": "Боксер"
+   "ru": "Боксер",
+   "pl": "Bokser"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -413,7 +443,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Болотохід",
    "en": "Swamp Buggy",
-   "ru": "Болотоход"
+   "ru": "Болотоход",
+   "pl": "Pojazd bagienny"
   },
   "c": "Крокуючі",
   "ac": [
@@ -426,7 +457,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бормашина",
    "en": "Dental Drill",
-   "ru": "Бормашина"
+   "ru": "Бормашина",
+   "pl": "Wiertarka dentystyczna"
   },
   "c": "Механізми",
   "ac": [
@@ -439,7 +471,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бульдог",
    "en": "Bulldog",
-   "ru": "Бульдог"
+   "ru": "Бульдог",
+   "pl": "Buldog"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -453,7 +486,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бій із ведмедем",
    "en": "Fight with a Bear",
-   "ru": "Бой с медведем"
+   "ru": "Бой с медведем",
+   "pl": "Walka z niedźwiedziem"
   },
   "c": "Люди",
   "ac": [
@@ -466,7 +500,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Білка",
    "en": "Squirrel",
-   "ru": "Белка"
+   "ru": "Белка",
+   "pl": "Wiewiórka"
   },
   "c": "Механізми",
   "ac": [
@@ -479,7 +514,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Біплан",
    "en": "Biplane",
-   "ru": "Биплан"
+   "ru": "Биплан",
+   "pl": "Dwupłatowiec"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -492,7 +528,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Важіль",
    "en": "Lever",
-   "ru": "Рычаг"
+   "ru": "Рычаг",
+   "pl": "Dźwignia"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -505,7 +542,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Важільний механізм",
    "en": "Lever Mechanism",
-   "ru": "Рычажный механизм"
+   "ru": "Рычажный механизм",
+   "pl": "Mechanizm dźwigniowy"
   },
   "c": "Механізми",
   "ac": [
@@ -518,7 +556,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Валентинка",
    "en": "Valentine",
-   "ru": "Валентинка"
+   "ru": "Валентинка",
+   "pl": "Walentynka"
   },
   "c": "Люди",
   "ac": [
@@ -531,7 +570,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Валлі",
    "en": "WALL-E",
-   "ru": "ВАЛЛ-И"
+   "ru": "ВАЛЛ-И",
+   "pl": "WALL-E"
   },
   "c": "Моделі без смартхаба",
   "ac": [
@@ -545,7 +585,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вантажна платформа",
    "en": "Cargo Platform",
-   "ru": "Грузовая платформа"
+   "ru": "Грузовая платформа",
+   "pl": "Platforma ładunkowa"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -559,7 +600,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вантажний космічний корабель",
    "en": "Cargo Spaceship",
-   "ru": "Грузовой космический корабль"
+   "ru": "Грузовой космический корабль",
+   "pl": "Towarowy statek kosmiczny"
   },
   "c": "Космос",
   "ac": [
@@ -573,7 +615,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вантажівка",
    "en": "Truck",
-   "ru": "Грузовик"
+   "ru": "Грузовик",
+   "pl": "Ciężarówka"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -587,7 +630,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ведмідь",
    "en": "Bear",
-   "ru": "Медведь"
+   "ru": "Медведь",
+   "pl": "Niedźwiedź"
   },
   "c": "Тварини",
   "ac": [
@@ -600,7 +644,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Велосипед 3-х колісний",
    "en": "Tricycle",
-   "ru": "Трехколесный велосипед"
+   "ru": "Трехколесный велосипед",
+   "pl": "Rowerek trójkołowy"
   },
   "c": "Механізми",
   "ac": [
@@ -614,7 +659,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Велосипедист",
    "en": "Cyclist",
-   "ru": "Велосипедист"
+   "ru": "Велосипедист",
+   "pl": "Rowerzysta"
   },
   "c": "Люди",
   "ac": [
@@ -628,7 +674,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Велосипедисти",
    "en": "Cyclists",
-   "ru": "Велосипедисты"
+   "ru": "Велосипедисты",
+   "pl": "Rowerzyści"
   },
   "c": "Люди",
   "ac": [
@@ -642,7 +689,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Велотренажер",
    "en": "Exercise Bike",
-   "ru": "Велотренажер"
+   "ru": "Велотренажер",
+   "pl": "Rower treningowy"
   },
   "c": "Спорт",
   "ac": [
@@ -655,7 +703,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Венерина мухолівка",
    "en": "Venus Flytrap",
-   "ru": "Венерина мухоловка"
+   "ru": "Венерина мухоловка",
+   "pl": "Muchołówka"
   },
   "c": "Рослини",
   "ac": [
@@ -668,7 +717,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вентилятор",
    "en": "Fan",
-   "ru": "Вентилятор"
+   "ru": "Вентилятор",
+   "pl": "Wentylator"
   },
   "c": "Механізми",
   "ac": [
@@ -682,7 +732,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -699,7 +750,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт КА-32",
    "en": "Ka-32 Helicopter",
-   "ru": "Вертолет Ка-32"
+   "ru": "Вертолет Ка-32",
+   "pl": "Śmigłowiec Ka-32"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -713,7 +765,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Веселий автопоїзд",
    "en": "Fun Road Train",
-   "ru": "Веселый автопоезд"
+   "ru": "Веселый автопоезд",
+   "pl": "Wesoły pociąg drogowy"
   },
   "c": "Транспорт",
   "ac": [
@@ -726,7 +779,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Веселий робот",
    "en": "Happy Robot",
-   "ru": "Веселый робот"
+   "ru": "Веселый робот",
+   "pl": "Wesoły robot"
   },
   "c": "Механізми",
   "ac": [
@@ -740,7 +794,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вигин",
    "en": "Bend",
-   "ru": "Изгиб"
+   "ru": "Изгиб",
+   "pl": "Zginanie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -753,7 +808,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Винищувач",
    "en": "Fighter Jet",
-   "ru": "Истребитель"
+   "ru": "Истребитель",
+   "pl": "Myśliwiec"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -767,7 +823,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Воротар",
    "en": "Goalkeeper",
-   "ru": "Вратарь"
+   "ru": "Вратарь",
+   "pl": "Bramkarz"
   },
   "c": "Спорт",
   "ac": [
@@ -780,7 +837,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Восьминіг",
    "en": "Octopus",
-   "ru": "Осьминог"
+   "ru": "Осьминог",
+   "pl": "Ośmiornica"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -794,7 +852,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Воїн (сумо)",
    "en": "Sumo Warrior",
-   "ru": "Воин (сумо)"
+   "ru": "Воин (сумо)",
+   "pl": "Wojownik (sumo)"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -807,7 +866,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вудка",
    "en": "Fishing Rod",
-   "ru": "Удочка"
+   "ru": "Удочка",
+   "pl": "Wędka"
   },
   "c": "Механізми",
   "ac": [
@@ -820,7 +880,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Візок Санти",
    "en": "Santa's Cart",
-   "ru": "Тележка Санты"
+   "ru": "Тележка Санты",
+   "pl": "Wózek Świętego Mikołaja"
   },
   "c": "Новорічні",
   "ac": [
@@ -833,7 +894,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вітрильник",
    "en": "Sailboat",
-   "ru": "Парусник"
+   "ru": "Парусник",
+   "pl": "Żaglowiec"
   },
   "c": "Кораблі",
   "ac": [
@@ -847,7 +909,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вітроелектростанція",
    "en": "Wind Turbine",
-   "ru": "Ветряная электростанция"
+   "ru": "Ветряная электростанция",
+   "pl": "Elektrownia wiatrowa"
   },
   "c": "Механізми",
   "ac": [
@@ -861,7 +924,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гармата",
    "en": "Cannon",
-   "ru": "Пушка"
+   "ru": "Пушка",
+   "pl": "Armata"
   },
   "c": "Військова техніка",
   "ac": [
@@ -874,7 +938,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Геккон",
    "en": "Gecko",
-   "ru": "Геккон"
+   "ru": "Геккон",
+   "pl": "Gekon"
   },
   "c": "Тварини",
   "ac": [
@@ -887,7 +952,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гладіатор",
    "en": "Gladiator",
-   "ru": "Гладиатор"
+   "ru": "Гладиатор",
+   "pl": "Gladiator"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -900,7 +966,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Годзілла",
    "en": "Godzilla",
-   "ru": "Годзилла"
+   "ru": "Годзилла",
+   "pl": "Godzilla"
   },
   "c": "Динозаври",
   "ac": [
@@ -913,7 +980,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Голова динозавра",
    "en": "Dinosaur Head",
-   "ru": "Голова динозавра"
+   "ru": "Голова динозавра",
+   "pl": "Głowa dinozaura"
   },
   "c": "Динозаври",
   "ac": [
@@ -926,7 +994,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гольфіст",
    "en": "Golfer",
-   "ru": "Гольфист"
+   "ru": "Гольфист",
+   "pl": "Golfista"
   },
   "c": "Люди",
   "ac": [
@@ -940,7 +1009,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гондола",
    "en": "Gondola",
-   "ru": "Гондола"
+   "ru": "Гондола",
+   "pl": "Gondola"
   },
   "c": "Кораблі",
   "ac": [
@@ -953,7 +1023,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -967,7 +1038,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Горила",
    "en": "Gorilla",
-   "ru": "Горилла"
+   "ru": "Горилла",
+   "pl": "Goryl"
   },
   "c": "Тварини",
   "ac": [
@@ -980,7 +1052,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гулівер",
    "en": "Gulliver",
-   "ru": "Гулливер"
+   "ru": "Гулливер",
+   "pl": "Guliwer"
   },
   "c": "Люди",
   "ac": [
@@ -993,7 +1066,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гусениця",
    "en": "Caterpillar",
-   "ru": "Гусеница"
+   "ru": "Гусеница",
+   "pl": "Gąsienica"
   },
   "c": "Комахи",
   "ac": [
@@ -1007,7 +1081,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гідроплан",
    "en": "Seaplane",
-   "ru": "Гидроплан"
+   "ru": "Гидроплан",
+   "pl": "Wodnosamolot"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -1020,7 +1095,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гімнаст",
    "en": "Gymnast",
-   "ru": "Гимнаст"
+   "ru": "Гимнаст",
+   "pl": "Gimnastyk"
   },
   "c": "Спорт",
   "ac": [
@@ -1033,7 +1109,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гітара",
    "en": "Guitar",
-   "ru": "Гитара"
+   "ru": "Гитара",
+   "pl": "Gitara"
   },
   "c": "Механізми",
   "ac": [
@@ -1046,7 +1123,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Двоголовий дракон",
    "en": "Two-Headed Dragon",
-   "ru": "Двуглавый дракон"
+   "ru": "Двуглавый дракон",
+   "pl": "Dwugłowy smok"
   },
   "c": "Тварини",
   "ac": [
@@ -1059,7 +1137,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Двомоторна платформа",
    "en": "Twin-Motor Platform",
-   "ru": "Двухмоторная платформа"
+   "ru": "Двухмоторная платформа",
+   "pl": "Platforma dwusilnikowa"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -1072,7 +1151,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Двомоторний робот",
    "en": "Twin-Motor Robot",
-   "ru": "Двухмоторный робот"
+   "ru": "Двухмоторный робот",
+   "pl": "Robot dwusilnikowy"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -1085,7 +1165,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Двохвинтовий вертоліт",
    "en": "Twin-Rotor Helicopter",
-   "ru": "Двухвинтовой вертолет"
+   "ru": "Двухвинтовой вертолет",
+   "pl": "Śmigłowiec dwuwirnikowy"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -1098,7 +1179,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Джип",
    "en": "Jeep",
-   "ru": "Джип"
+   "ru": "Джип",
+   "pl": "Jeep"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -1113,7 +1195,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Джойстик",
    "en": "Joystick",
-   "ru": "Джойстик"
+   "ru": "Джойстик",
+   "pl": "Joystick"
   },
   "c": "Механізми",
   "ac": [
@@ -1127,7 +1210,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Джойстик управління",
    "en": "Control Joystick",
-   "ru": "Джойстик управления"
+   "ru": "Джойстик управления",
+   "pl": "Joystick sterujący"
   },
   "c": "Космос",
   "ac": [
@@ -1142,7 +1226,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дзига",
    "en": "Spinning Top",
-   "ru": "Юла"
+   "ru": "Юла",
+   "pl": "Bączek"
   },
   "c": "Механізми",
   "ac": [
@@ -1155,7 +1240,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Динозавр",
    "en": "Dinosaur",
-   "ru": "Динозавр"
+   "ru": "Динозавр",
+   "pl": "Dinozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -1168,7 +1254,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Диригент",
    "en": "Conductor",
-   "ru": "Дирижер"
+   "ru": "Дирижер",
+   "pl": "Dyrygent"
   },
   "c": "Люди",
   "ac": [
@@ -1181,7 +1268,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дослідницький супутник",
    "en": "Research Satellite",
-   "ru": "Исследовательский спутник"
+   "ru": "Исследовательский спутник",
+   "pl": "Satelita badawczy"
   },
   "c": "Космос",
   "ac": [
@@ -1195,7 +1283,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Драгстер",
    "en": "Dragster",
-   "ru": "Драгстер"
+   "ru": "Драгстер",
+   "pl": "Dragster"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -1208,7 +1297,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дракон",
    "en": "Dragon",
-   "ru": "Дракон"
+   "ru": "Дракон",
+   "pl": "Smok"
   },
   "c": "Тварини",
   "ac": [
@@ -1221,7 +1311,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дракоша",
    "en": "Little Dragon",
-   "ru": "Дракоша"
+   "ru": "Дракоша",
+   "pl": "Mały smok"
   },
   "c": "Тварини",
   "ac": [
@@ -1234,7 +1325,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дройдека",
    "en": "Droideka",
-   "ru": "Дроидека"
+   "ru": "Дроидека",
+   "pl": "Droideka"
   },
   "c": "Роботи",
   "ac": [
@@ -1248,7 +1340,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Діметродон",
    "en": "Dimetrodon",
-   "ru": "Диметродон"
+   "ru": "Диметродон",
+   "pl": "Dimetrodon"
   },
   "c": "Динозаври",
   "ac": [
@@ -1261,7 +1354,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Евакуатор",
    "en": "Tow Truck",
-   "ru": "Эвакуатор"
+   "ru": "Эвакуатор",
+   "pl": "Laweta"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -1275,7 +1369,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Екскаватор",
    "en": "Excavator",
-   "ru": "Экскаватор"
+   "ru": "Экскаватор",
+   "pl": "Koparka"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -1288,7 +1383,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жаба",
    "en": "Frog",
-   "ru": "Жаба"
+   "ru": "Жаба",
+   "pl": "Żaba"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -1302,7 +1398,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жабеня",
    "en": "Froglet",
-   "ru": "Лягушонок"
+   "ru": "Лягушонок",
+   "pl": "Żabka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -1316,7 +1413,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жабенятко",
    "en": "Little Frog",
-   "ru": "Лягушонок"
+   "ru": "Лягушонок",
+   "pl": "Mała żabka"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1329,7 +1427,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жаби",
    "en": "Frogs",
-   "ru": "Жабы"
+   "ru": "Жабы",
+   "pl": "Żaby"
   },
   "c": "Тварини",
   "ac": [
@@ -1342,7 +1441,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жираф",
    "en": "Giraffe",
-   "ru": "Жираф"
+   "ru": "Жираф",
+   "pl": "Żyrafa"
   },
   "c": "Тварини",
   "ac": [
@@ -1355,7 +1455,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жук",
    "en": "Beetle",
-   "ru": "Жук"
+   "ru": "Жук",
+   "pl": "Chrząszcz"
   },
   "c": "Комахи",
   "ac": [
@@ -1368,7 +1469,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Заварник чаю",
    "en": "Teapot",
-   "ru": "Заварочный чайник"
+   "ru": "Заварочный чайник",
+   "pl": "Zaparzacz do herbaty"
   },
   "c": "Механізми",
   "ac": [
@@ -1381,7 +1483,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Залізна людина",
    "en": "Iron Man",
-   "ru": "Железный человек"
+   "ru": "Железный человек",
+   "pl": "Iron Man"
   },
   "c": "Роботи",
   "ac": [
@@ -1394,7 +1497,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Залізничний навантажувач",
    "en": "Railway Loader",
-   "ru": "Железнодорожный погрузчик"
+   "ru": "Железнодорожный погрузчик",
+   "pl": "Ładowarka kolejowa"
   },
   "c": "Механізми",
   "ac": [
@@ -1407,7 +1511,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Зауропод",
    "en": "Sauropod",
-   "ru": "Завропод"
+   "ru": "Завропод",
+   "pl": "Zauropod"
   },
   "c": "Динозаври",
   "ac": [
@@ -1420,7 +1525,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Захват",
    "en": "Grabber",
-   "ru": "Захват"
+   "ru": "Захват",
+   "pl": "Chwytak"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1433,7 +1539,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Захоплення",
    "en": "Capture",
-   "ru": "Захват"
+   "ru": "Захват",
+   "pl": "Chwytanie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1446,7 +1553,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Заєць",
    "en": "Hare",
-   "ru": "Заяц"
+   "ru": "Заяц",
+   "pl": "Zając"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -1460,7 +1568,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Заєць із молотком",
    "en": "Hare with a Hammer",
-   "ru": "Заяц с молотком"
+   "ru": "Заяц с молотком",
+   "pl": "Zając z młotkiem"
   },
   "c": "Тварини",
   "ac": [
@@ -1473,7 +1582,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Збиральна машина",
    "en": "Street Sweeper",
-   "ru": "Уборочная машина"
+   "ru": "Уборочная машина",
+   "pl": "Zamiatarka uliczna"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -1486,7 +1596,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Згинання",
    "en": "Bending",
-   "ru": "Сгибание"
+   "ru": "Сгибание",
+   "pl": "Zginanie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1499,7 +1610,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Землемірка",
    "en": "Inchworm",
-   "ru": "Гусеница-землемер"
+   "ru": "Гусеница-землемер",
+   "pl": "Gąsienica miernikowiec"
   },
   "c": "Комахи",
   "ac": [
@@ -1513,7 +1625,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Землетрус",
    "en": "Earthquake",
-   "ru": "Землетрясение"
+   "ru": "Землетрясение",
+   "pl": "Trzęsienie ziemi"
   },
   "c": "Механізми",
   "ac": [
@@ -1527,7 +1640,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "ЗигЗаг",
    "en": "ZigZag",
-   "ru": "ЗигЗаг"
+   "ru": "ЗигЗаг",
+   "pl": "Zygzak"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -1540,7 +1654,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Зимовий дослідник",
    "en": "Winter Explorer",
-   "ru": "Зимний исследователь"
+   "ru": "Зимний исследователь",
+   "pl": "Zimowy badacz"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -1553,7 +1668,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Змія",
    "en": "Snake",
-   "ru": "Змея"
+   "ru": "Змея",
+   "pl": "Wąż"
   },
   "c": "Тварини",
   "ac": [
@@ -1566,7 +1682,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кабріолет",
    "en": "Convertible",
-   "ru": "Кабриолет"
+   "ru": "Кабриолет",
+   "pl": "Kabriolet"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -1580,7 +1697,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Какаду",
    "en": "Cockatoo",
-   "ru": "Какаду"
+   "ru": "Какаду",
+   "pl": "Kakadu"
   },
   "c": "Птахи",
   "ac": [
@@ -1593,7 +1711,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Канатна дорога",
    "en": "Cable Car",
-   "ru": "Канатная дорога"
+   "ru": "Канатная дорога",
+   "pl": "Kolejka linowa"
   },
   "c": "Механізми",
   "ac": [
@@ -1607,7 +1726,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карлсон",
    "en": "Karlsson",
-   "ru": "Карлсон"
+   "ru": "Карлсон",
+   "pl": "Karlsson"
   },
   "c": "Люди",
   "ac": [
@@ -1620,7 +1740,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карусель",
    "en": "Carousel",
-   "ru": "Карусель"
+   "ru": "Карусель",
+   "pl": "Karuzela"
   },
   "c": "Механізми",
   "ac": [
@@ -1634,7 +1755,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карусель \"Вітерець\"",
    "en": "Carousel \"Breeze\"",
-   "ru": "Карусель \"Ветерок\""
+   "ru": "Карусель \"Ветерок\"",
+   "pl": "Karuzela „Wiaterek”"
   },
   "c": "Механізми",
   "ac": [
@@ -1648,7 +1770,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Каса",
    "en": "Cash Register",
-   "ru": "Касса"
+   "ru": "Касса",
+   "pl": "Kasa fiskalna"
   },
   "c": "Механізми",
   "ac": [
@@ -1661,7 +1784,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катамаран-дослідник",
    "en": "Research Catamaran",
-   "ru": "Катамаран-исследователь"
+   "ru": "Катамаран-исследователь",
+   "pl": "Katamaran badawczy"
   },
   "c": "Кораблі",
   "ac": [
@@ -1675,7 +1799,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катапульта",
    "en": "Catapult",
-   "ru": "Катапульта"
+   "ru": "Катапульта",
+   "pl": "Katapulta"
   },
   "c": "Механізми",
   "ac": [
@@ -1689,7 +1814,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катапульта для птахів",
    "en": "Bird Catapult",
-   "ru": "Катапульта для птиц"
+   "ru": "Катапульта для птиц",
+   "pl": "Katapulta dla ptaków"
   },
   "c": "Механізми",
   "ac": [
@@ -1703,7 +1829,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катер",
    "en": "Motorboat",
-   "ru": "Катер"
+   "ru": "Катер",
+   "pl": "Motorówka"
   },
   "c": "Кораблі",
   "ac": [
@@ -1716,7 +1843,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катюша",
    "en": "Katyusha",
-   "ru": "Катюша"
+   "ru": "Катюша",
+   "pl": "Katiusza"
   },
   "c": "Військова техніка",
   "ac": [
@@ -1729,7 +1857,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Качка",
    "en": "Duck",
-   "ru": "Утка"
+   "ru": "Утка",
+   "pl": "Kaczka"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -1743,7 +1872,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Качка, що повертається, качка",
    "en": "Turning Duck",
-   "ru": "Поворачивающаяся утка"
+   "ru": "Поворачивающаяся утка",
+   "pl": "Obracająca się kaczka"
   },
   "c": "Птахи",
   "ac": [
@@ -1756,7 +1886,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Квадрокоптер",
    "en": "Quadcopter",
-   "ru": "Квадрокоптер"
+   "ru": "Квадрокоптер",
+   "pl": "Kwadrokopter"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -1769,7 +1900,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Квітка",
    "en": "Flower",
-   "ru": "Цветок"
+   "ru": "Цветок",
+   "pl": "Kwiat"
   },
   "c": "Рослини",
   "ac": [
@@ -1782,7 +1914,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Квітка та бджола",
    "en": "Flower and Bee",
-   "ru": "Цветок и пчела"
+   "ru": "Цветок и пчела",
+   "pl": "Kwiat i pszczoła"
   },
   "c": "Комахи",
   "ac": [
@@ -1797,7 +1930,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Квітка і бджола",
    "en": "Flower and Bee",
-   "ru": "Цветок и пчела"
+   "ru": "Цветок и пчела",
+   "pl": "Kwiat i pszczoła"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1810,7 +1944,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кенгуру",
    "en": "Kangaroo",
-   "ru": "Кенгуру"
+   "ru": "Кенгуру",
+   "pl": "Kangur"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -1825,7 +1960,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кермування",
    "en": "Steering",
-   "ru": "Рулевое управление"
+   "ru": "Рулевое управление",
+   "pl": "Kierowanie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1838,7 +1974,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ковалі",
    "en": "Blacksmiths",
-   "ru": "Кузнецы"
+   "ru": "Кузнецы",
+   "pl": "Kowale"
   },
   "c": "Люди",
   "ac": [
@@ -1851,7 +1988,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ковзанка",
    "en": "Skating Rink",
-   "ru": "Каток"
+   "ru": "Каток",
+   "pl": "Lodowisko"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -1864,7 +2002,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коди з датчиком нахилу",
    "en": "Kodi with Tilt Sensor",
-   "ru": "Коди с датчиком наклона"
+   "ru": "Коди с датчиком наклона",
+   "pl": "Kodi z czujnikiem przechylenia"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1877,7 +2016,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коди з датчиком руху",
    "en": "Kodi with Motion Sensor",
-   "ru": "Коди с датчиком движения"
+   "ru": "Коди с датчиком движения",
+   "pl": "Kodi z czujnikiem ruchu"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1890,7 +2030,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коді",
    "en": "Kodi",
-   "ru": "Коди"
+   "ru": "Коди",
+   "pl": "Kodi"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1903,7 +2044,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коді з датчиком нахилу",
    "en": "Kodi with Tilt Sensor",
-   "ru": "Коди с датчиком наклона"
+   "ru": "Коди с датчиком наклона",
+   "pl": "Kodi z czujnikiem przechylenia"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1916,7 +2058,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коді з датчиком руху",
    "en": "Kodi with Motion Sensor",
-   "ru": "Коди с датчиком движения"
+   "ru": "Коди с датчиком движения",
+   "pl": "Kodi z czujnikiem ruchu"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1929,7 +2072,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коливання",
    "en": "Oscillation",
-   "ru": "Колебания"
+   "ru": "Колебания",
+   "pl": "Kołysanie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1942,7 +2086,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Комар",
    "en": "Mosquito",
-   "ru": "Комар"
+   "ru": "Комар",
+   "pl": "Komar"
   },
   "c": "Комахи",
   "ac": [
@@ -1955,7 +2100,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Комбайн",
    "en": "Combine Harvester",
-   "ru": "Комбайн"
+   "ru": "Комбайн",
+   "pl": "Kombajn"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -1968,7 +2114,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Конвертоплан",
    "en": "Tiltrotor",
-   "ru": "Конвертоплан"
+   "ru": "Конвертоплан",
+   "pl": "Przemiennopłat"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -1982,7 +2129,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Конвеєр",
    "en": "Conveyor",
-   "ru": "Конвейер"
+   "ru": "Конвейер",
+   "pl": "Przenośnik taśmowy"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -1995,7 +2143,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коник",
    "en": "Grasshopper",
-   "ru": "Кузнечик"
+   "ru": "Кузнечик",
+   "pl": "Konik polny"
   },
   "c": "Комахи",
   "ac": [
@@ -2008,7 +2157,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Контейнерний навантажувач",
    "en": "Container Loader",
-   "ru": "Контейнерный погрузчик"
+   "ru": "Контейнерный погрузчик",
+   "pl": "Wózek kontenerowy"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -2021,7 +2171,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Конячка",
    "en": "Little Horse",
-   "ru": "Лошадка"
+   "ru": "Лошадка",
+   "pl": "Konik"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -2035,7 +2186,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Конячка з візком",
    "en": "Horse and Cart",
-   "ru": "Лошадка с тележкой"
+   "ru": "Лошадка с тележкой",
+   "pl": "Konik z wózkiem"
   },
   "c": "Тварини",
   "ac": [
@@ -2048,7 +2200,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Корабель",
    "en": "Ship",
-   "ru": "Корабль"
+   "ru": "Корабль",
+   "pl": "Statek"
   },
   "c": "Кораблі",
   "ac": [
@@ -2062,7 +2215,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Корабель у шторм",
    "en": "Ship in a Storm",
-   "ru": "Корабль в шторм"
+   "ru": "Корабль в шторм",
+   "pl": "Statek podczas sztormu"
   },
   "c": "Кораблі",
   "ac": [
@@ -2075,7 +2229,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кораблик на хвилях",
    "en": "Boat on the Waves",
-   "ru": "Кораблик на волнах"
+   "ru": "Кораблик на волнах",
+   "pl": "Stateczek na falach"
   },
   "c": "Кораблі",
   "ac": [
@@ -2089,7 +2244,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Коробка передач",
    "en": "Gearbox",
-   "ru": "Коробка передач"
+   "ru": "Коробка передач",
+   "pl": "Skrzynia biegów"
   },
   "c": "Механізми",
   "ac": [
@@ -2102,7 +2258,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Космічний ліфт",
    "en": "Space Elevator",
-   "ru": "Космический лифт"
+   "ru": "Космический лифт",
+   "pl": "Winda kosmiczna"
   },
   "c": "Космос",
   "ac": [
@@ -2117,7 +2274,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Космодром",
    "en": "Spaceport",
-   "ru": "Космодром"
+   "ru": "Космодром",
+   "pl": "Kosmodrom"
   },
   "c": "Космос",
   "ac": [
@@ -2131,7 +2289,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Космонавт",
    "en": "Astronaut",
-   "ru": "Космонавт"
+   "ru": "Космонавт",
+   "pl": "Astronauta"
   },
   "c": "Космос",
   "ac": [
@@ -2144,7 +2303,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Космічний бій",
    "en": "Space Battle",
-   "ru": "Космический бой"
+   "ru": "Космический бой",
+   "pl": "Bitwa kosmiczna"
   },
   "c": "Космос",
   "ac": [
@@ -2157,7 +2317,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Космічний корабель Схід",
    "en": "Vostok Spacecraft",
-   "ru": "Космический корабль \"Восток\""
+   "ru": "Космический корабль \"Восток\"",
+   "pl": "Statek kosmiczny Wostok"
   },
   "c": "Космос",
   "ac": [
@@ -2170,7 +2331,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Космічні перегони",
    "en": "Space Race",
-   "ru": "Космические гонки"
+   "ru": "Космические гонки",
+   "pl": "Wyścig kosmiczny"
   },
   "c": "Космос",
   "ac": [
@@ -2184,7 +2346,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Котушка",
    "en": "Spool",
-   "ru": "Катушка"
+   "ru": "Катушка",
+   "pl": "Szpula"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2197,7 +2360,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "КПП",
    "en": "Checkpoint",
-   "ru": "КПП"
+   "ru": "КПП",
+   "pl": "Punkt kontrolny"
   },
   "c": "Механізми",
   "ac": [
@@ -2210,7 +2374,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Краб",
    "en": "Crab",
-   "ru": "Краб"
+   "ru": "Краб",
+   "pl": "Krab"
   },
   "c": "Тварини",
   "ac": [
@@ -2223,7 +2388,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокодил",
    "en": "Crocodile",
-   "ru": "Крокодил"
+   "ru": "Крокодил",
+   "pl": "Krokodyl"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -2237,7 +2403,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуюча людина",
    "en": "Walking Man",
-   "ru": "Шагающий человек"
+   "ru": "Шагающий человек",
+   "pl": "Kroczący człowiek"
   },
   "c": "Люди",
   "ac": [
@@ -2251,7 +2418,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуюча істота",
    "en": "Walking Creature",
-   "ru": "Шагающее существо"
+   "ru": "Шагающее существо",
+   "pl": "Krocząca istota"
   },
   "c": "Крокуючі",
   "ac": [
@@ -2264,7 +2432,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -2279,7 +2448,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кріпер",
    "en": "Creeper",
-   "ru": "Крипер"
+   "ru": "Крипер",
+   "pl": "Creeper"
   },
   "c": "Механізми",
   "ac": [
@@ -2292,7 +2462,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Культиватор",
    "en": "Cultivator",
-   "ru": "Культиватор"
+   "ru": "Культиватор",
+   "pl": "Kultywator"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -2305,7 +2476,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кухар",
    "en": "Chef",
-   "ru": "Повар"
+   "ru": "Повар",
+   "pl": "Kucharz"
   },
   "c": "Люди",
   "ac": [
@@ -2318,7 +2490,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кінг-Конг",
    "en": "King Kong",
-   "ru": "Кинг-Конг"
+   "ru": "Кинг-Конг",
+   "pl": "King Kong"
   },
   "c": "Тварини",
   "ac": [
@@ -2331,7 +2504,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кінь",
    "en": "Horse",
-   "ru": "Конь"
+   "ru": "Конь",
+   "pl": "Koń"
   },
   "c": "Тварини",
   "ac": [
@@ -2344,7 +2518,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кіт",
    "en": "Cat",
-   "ru": "Кот"
+   "ru": "Кот",
+   "pl": "Kot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -2359,7 +2534,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кіт на велосипеді",
    "en": "Cat on a Bicycle",
-   "ru": "Кот на велосипеде"
+   "ru": "Кот на велосипеде",
+   "pl": "Kot na rowerze"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -2374,7 +2550,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кіт та миша",
    "en": "Cat and Mouse",
-   "ru": "Кот и мышь"
+   "ru": "Кот и мышь",
+   "pl": "Kot i mysz"
   },
   "c": "Тварини",
   "ac": [
@@ -2387,7 +2564,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кіт та мишка",
    "en": "Cat and Little Mouse",
-   "ru": "Кот и мышка"
+   "ru": "Кот и мышка",
+   "pl": "Kot i myszka"
   },
   "c": "Тварини",
   "ac": [
@@ -2400,7 +2578,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лев",
    "en": "Lion",
-   "ru": "Лев"
+   "ru": "Лев",
+   "pl": "Lew"
   },
   "c": "Тварини",
   "ac": [
@@ -2413,7 +2592,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кажан",
    "en": "Bat",
-   "ru": "Летучая мышь"
+   "ru": "Летучая мышь",
+   "pl": "Nietoperz"
   },
   "c": "Тварини",
   "ac": [
@@ -2426,7 +2606,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лижник",
    "en": "Skier",
-   "ru": "Лыжник"
+   "ru": "Лыжник",
+   "pl": "Narciarz"
   },
   "c": "Люди",
   "ac": [
@@ -2440,7 +2621,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лижник Санта",
    "en": "Skiing Santa",
-   "ru": "Санта-лыжник"
+   "ru": "Санта-лыжник",
+   "pl": "Mikołaj na nartach"
   },
   "c": "Новорічні",
   "ac": [
@@ -2453,7 +2635,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лисиця",
    "en": "Fox",
-   "ru": "Лиса"
+   "ru": "Лиса",
+   "pl": "Lis"
   },
   "c": "Тварини",
   "ac": [
@@ -2466,7 +2649,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лицар на коні",
    "en": "Knight on Horseback",
-   "ru": "Рыцарь на коне"
+   "ru": "Рыцарь на коне",
+   "pl": "Rycerz na koniu"
   },
   "c": "Люди",
   "ac": [
@@ -2479,7 +2663,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лицарський турнір",
    "en": "Knights' Tournament",
-   "ru": "Рыцарский турнир"
+   "ru": "Рыцарский турнир",
+   "pl": "Turniej rycerski"
   },
   "c": "Люди",
   "ac": [
@@ -2492,7 +2677,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Локатор",
    "en": "Locator",
-   "ru": "Локатор"
+   "ru": "Локатор",
+   "pl": "Radar lokalizacyjny"
   },
   "c": "Космос",
   "ac": [
@@ -2506,7 +2692,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Локомотив",
    "en": "Locomotive",
-   "ru": "Локомотив"
+   "ru": "Локомотив",
+   "pl": "Lokomotywa"
   },
   "c": "Транспорт",
   "ac": [
@@ -2519,7 +2706,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лунатик",
    "en": "Lunatyk",
-   "ru": "Лунатик"
+   "ru": "Лунатик",
+   "pl": "Lunatyk"
   },
   "c": "Космос",
   "ac": [
@@ -2534,7 +2722,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Людина з возом",
    "en": "Man with a Cart",
-   "ru": "Человек с тележкой"
+   "ru": "Человек с тележкой",
+   "pl": "Człowiek z wózkiem"
   },
   "c": "Люди",
   "ac": [
@@ -2548,7 +2737,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лімузин",
    "en": "Limousine",
-   "ru": "Лимузин"
+   "ru": "Лимузин",
+   "pl": "Limuzyna"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2561,7 +2751,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -2576,7 +2767,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак на віражах",
    "en": "Stunt Plane",
-   "ru": "Самолет на виражах"
+   "ru": "Самолет на виражах",
+   "pl": "Samolot akrobacyjny"
   },
   "c": "Літаки, вертольоти",
   "ac": [
@@ -2589,7 +2781,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літаючих Санта",
    "en": "Flying Santa",
-   "ru": "Летающий Санта"
+   "ru": "Летающий Санта",
+   "pl": "Latający Święty Mikołaj"
   },
   "c": "Новорічні",
   "ac": [
@@ -2602,7 +2795,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ліфт",
    "en": "Lift",
-   "ru": "Лифт"
+   "ru": "Лифт",
+   "pl": "Winda"
   },
   "c": "Механізми",
   "ac": [
@@ -2616,7 +2810,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мавпа",
    "en": "Monkey",
-   "ru": "Обезьяна"
+   "ru": "Обезьяна",
+   "pl": "Małpa"
   },
   "c": "Тварини",
   "ac": [
@@ -2629,7 +2824,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло (науковий всюдихід)",
    "en": "Milo the Science Rover",
-   "ru": "Майло (научный вездеход)"
+   "ru": "Майло (научный вездеход)",
+   "pl": "Milo (łazik naukowy)"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2642,7 +2838,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло з датчиком нахилу",
    "en": "Milo with Tilt Sensor",
-   "ru": "Майло с датчиком наклона"
+   "ru": "Майло с датчиком наклона",
+   "pl": "Milo z czujnikiem przechylenia"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2655,7 +2852,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло з датчиком переміщення",
    "en": "Milo with Motion Sensor",
-   "ru": "Майло с датчиком перемещения"
+   "ru": "Майло с датчиком перемещения",
+   "pl": "Milo z czujnikiem ruchu"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2668,7 +2866,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло з датчиком переміщення (мод.)",
    "en": "Milo with Motion Sensor (mod.)",
-   "ru": "Майло с датчиком перемещения (мод.)"
+   "ru": "Майло с датчиком перемещения (мод.)",
+   "pl": "Milo z czujnikiem ruchu (mod.)"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2681,7 +2880,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло спільна робота",
    "en": "Milo Collaboration",
-   "ru": "Майло: совместная работа"
+   "ru": "Майло: совместная работа",
+   "pl": "Milo — współpraca"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2694,7 +2894,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло — науковий всюдихід",
    "en": "Milo — Science Rover",
-   "ru": "Майло — научный вездеход"
+   "ru": "Майло — научный вездеход",
+   "pl": "Milo — łazik naukowy"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2707,7 +2908,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло — спільна робота",
    "en": "Milo — Collaboration",
-   "ru": "Майло — совместная работа"
+   "ru": "Майло — совместная работа",
+   "pl": "Milo — współpraca"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -2720,7 +2922,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Малювальна акула",
    "en": "Drawing Shark",
-   "ru": "Рисующая акула"
+   "ru": "Рисующая акула",
+   "pl": "Rysujący rekin"
   },
   "c": "Моделі, що малюють",
   "ac": [
@@ -2734,7 +2937,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Малювання",
    "en": "Drawing",
-   "ru": "Рисование"
+   "ru": "Рисование",
+   "pl": "Rysowanie"
   },
   "c": "Моделі, що малюють",
   "ac": [
@@ -2747,7 +2951,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мандрівники",
    "en": "Travelers",
-   "ru": "Путешественники"
+   "ru": "Путешественники",
+   "pl": "Podróżnicy"
   },
   "c": "Люди",
   "ac": [
@@ -2760,7 +2965,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Маніпулятор",
    "en": "Robotic Manipulator",
-   "ru": "Манипулятор"
+   "ru": "Манипулятор",
+   "pl": "Manipulator"
   },
   "c": "Механізми",
   "ac": [
@@ -2773,7 +2979,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Марна машинка",
    "en": "Useless Machine",
-   "ru": "Бесполезная машинка"
+   "ru": "Бесполезная машинка",
+   "pl": "Bezużyteczna maszyna"
   },
   "c": "Механізми",
   "ac": [
@@ -2786,7 +2993,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Марсохід",
    "en": "Mars Rover",
-   "ru": "Марсоход"
+   "ru": "Марсоход",
+   "pl": "Łazik marsjański"
   },
   "c": "Космос",
   "ac": [
@@ -2799,7 +3007,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Машинка",
    "en": "Toy Car",
-   "ru": "Машинка"
+   "ru": "Машинка",
+   "pl": "Samochodzik"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2812,7 +3021,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Машинка з двома швидкостями",
    "en": "Two-Speed Car",
-   "ru": "Машинка с двумя скоростями"
+   "ru": "Машинка с двумя скоростями",
+   "pl": "Samochodzik dwubiegowy"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2826,7 +3036,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Меганевра",
    "en": "Meganeura",
-   "ru": "Меганевра"
+   "ru": "Меганевра",
+   "pl": "Meganeura"
   },
   "c": "Динозаври",
   "ac": [
@@ -2840,7 +3051,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Млин",
    "en": "Mill",
-   "ru": "Мельница"
+   "ru": "Мельница",
+   "pl": "Młyn"
   },
   "c": "Механізми",
   "ac": [
@@ -2853,7 +3065,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Метелик",
    "en": "Butterfly",
-   "ru": "Бабочка"
+   "ru": "Бабочка",
+   "pl": "Motyl"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -2867,7 +3080,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Модель сонячної системи",
    "en": "Solar System Model",
-   "ru": "Модель Солнечной системы"
+   "ru": "Модель Солнечной системы",
+   "pl": "Model Układu Słonecznego"
   },
   "c": "Космос",
   "ac": [
@@ -2882,7 +3096,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Монорельс",
    "en": "Monorail",
-   "ru": "Монорельс"
+   "ru": "Монорельс",
+   "pl": "Kolej jednoszynowa"
   },
   "c": "Транспорт",
   "ac": [
@@ -2895,7 +3110,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Монстртрак",
    "en": "Monster Truck",
-   "ru": "Монстр-трак"
+   "ru": "Монстр-трак",
+   "pl": "Monster truck"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2908,7 +3124,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Моторолер",
    "en": "Scooter",
-   "ru": "Мотороллер"
+   "ru": "Мотороллер",
+   "pl": "Skuter"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2923,7 +3140,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мотоцикл",
    "en": "Motorcycle",
-   "ru": "Мотоцикл"
+   "ru": "Мотоцикл",
+   "pl": "Motocykl"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2937,7 +3155,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мотоцикліст",
    "en": "Motorcyclist",
-   "ru": "Мотоциклист"
+   "ru": "Мотоциклист",
+   "pl": "Motocyklista"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -2951,7 +3170,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Музикант",
    "en": "Musician",
-   "ru": "Музыкант"
+   "ru": "Музыкант",
+   "pl": "Muzyk"
   },
   "c": "Люди",
   "ac": [
@@ -2964,7 +3184,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мураха",
    "en": "Ant",
-   "ru": "Муравей"
+   "ru": "Муравей",
+   "pl": "Mrówka"
   },
   "c": "Комахи",
   "ac": [
@@ -2977,7 +3198,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Муха",
    "en": "Fly",
-   "ru": "Муха"
+   "ru": "Муха",
+   "pl": "Mucha"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -2992,7 +3214,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Міжзоряний корабель",
    "en": "Interstellar Ship",
-   "ru": "Межзвездный корабль"
+   "ru": "Межзвездный корабль",
+   "pl": "Statek międzygwiezdny"
   },
   "c": "Космос",
   "ac": [
@@ -3006,7 +3229,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Міксер",
    "en": "Mixer",
-   "ru": "Миксер"
+   "ru": "Миксер",
+   "pl": "Mikser"
   },
   "c": "Механізми",
   "ac": [
@@ -3019,7 +3243,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Міоланія",
    "en": "Meiolania",
-   "ru": "Мейолания"
+   "ru": "Мейолания",
+   "pl": "Mejolania"
   },
   "c": "Динозаври",
   "ac": [
@@ -3033,7 +3258,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Місяцехід",
    "en": "Lunar Rover",
-   "ru": "Луноход"
+   "ru": "Луноход",
+   "pl": "Łazik księżycowy"
   },
   "c": "Космос",
   "ac": [
@@ -3047,7 +3273,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Навантажувач",
    "en": "Loader",
-   "ru": "Погрузчик"
+   "ru": "Погрузчик",
+   "pl": "Ładowarka"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -3060,7 +3287,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Навантажувач вилковий",
    "en": "Forklift",
-   "ru": "Вилочный погрузчик"
+   "ru": "Вилочный погрузчик",
+   "pl": "Wózek widłowy"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -3073,7 +3301,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Нафтовий насос",
    "en": "Oil Pump",
-   "ru": "Нефтяной насос"
+   "ru": "Нефтяной насос",
+   "pl": "Kiwon naftowy"
   },
   "c": "Механізми",
   "ac": [
@@ -3086,7 +3315,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Нахил",
    "en": "Tilt",
-   "ru": "Наклон"
+   "ru": "Наклон",
+   "pl": "Przechylenie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3099,7 +3329,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Невідомий динозавр",
    "en": "Unknown Dinosaur",
-   "ru": "Неизвестный динозавр"
+   "ru": "Неизвестный динозавр",
+   "pl": "Nieznany dinozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -3112,7 +3343,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Новорічна ялинка",
    "en": "Christmas Tree",
-   "ru": "Новогодняя елка"
+   "ru": "Новогодняя елка",
+   "pl": "Choinka świąteczna"
   },
   "c": "Новорічні",
   "ac": [
@@ -3125,7 +3357,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Новорічний експрес",
    "en": "New Year Express",
-   "ru": "Новогодний экспресс"
+   "ru": "Новогодний экспресс",
+   "pl": "Świąteczny ekspres"
   },
   "c": "Новорічні",
   "ac": [
@@ -3140,7 +3373,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Новорічний паровоз",
    "en": "New Year Steam Train",
-   "ru": "Новогодний паровоз"
+   "ru": "Новогодний паровоз",
+   "pl": "Świąteczny parowóz"
   },
   "c": "Новорічні",
   "ac": [
@@ -3154,7 +3388,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Носоріг",
    "en": "Rhinoceros",
-   "ru": "Носорог"
+   "ru": "Носорог",
+   "pl": "Nosorożec"
   },
   "c": "Тварини",
   "ac": [
@@ -3167,7 +3402,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Обертання (дриль)",
    "en": "Spinning (Drill)",
-   "ru": "Вращение (дрель)"
+   "ru": "Вращение (дрель)",
+   "pl": "Obracanie (wiertarka)"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3180,7 +3416,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Олень Рудольф",
    "en": "Rudolph the Reindeer",
-   "ru": "Олень Рудольф"
+   "ru": "Олень Рудольф",
+   "pl": "Renifer Rudolf"
   },
   "c": "Новорічні",
   "ac": [
@@ -3194,7 +3431,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Олень Свен",
    "en": "Sven the Reindeer",
-   "ru": "Олень Свен"
+   "ru": "Олень Свен",
+   "pl": "Renifer Sven"
   },
   "c": "Новорічні",
   "ac": [
@@ -3208,7 +3446,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Павук",
    "en": "Spider",
-   "ru": "Паук"
+   "ru": "Паук",
+   "pl": "Pająk"
   },
   "c": "Комахи",
   "ac": [
@@ -3221,7 +3460,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Панда",
    "en": "Panda",
-   "ru": "Панда"
+   "ru": "Панда",
+   "pl": "Panda"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -3235,7 +3475,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Папуга",
    "en": "Parrot",
-   "ru": "Попугай"
+   "ru": "Попугай",
+   "pl": "Papuga"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -3249,7 +3490,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Паразауролоф",
    "en": "Parasaurolophus",
-   "ru": "Паразауролоф"
+   "ru": "Паразауролоф",
+   "pl": "Parazaurolof"
   },
   "c": "Динозаври",
   "ac": [
@@ -3262,7 +3504,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пасхальний заєць",
    "en": "Easter Bunny",
-   "ru": "Пасхальный заяц"
+   "ru": "Пасхальный заяц",
+   "pl": "Zajączek wielkanocny"
   },
   "c": "Тварини",
   "ac": [
@@ -3275,7 +3518,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пелікан",
    "en": "Pelican",
-   "ru": "Пеликан"
+   "ru": "Пеликан",
+   "pl": "Pelikan"
   },
   "c": "Птахи",
   "ac": [
@@ -3288,7 +3532,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пенальті",
    "en": "Penalty Kick",
-   "ru": "Пенальти"
+   "ru": "Пенальти",
+   "pl": "Rzut karny"
   },
   "c": "Механізми",
   "ac": [
@@ -3302,7 +3547,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Планетохід",
    "en": "Planetary Rover",
-   "ru": "Планетоход"
+   "ru": "Планетоход",
+   "pl": "Łazik planetarny"
   },
   "c": "Космос",
   "ac": [
@@ -3315,7 +3561,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Плезіозавр",
    "en": "Plesiosaurus",
-   "ru": "Плезиозавр"
+   "ru": "Плезиозавр",
+   "pl": "Plezjozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -3328,7 +3575,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Поверни",
    "en": "Turn",
-   "ru": "Поверни"
+   "ru": "Поверни",
+   "pl": "Skręć"
   },
   "c": "Роботи",
   "ac": [
@@ -3341,7 +3589,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Поворот",
    "en": "Turning",
-   "ru": "Поворот"
+   "ru": "Поворот",
+   "pl": "Skręt"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3354,7 +3603,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Повороти та лінія",
    "en": "Turns and Line",
-   "ru": "Повороты и линия"
+   "ru": "Повороты и линия",
+   "pl": "Zakręty i linia"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -3367,7 +3617,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пожежна машина",
    "en": "Fire Truck",
-   "ru": "Пожарная машина"
+   "ru": "Пожарная машина",
+   "pl": "Wóz strażacki"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -3380,7 +3631,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Позашляховик",
    "en": "Off-Road Vehicle",
-   "ru": "Внедорожник"
+   "ru": "Внедорожник",
+   "pl": "Samochód terenowy"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -3394,7 +3646,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Портовий кран",
    "en": "Harbor Crane",
-   "ru": "Портовый кран"
+   "ru": "Портовый кран",
+   "pl": "Dźwig portowy"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -3407,7 +3660,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Потенціометр",
    "en": "Potentiometer",
-   "ru": "Потенциометр"
+   "ru": "Потенциометр",
+   "pl": "Potencjometr"
   },
   "c": "Механізми",
   "ac": [
@@ -3420,7 +3674,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Поштовх",
    "en": "Push",
-   "ru": "Толчок"
+   "ru": "Толчок",
+   "pl": "Pchnięcie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3433,7 +3688,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пошуковий всюдихід",
    "en": "Search Rover",
-   "ru": "Поисковый вездеход"
+   "ru": "Поисковый вездеход",
+   "pl": "Łazik poszukiwawczy"
   },
   "c": "Космос",
   "ac": [
@@ -3447,7 +3703,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Прес",
    "en": "Press",
-   "ru": "Пресс"
+   "ru": "Пресс",
+   "pl": "Prasa"
   },
   "c": "Механізми",
   "ac": [
@@ -3460,7 +3717,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Прибулець",
    "en": "Alien",
-   "ru": "Пришелец"
+   "ru": "Пришелец",
+   "pl": "Kosmita"
   },
   "c": "Космос",
   "ac": [
@@ -3474,7 +3732,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Принтер",
    "en": "Printer",
-   "ru": "Принтер"
+   "ru": "Принтер",
+   "pl": "Drukarka"
   },
   "c": "Механізми",
   "ac": [
@@ -3487,7 +3746,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птах",
    "en": "Bird",
-   "ru": "Птица"
+   "ru": "Птица",
+   "pl": "Ptak"
   },
   "c": "Птахи",
   "ac": [
@@ -3500,7 +3760,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птах махає крилами",
    "en": "Bird Flapping Its Wings",
-   "ru": "Птица машет крыльями"
+   "ru": "Птица машет крыльями",
+   "pl": "Ptak machający skrzydłami"
   },
   "c": "Птахи",
   "ac": [
@@ -3513,7 +3774,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птахи",
    "en": "Birds",
-   "ru": "Птицы"
+   "ru": "Птицы",
+   "pl": "Ptaki"
   },
   "c": "Птахи",
   "ac": [
@@ -3526,7 +3788,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пташеня в яйці",
    "en": "Chick in an Egg",
-   "ru": "Птенец в яйце"
+   "ru": "Птенец в яйце",
+   "pl": "Pisklę w jajku"
   },
   "c": "Птахи",
   "ac": [
@@ -3539,7 +3802,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пташенята",
    "en": "Chicks",
-   "ru": "Птенцы"
+   "ru": "Птенцы",
+   "pl": "Pisklęta"
   },
   "c": "Птахи",
   "ac": [
@@ -3552,7 +3816,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птеранодон",
    "en": "Pteranodon",
-   "ru": "Птеранодон"
+   "ru": "Птеранодон",
+   "pl": "Pteranodon"
   },
   "c": "Динозаври",
   "ac": [
@@ -3565,7 +3830,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птеродактиль",
    "en": "Pterodactyl",
-   "ru": "Птеродактиль"
+   "ru": "Птеродактиль",
+   "pl": "Pterodaktyl"
   },
   "c": "Динозаври",
   "ac": [
@@ -3578,7 +3844,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пугало",
    "en": "Scarecrow",
-   "ru": "Пугало"
+   "ru": "Пугало",
+   "pl": "Strach na wróble"
   },
   "c": "Механізми",
   "ac": [
@@ -3591,7 +3858,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пуголовок",
    "en": "Tadpole",
-   "ru": "Головастик"
+   "ru": "Головастик",
+   "pl": "Kijanka"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3605,7 +3873,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пускова установка",
    "en": "Launcher",
-   "ru": "Пусковая установка"
+   "ru": "Пусковая установка",
+   "pl": "Wyrzutnia"
   },
   "c": "Космос",
   "ac": [
@@ -3618,7 +3887,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підвішений космічний корабель",
    "en": "Suspended Spaceship",
-   "ru": "Подвешенный космический корабль"
+   "ru": "Подвешенный космический корабль",
+   "pl": "Podwieszony statek kosmiczny"
   },
   "c": "Космос",
   "ac": [
@@ -3632,7 +3902,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйом",
    "en": "Lifting",
-   "ru": "Подъем"
+   "ru": "Подъем",
+   "pl": "Podnoszenie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3645,7 +3916,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйомний кран",
    "en": "Crane",
-   "ru": "Подъемный кран"
+   "ru": "Подъемный кран",
+   "pl": "Dźwig"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -3658,7 +3930,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйомник",
    "en": "Hoist",
-   "ru": "Подъемник"
+   "ru": "Подъемник",
+   "pl": "Podnośnik"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -3671,7 +3944,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підтягування",
    "en": "Pull-Ups",
-   "ru": "Подтягивание"
+   "ru": "Подтягивание",
+   "pl": "Podciąganie na drążku"
   },
   "c": "Люди",
   "ac": [
@@ -3685,7 +3959,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пінгвін",
    "en": "Penguin",
-   "ru": "Пингвин"
+   "ru": "Пингвин",
+   "pl": "Pingwin"
   },
   "c": "Птахи",
   "ac": [
@@ -3698,7 +3973,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Піратський корабель",
    "en": "Pirate Ship",
-   "ru": "Пиратский корабль"
+   "ru": "Пиратский корабль",
+   "pl": "Statek piracki"
   },
   "c": "Кораблі",
   "ac": [
@@ -3711,7 +3987,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Равлик",
    "en": "Snail",
-   "ru": "Улитка"
+   "ru": "Улитка",
+   "pl": "Ślimak"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -3725,7 +4002,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Равлик-ліхтарик",
    "en": "Snail Flashlight",
-   "ru": "Улитка-фонарик"
+   "ru": "Улитка-фонарик",
+   "pl": "Ślimak-latarka"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3739,7 +4017,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Радар",
    "en": "Radar",
-   "ru": "Радар"
+   "ru": "Радар",
+   "pl": "Radar"
   },
   "c": "Космос",
   "ac": [
@@ -3755,7 +4034,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Радіо",
    "en": "Radio",
-   "ru": "Радио"
+   "ru": "Радио",
+   "pl": "Radio"
   },
   "c": "Механізми",
   "ac": [
@@ -3768,7 +4048,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ретромобіль",
    "en": "Retro Car",
-   "ru": "Ретромобиль"
+   "ru": "Ретромобиль",
+   "pl": "Samochód retro"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -3782,7 +4063,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Рибалка",
    "en": "Fisherman",
-   "ru": "Рыбак"
+   "ru": "Рыбак",
+   "pl": "Wędkarz"
   },
   "c": "Люди",
   "ac": [
@@ -3795,7 +4077,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Рибка",
    "en": "Little Fish",
-   "ru": "Рыбка"
+   "ru": "Рыбка",
+   "pl": "Rybka"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -3809,7 +4092,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вівця, що малює",
    "en": "Drawing Sheep",
-   "ru": "Рисующая овца"
+   "ru": "Рисующая овца",
+   "pl": "Rysująca owca"
   },
   "c": "Моделі, що малюють",
   "ac": [
@@ -3823,7 +4107,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робо-рука",
    "en": "Robot Arm",
-   "ru": "Робо-рука"
+   "ru": "Робо-рука",
+   "pl": "Ramię robota"
   },
   "c": "Механізми",
   "ac": [
@@ -3837,7 +4122,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот \"Атлас\"",
    "en": "Atlas Robot",
-   "ru": "Робот \"Атлас\""
+   "ru": "Робот \"Атлас\"",
+   "pl": "Robot „Atlas”"
   },
   "c": "Роботи",
   "ac": [
@@ -3851,7 +4137,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот \"Спот\"",
    "en": "Spot Robot",
-   "ru": "Робот \"Спот\""
+   "ru": "Робот \"Спот\"",
+   "pl": "Robot „Spot”"
   },
   "c": "Роботи",
   "ac": [
@@ -3865,7 +4152,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот на візку",
    "en": "Robot on a Cart",
-   "ru": "Робот на тележке"
+   "ru": "Робот на тележке",
+   "pl": "Robot na wózku"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -3880,7 +4168,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот прибульців",
    "en": "Alien Robot",
-   "ru": "Робот пришельцев"
+   "ru": "Робот пришельцев",
+   "pl": "Robot obcych"
   },
   "c": "Космос",
   "ac": [
@@ -3895,7 +4184,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот, що повертає",
    "en": "Turning Robot",
-   "ru": "Поворачивающий робот"
+   "ru": "Поворачивающий робот",
+   "pl": "Skręcający robot"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -3909,7 +4199,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот, що тягне",
    "en": "Pulling Robot",
-   "ru": "Тянущий робот"
+   "ru": "Тянущий робот",
+   "pl": "Robot ciągnący"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -3923,7 +4214,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-гітарист",
    "en": "Guitarist Robot",
-   "ru": "Робот-гитарист"
+   "ru": "Робот-гитарист",
+   "pl": "Robot gitarzysta"
   },
   "c": "Роботи",
   "ac": [
@@ -3936,7 +4228,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-захисник",
    "en": "Defender Robot",
-   "ru": "Робот-защитник"
+   "ru": "Робот-защитник",
+   "pl": "Robot obrońca"
   },
   "c": "Космос",
   "ac": [
@@ -3951,7 +4244,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-лаборант",
    "en": "Lab Assistant Robot",
-   "ru": "Робот-лаборант"
+   "ru": "Робот-лаборант",
+   "pl": "Robot laborant"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -3966,7 +4260,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-охоронець",
    "en": "Guard Robot",
-   "ru": "Робот-охранник"
+   "ru": "Робот-охранник",
+   "pl": "Robot strażnik"
   },
   "c": "Космос",
   "ac": [
@@ -3980,7 +4275,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-сумоїст",
    "en": "Sumo Robot",
-   "ru": "Робот-сумоист"
+   "ru": "Робот-сумоист",
+   "pl": "Robot sumo"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -3994,7 +4290,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-шпигун",
    "en": "Spy Robot",
-   "ru": "Робот-шпион"
+   "ru": "Робот-шпион",
+   "pl": "Robot szpieg"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4008,7 +4305,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-шукач",
    "en": "Seeker Robot",
-   "ru": "Робот-искатель"
+   "ru": "Робот-искатель",
+   "pl": "Robot poszukiwacz"
   },
   "c": "Космос",
   "ac": [
@@ -4023,7 +4321,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ровер",
    "en": "Rover",
-   "ru": "Ровер"
+   "ru": "Ровер",
+   "pl": "Łazik"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -4037,7 +4336,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Родео",
    "en": "Rodeo",
-   "ru": "Родео"
+   "ru": "Родео",
+   "pl": "Rodeo"
   },
   "c": "Люди",
   "ac": [
@@ -4050,7 +4350,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Розпушування",
    "en": "Soil Loosening",
-   "ru": "Рыхление"
+   "ru": "Рыхление",
+   "pl": "Spulchnianie gleby"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -4063,7 +4364,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Рух",
    "en": "Motion",
-   "ru": "Движение"
+   "ru": "Движение",
+   "pl": "Ruch"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4076,7 +4378,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Рух по лінії",
    "en": "Line Following",
-   "ru": "Движение по линии"
+   "ru": "Движение по линии",
+   "pl": "Jazda po linii"
   },
   "c": "Моделі для змагань",
   "ac": [
@@ -4089,7 +4392,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Савана",
    "en": "Savanna",
-   "ru": "Саванна"
+   "ru": "Саванна",
+   "pl": "Sawanna"
   },
   "c": "Рослини",
   "ac": [
@@ -4102,7 +4406,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Самоскид",
    "en": "Dump Truck",
-   "ru": "Самосвал"
+   "ru": "Самосвал",
+   "pl": "Wywrotka"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4116,7 +4421,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Санта-Клаус",
    "en": "Santa Claus",
-   "ru": "Санта-Клаус"
+   "ru": "Санта-Клаус",
+   "pl": "Święty Mikołaj"
   },
   "c": "Новорічні",
   "ac": [
@@ -4129,7 +4435,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Свердлильний верстат",
    "en": "Drill Press",
-   "ru": "Сверлильный станок"
+   "ru": "Сверлильный станок",
+   "pl": "Wiertarka stołowa"
   },
   "c": "Механізми",
   "ac": [
@@ -4142,7 +4449,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Світлофор та шлагбаум",
    "en": "Traffic Light and Barrier",
-   "ru": "Светофор и шлагбаум"
+   "ru": "Светофор и шлагбаум",
+   "pl": "Sygnalizacja świetlna i szlaban"
   },
   "c": "Механізми",
   "ac": [
@@ -4155,7 +4463,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сейф",
    "en": "Safe",
-   "ru": "Сейф"
+   "ru": "Сейф",
+   "pl": "Sejf"
   },
   "c": "Механізми",
   "ac": [
@@ -4168,7 +4477,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сигналізація",
    "en": "Alarm",
-   "ru": "Сигнализация"
+   "ru": "Сигнализация",
+   "pl": "Alarm"
   },
   "c": "Механізми",
   "ac": [
@@ -4182,7 +4492,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Скорпіон",
    "en": "Scorpion",
-   "ru": "Скорпион"
+   "ru": "Скорпион",
+   "pl": "Skorpion"
   },
   "c": "Комахи",
   "ac": [
@@ -4195,7 +4506,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Слон",
    "en": "Elephant",
-   "ru": "Слон"
+   "ru": "Слон",
+   "pl": "Słoń"
   },
   "c": "Тварини",
   "ac": [
@@ -4208,7 +4520,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сміттєвоз",
    "en": "Garbage Truck",
-   "ru": "Мусоровоз"
+   "ru": "Мусоровоз",
+   "pl": "Śmieciarka"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4221,7 +4534,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сноубордист",
    "en": "Snowboarder",
-   "ru": "Сноубордист"
+   "ru": "Сноубордист",
+   "pl": "Snowboardzista"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -4235,7 +4549,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Снігохід",
    "en": "Snowmobile",
-   "ru": "Снегоход"
+   "ru": "Снегоход",
+   "pl": "Skuter śnieżny"
   },
   "c": "Спецтехніка",
   "ac": [
@@ -4248,7 +4563,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Собака",
    "en": "Dog",
-   "ru": "Собака"
+   "ru": "Собака",
+   "pl": "Pies"
   },
   "c": "Тварини",
   "ac": [
@@ -4261,7 +4577,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сова",
    "en": "Owl",
-   "ru": "Сова"
+   "ru": "Сова",
+   "pl": "Sowa"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -4275,7 +4592,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сортувальник деталей",
    "en": "Parts Sorter",
-   "ru": "Сортировщик деталей"
+   "ru": "Сортировщик деталей",
+   "pl": "Sorter klocków"
   },
   "c": "Механізми",
   "ac": [
@@ -4288,7 +4606,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Спіннер",
    "en": "Spinner",
-   "ru": "Спиннер"
+   "ru": "Спиннер",
+   "pl": "Spinner"
   },
   "c": "Механізми",
   "ac": [
@@ -4301,7 +4620,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Спірограф",
    "en": "Spirograph",
-   "ru": "Спирограф"
+   "ru": "Спирограф",
+   "pl": "Spirograf"
   },
   "c": "Моделі, що малюють",
   "ac": [
@@ -4314,7 +4634,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Стегозавр",
    "en": "Stegosaurus",
-   "ru": "Стегозавр"
+   "ru": "Стегозавр",
+   "pl": "Stegozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -4327,7 +4648,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Страус",
    "en": "Ostrich",
-   "ru": "Страус"
+   "ru": "Страус",
+   "pl": "Struś"
   },
   "c": "Птахи",
   "ac": [
@@ -4340,7 +4662,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Стріляюча гармата",
    "en": "Shooting Cannon",
-   "ru": "Стреляющая пушка"
+   "ru": "Стреляющая пушка",
+   "pl": "Strzelająca armata"
   },
   "c": "Механізми",
   "ac": [
@@ -4353,7 +4676,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Стріляючий пускач",
    "en": "Shooting Launcher",
-   "ru": "Стреляющая пусковая установка"
+   "ru": "Стреляющая пусковая установка",
+   "pl": "Strzelająca wyrzutnia"
   },
   "c": "Механізми",
   "ac": [
@@ -4366,7 +4690,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Стів",
    "en": "Steve",
-   "ru": "Стив"
+   "ru": "Стив",
+   "pl": "Steve"
   },
   "c": "Механізми",
   "ac": [
@@ -4379,7 +4704,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Суперкар",
    "en": "Supercar",
-   "ru": "Суперкар"
+   "ru": "Суперкар",
+   "pl": "Supersamochód"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -4392,7 +4718,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Супутник",
    "en": "Satellite",
-   "ru": "Спутник"
+   "ru": "Спутник",
+   "pl": "Satelita"
   },
   "c": "Космос",
   "ac": [
@@ -4406,7 +4733,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Супутники",
    "en": "Satellites",
-   "ru": "Спутники"
+   "ru": "Спутники",
+   "pl": "Satelity"
   },
   "c": "Космос",
   "ac": [
@@ -4419,7 +4747,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сфінкс",
    "en": "Sphinx",
-   "ru": "Сфинкс"
+   "ru": "Сфинкс",
+   "pl": "Sfinks"
   },
   "c": "Тварини",
   "ac": [
@@ -4432,7 +4761,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танк",
    "en": "Tank",
-   "ru": "Танк"
+   "ru": "Танк",
+   "pl": "Czołg"
   },
   "c": "Військова техніка",
   "ac": [
@@ -4445,7 +4775,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танкбот",
    "en": "Tankbot",
-   "ru": "Танкобот"
+   "ru": "Танкобот",
+   "pl": "Czołgobot"
   },
   "c": "Роботи",
   "ac": [
@@ -4458,7 +4789,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танцюрист",
    "en": "Dancer",
-   "ru": "Танцор"
+   "ru": "Танцор",
+   "pl": "Tancerz"
   },
   "c": "Люди",
   "ac": [
@@ -4472,7 +4804,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танцюючі птахи",
    "en": "Dancing Birds",
-   "ru": "Танцующие птицы"
+   "ru": "Танцующие птицы",
+   "pl": "Tańczące ptaki"
   },
   "c": "Птахи",
   "ac": [
@@ -4485,7 +4818,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танці",
    "en": "Dance",
-   "ru": "Танцы"
+   "ru": "Танцы",
+   "pl": "Taniec"
   },
   "c": "Люди",
   "ac": [
@@ -4498,7 +4832,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Телеграф",
    "en": "Telegraph",
-   "ru": "Телеграф"
+   "ru": "Телеграф",
+   "pl": "Telegraf"
   },
   "c": "Механізми",
   "ac": [
@@ -4511,7 +4846,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Телескоп Хаббл",
    "en": "Hubble Telescope",
-   "ru": "Телескоп \"Хаббл\""
+   "ru": "Телескоп \"Хаббл\"",
+   "pl": "Teleskop Hubble’a"
   },
   "c": "Космос",
   "ac": [
@@ -4525,7 +4861,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Терези",
    "en": "Scales",
-   "ru": "Весы"
+   "ru": "Весы",
+   "pl": "Waga szalkowa"
   },
   "c": "Механізми",
   "ac": [
@@ -4538,7 +4875,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Технозавр",
    "en": "Technosaurus",
-   "ru": "Технозавр"
+   "ru": "Технозавр",
+   "pl": "Technozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -4551,7 +4889,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тигр",
    "en": "Tiger",
-   "ru": "Тигр"
+   "ru": "Тигр",
+   "pl": "Tygrys"
   },
   "c": "Тварини",
   "ac": [
@@ -4564,7 +4903,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тиранозавр",
    "en": "Tyrannosaurus",
-   "ru": "Тираннозавр"
+   "ru": "Тираннозавр",
+   "pl": "Tyranozaur"
   },
   "c": "Динозаври",
   "ac": [
@@ -4577,7 +4917,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Токарний верстат",
    "en": "Lathe",
-   "ru": "Токарный станок"
+   "ru": "Токарный станок",
+   "pl": "Tokarka"
   },
   "c": "Механізми",
   "ac": [
@@ -4590,7 +4931,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Том і Джері",
    "en": "Tom and Jerry",
-   "ru": "Том и Джерри"
+   "ru": "Том и Джерри",
+   "pl": "Tom i Jerry"
   },
   "c": "Тварини",
   "ac": [
@@ -4603,7 +4945,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -4617,7 +4960,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трал",
    "en": "Trawl",
-   "ru": "Трал"
+   "ru": "Трал",
+   "pl": "Trał"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4630,7 +4974,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трицератопс",
    "en": "Triceratops",
-   "ru": "Трицератопс"
+   "ru": "Трицератопс",
+   "pl": "Triceratops"
   },
   "c": "Динозаври",
   "ac": [
@@ -4643,7 +4988,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трицикл",
    "en": "Trike",
-   "ru": "Трицикл"
+   "ru": "Трицикл",
+   "pl": "Trajka"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -4657,7 +5003,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тролейбус",
    "en": "Trolleybus",
-   "ru": "Троллейбус"
+   "ru": "Троллейбус",
+   "pl": "Trolejbus"
   },
   "c": "Транспорт",
   "ac": [
@@ -4670,7 +5017,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тукан",
    "en": "Toucan",
-   "ru": "Тукан"
+   "ru": "Тукан",
+   "pl": "Tukan"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -4684,7 +5032,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Турбо-вентилятор",
    "en": "Turbo Fan",
-   "ru": "Турбовентилятор"
+   "ru": "Турбовентилятор",
+   "pl": "Turbowentylator"
   },
   "c": "Механізми",
   "ac": [
@@ -4697,7 +5046,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Турист",
    "en": "Tourist",
-   "ru": "Турист"
+   "ru": "Турист",
+   "pl": "Turysta"
   },
   "c": "Люди",
   "ac": [
@@ -4710,7 +5060,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Турнір роботів",
    "en": "Robot Tournament",
-   "ru": "Турнир роботов"
+   "ru": "Турнир роботов",
+   "pl": "Turniej robotów"
   },
   "c": "Космос",
   "ac": [
@@ -4726,7 +5077,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тягач",
    "en": "Semi Truck",
-   "ru": "Тягач"
+   "ru": "Тягач",
+   "pl": "Ciągnik siodłowy"
   },
   "c": "Моделі без смартхаба",
   "ac": [
@@ -4740,7 +5092,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тягнучий робот",
    "en": "Pulling Robot",
-   "ru": "Тянущий робот"
+   "ru": "Тянущий робот",
+   "pl": "Robot holownik"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4753,7 +5106,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Фабрика Санти",
    "en": "Santa's Factory",
-   "ru": "Фабрика Санты"
+   "ru": "Фабрика Санты",
+   "pl": "Fabryka Świętego Mikołaja"
   },
   "c": "Новорічні",
   "ac": [
@@ -4766,7 +5120,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Фенек",
    "en": "Fennec Fox",
-   "ru": "Фенек"
+   "ru": "Фенек",
+   "pl": "Fenek"
   },
   "c": "Тварини",
   "ac": [
@@ -4779,7 +5134,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Формула-1",
    "en": "Formula 1",
-   "ru": "Формула-1"
+   "ru": "Формула-1",
+   "pl": "Formuła 1"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -4792,7 +5148,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Фунікулер",
    "en": "Funicular",
-   "ru": "Фуникулер"
+   "ru": "Фуникулер",
+   "pl": "Kolejka linowo-terenowa"
   },
   "c": "Механізми",
   "ac": [
@@ -4806,7 +5163,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Фітнес-кіт",
    "en": "Fitness Cat",
-   "ru": "Фитнес-кот"
+   "ru": "Фитнес-кот",
+   "pl": "Kot na siłowni"
   },
   "c": "Спорт",
   "ac": [
@@ -4820,7 +5178,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Хакерський прилад",
    "en": "Hacker Gadget",
-   "ru": "Хакерское устройство"
+   "ru": "Хакерское устройство",
+   "pl": "Urządzenie hakera"
   },
   "c": "Космос",
   "ac": [
@@ -4835,7 +5194,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Хамелеон",
    "en": "Chameleon",
-   "ru": "Хамелеон"
+   "ru": "Хамелеон",
+   "pl": "Kameleon"
   },
   "c": "Тварини",
   "ac": [
@@ -4848,7 +5208,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Хаммер",
    "en": "Hummer",
-   "ru": "Хаммер"
+   "ru": "Хаммер",
+   "pl": "Hummer"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -4863,7 +5224,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Харвестер",
    "en": "Harvester",
-   "ru": "Харвестер"
+   "ru": "Харвестер",
+   "pl": "Harwester"
   },
   "c": "Космос",
   "ac": [
@@ -4878,7 +5240,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Хитання",
    "en": "Wobble",
-   "ru": "Качание"
+   "ru": "Качание",
+   "pl": "Kołysanie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4891,7 +5254,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ходьба",
    "en": "Walking",
-   "ru": "Ходьба"
+   "ru": "Ходьба",
+   "pl": "Chodzenie"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -4904,7 +5268,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Хот-рід",
    "en": "Hot Rod",
-   "ru": "Хот-род"
+   "ru": "Хот-род",
+   "pl": "Hot rod"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -4917,7 +5282,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Художник",
    "en": "Artist",
-   "ru": "Художник"
+   "ru": "Художник",
+   "pl": "Malarz"
   },
   "c": "Люди",
   "ac": [
@@ -4931,7 +5297,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Цвіркун",
    "en": "Cricket",
-   "ru": "Сверчок"
+   "ru": "Сверчок",
+   "pl": "Świerszcz"
   },
   "c": "Комахи",
   "ac": [
@@ -4944,7 +5311,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Циркач",
    "en": "Circus Performer",
-   "ru": "Циркач"
+   "ru": "Циркач",
+   "pl": "Cyrkowiec"
   },
   "c": "Люди",
   "ac": [
@@ -4957,7 +5325,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Черв'як",
    "en": "Worm",
-   "ru": "Червяк"
+   "ru": "Червяк",
+   "pl": "Robak"
   },
   "c": "Комахи",
   "ac": [
@@ -4970,7 +5339,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Черепаха",
    "en": "Turtle",
-   "ru": "Черепаха"
+   "ru": "Черепаха",
+   "pl": "Żółw"
   },
   "c": "Міні-моделі",
   "ac": [
@@ -4984,7 +5354,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Човен",
    "en": "Boat",
-   "ru": "Лодка"
+   "ru": "Лодка",
+   "pl": "Łódka"
   },
   "c": "Кораблі",
   "ac": [
@@ -4997,7 +5368,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Чопер",
    "en": "Chopper",
-   "ru": "Чоппер"
+   "ru": "Чоппер",
+   "pl": "Chopper"
   },
   "c": "Автомобілі, мотоцикли",
   "ac": [
@@ -5011,7 +5383,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Шалені фанати",
    "en": "Crazy Fans",
-   "ru": "Безумные фанаты"
+   "ru": "Безумные фанаты",
+   "pl": "Szaleni kibice"
   },
   "c": "Механізми",
   "ac": [
@@ -5024,7 +5397,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Шахтар",
    "en": "Miner",
-   "ru": "Шахтер"
+   "ru": "Шахтер",
+   "pl": "Górnik"
   },
   "c": "Люди",
   "ac": [
@@ -5037,7 +5411,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Швейна машина",
    "en": "Sewing Machine",
-   "ru": "Швейная машина"
+   "ru": "Швейная машина",
+   "pl": "Maszyna do szycia"
   },
   "c": "Механізми",
   "ac": [
@@ -5050,7 +5425,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Швидкісний поїзд",
    "en": "High-Speed Train",
-   "ru": "Скоростной поезд"
+   "ru": "Скоростной поезд",
+   "pl": "Szybki pociąg"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5064,7 +5440,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Шлюз",
    "en": "Floodgate",
-   "ru": "Шлюз"
+   "ru": "Шлюз",
+   "pl": "Śluza wodna"
   },
   "c": "Механізми",
   "ac": [
@@ -5078,7 +5455,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Штангіст",
    "en": "Weightlifter",
-   "ru": "Штангист"
+   "ru": "Штангист",
+   "pl": "Ciężarowiec"
   },
   "c": "Люди",
   "ac": [
@@ -5092,7 +5470,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Яйцебот",
    "en": "Eggbot",
-   "ru": "Яйцебот"
+   "ru": "Яйцебот",
+   "pl": "Jajkobot"
   },
   "c": "Моделі, що малюють",
   "ac": [
@@ -5105,7 +5484,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Яхта",
    "en": "Yacht",
-   "ru": "Яхта"
+   "ru": "Яхта",
+   "pl": "Jacht"
   },
   "c": "Кораблі",
   "ac": [
@@ -5119,7 +5499,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ящик",
    "en": "Box",
-   "ru": "Ящик"
+   "ru": "Ящик",
+   "pl": "Skrzynia"
   },
   "c": "Механізми",
   "ac": [
@@ -5132,7 +5513,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ігровий пістолет",
    "en": "Toy Gun",
-   "ru": "Игровой пистолет"
+   "ru": "Игровой пистолет",
+   "pl": "Pistolet zabawkowy"
   },
   "c": "Механізми",
   "ac": [
@@ -5145,7 +5527,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ілистий стрибун",
    "en": "Mudskipper",
-   "ru": "Илистый прыгун"
+   "ru": "Илистый прыгун",
+   "pl": "Skoczek mułowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5159,7 +5542,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Індіанець",
    "en": "Native American",
-   "ru": "Индеец"
+   "ru": "Индеец",
+   "pl": "Indianin"
   },
   "c": "Люди",
   "ac": [
@@ -5172,7 +5556,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Інопланетянин",
    "en": "Extraterrestrial",
-   "ru": "Инопланетянин"
+   "ru": "Инопланетянин",
+   "pl": "Kosmita"
   },
   "c": "Космос",
   "ac": [
@@ -5185,7 +5570,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Їзда",
    "en": "Driving",
-   "ru": "Езда"
+   "ru": "Езда",
+   "pl": "Jazda"
   },
   "c": "Офіційні інструкції LEGO",
   "ac": [
@@ -5198,7 +5584,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автоматичні ворота",
    "en": "Automatic Gate",
-   "ru": "Автоматические ворота"
+   "ru": "Автоматические ворота",
+   "pl": "Brama automatyczna"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5212,7 +5599,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Планетохід",
    "en": "Planetary Rover",
-   "ru": "Планетоход"
+   "ru": "Планетоход",
+   "pl": "Łazik planetarny"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5226,7 +5614,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вудка",
    "en": "Fishing Rod",
-   "ru": "Удочка"
+   "ru": "Удочка",
+   "pl": "Wędka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5240,7 +5629,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйомник",
    "en": "Hoist",
-   "ru": "Подъемник"
+   "ru": "Подъемник",
+   "pl": "Podnośnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5254,7 +5644,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Заєць",
    "en": "Hare",
-   "ru": "Заяц"
+   "ru": "Заяц",
+   "pl": "Zając"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5268,7 +5659,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5282,7 +5674,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5296,7 +5689,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5310,7 +5704,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баггі",
    "en": "Buggy",
-   "ru": "Багги"
+   "ru": "Багги",
+   "pl": "Buggy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5324,7 +5719,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бик",
    "en": "Bull",
-   "ru": "Бык"
+   "ru": "Бык",
+   "pl": "Byk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5338,7 +5734,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Навантажувач вилковий",
    "en": "Forklift",
-   "ru": "Вилочный погрузчик"
+   "ru": "Вилочный погрузчик",
+   "pl": "Wózek widłowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5352,7 +5749,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5366,7 +5764,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5380,7 +5779,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жаба",
    "en": "Frog",
-   "ru": "Жаба"
+   "ru": "Жаба",
+   "pl": "Żaba"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5394,7 +5794,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5408,7 +5809,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Позашляховик",
    "en": "Off-Road Vehicle",
-   "ru": "Внедорожник"
+   "ru": "Внедорожник",
+   "pl": "Samochód terenowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5422,7 +5824,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5436,7 +5839,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робо-рука",
    "en": "Robot Arm",
-   "ru": "Робо-рука"
+   "ru": "Робо-рука",
+   "pl": "Ramię robota"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5450,7 +5854,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Конвертоплан",
    "en": "Tiltrotor",
-   "ru": "Конвертоплан"
+   "ru": "Конвертоплан",
+   "pl": "Przemiennopłat"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5464,7 +5869,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5478,7 +5884,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баштовий кран",
    "en": "Tower Crane",
-   "ru": "Башенный кран"
+   "ru": "Башенный кран",
+   "pl": "Żuraw wieżowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5492,7 +5899,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5506,7 +5914,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катапульта",
    "en": "Catapult",
-   "ru": "Катапульта"
+   "ru": "Катапульта",
+   "pl": "Katapulta"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5520,7 +5929,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Монорельс",
    "en": "Monorail",
-   "ru": "Монорельс"
+   "ru": "Монорельс",
+   "pl": "Kolej jednoszynowa"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5534,7 +5944,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйомний кран",
    "en": "Crane",
-   "ru": "Подъемный кран"
+   "ru": "Подъемный кран",
+   "pl": "Dźwig"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5548,7 +5959,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гусениця",
    "en": "Caterpillar",
-   "ru": "Гусеница"
+   "ru": "Гусеница",
+   "pl": "Gąsienica"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5562,7 +5974,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Муха",
    "en": "Fly",
-   "ru": "Муха"
+   "ru": "Муха",
+   "pl": "Mucha"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5576,7 +5989,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Велосипедист",
    "en": "Cyclist",
-   "ru": "Велосипедист"
+   "ru": "Велосипедист",
+   "pl": "Rowerzysta"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5590,7 +6004,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Малювання",
    "en": "Drawing",
-   "ru": "Рисование"
+   "ru": "Рисование",
+   "pl": "Rysowanie"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5604,7 +6019,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Богомол",
    "en": "Praying Mantis",
-   "ru": "Богомол"
+   "ru": "Богомол",
+   "pl": "Modliszka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5618,7 +6034,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Планетохід",
    "en": "Planetary Rover",
-   "ru": "Планетоход"
+   "ru": "Планетоход",
+   "pl": "Łazik planetarny"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5632,7 +6049,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мотоцикл",
    "en": "Motorcycle",
-   "ru": "Мотоцикл"
+   "ru": "Мотоцикл",
+   "pl": "Motocykl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5646,7 +6064,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5660,7 +6079,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Аероплан",
    "en": "Aeroplane",
-   "ru": "Аэроплан"
+   "ru": "Аэроплан",
+   "pl": "Aeroplan"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5674,7 +6094,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мотоцикл",
    "en": "Motorcycle",
-   "ru": "Мотоцикл"
+   "ru": "Мотоцикл",
+   "pl": "Motocykl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5688,7 +6109,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Джип",
    "en": "Jeep",
-   "ru": "Джип"
+   "ru": "Джип",
+   "pl": "Jeep"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5702,7 +6124,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Змія",
    "en": "Snake",
-   "ru": "Змея"
+   "ru": "Змея",
+   "pl": "Wąż"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5716,7 +6139,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тиранозавр",
    "en": "Tyrannosaurus",
-   "ru": "Тираннозавр"
+   "ru": "Тираннозавр",
+   "pl": "Tyranozaur"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5730,7 +6154,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ліфт",
    "en": "Lift",
-   "ru": "Лифт"
+   "ru": "Лифт",
+   "pl": "Winda"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5744,7 +6169,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Заєць",
    "en": "Hare",
-   "ru": "Заяц"
+   "ru": "Заяц",
+   "pl": "Zając"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5758,7 +6184,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кіт",
    "en": "Cat",
-   "ru": "Кот"
+   "ru": "Кот",
+   "pl": "Kot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5772,7 +6199,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лижник",
    "en": "Skier",
-   "ru": "Лыжник"
+   "ru": "Лыжник",
+   "pl": "Narciarz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5786,7 +6214,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5800,7 +6229,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карусель",
    "en": "Carousel",
-   "ru": "Карусель"
+   "ru": "Карусель",
+   "pl": "Karuzela"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5814,7 +6244,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Скорпіон",
    "en": "Scorpion",
-   "ru": "Скорпион"
+   "ru": "Скорпион",
+   "pl": "Skorpion"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5828,7 +6259,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Горила",
    "en": "Gorilla",
-   "ru": "Горилла"
+   "ru": "Горилла",
+   "pl": "Goryl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5842,7 +6274,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пелікан",
    "en": "Pelican",
-   "ru": "Пеликан"
+   "ru": "Пеликан",
+   "pl": "Pelikan"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5856,7 +6289,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Самоскид",
    "en": "Dump Truck",
-   "ru": "Самосвал"
+   "ru": "Самосвал",
+   "pl": "Wywrotka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5870,7 +6304,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катер",
    "en": "Motorboat",
-   "ru": "Катер"
+   "ru": "Катер",
+   "pl": "Motorówka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5884,7 +6319,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Воротар",
    "en": "Goalkeeper",
-   "ru": "Вратарь"
+   "ru": "Вратарь",
+   "pl": "Bramkarz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5898,7 +6334,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робо-рука",
    "en": "Robot Arm",
-   "ru": "Робо-рука"
+   "ru": "Робо-рука",
+   "pl": "Ramię robota"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5912,7 +6349,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Швидкісний поїзд",
    "en": "High-Speed Train",
-   "ru": "Скоростной поезд"
+   "ru": "Скоростной поезд",
+   "pl": "Szybki pociąg"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5926,7 +6364,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вентилятор",
    "en": "Fan",
-   "ru": "Вентилятор"
+   "ru": "Вентилятор",
+   "pl": "Wentylator"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5940,7 +6379,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робо-рука",
    "en": "Robot Arm",
-   "ru": "Робо-рука"
+   "ru": "Робо-рука",
+   "pl": "Ramię robota"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5954,7 +6394,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Равлик",
    "en": "Snail",
-   "ru": "Улитка"
+   "ru": "Улитка",
+   "pl": "Ślimak"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5968,7 +6409,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тягач",
    "en": "Semi Truck",
-   "ru": "Тягач"
+   "ru": "Тягач",
+   "pl": "Ciągnik siodłowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5982,7 +6424,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ліфт",
    "en": "Lift",
-   "ru": "Лифт"
+   "ru": "Лифт",
+   "pl": "Winda"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -5996,7 +6439,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Хаммер",
    "en": "Hummer",
-   "ru": "Хаммер"
+   "ru": "Хаммер",
+   "pl": "Hummer"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6010,7 +6454,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бетмобіль",
    "en": "Batmobile",
-   "ru": "Бэтмобиль"
+   "ru": "Бэтмобиль",
+   "pl": "Batmobil"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6024,7 +6469,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6038,7 +6484,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Корабель",
    "en": "Ship",
-   "ru": "Корабль"
+   "ru": "Корабль",
+   "pl": "Statek"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6052,7 +6499,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гідроплан",
    "en": "Seaplane",
-   "ru": "Гидроплан"
+   "ru": "Гидроплан",
+   "pl": "Wodnosamolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6066,7 +6514,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мавпа",
    "en": "Monkey",
-   "ru": "Обезьяна"
+   "ru": "Обезьяна",
+   "pl": "Małpa"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6080,7 +6529,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Качка",
    "en": "Duck",
-   "ru": "Утка"
+   "ru": "Утка",
+   "pl": "Kaczka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6094,7 +6544,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6108,7 +6559,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жаба",
    "en": "Frog",
-   "ru": "Жаба"
+   "ru": "Жаба",
+   "pl": "Żaba"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6122,7 +6574,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Зауропод",
    "en": "Sauropod",
-   "ru": "Завропод"
+   "ru": "Завропод",
+   "pl": "Zauropod"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6136,7 +6589,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6150,7 +6604,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Каса",
    "en": "Cash Register",
-   "ru": "Касса"
+   "ru": "Касса",
+   "pl": "Kasa fiskalna"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6164,7 +6619,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Збиральна машина",
    "en": "Street Sweeper",
-   "ru": "Уборочная машина"
+   "ru": "Уборочная машина",
+   "pl": "Zamiatarka uliczna"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6178,7 +6634,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Олень Рудольф",
    "en": "Rudolph the Reindeer",
-   "ru": "Олень Рудольф"
+   "ru": "Олень Рудольф",
+   "pl": "Renifer Rudolf"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6192,7 +6649,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вентилятор",
    "en": "Fan",
-   "ru": "Вентилятор"
+   "ru": "Вентилятор",
+   "pl": "Wentylator"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6206,7 +6664,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Позашляховик",
    "en": "Off-Road Vehicle",
-   "ru": "Внедорожник"
+   "ru": "Внедорожник",
+   "pl": "Samochód terenowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6220,7 +6679,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лижник",
    "en": "Skier",
-   "ru": "Лыжник"
+   "ru": "Лыжник",
+   "pl": "Narciarz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6234,7 +6694,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Сова",
    "en": "Owl",
-   "ru": "Сова"
+   "ru": "Сова",
+   "pl": "Sowa"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6248,7 +6709,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ілистий стрибун",
    "en": "Mudskipper",
-   "ru": "Илистый прыгун"
+   "ru": "Илистый прыгун",
+   "pl": "Skoczek mułowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6262,7 +6724,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6276,7 +6739,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Слон",
    "en": "Elephant",
-   "ru": "Слон"
+   "ru": "Слон",
+   "pl": "Słoń"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6290,7 +6754,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бик",
    "en": "Bull",
-   "ru": "Бык"
+   "ru": "Бык",
+   "pl": "Byk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6304,7 +6769,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6318,7 +6784,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Комбайн",
    "en": "Combine Harvester",
-   "ru": "Комбайн"
+   "ru": "Комбайн",
+   "pl": "Kombajn"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6332,7 +6799,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6346,7 +6814,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бетмобіль",
    "en": "Batmobile",
-   "ru": "Бэтмобиль"
+   "ru": "Бэтмобиль",
+   "pl": "Batmobil"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6360,7 +6829,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танк",
    "en": "Tank",
-   "ru": "Танк"
+   "ru": "Танк",
+   "pl": "Czołg"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6374,7 +6844,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автомобіль",
    "en": "Car",
-   "ru": "Автомобиль"
+   "ru": "Автомобиль",
+   "pl": "Samochód"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6388,7 +6859,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Воротар",
    "en": "Goalkeeper",
-   "ru": "Вратарь"
+   "ru": "Вратарь",
+   "pl": "Bramkarz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6402,7 +6874,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6416,7 +6889,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Корабель",
    "en": "Ship",
-   "ru": "Корабль"
+   "ru": "Корабль",
+   "pl": "Statek"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6430,7 +6904,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6444,7 +6919,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Радар",
    "en": "Radar",
-   "ru": "Радар"
+   "ru": "Радар",
+   "pl": "Radar"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6458,7 +6934,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6472,7 +6949,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дракон",
    "en": "Dragon",
-   "ru": "Дракон"
+   "ru": "Дракон",
+   "pl": "Smok"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6486,7 +6964,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Новорічна ялинка",
    "en": "Christmas Tree",
-   "ru": "Новогодняя елка"
+   "ru": "Новогодняя елка",
+   "pl": "Choinka świąteczna"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6500,7 +6979,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вантажівка",
    "en": "Truck",
-   "ru": "Грузовик"
+   "ru": "Грузовик",
+   "pl": "Ciężarówka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6514,7 +6994,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бетмобіль",
    "en": "Batmobile",
-   "ru": "Бэтмобиль"
+   "ru": "Бэтмобиль",
+   "pl": "Batmobil"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6528,7 +7009,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6542,7 +7024,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Аероплан",
    "en": "Aeroplane",
-   "ru": "Аэроплан"
+   "ru": "Аэроплан",
+   "pl": "Aeroplan"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6556,7 +7039,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Комбайн",
    "en": "Combine Harvester",
-   "ru": "Комбайн"
+   "ru": "Комбайн",
+   "pl": "Kombajn"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6570,7 +7054,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6584,7 +7069,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "X-wing",
    "en": "X-wing",
-   "ru": "X-wing"
+   "ru": "X-wing",
+   "pl": "X-wing"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6598,7 +7084,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "X-wing",
    "en": "X-wing",
-   "ru": "X-wing"
+   "ru": "X-wing",
+   "pl": "X-wing"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6612,7 +7099,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6626,7 +7114,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Павук",
    "en": "Spider",
-   "ru": "Паук"
+   "ru": "Паук",
+   "pl": "Pająk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6640,7 +7129,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дракон",
    "en": "Dragon",
-   "ru": "Дракон"
+   "ru": "Дракон",
+   "pl": "Smok"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6654,7 +7144,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Павук",
    "en": "Spider",
-   "ru": "Паук"
+   "ru": "Паук",
+   "pl": "Pająk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6668,7 +7159,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйомний кран",
    "en": "Crane",
-   "ru": "Подъемный кран"
+   "ru": "Подъемный кран",
+   "pl": "Dźwig"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6682,7 +7174,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Слон",
    "en": "Elephant",
-   "ru": "Слон"
+   "ru": "Слон",
+   "pl": "Słoń"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6696,7 +7189,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тягач",
    "en": "Semi Truck",
-   "ru": "Тягач"
+   "ru": "Тягач",
+   "pl": "Ciągnik siodłowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6710,7 +7204,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6724,7 +7219,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автобус",
    "en": "Bus",
-   "ru": "Автобус"
+   "ru": "Автобус",
+   "pl": "Autobus"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6738,7 +7234,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Яхта",
    "en": "Yacht",
-   "ru": "Яхта"
+   "ru": "Яхта",
+   "pl": "Jacht"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6752,7 +7249,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Спірограф",
    "en": "Spirograph",
-   "ru": "Спирограф"
+   "ru": "Спирограф",
+   "pl": "Spirograf"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6766,7 +7264,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вантажівка",
    "en": "Truck",
-   "ru": "Грузовик"
+   "ru": "Грузовик",
+   "pl": "Ciężarówka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6780,7 +7279,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Павук",
    "en": "Spider",
-   "ru": "Паук"
+   "ru": "Паук",
+   "pl": "Pająk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6794,7 +7294,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баггі",
    "en": "Buggy",
-   "ru": "Багги"
+   "ru": "Багги",
+   "pl": "Buggy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6808,7 +7309,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Скорпіон",
    "en": "Scorpion",
-   "ru": "Скорпион"
+   "ru": "Скорпион",
+   "pl": "Skorpion"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6822,7 +7324,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бабка",
    "en": "Dragonfly",
-   "ru": "Стрекоза"
+   "ru": "Стрекоза",
+   "pl": "Ważka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6836,7 +7339,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Новорічна ялинка",
    "en": "Christmas Tree",
-   "ru": "Новогодняя елка"
+   "ru": "Новогодняя елка",
+   "pl": "Choinka świąteczna"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6850,7 +7354,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бетмобіль",
    "en": "Batmobile",
-   "ru": "Бэтмобиль"
+   "ru": "Бэтмобиль",
+   "pl": "Batmobil"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6864,7 +7369,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6878,7 +7384,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Равлик",
    "en": "Snail",
-   "ru": "Улитка"
+   "ru": "Улитка",
+   "pl": "Ślimak"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6892,7 +7399,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6906,7 +7414,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Позашляховик",
    "en": "Off-Road Vehicle",
-   "ru": "Внедорожник"
+   "ru": "Внедорожник",
+   "pl": "Samochód terenowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6920,7 +7429,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Папуга",
    "en": "Parrot",
-   "ru": "Попугай"
+   "ru": "Попугай",
+   "pl": "Papuga"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6934,7 +7444,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ящик",
    "en": "Box",
-   "ru": "Ящик"
+   "ru": "Ящик",
+   "pl": "Skrzynia"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6948,7 +7459,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Воротар",
    "en": "Goalkeeper",
-   "ru": "Вратарь"
+   "ru": "Вратарь",
+   "pl": "Bramkarz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6962,7 +7474,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танцюрист",
    "en": "Dancer",
-   "ru": "Танцор"
+   "ru": "Танцор",
+   "pl": "Tancerz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6976,7 +7489,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Лижник",
    "en": "Skier",
-   "ru": "Лыжник"
+   "ru": "Лыжник",
+   "pl": "Narciarz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -6990,7 +7504,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Павук",
    "en": "Spider",
-   "ru": "Паук"
+   "ru": "Паук",
+   "pl": "Pająk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7004,7 +7519,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бик",
    "en": "Bull",
-   "ru": "Бык"
+   "ru": "Бык",
+   "pl": "Byk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7018,7 +7534,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кіт на велосипеді",
    "en": "Cat on a Bicycle",
-   "ru": "Кот на велосипеде"
+   "ru": "Кот на велосипеде",
+   "pl": "Kot na rowerze"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7032,7 +7549,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Поворот",
    "en": "Turning",
-   "ru": "Поворот"
+   "ru": "Поворот",
+   "pl": "Skręt"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7046,7 +7564,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баггі",
    "en": "Buggy",
-   "ru": "Багги"
+   "ru": "Багги",
+   "pl": "Buggy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7060,7 +7579,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7074,7 +7594,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Собака",
    "en": "Dog",
-   "ru": "Собака"
+   "ru": "Собака",
+   "pl": "Pies"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7088,7 +7609,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Рух по лінії",
    "en": "Line Following",
-   "ru": "Движение по линии"
+   "ru": "Движение по линии",
+   "pl": "Jazda po linii"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7102,7 +7624,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Канатна дорога",
    "en": "Cable Car",
-   "ru": "Канатная дорога"
+   "ru": "Канатная дорога",
+   "pl": "Kolejka linowa"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7116,7 +7639,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Андроїд",
    "en": "Android",
-   "ru": "Андроид"
+   "ru": "Андроид",
+   "pl": "Android"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7130,7 +7654,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7144,7 +7669,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Нафтовий насос",
    "en": "Oil Pump",
-   "ru": "Нефтяной насос"
+   "ru": "Нефтяной насос",
+   "pl": "Kiwon naftowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7158,7 +7684,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Черепаха",
    "en": "Turtle",
-   "ru": "Черепаха"
+   "ru": "Черепаха",
+   "pl": "Żółw"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7172,7 +7699,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокодил",
    "en": "Crocodile",
-   "ru": "Крокодил"
+   "ru": "Крокодил",
+   "pl": "Krokodyl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7186,7 +7714,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Моторолер",
    "en": "Scooter",
-   "ru": "Мотороллер"
+   "ru": "Мотороллер",
+   "pl": "Skuter"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7200,7 +7729,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7214,7 +7744,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7228,7 +7759,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Трактор",
    "en": "Tractor",
-   "ru": "Трактор"
+   "ru": "Трактор",
+   "pl": "Ciągnik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7242,7 +7774,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катапульта",
    "en": "Catapult",
-   "ru": "Катапульта"
+   "ru": "Катапульта",
+   "pl": "Katapulta"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7256,7 +7789,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Модель сонячної системи",
    "en": "Solar System Model",
-   "ru": "Модель Солнечной системы"
+   "ru": "Модель Солнечной системы",
+   "pl": "Model Układu Słonecznego"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7270,7 +7804,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Павук",
    "en": "Spider",
-   "ru": "Паук"
+   "ru": "Паук",
+   "pl": "Pająk"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7284,7 +7819,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Собака",
    "en": "Dog",
-   "ru": "Собака"
+   "ru": "Собака",
+   "pl": "Pies"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7298,7 +7834,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карусель",
    "en": "Carousel",
-   "ru": "Карусель"
+   "ru": "Карусель",
+   "pl": "Karuzela"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7312,7 +7849,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Піратський корабель",
    "en": "Pirate Ship",
-   "ru": "Пиратский корабль"
+   "ru": "Пиратский корабль",
+   "pl": "Statek piracki"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7326,7 +7864,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Равлик",
    "en": "Snail",
-   "ru": "Улитка"
+   "ru": "Улитка",
+   "pl": "Ślimak"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7340,7 +7879,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тролейбус",
    "en": "Trolleybus",
-   "ru": "Троллейбус"
+   "ru": "Троллейбус",
+   "pl": "Trolejbus"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7354,7 +7894,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вентилятор",
    "en": "Fan",
-   "ru": "Вентилятор"
+   "ru": "Вентилятор",
+   "pl": "Wentylator"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7368,7 +7909,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7382,7 +7924,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Марсохід",
    "en": "Mars Rover",
-   "ru": "Марсоход"
+   "ru": "Марсоход",
+   "pl": "Łazik marsjański"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7396,7 +7939,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птах",
    "en": "Bird",
-   "ru": "Птица"
+   "ru": "Птица",
+   "pl": "Ptak"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7410,7 +7954,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Жаба",
    "en": "Frog",
-   "ru": "Жаба"
+   "ru": "Жаба",
+   "pl": "Żaba"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7424,7 +7969,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кит",
    "en": "Whale",
-   "ru": "Кит"
+   "ru": "Кит",
+   "pl": "Wieloryb"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7438,7 +7984,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Яйцебот",
    "en": "Eggbot",
-   "ru": "Яйцебот"
+   "ru": "Яйцебот",
+   "pl": "Jajkobot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7452,7 +7999,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Батискаф",
    "en": "Bathyscaphe",
-   "ru": "Батискаф"
+   "ru": "Батискаф",
+   "pl": "Batyskaf"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7466,7 +8014,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карусель",
    "en": "Carousel",
-   "ru": "Карусель"
+   "ru": "Карусель",
+   "pl": "Karuzela"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7480,7 +8029,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автобус",
    "en": "Bus",
-   "ru": "Автобус"
+   "ru": "Автобус",
+   "pl": "Autobus"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7494,7 +8044,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Пожежна машина",
    "en": "Fire Truck",
-   "ru": "Пожарная машина"
+   "ru": "Пожарная машина",
+   "pl": "Wóz strażacki"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7508,7 +8059,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7522,7 +8074,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Навантажувач вилковий",
    "en": "Forklift",
-   "ru": "Вилочный погрузчик"
+   "ru": "Вилочный погрузчик",
+   "pl": "Wózek widłowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7536,7 +8089,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7550,7 +8104,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Майло з датчиком переміщення",
    "en": "Milo with Motion Sensor",
-   "ru": "Майло с датчиком перемещения"
+   "ru": "Майло с датчиком перемещения",
+   "pl": "Milo z czujnikiem ruchu"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7564,7 +8119,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7578,7 +8134,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Горила",
    "en": "Gorilla",
-   "ru": "Горилла"
+   "ru": "Горилла",
+   "pl": "Goryl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7592,7 +8149,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Тягач",
    "en": "Semi Truck",
-   "ru": "Тягач"
+   "ru": "Тягач",
+   "pl": "Ciągnik siodłowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7606,7 +8164,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокодил",
    "en": "Crocodile",
-   "ru": "Крокодил"
+   "ru": "Крокодил",
+   "pl": "Krokodyl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7620,7 +8179,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Навантажувач вилковий",
    "en": "Forklift",
-   "ru": "Вилочный погрузчик"
+   "ru": "Вилочный погрузчик",
+   "pl": "Wózek widłowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7634,7 +8194,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Підйомний кран",
    "en": "Crane",
-   "ru": "Подъемный кран"
+   "ru": "Подъемный кран",
+   "pl": "Dźwig"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7648,7 +8209,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ліфт",
    "en": "Lift",
-   "ru": "Лифт"
+   "ru": "Лифт",
+   "pl": "Winda"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7662,7 +8224,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "AT-ST",
    "en": "AT-ST",
-   "ru": "AT-ST"
+   "ru": "AT-ST",
+   "pl": "AT-ST"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7676,7 +8239,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Качка",
    "en": "Duck",
-   "ru": "Утка"
+   "ru": "Утка",
+   "pl": "Kaczka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7690,7 +8254,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7704,7 +8269,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокодил",
    "en": "Crocodile",
-   "ru": "Крокодил"
+   "ru": "Крокодил",
+   "pl": "Krokodyl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7718,7 +8284,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Комбайн",
    "en": "Combine Harvester",
-   "ru": "Комбайн"
+   "ru": "Комбайн",
+   "pl": "Kombajn"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7732,7 +8299,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Дракон",
    "en": "Dragon",
-   "ru": "Дракон"
+   "ru": "Дракон",
+   "pl": "Smok"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7746,7 +8314,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робо-рука",
    "en": "Robot Arm",
-   "ru": "Робо-рука"
+   "ru": "Робо-рука",
+   "pl": "Ramię robota"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7760,7 +8329,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катапульта",
    "en": "Catapult",
-   "ru": "Катапульта"
+   "ru": "Катапульта",
+   "pl": "Katapulta"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7774,7 +8344,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "R2D2",
    "en": "R2D2",
-   "ru": "R2D2"
+   "ru": "R2D2",
+   "pl": "R2D2"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7788,7 +8359,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Ровер",
    "en": "Rover",
-   "ru": "Ровер"
+   "ru": "Ровер",
+   "pl": "Łazik"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7802,7 +8374,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вентилятор",
    "en": "Fan",
-   "ru": "Вентилятор"
+   "ru": "Вентилятор",
+   "pl": "Wentylator"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7816,7 +8389,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Літак",
    "en": "Airplane",
-   "ru": "Самолет"
+   "ru": "Самолет",
+   "pl": "Samolot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7830,7 +8404,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Кінь",
    "en": "Horse",
-   "ru": "Конь"
+   "ru": "Конь",
+   "pl": "Koń"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7844,7 +8419,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Маніпулятор",
    "en": "Robotic Manipulator",
-   "ru": "Манипулятор"
+   "ru": "Манипулятор",
+   "pl": "Manipulator"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7858,7 +8434,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Птеродактиль",
    "en": "Pterodactyl",
-   "ru": "Птеродактиль"
+   "ru": "Птеродактиль",
+   "pl": "Pterodaktyl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7872,7 +8449,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Робот-сумоїст",
    "en": "Sumo Robot",
-   "ru": "Робот-сумоист"
+   "ru": "Робот-сумоист",
+   "pl": "Robot sumo"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7886,7 +8464,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7900,7 +8479,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Шалені фанати",
    "en": "Crazy Fans",
-   "ru": "Безумные фанаты"
+   "ru": "Безумные фанаты",
+   "pl": "Szaleni kibice"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7914,7 +8494,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7928,7 +8509,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Автомобіль",
    "en": "Car",
-   "ru": "Автомобиль"
+   "ru": "Автомобиль",
+   "pl": "Samochód"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7942,7 +8524,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Баштовий кран",
    "en": "Tower Crane",
-   "ru": "Башенный кран"
+   "ru": "Башенный кран",
+   "pl": "Żuraw wieżowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7956,7 +8539,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Карусель",
    "en": "Carousel",
-   "ru": "Карусель"
+   "ru": "Карусель",
+   "pl": "Karuzela"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7970,7 +8554,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бетмобіль",
    "en": "Batmobile",
-   "ru": "Бэтмобиль"
+   "ru": "Бэтмобиль",
+   "pl": "Batmobil"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7984,7 +8569,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокуючий робот",
    "en": "Walking Robot",
-   "ru": "Шагающий робот"
+   "ru": "Шагающий робот",
+   "pl": "Kroczący robot"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -7998,7 +8584,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Танцюрист",
    "en": "Dancer",
-   "ru": "Танцор"
+   "ru": "Танцор",
+   "pl": "Tancerz"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8012,7 +8599,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Гоночний автомобіль",
    "en": "Race Car",
-   "ru": "Гоночный автомобиль"
+   "ru": "Гоночный автомобиль",
+   "pl": "Samochód wyścigowy"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8026,7 +8614,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Вертоліт",
    "en": "Helicopter",
-   "ru": "Вертолет"
+   "ru": "Вертолет",
+   "pl": "Śmigłowiec"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8040,7 +8629,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Крокодил",
    "en": "Crocodile",
-   "ru": "Крокодил"
+   "ru": "Крокодил",
+   "pl": "Krokodyl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8054,7 +8644,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Валлі",
    "en": "WALL-E",
-   "ru": "ВАЛЛ-И"
+   "ru": "ВАЛЛ-И",
+   "pl": "WALL-E"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8068,7 +8659,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Черепаха",
    "en": "Turtle",
-   "ru": "Черепаха"
+   "ru": "Черепаха",
+   "pl": "Żółw"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8082,7 +8674,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Бабка",
    "en": "Dragonfly",
-   "ru": "Стрекоза"
+   "ru": "Стрекоза",
+   "pl": "Ważka"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8096,7 +8689,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Мотоцикл",
    "en": "Motorcycle",
-   "ru": "Мотоцикл"
+   "ru": "Мотоцикл",
+   "pl": "Motocykl"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8110,7 +8704,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Катапульта",
    "en": "Catapult",
-   "ru": "Катапульта"
+   "ru": "Катапульта",
+   "pl": "Katapulta"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8124,7 +8719,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Банкомат",
    "en": "ATM",
-   "ru": "Банкомат"
+   "ru": "Банкомат",
+   "pl": "Bankomat"
   },
   "c": "Нові інструкції",
   "ac": [
@@ -8138,7 +8734,8 @@ const LEGO_DATA = [
   "t": {
    "uk": "Снігохід",
    "en": "Snowmobile",
-   "ru": "Снегоход"
+   "ru": "Снегоход",
+   "pl": "Skuter śnieżny"
   },
   "c": "Нові інструкції",
   "ac": [

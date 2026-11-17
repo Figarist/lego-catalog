@@ -1175,8 +1175,6 @@ document.addEventListener('DOMContentLoaded', () => {
   async function handleShare(item) {
     const shareUrl = new URL(window.location.origin + window.location.pathname);
     shareUrl.searchParams.set('model', item.p);
-    const lang = LegoStore.getLang();
-    if (lang) shareUrl.searchParams.set('lang', lang);
 
     const shareData = {
       title: getLocalized(item.t),
