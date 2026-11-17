@@ -64,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalCats = $('modalCats');
   const modalItemActions = $('modalItemActions');
   const modalOpenBtn = $('modalOpenBtn');
+  const modalUnavailable = $('modalUnavailable');
   const modalClose = $('modalClose');
 
   // About Modal elements
@@ -199,6 +200,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function getLocalized(val) {
     return LegoStore.getLocalized(val);
+  }
+
+  // Only external (http/https) instruction links are published. Repo-relative PDF paths are never
+  // deployed (*.pdf is git-ignored), so such models show an "unavailable" state instead of a dead link.
+  // Keep in sync with instructionHref() in scripts/generate-pages.mjs.
+  function hasOnlineInstruction(item) {
+    return /^https?:\/\//i.test(item.p || '');
   }
 
 
@@ -649,15 +657,20 @@ document.addEventListener('DOMContentLoaded', () => {
       imgDiv.innerHTML = `<div class="no-img"><span class="no-img-icon">📋</span>${t('label_official')}</div>`;
     }
 
-    const badge = document.createElement('div');
-    badge.className = 'play-badge';
-    badge.textContent = '▶';
-    div.appendChild(badge);
+    const online = hasOnlineInstruction(item);
+    if (online) {
+      const badge = document.createElement('div');
+      badge.className = 'play-badge';
+      badge.textContent = '▶';
+      div.appendChild(badge);
+    } else {
+      div.classList.add('is-unavailable');
+    }
 
     const body = document.createElement('div');
     body.className = 'card-body';
     const titleText = getLocalized(item.t);
-    const catText = getLocalizedCat(item.c);
+    const catText = online ? getLocalizedCat(item.c) : t('instruction_unavailable');
     body.innerHTML = `<div class="card-title" title="${escapeHTML(titleText)}">${escapeHTML(titleText)}</div><div class="card-cat">${escapeHTML(catText)}</div>`;
 
     div.appendChild(imgDiv);
@@ -810,7 +823,11 @@ document.addEventListener('DOMContentLoaded', () => {
     modalShareBtn.onclick = () => handleShare(item);
     if (modalItemActions) modalItemActions.appendChild(modalShareBtn);
 
-    modalOpenBtn.href = item.p;
+    const online = hasOnlineInstruction(item);
+    if (online) modalOpenBtn.href = item.p;
+    else modalOpenBtn.removeAttribute('href');
+    modalOpenBtn.classList.toggle('hidden', !online);
+    if (modalUnavailable) modalUnavailable.classList.toggle('hidden', online);
 
     // Built toggle in modal
     const modalBuiltInput = $('modalBuilt');

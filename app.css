@@ -624,6 +624,15 @@ body{
 }
 .modal-open-btn:active{transform:translateY(0) scale(.98)}
 .modal-open-btn .btn-icon{font-size:1.6rem}
+.modal-unavailable{
+  display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:18px 24px;margin-top:6px;
+  border:2px dashed rgba(255,255,255,.18);border-radius:var(--r-md);
+  color:var(--text2);
+  font-size:1.05rem;font-weight:800;text-align:center;
+}
+.modal-unavailable .btn-icon{font-size:1.4rem}
+.card.is-unavailable .card-cat{font-style:italic}
 
 /* === EMPTY STATE === */
 .empty{
