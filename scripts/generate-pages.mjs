@@ -180,6 +180,31 @@ const LOCALES = {
     footerBrand: 'BrickBot Study Archive — для наборов LEGO® WeDo 2.0',
     footerCatalog: '🧱 Каталог инструкций',
     langLabel: 'Язык'
+  },
+  pl: {
+    prefix: 'pl/', htmlLang: 'pl', ogLocale: 'pl_PL', langName: 'Polski', short: 'PL',
+    hub: 'https://sivochka.com/', tutoring: 'https://sivochka.com/',
+    preferCyrillic: false,
+    title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'instrukcja', 'instrukcje', 'instrukcji')} LEGO WeDo 2.0`,
+    titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'instrukcja', 'instrukcje', 'instrukcji')} WeDo 2.0`,
+    descLead: (name, n, ex, more) => `${n} ${slavicPlural(n, 'schemat', 'schematy', 'schematów')} budowy LEGO® WeDo 2.0 w kategorii „${name}”` +
+      (ex.length ? `: ${ex.join(', ')}${more ? ' i inne' : ''}.` : '.'),
+    descTail: ' Za darmo na lekcje robotyki.',
+    h1: (name, n) => `LEGO® WeDo 2.0: instrukcje — ${name} (${n} ${slavicPlural(n, 'model', 'modele', 'modeli')})`,
+    intro: (name, n, ex) => `W kategorii „${name}” zebrano ${n} ${slavicPlural(n, 'schemat', 'schematy', 'schematów')} budowy dla zestawów LEGO® Education WeDo 2.0` +
+      (ex.length ? `, w tym ${joinWith(ex, ' oraz ')}` : '') +
+      '. Kliknij model, aby otworzyć instrukcję krok po kroku w nowej karcie.',
+    section: (name, n) => `${name}: ${n} ${slavicPlural(n, 'model', 'modele', 'modeli')}`,
+    itemListName: name => `${name} — instrukcje LEGO WeDo 2.0`,
+    also: 'Również: ',
+    catalogSmall: 'Katalog instrukcji',
+    appBtn: '🔍 Otwórz interaktywny katalog',
+    breadcrumbLabel: 'Ścieżka nawigacji',
+    catalogCrumb: 'Katalog LEGO WeDo 2.0',
+    otherCats: '📂 Inne kategorie instrukcji',
+    footerBrand: 'BrickBot Study Archive — dla zestawów LEGO® WeDo 2.0',
+    footerCatalog: '🧱 Katalog instrukcji',
+    langLabel: 'Język'
   }
 };
 const LANGS = Object.keys(LOCALES);
@@ -187,8 +212,8 @@ const LANGS = Object.keys(LOCALES);
 const nameOf = (item, lang) => (item.t[lang] || item.t.uk).trim();
 const pageUrl = (lang, slug) => `${BASE_URL}${LOCALES[lang].prefix}c/${slug}/`;
 const pagePath = (lang, slug) => `${LOCALES[lang].prefix}c/${slug}/index.html`;
-// App entry point for a language: the app reads ?lang= (store.js); Ukrainian is the default.
-const appQuery = lang => (lang === 'uk' ? '' : `?lang=${lang}`);
+// Always link to clean canonical URLs (no ?lang= query strings); store.js detects category locale via referrer.
+const appQuery = () => '';
 
 // ---------- Build category model ----------
 function buildCategories(data) {
