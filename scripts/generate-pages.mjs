@@ -240,7 +240,7 @@ function renderCategoryPage(cat, ctx) {
     const href = instructionHref(it.p, relRoot);
     const note = href
       ? (others.length ? 'Також: ' + esc(others.join(', ')) : esc(uk.label_instruction))
-      : 'Інструкція поки недоступна онлайн';
+      : esc(uk.instruction_unavailable);
     const inner = `
             <div class="card-img">${img}</div>
             <div class="card-body">
