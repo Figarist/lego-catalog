@@ -1964,6 +1964,15 @@ body::before{
   transition:transform .2s ease;
 }
 .lp-app-btn:hover{transform:translateY(-2px)}
+.lp-header-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center}
+.lp-lang ul{list-style:none;display:flex;gap:4px;padding:4px;margin:0;border-radius:var(--r-pill);background:rgba(255,255,255,.08)}
+.lp-lang-link{
+  display:inline-flex;align-items:center;justify-content:center;min-width:44px;min-height:40px;
+  padding:6px 10px;border-radius:var(--r-pill);
+  color:var(--text);font-weight:800;font-size:.85rem;text-decoration:none;
+}
+.lp-lang-link:hover{background:rgba(255,255,255,.12)}
+.lp-lang-link.is-current{background:var(--yellow);color:var(--on-yellow)}
 .lp-main{max-width:1200px;margin:0 auto;padding:20px 16px 40px}
 .lp-breadcrumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;font-size:.85rem;color:var(--text2);margin-bottom:16px}
 .lp-breadcrumb li+li::before{content:'›';margin-right:6px;opacity:.7}

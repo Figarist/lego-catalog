@@ -3,9 +3,13 @@
 //
 // Reads data_localized.js (LEGO_DATA) and translations.js (CATEGORY_MAP, CATEGORY_EMOJI, I18N_DATA)
 // and writes crawlable HTML pages that need no JavaScript to show their content:
-//   c/<category-slug>/index.html   one Ukrainian page per category (membership = item.ac, like the app)
-//   sitemap.xml                    root, legal.html and every generated page
-//   index.html                     static category link block between the GENERATED markers
+//   c/<category-slug>/index.html      one Ukrainian page per category (membership = item.ac, like the app)
+//   en/c/<category-slug>/index.html   the same page in English (same slug)
+//   ru/c/<category-slug>/index.html   the same page in Russian (same slug)
+//   sitemap.xml                       root, legal.html and every generated page
+//   index.html                        static (Ukrainian) category link block between the GENERATED markers
+// The three language variants of a category link to each other with reciprocal hreflang
+// (uk, en, ru; x-default -> uk) and a small static language switcher.
 //
 // Usage:
 //   node scripts/generate-pages.mjs           write files
@@ -69,22 +73,20 @@ function slugify(text) {
 }
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-const hasCyrillic = s => /[а-яіїєґ]/i.test(s);
-const collator = new Intl.Collator('uk', { sensitivity: 'base', numeric: true });
+const hasCyrillic = s => /[а-яіїєґё]/i.test(s);
 
-function plural(n, one, few, many) {
+// East Slavic plural forms (uk and ru share the rule).
+function slavicPlural(n, one, few, many) {
   const m10 = n % 10, m100 = n % 100;
   if (m10 === 1 && m100 !== 11) return one;
   if (m10 >= 2 && m10 <= 4 && (m100 < 12 || m100 > 14)) return few;
   return many;
 }
-const instr = n => plural(n, 'інструкція', 'інструкції', 'інструкцій');
-const schem = n => plural(n, 'схема', 'схеми', 'схем');
-const models = n => plural(n, 'модель', 'моделі', 'моделей');
+const enPlural = (n, one, many) => (n === 1 ? one : many);
 
-function joinNames(names) {
+function joinWith(names, and) {
   if (names.length <= 1) return names.join('');
-  return names.slice(0, -1).join(', ') + ' та ' + names[names.length - 1];
+  return names.slice(0, -1).join(', ') + and + names[names.length - 1];
 }
 
 function git(args) {
@@ -99,6 +101,95 @@ function lastmodFor(files) {
   return git(['log', '-1', '--format=%cs', '--', ...files]) || TODAY;
 }
 
+// ---------- Locales ----------
+// Page copy per language. Model names come from item.t[lang], category names from CATEGORY_MAP,
+// footer/legal strings and the "not available online" note from I18N_DATA[lang].
+const LOCALES = {
+  uk: {
+    prefix: '', htmlLang: 'uk', ogLocale: 'uk_UA', langName: 'Українська', short: 'UA',
+    hub: 'https://sivochka.com/uk/', tutoring: 'https://sivochka.com/',
+    // Cyrillic names first (Latin-only names such as "AT-AT" go last).
+    preferCyrillic: true,
+    title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'інструкція', 'інструкції', 'інструкцій')} LEGO WeDo 2.0`,
+    titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'інструкція', 'інструкції', 'інструкцій')} WeDo 2.0`,
+    descLead: (name, n, ex, more) => `${n} ${slavicPlural(n, 'схема', 'схеми', 'схем')} збірки LEGO® WeDo 2.0 у категорії «${name}»` +
+      (ex.length ? `: ${ex.join(', ')}${more ? ' та інші' : ''}.` : '.'),
+    descTail: ' Безкоштовно для уроків робототехніки.',
+    h1: (name, n) => `LEGO® WeDo 2.0: інструкції — ${name} (${n} ${slavicPlural(n, 'модель', 'моделі', 'моделей')})`,
+    intro: (name, n, ex) => `У категорії «${name}» зібрано ${n} ${slavicPlural(n, 'схема', 'схеми', 'схем')} збірки для наборів LEGO® Education WeDo 2.0` +
+      (ex.length ? `, зокрема ${joinWith(ex, ' та ')}` : '') +
+      '. Натисніть на модель, щоб відкрити покрокову інструкцію в новій вкладці.',
+    section: (name, n) => `${name}: ${n} ${slavicPlural(n, 'модель', 'моделі', 'моделей')}`,
+    itemListName: name => `${name} — інструкції LEGO WeDo 2.0`,
+    also: 'Також: ',
+    catalogSmall: 'Каталог інструкцій',
+    appBtn: '🔍 Відкрити інтерактивний каталог',
+    breadcrumbLabel: 'Навігаційний ланцюжок',
+    catalogCrumb: 'Каталог LEGO WeDo 2.0',
+    otherCats: '📂 Інші категорії інструкцій',
+    footerBrand: 'BrickBot Study Archive — для наборів LEGO® WeDo 2.0',
+    footerCatalog: '🧱 Каталог інструкцій',
+    langLabel: 'Мова'
+  },
+  en: {
+    prefix: 'en/', htmlLang: 'en', ogLocale: 'en_US', langName: 'English', short: 'EN',
+    hub: 'https://sivochka.com/', tutoring: 'https://sivochka.com/',
+    preferCyrillic: false,
+    title: (name, n) => `${name} — ${n} LEGO WeDo 2.0 ${enPlural(n, 'instruction', 'instructions')}`,
+    titleShort: (name, n) => `${name} — ${n} WeDo 2.0 ${enPlural(n, 'guide', 'guides')}`,
+    descLead: (name, n, ex, more) => `${n} LEGO® WeDo 2.0 building ${enPlural(n, 'guide', 'guides')} in the “${name}” category` +
+      (ex.length ? `: ${ex.join(', ')}${more ? ' and more' : ''}.` : '.'),
+    descTail: ' Free for robotics lessons.',
+    h1: (name, n) => `LEGO® WeDo 2.0 instructions — ${name} (${n} ${enPlural(n, 'model', 'models')})`,
+    intro: (name, n, ex) => `The “${name}” category collects ${n} building ${enPlural(n, 'guide', 'guides')} for LEGO® Education WeDo 2.0 sets` +
+      (ex.length ? `, including ${joinWith(ex, ' and ')}` : '') +
+      '. Click a model to open its step-by-step instructions in a new tab.',
+    section: (name, n) => `${name}: ${n} ${enPlural(n, 'model', 'models')}`,
+    itemListName: name => `${name} — LEGO WeDo 2.0 instructions`,
+    also: 'Also: ',
+    catalogSmall: 'Instruction catalog',
+    appBtn: '🔍 Open the interactive catalog',
+    breadcrumbLabel: 'Breadcrumb',
+    catalogCrumb: 'LEGO WeDo 2.0 Catalog',
+    otherCats: '📂 Other instruction categories',
+    footerBrand: 'BrickBot Study Archive — for LEGO® WeDo 2.0 sets',
+    footerCatalog: '🧱 Instruction catalog',
+    langLabel: 'Language'
+  },
+  ru: {
+    prefix: 'ru/', htmlLang: 'ru', ogLocale: 'ru_RU', langName: 'Русский', short: 'RU',
+    hub: 'https://sivochka.com/ru/', tutoring: 'https://sivochka.com/',
+    preferCyrillic: true,
+    title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'инструкция', 'инструкции', 'инструкций')} LEGO WeDo 2.0`,
+    titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'инструкция', 'инструкции', 'инструкций')} WeDo 2.0`,
+    descLead: (name, n, ex, more) => `${n} ${slavicPlural(n, 'схема', 'схемы', 'схем')} сборки LEGO® WeDo 2.0 в категории «${name}»` +
+      (ex.length ? `: ${ex.join(', ')}${more ? ' и другие' : ''}.` : '.'),
+    descTail: ' Бесплатно для уроков робототехники.',
+    h1: (name, n) => `LEGO® WeDo 2.0: инструкции — ${name} (${n} ${slavicPlural(n, 'модель', 'модели', 'моделей')})`,
+    intro: (name, n, ex) => `В категории «${name}» собрано ${n} ${slavicPlural(n, 'схема', 'схемы', 'схем')} сборки для наборов LEGO® Education WeDo 2.0` +
+      (ex.length ? `, в том числе ${joinWith(ex, ' и ')}` : '') +
+      '. Нажмите на модель, чтобы открыть пошаговую инструкцию в новой вкладке.',
+    section: (name, n) => `${name}: ${n} ${slavicPlural(n, 'модель', 'модели', 'моделей')}`,
+    itemListName: name => `${name} — инструкции LEGO WeDo 2.0`,
+    also: 'Также: ',
+    catalogSmall: 'Каталог инструкций',
+    appBtn: '🔍 Открыть интерактивный каталог',
+    breadcrumbLabel: 'Навигационная цепочка',
+    catalogCrumb: 'Каталог LEGO WeDo 2.0',
+    otherCats: '📂 Другие категории инструкций',
+    footerBrand: 'BrickBot Study Archive — для наборов LEGO® WeDo 2.0',
+    footerCatalog: '🧱 Каталог инструкций',
+    langLabel: 'Язык'
+  }
+};
+const LANGS = Object.keys(LOCALES);
+
+const nameOf = (item, lang) => (item.t[lang] || item.t.uk).trim();
+const pageUrl = (lang, slug) => `${BASE_URL}${LOCALES[lang].prefix}c/${slug}/`;
+const pagePath = (lang, slug) => `${LOCALES[lang].prefix}c/${slug}/index.html`;
+// App entry point for a language: the app reads ?lang= (store.js); Ukrainian is the default.
+const appQuery = lang => (lang === 'uk' ? '' : `?lang=${lang}`);
+
 // ---------- Build category model ----------
 function buildCategories(data) {
   const { LEGO_DATA, CATEGORY_MAP, CATEGORY_EMOJI, I18N_DATA } = data;
@@ -109,34 +200,38 @@ function buildCategories(data) {
       byCat.get(c).push({ ...item, index });
     }
   });
-  // Cyrillic names first, then Latin-only names; Ukrainian collation; data order breaks ties.
-  const sortItems = list => list.sort((a, b) =>
-    (hasCyrillic(b.t.uk) - hasCyrillic(a.t.uk)) || collator.compare(a.t.uk, b.t.uk) || a.index - b.index);
 
   const cats = [...byCat.keys()].sort((a, b) => a.localeCompare(b, 'uk')).map(key => {
-    const name = (CATEGORY_MAP[key] && CATEGORY_MAP[key].uk) || key;
-    return {
-      key, name,
-      slug: slugify(name),
-      emoji: CATEGORY_EMOJI[key] || '📁',
-      items: sortItems(byCat.get(key))
-    };
+    const names = {};
+    for (const lang of LANGS) names[lang] = (CATEGORY_MAP[key] && CATEGORY_MAP[key][lang]) || key;
+    return { key, names, slug: slugify(names.uk), emoji: CATEGORY_EMOJI[key] || '📁', items: byCat.get(key) };
   });
   const seen = new Set();
   for (const c of cats) {
     if (!c.slug || seen.has(c.slug)) throw new Error(`Empty or duplicate slug "${c.slug}" for category ${c.key}`);
     seen.add(c.slug);
   }
-  return { cats, total: LEGO_DATA.length, uk: I18N_DATA.uk };
+  return { cats, total: LEGO_DATA.length, i18n: I18N_DATA };
 }
 
-// Deterministic, evenly spread example names (Cyrillic names preferred, no duplicates).
-function exampleNames(items, count) {
+// Items in display order for one language: localized collation, data order breaks ties.
+function sortedItems(items, lang) {
+  const collator = new Intl.Collator(lang, { sensitivity: 'base', numeric: true });
+  const cyr = LOCALES[lang].preferCyrillic;
+  return [...items].sort((a, b) => {
+    const na = nameOf(a, lang), nb = nameOf(b, lang);
+    return (cyr ? hasCyrillic(nb) - hasCyrillic(na) : 0) || collator.compare(na, nb) || a.index - b.index;
+  });
+}
+
+// Deterministic, evenly spread example names (no duplicates; Cyrillic names only for uk/ru).
+function exampleNames(items, lang, count) {
   const pool = [];
   const seen = new Set();
   for (const it of items) {
-    const n = it.t.uk.trim();
-    if (hasCyrillic(n) && !seen.has(n.toLowerCase())) { seen.add(n.toLowerCase()); pool.push(n); }
+    const n = nameOf(it, lang);
+    if (LOCALES[lang].preferCyrillic && !hasCyrillic(n)) continue;
+    if (!seen.has(n.toLowerCase())) { seen.add(n.toLowerCase()); pool.push(n); }
   }
   if (pool.length <= count) return pool;
   const out = [];
@@ -144,27 +239,28 @@ function exampleNames(items, count) {
   return out;
 }
 
-function buildMeta(cat) {
-  const n = cat.items.length;
-  const title = `${cat.name} — ${n} ${instr(n)} LEGO WeDo 2.0`;
-  const examples = exampleNames(cat.items, 4);
-  const tail = ' Безкоштовно для уроків робототехніки.';
+function buildMeta(cat, items, lang) {
+  const L = LOCALES[lang];
+  const name = cat.names[lang];
+  const n = items.length;
+  let title = L.title(name, n);
+  if (title.length > 60) title = L.titleShort(name, n);
+  const examples = exampleNames(items, lang, 4);
   let description = '';
   for (let k = examples.length; k >= 0; k--) {
     const ex = examples.slice(0, k);
-    const lead = `${n} ${schem(n)} збірки LEGO® WeDo 2.0 у категорії «${cat.name}»` +
-      (ex.length ? `: ${ex.join(', ')}${n > ex.length ? ' та інші' : ''}.` : '.');
-    if ((lead + tail).length <= 155) { description = lead + tail; break; }
+    const lead = L.descLead(name, n, ex, n > ex.length);
+    if ((lead + L.descTail).length <= 155) { description = lead + L.descTail; break; }
     if (lead.length <= 155 && k === 0) { description = lead; break; }
   }
   if (title.length > 60) throw new Error(`Title too long (${title.length}): ${title}`);
-  if (!description || description.length > 155) throw new Error(`Description too long for ${cat.key}`);
+  if (!description || description.length > 155) throw new Error(`Description too long for ${lang} ${cat.key}`);
   return { title, description, examples };
 }
 
 // ---------- Render ----------
-const relRoot = '../../';
-const imgSrc = p => relRoot + encodeURI(p);
+// Relative path from a category page back to the catalog root (c/x/ -> ../../, en/c/x/ -> ../../../).
+const relRootFor = lang => '../../' + '../'.repeat(LOCALES[lang].prefix.split('/').filter(Boolean).length);
 const absImg = p => BASE_URL + encodeURI(p);
 // Instruction link: external URLs as-is, repo-relative files only when they are actually published.
 // Some entries point at local PDFs that are not in the repository (PDFs are git-ignored); those get no link.
@@ -174,17 +270,21 @@ function instructionHref(p, depthPrefix) {
   return null;
 }
 
-function renderCategoryPage(cat, ctx) {
-  const { cats, uk } = ctx;
-  const n = cat.items.length;
-  const url = `${BASE_URL}c/${cat.slug}/`;
-  const { title, description, examples } = buildMeta(cat);
-  const h1 = `LEGO® WeDo 2.0: інструкції — ${cat.name} (${n} ${models(n)})`;
-  const intro = `У категорії «${cat.name}» зібрано ${n} ${schem(n)} збірки для наборів LEGO® Education WeDo 2.0` +
-    (examples.length ? `, зокрема ${joinNames(examples.slice(0, 3))}` : '') +
-    '. Натисніть на модель, щоб відкрити покрокову інструкцію в новій вкладці.';
+function renderCategoryPage(cat, ctx, lang) {
+  const L = LOCALES[lang];
+  const t = ctx.i18n[lang];
+  const relRoot = relRootFor(lang);
+  const appHref = relRoot + appQuery(lang);
+  const legalHref = `${relRoot}legal.html${appQuery(lang)}`;
+  const name = cat.names[lang];
+  const items = sortedItems(cat.items, lang);
+  const n = items.length;
+  const url = pageUrl(lang, cat.slug);
+  const { title, description, examples } = buildMeta(cat, items, lang);
+  const h1 = L.h1(name, n);
+  const intro = L.intro(name, n, examples.slice(0, 3));
 
-  const linked = cat.items.filter(it => instructionHref(it.p, relRoot));
+  const linked = items.filter(it => instructionHref(it.p, relRoot));
   const jsonld = {
     '@context': 'https://schema.org',
     '@graph': [
@@ -195,7 +295,7 @@ function renderCategoryPage(cat, ctx) {
         name: title,
         headline: h1,
         description,
-        inLanguage: 'uk',
+        inLanguage: L.htmlLang,
         isAccessibleForFree: true,
         image: SOCIAL_IMAGE,
         author: { '@id': 'https://sivochka.com#person' },
@@ -206,11 +306,11 @@ function renderCategoryPage(cat, ctx) {
       {
         '@type': 'ItemList',
         '@id': `${url}#itemlist`,
-        name: `${cat.name} — інструкції LEGO WeDo 2.0`,
+        name: L.itemListName(name),
         numberOfItems: linked.length,
         itemListOrder: 'https://schema.org/ItemListOrderAscending',
         itemListElement: linked.map((it, i) => {
-          const el = { '@type': 'ListItem', position: i + 1, name: it.t.uk, url: instructionHref(it.p, BASE_URL) };
+          const el = { '@type': 'ListItem', position: i + 1, name: nameOf(it, lang), url: instructionHref(it.p, BASE_URL) };
           if (it.i) el.image = absImg(it.i);
           return el;
         })
@@ -219,32 +319,32 @@ function renderCategoryPage(cat, ctx) {
         '@type': 'BreadcrumbList',
         '@id': `${url}#breadcrumb`,
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'sivochka.com', item: 'https://sivochka.com/' },
-          { '@type': 'ListItem', position: 2, name: 'Каталог LEGO WeDo 2.0', item: BASE_URL },
-          { '@type': 'ListItem', position: 3, name: cat.name, item: url }
+          { '@type': 'ListItem', position: 1, name: 'sivochka.com', item: L.hub },
+          { '@type': 'ListItem', position: 2, name: L.catalogCrumb, item: BASE_URL + appQuery(lang) },
+          { '@type': 'ListItem', position: 3, name, item: url }
         ]
       }
     ]
   };
   const jsonText = JSON.stringify(jsonld, null, 2).replace(/</g, '\\u003c');
 
-  const cards = cat.items.map(it => {
-    const name = esc(it.t.uk);
+  const cards = items.map(it => {
+    const label = esc(nameOf(it, lang));
     const others = it.ac.filter(c => c !== cat.key).map(c => {
-      const o = cats.find(x => x.key === c);
-      return o ? o.name : c;
+      const o = ctx.cats.find(x => x.key === c);
+      return o ? o.names[lang] : c;
     });
     const img = it.i
-      ? `<img src="${esc(imgSrc(it.i))}" alt="${name}" loading="lazy" decoding="async">`
-      : `<div class="no-img"><span class="no-img-icon">📋</span>${esc(uk.label_official)}</div>`;
+      ? `<img src="${esc(relRoot + encodeURI(it.i))}" alt="${label}" loading="lazy" decoding="async">`
+      : `<div class="no-img"><span class="no-img-icon">📋</span>${esc(t.label_official)}</div>`;
     const href = instructionHref(it.p, relRoot);
     const note = href
-      ? (others.length ? 'Також: ' + esc(others.join(', ')) : esc(uk.label_instruction))
-      : esc(uk.instruction_unavailable);
+      ? (others.length ? L.also + esc(others.join(', ')) : esc(t.label_instruction))
+      : esc(t.instruction_unavailable);
     const inner = `
             <div class="card-img">${img}</div>
             <div class="card-body">
-              <div class="card-title" title="${name}">${name}</div>
+              <div class="card-title" title="${label}">${label}</div>
               <div class="card-cat">${note}</div>
             </div>`;
     return href
@@ -258,14 +358,25 @@ function renderCategoryPage(cat, ctx) {
         </li>`;
   }).join('\n');
 
-  const siblings = cats.map(c => {
+  const catCollator = new Intl.Collator(lang);
+  const siblings = [...ctx.cats].sort((a, b) => catCollator.compare(a.names[lang], b.names[lang])).map(c => {
     const current = c.slug === cat.slug;
-    return `        <li><a class="lp-cat${current ? ' is-current' : ''}" href="../${c.slug}/"${current ? ' aria-current="page"' : ''}>${c.emoji} ${esc(c.name)} <span class="lp-cnt">${c.items.length}</span></a></li>`;
+    return `        <li><a class="lp-cat${current ? ' is-current' : ''}" href="../${c.slug}/"${current ? ' aria-current="page"' : ''}>${c.emoji} ${esc(c.names[lang])} <span class="lp-cnt">${c.items.length}</span></a></li>`;
   }).join('\n');
+
+  const alternates = LANGS.map(l => `    <link rel="alternate" hreflang="${LOCALES[l].htmlLang}" href="${pageUrl(l, cat.slug)}">`).join('\n') +
+    `\n    <link rel="alternate" hreflang="x-default" href="${pageUrl('uk', cat.slug)}">`;
+  const ogAlternates = LANGS.filter(l => l !== lang)
+    .map(l => `    <meta property="og:locale:alternate" content="${LOCALES[l].ogLocale}">`).join('\n');
+  const switcher = LANGS.map(l => {
+    const o = LOCALES[l];
+    const current = l === lang ? ' is-current" aria-current="true' : '';
+    return `<li><a class="lp-lang-link${current}" href="${relRoot}${o.prefix}c/${cat.slug}/" hreflang="${o.htmlLang}" lang="${o.htmlLang}" title="${o.langName}">${o.short}</a></li>`;
+  }).join('');
 
   return `<!DOCTYPE html>
 ${GENERATED_MARK}
-<html lang="uk">
+<html lang="${L.htmlLang}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -275,15 +386,15 @@ ${GENERATED_MARK}
     <meta name="author" content="BrickBot Study Archive">
     <link rel="author" href="https://sivochka.com/">
     <link rel="canonical" href="${url}">
-    <link rel="alternate" hreflang="uk" href="${url}">
-    <link rel="alternate" hreflang="x-default" href="${url}">
+${alternates}
     <meta property="og:type" content="website">
     <meta property="og:title" content="${esc(title)}">
     <meta property="og:description" content="${esc(description)}">
     <meta property="og:url" content="${url}">
     <meta property="og:image" content="${SOCIAL_IMAGE}">
     <meta property="og:image:alt" content="${esc(h1)}">
-    <meta property="og:locale" content="uk_UA">
+    <meta property="og:locale" content="${L.ogLocale}">
+${ogAlternates}
     <meta property="og:site_name" content="BrickBot Study Archive · sivochka.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="${esc(title)}">
@@ -301,22 +412,25 @@ ${jsonText}
 </head>
 <body class="lp-body">
     <header class="lp-header">
-        <a class="logo" href="${relRoot}">
+        <a class="logo" href="${appHref}">
             <div class="lego-dots" aria-hidden="true"><span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span><span class="dot-blue"></span></div>
             <div class="logo-text">
                 <strong>🧱 LEGO WeDo 2.0</strong>
-                <small>Каталог інструкцій</small>
+                <small>${esc(L.catalogSmall)}</small>
             </div>
         </a>
-        <a class="lp-app-btn" href="${relRoot}">🔍 Відкрити інтерактивний каталог</a>
+        <div class="lp-header-actions">
+            <nav class="lp-lang" aria-label="${esc(L.langLabel)}"><ul>${switcher}</ul></nav>
+            <a class="lp-app-btn" href="${appHref}">${esc(L.appBtn)}</a>
+        </div>
     </header>
 
     <main class="lp-main">
-        <nav class="lp-breadcrumb" aria-label="Навігаційний ланцюжок">
+        <nav class="lp-breadcrumb" aria-label="${esc(L.breadcrumbLabel)}">
             <ol>
-                <li><a href="https://sivochka.com/" data-goatcounter-click="lego-hub">sivochka.com</a></li>
-                <li><a href="${relRoot}">Каталог LEGO WeDo 2.0</a></li>
-                <li aria-current="page">${esc(cat.name)}</li>
+                <li><a href="${L.hub}" data-goatcounter-click="lego-hub">sivochka.com</a></li>
+                <li><a href="${appHref}">${esc(L.catalogCrumb)}</a></li>
+                <li aria-current="page">${esc(name)}</li>
             </ol>
         </nav>
 
@@ -325,13 +439,13 @@ ${jsonText}
             <p>${esc(intro)}</p>
         </section>
 
-        <h2 class="lp-section-title">${cat.emoji} ${esc(cat.name)}: ${n} ${models(n)}</h2>
+        <h2 class="lp-section-title">${cat.emoji} ${esc(L.section(name, n))}</h2>
         <ul class="grid lp-grid">
 ${cards}
         </ul>
 
         <nav class="lp-cats" aria-labelledby="lpCatsTitle">
-            <h2 id="lpCatsTitle" class="lp-section-title">📂 Інші категорії інструкцій</h2>
+            <h2 id="lpCatsTitle" class="lp-section-title">${esc(L.otherCats)}</h2>
             <ul>
 ${siblings}
             </ul>
@@ -343,21 +457,21 @@ ${siblings}
             <div class="footer-brand">
                 <span class="footer-logo">🧱</span>
                 <div>
-                    <strong>BrickBot Study Archive — для наборів LEGO® WeDo 2.0</strong>
-                    <small>${esc(uk.footer_brand_subtitle)}</small>
+                    <strong>${esc(L.footerBrand)}</strong>
+                    <small>${esc(t.footer_brand_subtitle)}</small>
                 </div>
             </div>
             <div class="footer-links">
-                <a href="${relRoot}">🧱 Каталог інструкцій</a>
-                <a href="https://sivochka.com/" class="footer-tutoring-link" data-goatcounter-click="lego-hub">${esc(uk.footer_tutoring)}</a>
-                <a href="${relRoot}legal.html">${esc(uk.footer_legal)}</a>
-                <a href="${relRoot}legal.html#dmca">${esc(uk.footer_dmca)}</a>
-                <a href="https://sivochka.com/" data-goatcounter-click="lego-hub">🌐 sivochka.com</a>
+                <a href="${appHref}">${esc(L.footerCatalog)}</a>
+                <a href="${L.tutoring}" class="footer-tutoring-link" data-goatcounter-click="lego-hub">${esc(t.footer_tutoring)}</a>
+                <a href="${legalHref}">${esc(t.footer_legal)}</a>
+                <a href="${legalHref}#dmca">${esc(t.footer_dmca)}</a>
+                <a href="${L.hub}" data-goatcounter-click="lego-hub">🌐 sivochka.com</a>
             </div>
             <div class="footer-copy">
-                <p>${esc(uk.disclaimer_p2)} ${esc(uk.disclaimer_p3)}</p>
-                <p>${esc(uk.footer_copy_1)}</p>
-                <p class="footer-fair-play">${esc(uk.lego_fair_play_disclaimer)}</p>
+                <p>${esc(t.disclaimer_p2)} ${esc(t.disclaimer_p3)}</p>
+                <p>${esc(t.footer_copy_1)}</p>
+                <p class="footer-fair-play">${esc(t.lego_fair_play_disclaimer)}</p>
             </div>
         </div>
     </footer>
@@ -368,7 +482,7 @@ ${siblings}
 
 function renderIndexBlock(cats) {
   const items = cats.map(c =>
-    `                    <li><a class="lp-cat" href="c/${c.slug}/">${c.emoji} ${esc(c.name)} <span class="lp-cnt">${c.items.length}</span></a></li>`
+    `                    <li><a class="lp-cat" href="c/${c.slug}/">${c.emoji} ${esc(c.names.uk)} <span class="lp-cnt">${c.items.length}</span></a></li>`
   ).join('\n');
   return `${INDEX_START}
             <nav class="lp-cats seo-cat-nav" aria-labelledby="seoCatTitle">
@@ -400,7 +514,9 @@ const ctx = buildCategories(loadData());
 const pageInputs = ['data_localized.js', 'translations.js', 'scripts/generate-pages.mjs'];
 const pagesLastmod = lastmodFor(pageInputs);
 
-for (const cat of ctx.cats) outputs.set(`c/${cat.slug}/index.html`, renderCategoryPage(cat, ctx));
+for (const lang of LANGS) {
+  for (const cat of ctx.cats) outputs.set(pagePath(lang, cat.slug), renderCategoryPage(cat, ctx, lang));
+}
 
 const indexPath = join(ROOT, 'index.html');
 const indexHtml = readFileSync(indexPath, 'utf8');
@@ -408,20 +524,27 @@ const s = indexHtml.indexOf(INDEX_START), e = indexHtml.indexOf(INDEX_END);
 if (s < 0 || e < s) throw new Error('index.html is missing the GENERATED:category-links markers');
 outputs.set('index.html', indexHtml.slice(0, s) + renderIndexBlock(ctx.cats) + indexHtml.slice(e + INDEX_END.length));
 
-outputs.set('sitemap.xml', renderSitemap([
+const sitemapEntries = [
   { loc: BASE_URL, lastmod: lastmodFor(['index.html', ...pageInputs]), priority: '1.0' },
-  { loc: `${BASE_URL}legal.html`, lastmod: lastmodFor(['legal.html']), priority: '0.5' },
-  ...ctx.cats.map(c => ({ loc: `${BASE_URL}c/${c.slug}/`, lastmod: pagesLastmod, priority: '0.8' }))
-]));
+  { loc: `${BASE_URL}legal.html`, lastmod: lastmodFor(['legal.html']), priority: '0.5' }
+];
+for (const lang of LANGS) {
+  for (const c of ctx.cats) {
+    sitemapEntries.push({ loc: pageUrl(lang, c.slug), lastmod: pagesLastmod, priority: lang === 'uk' ? '0.8' : '0.7' });
+  }
+}
+outputs.set('sitemap.xml', renderSitemap(sitemapEntries));
 
 // Generated category folders that no longer exist in the data.
 const stale = [];
-const cDir = join(ROOT, 'c');
-if (existsSync(cDir)) {
-  const wanted = new Set(ctx.cats.map(c => c.slug));
+const wanted = new Set(ctx.cats.map(c => c.slug));
+for (const lang of LANGS) {
+  const rel = `${LOCALES[lang].prefix}c`;
+  const cDir = join(ROOT, rel);
+  if (!existsSync(cDir)) continue;
   for (const d of readdirSync(cDir)) {
     const f = join(cDir, d, 'index.html');
-    if (!wanted.has(d) && existsSync(f) && readFileSync(f, 'utf8').includes(GENERATED_MARK)) stale.push(join('c', d));
+    if (!wanted.has(d) && existsSync(f) && readFileSync(f, 'utf8').includes(GENERATED_MARK)) stale.push(join(rel, d));
   }
 }
 
@@ -441,5 +564,6 @@ for (const rel of stale) {
   else rmSync(join(ROOT, rel), { recursive: true });
 }
 
-console.log(`${ctx.cats.length} category pages, ${ctx.total} models, sitemap ${ctx.cats.length + 2} URLs, ${changed} file(s) ${CHECK ? 'out of date' : 'updated'}.`);
+const pages = ctx.cats.length * LANGS.length;
+console.log(`${pages} category pages (${ctx.cats.length} × ${LANGS.join('/')}), ${ctx.total} models, sitemap ${sitemapEntries.length} URLs, ${changed} file(s) ${CHECK ? 'out of date' : 'updated'}.`);
 if (CHECK && changed) process.exit(1);
