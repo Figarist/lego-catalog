@@ -1325,12 +1325,6 @@ body::before{
   color:#fff;border-color:var(--green);background:var(--surface2);
   transform:translateY(-2px);
 }
-.footer-links .footer-tutoring-link{
-  border-color:rgba(0,210,106,.45);color:var(--green);
-}
-.footer-links .footer-tutoring-link:hover{
-  border-color:var(--green);background:var(--green);color:var(--on-green);
-}
 
 .footer-copy{color:var(--text2);font-size:.78rem;line-height:1.7;opacity:.85}
 .footer-copy p{margin:2px 0}

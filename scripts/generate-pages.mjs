@@ -107,7 +107,7 @@ function lastmodFor(files) {
 const LOCALES = {
   uk: {
     prefix: '', htmlLang: 'uk', ogLocale: 'uk_UA', langName: 'Українська', short: 'UA',
-    hub: 'https://sivochka.com/uk/', tutoring: 'https://sivochka.com/',
+    hub: 'https://sivochka.com/uk/',
     // Cyrillic names first (Latin-only names such as "AT-AT" go last).
     preferCyrillic: true,
     title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'інструкція', 'інструкції', 'інструкцій')} LEGO WeDo 2.0`,
@@ -133,7 +133,7 @@ const LOCALES = {
   },
   en: {
     prefix: 'en/', htmlLang: 'en', ogLocale: 'en_US', langName: 'English', short: 'EN',
-    hub: 'https://sivochka.com/', tutoring: 'https://sivochka.com/',
+    hub: 'https://sivochka.com/',
     preferCyrillic: false,
     title: (name, n) => `${name} — ${n} LEGO WeDo 2.0 ${enPlural(n, 'instruction', 'instructions')}`,
     titleShort: (name, n) => `${name} — ${n} WeDo 2.0 ${enPlural(n, 'guide', 'guides')}`,
@@ -158,7 +158,7 @@ const LOCALES = {
   },
   ru: {
     prefix: 'ru/', htmlLang: 'ru', ogLocale: 'ru_RU', langName: 'Русский', short: 'RU',
-    hub: 'https://sivochka.com/ru/', tutoring: 'https://sivochka.com/',
+    hub: 'https://sivochka.com/ru/',
     preferCyrillic: true,
     title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'инструкция', 'инструкции', 'инструкций')} LEGO WeDo 2.0`,
     titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'инструкция', 'инструкции', 'инструкций')} WeDo 2.0`,
@@ -183,7 +183,7 @@ const LOCALES = {
   },
   pl: {
     prefix: 'pl/', htmlLang: 'pl', ogLocale: 'pl_PL', langName: 'Polski', short: 'PL',
-    hub: 'https://sivochka.com/', tutoring: 'https://sivochka.com/',
+    hub: 'https://sivochka.com/',
     preferCyrillic: false,
     title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'instrukcja', 'instrukcje', 'instrukcji')} LEGO WeDo 2.0`,
     titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'instrukcja', 'instrukcje', 'instrukcji')} WeDo 2.0`,
@@ -488,10 +488,10 @@ ${siblings}
             </div>
             <div class="footer-links">
                 <a href="${appHref}">${esc(L.footerCatalog)}</a>
-                <a href="${L.tutoring}" class="footer-tutoring-link" data-goatcounter-click="lego-hub">${esc(t.footer_tutoring)}</a>
                 <a href="${legalHref}">${esc(t.footer_legal)}</a>
                 <a href="${legalHref}#dmca">${esc(t.footer_dmca)}</a>
                 <a href="${L.hub}" data-goatcounter-click="lego-hub">🌐 sivochka.com</a>
+                <a href="https://github.com/Figarist/lego-catalog">⭐ GitHub</a>
             </div>
             <div class="footer-copy">
                 <p>${esc(t.disclaimer_p2)} ${esc(t.disclaimer_p3)}</p>
