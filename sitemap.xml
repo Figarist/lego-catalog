@@ -1,638 +1,1196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://sivochka.com/lego-catalog/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://sivochka.com/lego-catalog/en/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/"/>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sivochka.com/lego-catalog/ru/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/"/>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sivochka.com/lego-catalog/pl/</loc>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/"/>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://sivochka.com/lego-catalog/legal.html</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/viiskova-tekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/dynozavry/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/zoriani-viiny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/komakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/korabli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/kosmos/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/krokuiuchi/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/litaky-vertoloty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/liudy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/mekhanizmy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/mini-modeli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/novi-instruktsii/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/novorichni/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/ptakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/rizne/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/roboty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/roslyny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/spetstekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/sport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/tvaryny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/c/transport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/avtomobili-mototsykly/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/viiskova-tekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/dynozavry/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/zoriani-viiny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/komakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/korabli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/kosmos/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/krokuiuchi/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/litaky-vertoloty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/liudy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/mekhanizmy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/mini-modeli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/modeli-bez-smartkhaba/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/modeli-dlia-zmahan/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/modeli-shcho-maliuiut/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/novi-instruktsii/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/novorichni/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/ofitsiini-instruktsii-lego/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/ptakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/rizne/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/roboty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/roslyny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/spetstekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/sport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/tvaryny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/en/c/transport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/avtomobili-mototsykly/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/viiskova-tekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/dynozavry/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/zoriani-viiny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/komakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/korabli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/kosmos/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/krokuiuchi/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/litaky-vertoloty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/liudy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/mekhanizmy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/mini-modeli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/modeli-bez-smartkhaba/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/modeli-dlia-zmahan/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/modeli-shcho-maliuiut/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/novi-instruktsii/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/novorichni/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/ofitsiini-instruktsii-lego/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/ptakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/rizne/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/roboty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/roslyny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/spetstekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/sport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/tvaryny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/ru/c/transport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/avtomobili-mototsykly/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/avtomobili-mototsykly/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/viiskova-tekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/viiskova-tekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/viiskova-tekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/dynozavry/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/dynozavry/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/dynozavry/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/zoriani-viiny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/zoriani-viiny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/zoriani-viiny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/komakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/komakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/komakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/korabli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/korabli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/korabli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/kosmos/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/kosmos/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/kosmos/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/krokuiuchi/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/krokuiuchi/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/krokuiuchi/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/litaky-vertoloty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/litaky-vertoloty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/litaky-vertoloty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/liudy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/liudy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/liudy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/mekhanizmy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mekhanizmy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mekhanizmy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/mini-modeli/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/mini-modeli/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/mini-modeli/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/modeli-bez-smartkhaba/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-bez-smartkhaba/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-bez-smartkhaba/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/modeli-dlia-zmahan/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-dlia-zmahan/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-dlia-zmahan/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/modeli-shcho-maliuiut/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/modeli-shcho-maliuiut/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/modeli-shcho-maliuiut/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/novi-instruktsii/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novi-instruktsii/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novi-instruktsii/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/novorichni/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/novorichni/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/novorichni/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/ofitsiini-instruktsii-lego/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ofitsiini-instruktsii-lego/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ofitsiini-instruktsii-lego/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/ptakhy/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/ptakhy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/ptakhy/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/rizne/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/rizne/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/rizne/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/roboty/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roboty/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roboty/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/roslyny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/roslyny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/roslyny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/spetstekhnika/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/spetstekhnika/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/spetstekhnika/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/sport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/sport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/sport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/tvaryny/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/tvaryny/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/tvaryny/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sivochka.com/lego-catalog/pl/c/transport/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <xhtml:link rel="alternate" hreflang="uk" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/transport/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/transport/"/>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

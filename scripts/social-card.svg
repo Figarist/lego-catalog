@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Source of icons/social-card.png (1200x630). Render with headless Chrome: screenshot at window size 1200x630 -->
+  <rect width="1200" height="630" fill="#1a1a2e"/>
+  <rect x="0" y="560" width="1200" height="70" fill="#0f3460"/>
+  <g>
+    <rect x="80" y="90" width="150" height="60" rx="8" fill="#c02937"/>
+    <circle cx="120" cy="80" r="18" fill="#c02937"/><circle cx="190" cy="80" r="18" fill="#c02937"/>
+    <rect x="250" y="90" width="150" height="60" rx="8" fill="#ffc312"/>
+    <circle cx="290" cy="80" r="18" fill="#ffc312"/><circle cx="360" cy="80" r="18" fill="#ffc312"/>
+    <rect x="420" y="90" width="150" height="60" rx="8" fill="#00d26a"/>
+    <circle cx="460" cy="80" r="18" fill="#00d26a"/><circle cx="530" cy="80" r="18" fill="#00d26a"/>
+    <rect x="590" y="90" width="150" height="60" rx="8" fill="#1e90ff"/>
+    <circle cx="630" cy="80" r="18" fill="#1e90ff"/><circle cx="700" cy="80" r="18" fill="#1e90ff"/>
+  </g>
+  <g font-family="Helvetica Neue, Helvetica, Arial, sans-serif" fill="#ffffff">
+    <text x="80" y="290" font-size="104" font-weight="800">LEGO® WeDo 2.0</text>
+    <text x="80" y="400" font-size="76" font-weight="800" fill="#ffc312">597 building instructions</text>
+    <text x="80" y="480" font-size="38" font-weight="500" fill="#d6dcf0">26 categories · UA · EN · PL · RU · free, unofficial</text>
+    <text x="80" y="606" font-size="30" font-weight="700" fill="#ffffff">sivochka.com/lego-catalog</text>
+    <text x="1120" y="606" font-size="22" font-weight="500" text-anchor="end" fill="#b9c4e6">LEGO® is a trademark of the LEGO Group</text>
+  </g>
+</svg>

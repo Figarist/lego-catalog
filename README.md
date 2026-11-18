@@ -67,7 +67,7 @@ Models are stored in `data_localized.js`. Each model is an object with localized
 ## 🔎 Static Category Pages & Sitemap
 
 The app itself is rendered by JavaScript, so crawlable landing pages are generated from the same data:
-`c/<category-slug>/index.html` (one Ukrainian page per category, every model listed with its thumbnail and instruction link), the same pages in English, Russian, and Polish under `en/c/<category-slug>/`, `ru/c/<category-slug>/`, and `pl/c/<category-slug>/` (reciprocal hreflang, x-default → Ukrainian), the Ukrainian category link block in `index.html` (between the `GENERATED:category-links` markers) and `sitemap.xml`.
+`c/<category-slug>/index.html` (one Ukrainian page per category, every model listed with its thumbnail and instruction link), the same pages in English, Russian, and Polish under `en/c/<category-slug>/`, `ru/c/<category-slug>/`, and `pl/c/<category-slug>/` (reciprocal hreflang, x-default → Ukrainian), static localized landing pages `en/index.html`, `ru/index.html`, `pl/index.html` (self-canonical, category list, FAQ, link into the app at the root; hreflang shared with the root), the Ukrainian category link block in `index.html` (between the `GENERATED:category-links` markers) and `sitemap.xml` (with hreflang alternates). The shared 1200x630 social card `icons/social-card.png` is rendered from `scripts/social-card.svg` with headless Chrome.
 
 After changing `data_localized.js` or category names in `translations.js`, re-run (Node 18+, no dependencies):
 

@@ -32,7 +32,7 @@ window.LegoStore = (function() {
     try {
         if (document.referrer) {
             const refPath = new URL(document.referrer).pathname;
-            const m = refPath.match(/\/lego-catalog\/(?:(en|ru|pl)\/)?c\//);
+            const m = refPath.match(/\/lego-catalog\/(?:(en|ru|pl)\/(?:c\/)?|c\/)/);
             if (m) refLang = m[1] || 'uk';
         }
     } catch (e) { /* ignore invalid referrer */ }
