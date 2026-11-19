@@ -38,7 +38,7 @@ This project was built to solve a specific problem: providing quick, localized, 
 ## 🛠 Tech Stack
 
 - **HTML5**: Semantic structure.
-- **CSS3 & Design System**: Unified **«Friendly Arcade»** design system ([`docs/DESIGN_SYSTEM.md`](docs/DESIGN_SYSTEM.md)), dark-mode aesthetic with WCAG AA compliance.
+- **CSS3 & Design System**: Unified **«Friendly Arcade»** design system, dark-mode aesthetic with WCAG AA compliance.
 - **Vanilla JavaScript**: Zero dependencies. No React, no Vue, no external libraries.
 - **Service Workers**: Stale-While-Revalidate caching strategy.
 
