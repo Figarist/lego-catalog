@@ -141,8 +141,8 @@ const LOCALES = {
   en: {
     prefix: 'en/', htmlLang: 'en', ogLocale: 'en_US', langName: 'English', short: 'EN',
     landing: {
-      title: (n, c) => `LEGO WeDo 2.0 Building Instructions — ${n} Models`,
-      description: (n, c) => `Free LEGO® WeDo 2.0 building instructions: ${n} models in ${c} categories — robots, dinosaurs, animals, mechanisms, space. Browse by theme.`,
+      title: (n, c) => `LEGO WeDo 2.0 Building Instructions PDF — ${n} Models`,
+      description: (n, c) => `Free LEGO® WeDo 2.0 building instructions (PDF): ${n} models in ${c} categories — robots, dinosaurs, animals, mechanisms, space. Browse by theme.`,
       h1: (n, c) => `LEGO WeDo 2.0 building instructions — ${n} step-by-step models`,
       intro: (n, c) => `A free, non-commercial catalog of ${n} building guides for LEGO® Education WeDo 2.0 sets, sorted into ${c} categories for teachers, robotics clubs and parents. Pick a category below or open the interactive catalog to search all models, shuffle a random one and track what you have built.`,
       catsTitle: c => `📂 ${c} instruction categories`,
@@ -223,8 +223,8 @@ const LOCALES = {
   pl: {
     prefix: 'pl/', htmlLang: 'pl', ogLocale: 'pl_PL', langName: 'Polski', short: 'PL',
     landing: {
-      title: (n, c) => `LEGO WeDo 2.0 instrukcje — ${n} schematów budowy`,
-      description: (n, c) => `Darmowe instrukcje LEGO® WeDo 2.0: ${n} schematów budowy w ${c} kategoriach — roboty, dinozaury, zwierzęta, mechanizmy, kosmos. Na lekcje robotyki.`,
+      title: (n, c) => `LEGO WeDo 2.0 instrukcje PDF — ${n} schematów budowy`,
+      description: (n, c) => `Darmowe instrukcje LEGO® WeDo 2.0 (PDF): ${n} schematów budowy krok po kroku w ${c} kategoriach — roboty, dinozaury, zwierzęta, mechanizmy, kosmos.`,
       h1: (n, c) => `LEGO WeDo 2.0 instrukcje — ${n} schematów budowy krok po kroku`,
       intro: (n, c) => `Darmowy, niekomercyjny katalog ${n} schematów budowy do zestawów LEGO® Education WeDo 2.0, podzielonych na ${c} kategorii dla nauczycieli, kółek robotyki i rodziców. Wybierz kategorię poniżej albo otwórz interaktywny katalog: wyszukiwarka wszystkich modeli, losowy wybór i oznaczanie zbudowanych modeli.`,
       catsTitle: c => `📂 ${c} kategorii instrukcji`,
