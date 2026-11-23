@@ -45,6 +45,9 @@ self.addEventListener('fetch', event => {
   if (!event.request.url.startsWith(self.location.origin)) {
     return;
   }
+  if (new URL(event.request.url).pathname.startsWith('/m/')) {
+    return;
+  }
 
   event.respondWith(
     caches.open(CACHE_NAME).then(cache => {
