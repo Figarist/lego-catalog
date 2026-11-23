@@ -41,6 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const t = key => (I18N_DATA[LegoStore.getLang()] && I18N_DATA[LegoStore.getLang()][key]) || key;
   const gridView = $('gridView');
   const homeView = $('homeView');
+  const recentSection = $('recentSection');
+  const recentGrid = $('recentGrid');
   const trendingGrid = $('trendingGrid');
   const genreGrid = $('genreGrid');
   const recommendedGrid = $('recommendedGrid');
@@ -76,10 +78,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Roulette elements
   const btnRandom = $('btnRandom');
+  const btnCatRandom = $('btnCatRandom');
   const rouletteOverlay = $('rouletteOverlay');
   const rouletteModal = $('rouletteModal');
   const rouletteClose = $('rouletteClose');
   const rouletteSoundBtn = $('rouletteSoundBtn');
+  const rouletteScopeToggle = $('rouletteScopeToggle');
+  const rouletteScopeCat = $('rouletteScopeCat');
+  const rouletteScopeAll = $('rouletteScopeAll');
   const rouletteWindow = $('rouletteWindow');
   const roulettePointer = $('roulettePointer');
   const rouletteStrip = $('rouletteStrip');
@@ -87,6 +93,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const rouletteResult = $('rouletteResult');
   const rouletteActionBtn = $('rouletteActionBtn');
   const rouletteRerollBtn = $('rouletteRerollBtn');
+
+  // Build Timer elements
+  const buildTimerOverlay = $('buildTimerOverlay');
+  const buildTimerClock = $('buildTimerClock');
+  const buildTimerModel = $('buildTimerModel');
+  const buildTimerDoneBtn = $('buildTimerDoneBtn');
+  const buildTimerReopenBtn = $('buildTimerReopenBtn');
+  const buildTimerKeepBtn = $('buildTimerKeepBtn');
+  const buildTimerCancelBtn = $('buildTimerCancelBtn');
+  const buildFloatingBar = $('buildFloatingBar');
+  const buildFloatingExpand = $('buildFloatingExpand');
+  const buildFloatingClock = $('buildFloatingClock');
+  const buildFloatingTitle = $('buildFloatingTitle');
+  const buildFloatingDone = $('buildFloatingDone');
   const emptyEmoji = $('emptyEmoji');
   const emptyTitle = $('emptyTitle');
   const emptyText = $('emptyText');
@@ -99,9 +119,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const navFav = $('navFav');
   const navFavCount = $('navFavCount');
   const navBuilt = $('navBuilt');
+  const navRankIcon = $('navRankIcon');
+  const navRankName = $('navRankName');
+  const navRankFill = $('navRankFill');
+  const themeToggle = $('themeToggle');
+
+  const filterBar = $('filterBar');
+  const filterUnbuiltBtn = $('filterUnbuilt');
+  const filterRatedBtn = $('filterRated');
+  const filterInCatBtn = $('filterInCat');
+  const filterResultCount = $('filterResultCount');
+  const filterResetBtn = $('filterResetBtn');
 
   let activeCat = 'home';
   let query = '';
+  const activeFilters = { unbuilt: false, rated: false, inCat: false };
 
   // --- SW Update Toast ---
   function showUpdateToast(reg) {
@@ -178,9 +210,37 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderAchievementsGrid() {
     const unlocked = LegoStore.getUnlockedAchievements();
     const lang = LegoStore.getLang();
+    const rankInfo = LegoStore.getRankInfo();
     const container = document.createElement('div');
     container.className = 'badges-container';
-    container.innerHTML = `<h2 class="badges-header">${t('my_badges')}</h2>`;
+
+    const currentRankLabel = t('rank_' + rankInfo.current.id);
+    const nextHint = rankInfo.next
+      ? t('rank_next_hint').replace('{n}', rankInfo.remaining).replace('{next}', t('rank_' + rankInfo.next.id))
+      : t('rank_max_hint');
+
+    const rankBanner = document.createElement('div');
+    rankBanner.className = 'rank-card';
+    rankBanner.innerHTML = `
+      <div class="rank-card-top">
+        <div class="rank-card-badge">
+          <span class="rank-card-icon">${rankInfo.current.icon}</span>
+          <div>
+            <div class="rank-card-kicker">${escapeHTML(t('rank_card_label'))}</div>
+            <div class="rank-card-title">${escapeHTML(currentRankLabel)}</div>
+          </div>
+        </div>
+        <div class="rank-card-pct">${rankInfo.pct}%</div>
+      </div>
+      <div class="rank-progress-track"><div class="rank-progress-fill" style="width:${rankInfo.pct}%"></div></div>
+      <div class="rank-card-hint">${escapeHTML(nextHint)}</div>
+    `;
+    container.appendChild(rankBanner);
+
+    const header = document.createElement('h2');
+    header.className = 'badges-header';
+    header.textContent = t('my_badges');
+    container.appendChild(header);
     
     const bGrid = document.createElement('div');
     bGrid.className = 'badges-grid';
@@ -221,11 +281,35 @@ document.addEventListener('DOMContentLoaded', () => {
     return (CATEGORY_MAP[cat] && CATEGORY_MAP[cat][lang]) || cat;
   }
 
+  function updateThemeBtn() {
+    if (!themeToggle) return;
+    const isLight = LegoStore.getTheme() === 'light';
+    themeToggle.textContent = isLight ? '🌙' : '☀️';
+    themeToggle.setAttribute('aria-pressed', isLight ? 'true' : 'false');
+    const label = t(isLight ? 'theme_to_dark' : 'theme_to_light');
+    themeToggle.title = label;
+    themeToggle.setAttribute('aria-label', label);
+  }
+
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      const next = LegoStore.getTheme() === 'light' ? 'dark' : 'light';
+      LegoStore.setTheme(next);
+      updateThemeBtn();
+    });
+  }
+
   function updateGlobalUI() {
     if (navFavCount) navFavCount.textContent = LegoStore.getFavorites().length;
     if (navFav) navFav.classList.toggle('has-items', LegoStore.getFavorites().length > 0);
     if (builtCountEl) builtCountEl.textContent = LegoStore.getBuiltItems().length;
     if (navBuilt) navBuilt.classList.toggle('has-items', LegoStore.getBuiltItems().length > 0);
+    if (LegoStore.getRankInfo) {
+      const rankInfo = LegoStore.getRankInfo();
+      if (navRankIcon) navRankIcon.textContent = rankInfo.current.icon;
+      if (navRankName) navRankName.textContent = t('rank_' + rankInfo.current.id);
+      if (navRankFill) navRankFill.style.width = rankInfo.pct + '%';
+    }
   }
 
   function updateUI() {
@@ -283,6 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Refresh dynamic content
     rebuildSearchIndex();
     renderCategories();
+    updateThemeBtn();
     updateRouletteSoundBtn();
     if (activeCat === 'home') renderHome();
     else switchView(activeCat, '', ''); // refresh current view
@@ -545,6 +630,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const activeItem = document.querySelector(`.cat-item[data-key="${key}"]`);
     if (activeItem) activeItem.classList.add('active');
 
+    const showCatRandom = key !== 'home' && key !== 'all' && key !== 'built';
+    if (btnCatRandom) btnCatRandom.classList.toggle('hidden', !showCatRandom);
+
     if (key === 'home') {
       homeView.classList.remove('hidden');
       gridView.classList.add('hidden');
@@ -579,8 +667,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function renderRecent() {
+    if (!recentSection || !recentGrid || !LegoStore.getRecent) return;
+    const recentIds = LegoStore.getRecent();
+    const recentItems = recentIds.map(id => LEGO_DATA.find(x => x.p === id)).filter(Boolean);
+    recentSection.classList.toggle('hidden', recentItems.length === 0);
+    if (recentItems.length > 0) {
+      renderSimpleGrid(recentGrid, recentItems);
+    }
+  }
+
   // Render Home Hub
   function renderHome() {
+    renderRecent();
+
     // Trending: Random 8 items
     const trending = [...LEGO_DATA].sort(() => 0.5 - Math.random()).slice(0, 8);
     renderSimpleGrid(trendingGrid, trending, true);
@@ -649,6 +749,15 @@ document.addEventListener('DOMContentLoaded', () => {
       div.appendChild(rBadge);
     }
 
+    // Build Time Badge
+    const savedTime = LegoStore.getBuildTime ? LegoStore.getBuildTime(item.p) : 0;
+    if (savedTime > 0) {
+      const tBadge = document.createElement('div');
+      tBadge.className = 'card-build-time';
+      tBadge.textContent = t('build_time_badge').replace('{time}', formatBuildTime(savedTime));
+      div.appendChild(tBadge);
+    }
+
     // NEW Badge
     if (item.ac.includes(CAT_KEY_NEW)) {
       const newBadge = document.createElement('div');
@@ -696,30 +805,74 @@ document.addEventListener('DOMContentLoaded', () => {
     return div;
   }
 
+  function syncFilterBarUI(count) {
+    if (!filterBar) return;
+    const isBuiltTab = activeCat === 'built' && !query;
+    filterBar.classList.toggle('hidden', isBuiltTab);
+    if (isBuiltTab) return;
+
+    const hasSpecificCat = Boolean(query && activeCat !== 'home' && activeCat !== 'all' && activeCat !== 'favorites' && activeCat !== 'built');
+    if (filterInCatBtn) {
+      filterInCatBtn.classList.toggle('hidden', !hasSpecificCat);
+      if (hasSpecificCat) {
+        filterInCatBtn.textContent = t('filter_in_cat') + ': ' + getLocalizedCat(activeCat);
+      }
+      filterInCatBtn.classList.toggle('active', activeFilters.inCat);
+    }
+    if (filterUnbuiltBtn) filterUnbuiltBtn.classList.toggle('active', activeFilters.unbuilt);
+    if (filterRatedBtn) filterRatedBtn.classList.toggle('active', activeFilters.rated);
+
+    const anyActive = activeFilters.unbuilt || activeFilters.rated || (hasSpecificCat && activeFilters.inCat);
+    if (filterResetBtn) filterResetBtn.classList.toggle('hidden', !anyActive);
+    if (filterResultCount) filterResultCount.textContent = count + ' ' + t('models_count');
+  }
+
+  [filterUnbuiltBtn, filterRatedBtn, filterInCatBtn].forEach(btn => {
+    if (!btn) return;
+    btn.addEventListener('click', () => {
+      const key = btn.dataset.filter;
+      if (key === 'unbuilt') activeFilters.unbuilt = !activeFilters.unbuilt;
+      else if (key === 'rated') activeFilters.rated = !activeFilters.rated;
+      else if (key === 'incat') activeFilters.inCat = !activeFilters.inCat;
+      renderGrid();
+    });
+  });
+
+  if (filterResetBtn) {
+    filterResetBtn.addEventListener('click', () => {
+      activeFilters.unbuilt = false;
+      activeFilters.rated = false;
+      activeFilters.inCat = false;
+      renderGrid();
+    });
+  }
+
   // Filter
   function getFiltered() {
-    if (!query) {
-      return LEGO_DATA.filter(item => {
-        if (activeCat === 'all' || activeCat === 'home') return true;
-        if (activeCat === 'favorites') return LegoStore.isFavorite(item.p);
-        if (activeCat === 'built') return LegoStore.isBuilt(item.p);
-        return item.ac.includes(activeCat);
-      });
-    }
-
-    // Use pre-built search index for fast matching
     return LEGO_DATA.filter((item, idx) => {
-      const matchQ = searchIndex[idx].includes(query);
-      
-      if (activeCat === 'favorites') return matchQ && LegoStore.isFavorite(item.p);
-      if (activeCat === 'built') return matchQ && LegoStore.isBuilt(item.p);
-      return matchQ;
+      if (query) {
+        if (!searchIndex[idx].includes(query)) return false;
+        if (activeCat === 'favorites' && !LegoStore.isFavorite(item.p)) return false;
+        if (activeCat === 'built' && !LegoStore.isBuilt(item.p)) return false;
+        if (activeFilters.inCat && activeCat !== 'home' && activeCat !== 'all' && activeCat !== 'favorites' && activeCat !== 'built') {
+          if (!item.ac.includes(activeCat)) return false;
+        }
+      } else {
+        if (activeCat === 'favorites' && !LegoStore.isFavorite(item.p)) return false;
+        else if (activeCat === 'built' && !LegoStore.isBuilt(item.p)) return false;
+        else if (activeCat !== 'all' && activeCat !== 'home' && !item.ac.includes(activeCat)) return false;
+      }
+
+      if (activeFilters.unbuilt && LegoStore.isBuilt(item.p)) return false;
+      if (activeFilters.rated && LegoStore.getRating(item.p) <= 0) return false;
+      return true;
     });
   }
 
   // Render grid for specific category or search
   function renderGrid() {
     const items = getFiltered();
+    syncFilterBarUI(items.length);
     grid.innerHTML = '';
 
     if (activeCat === 'built') {
@@ -803,6 +956,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === MODAL ===
   function openModal(item) {
+    if (LegoStore.addRecent) {
+      LegoStore.addRecent(item.p);
+      if (activeCat === 'home') renderRecent();
+    }
     const lang = LegoStore.getLang();
     if (item.i) {
       modalImg.innerHTML = `<img src="${escapeHTML(item.i)}" alt="${escapeHTML(getLocalized(item.t))}">`;
@@ -842,8 +999,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modalItemActions) modalItemActions.appendChild(modalShareBtn);
 
     const online = hasOnlineInstruction(item);
-    if (online) modalOpenBtn.href = item.p;
-    else modalOpenBtn.removeAttribute('href');
+    if (online) {
+      modalOpenBtn.href = item.p;
+      modalOpenBtn.onclick = () => {
+        if (LegoStore.startBuild) {
+          LegoStore.startBuild(item.p);
+          openBuildTimerModal(item);
+        }
+      };
+    } else {
+      modalOpenBtn.removeAttribute('href');
+      modalOpenBtn.onclick = null;
+    }
     modalOpenBtn.classList.toggle('hidden', !online);
     if (modalUnavailable) modalUnavailable.classList.toggle('hidden', online);
 
@@ -990,6 +1157,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') {
+      if (buildTimerOverlay && buildTimerOverlay.classList.contains('active')) {
+        minimizeBuildTimer();
+        return;
+      }
       closeModal();
       closeRoulette();
       closeAboutModal();
@@ -1061,12 +1232,141 @@ document.addEventListener('DOMContentLoaded', () => {
     switchView('home', t('sidebar_home'), '🏠');
   });
 
+  // === BUILD TIMER LOGIC ===
+  let buildTimerInterval = null;
+
+  function formatBuildTime(totalSec) {
+    const s = Math.max(0, Math.floor(totalSec));
+    const hrs = Math.floor(s / 3600);
+    const mins = Math.floor((s % 3600) / 60);
+    const secs = s % 60;
+    const mm = String(mins).padStart(2, '0');
+    const ss = String(secs).padStart(2, '0');
+    return hrs > 0 ? `${hrs}:${mm}:${ss}` : `${mm}:${ss}`;
+  }
+
+  function updateBuildTimerTick() {
+    const active = LegoStore.getActiveBuild ? LegoStore.getActiveBuild() : null;
+    if (!active) return;
+    const elapsed = Math.max(0, Math.floor((Date.now() - active.startedAt) / 1000));
+    const formatted = formatBuildTime(elapsed);
+    if (buildTimerClock) buildTimerClock.textContent = formatted;
+    if (buildFloatingClock) buildFloatingClock.textContent = formatted;
+  }
+
+  function startBuildTimerInterval() {
+    if (buildTimerInterval) clearInterval(buildTimerInterval);
+    updateBuildTimerTick();
+    buildTimerInterval = setInterval(updateBuildTimerTick, 1000);
+  }
+
+  function stopBuildTimerInterval() {
+    if (buildTimerInterval) {
+      clearInterval(buildTimerInterval);
+      buildTimerInterval = null;
+    }
+  }
+
+  function openBuildTimerModal(item) {
+    closeModal();
+    if (!buildTimerOverlay) return;
+    const titleText = getLocalized(item.t);
+    if (buildTimerModel) buildTimerModel.textContent = titleText;
+    if (buildFloatingTitle) buildFloatingTitle.textContent = titleText;
+    if (buildFloatingBar) buildFloatingBar.classList.add('hidden');
+    buildTimerOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    startBuildTimerInterval();
+  }
+
+  function minimizeBuildTimer() {
+    if (!buildTimerOverlay) return;
+    buildTimerOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+    const active = LegoStore.getActiveBuild ? LegoStore.getActiveBuild() : null;
+    if (active && buildFloatingBar) {
+      const item = LEGO_DATA.find(x => x.p === active.id);
+      if (item && buildFloatingTitle) buildFloatingTitle.textContent = getLocalized(item.t);
+      buildFloatingBar.classList.remove('hidden');
+      startBuildTimerInterval();
+    }
+  }
+
+  function finishActiveBuild() {
+    const active = LegoStore.getActiveBuild ? LegoStore.getActiveBuild() : null;
+    if (!active) return;
+    const elapsedSec = LegoStore.finishBuild(active.id);
+    stopBuildTimerInterval();
+    if (buildTimerOverlay) buildTimerOverlay.classList.remove('active');
+    if (buildFloatingBar) buildFloatingBar.classList.add('hidden');
+    document.body.style.overflow = '';
+
+    if (!LegoStore.isBuilt(active.id)) {
+      LegoStore.toggleBuilt(active.id, LEGO_DATA);
+    }
+    updateGlobalUI();
+    updateCardUI(active.id);
+    if (activeCat === 'built') renderGrid();
+    triggerLegoConfetti();
+
+    const toast = document.createElement('div');
+    toast.className = 'update-toast';
+    toast.innerHTML = `<div class="toast-content"><span>${escapeHTML(t('build_timer_congrats').replace('{time}', formatBuildTime(elapsedSec)))}</span></div>`;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+  }
+
+  function cancelActiveBuild() {
+    stopBuildTimerInterval();
+    if (LegoStore.cancelBuild) LegoStore.cancelBuild();
+    if (buildTimerOverlay) buildTimerOverlay.classList.remove('active');
+    if (buildFloatingBar) buildFloatingBar.classList.add('hidden');
+    document.body.style.overflow = '';
+  }
+
+  if (buildTimerDoneBtn) buildTimerDoneBtn.addEventListener('click', finishActiveBuild);
+  if (buildFloatingDone) buildFloatingDone.addEventListener('click', finishActiveBuild);
+  if (buildTimerKeepBtn) buildTimerKeepBtn.addEventListener('click', minimizeBuildTimer);
+  if (buildTimerCancelBtn) buildTimerCancelBtn.addEventListener('click', cancelActiveBuild);
+  if (buildTimerReopenBtn) {
+    buildTimerReopenBtn.addEventListener('click', () => {
+      const active = LegoStore.getActiveBuild ? LegoStore.getActiveBuild() : null;
+      if (active && /^https?:\/\//i.test(active.id)) {
+        window.open(active.id, '_blank', 'noopener,noreferrer');
+      }
+    });
+  }
+  if (buildFloatingExpand) {
+    buildFloatingExpand.addEventListener('click', () => {
+      const active = LegoStore.getActiveBuild ? LegoStore.getActiveBuild() : null;
+      if (!active) return;
+      const item = LEGO_DATA.find(x => x.p === active.id);
+      if (item) openBuildTimerModal(item);
+    });
+  }
+
   // Init
   LegoStore.healData(LEGO_DATA);
   updateUI();
   initDragScroll();
+  if (LegoStore.getActiveBuild) {
+    const pendingBuild = LegoStore.getActiveBuild();
+    if (pendingBuild) {
+      const pendingItem = LEGO_DATA.find(x => x.p === pendingBuild.id);
+      if (pendingItem && buildFloatingBar) {
+        if (buildFloatingTitle) buildFloatingTitle.textContent = getLocalized(pendingItem.t);
+        buildFloatingBar.classList.remove('hidden');
+        startBuildTimerInterval();
+      } else {
+        LegoStore.cancelBuild();
+      }
+    }
+  }
 
   // === ROULETTE LOGIC ===
+  let rouletteCategory = null;
+  let rouletteScope = 'all';
+
   function updateRouletteSoundBtn() {
     if (!rouletteSoundBtn || !window.LegoRoulette) return;
     const on = LegoRoulette.isSoundEnabled();
@@ -1087,12 +1387,32 @@ document.addEventListener('DOMContentLoaded', () => {
     updateRouletteSoundBtn();
   }
 
-  function startRoulette() {
+  function getRoulettePool() {
+    if (rouletteScope !== 'cat' || !rouletteCategory) return LEGO_DATA;
+    let pool;
+    if (rouletteCategory === 'favorites') {
+      pool = LEGO_DATA.filter(x => LegoStore.isFavorite(x.p));
+    } else {
+      pool = LEGO_DATA.filter(x => x.ac && x.ac.includes(rouletteCategory));
+    }
+    return pool.length > 0 ? pool : LEGO_DATA;
+  }
+
+  function syncRouletteScopeUI() {
+    if (!rouletteScopeToggle) return;
+    rouletteScopeToggle.classList.toggle('hidden', !rouletteCategory);
+    if (rouletteScopeCat) rouletteScopeCat.classList.toggle('active', rouletteScope === 'cat');
+    if (rouletteScopeAll) rouletteScopeAll.classList.toggle('active', rouletteScope === 'all');
+  }
+
+  function runRouletteSpin() {
     document.body.style.overflow = 'hidden';
     if (window.LegoRoulette && window.LegoRoulette.unlockAudio) {
       window.LegoRoulette.unlockAudio();
     }
     updateRouletteSoundBtn();
+    syncRouletteScopeUI();
+    const pool = getRoulettePool();
     LegoRoulette.start({
       overlay: rouletteOverlay,
       modal: rouletteModal,
@@ -1103,7 +1423,7 @@ document.addEventListener('DOMContentLoaded', () => {
       resultEl: rouletteResult,
       actionBtn: rouletteActionBtn,
       rerollBtn: rouletteRerollBtn,
-      data: LEGO_DATA,
+      data: pool,
       t: t,
       getCategoryLabel: (cat) => {
         if (!cat) return '';
@@ -1123,12 +1443,43 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  function startRoulette(scopeCat) {
+    if (typeof scopeCat === 'string' && scopeCat) {
+      rouletteCategory = scopeCat;
+      rouletteScope = 'cat';
+    } else {
+      rouletteCategory = null;
+      rouletteScope = 'all';
+    }
+    runRouletteSpin();
+  }
+
   if (btnRandom) {
-    btnRandom.addEventListener('click', startRoulette);
+    btnRandom.addEventListener('click', () => startRoulette(null));
+  }
+
+  if (btnCatRandom) {
+    btnCatRandom.addEventListener('click', () => startRoulette(activeCat));
+  }
+
+  if (rouletteScopeCat) {
+    rouletteScopeCat.addEventListener('click', () => {
+      if (rouletteScope === 'cat') return;
+      rouletteScope = 'cat';
+      runRouletteSpin();
+    });
+  }
+
+  if (rouletteScopeAll) {
+    rouletteScopeAll.addEventListener('click', () => {
+      if (rouletteScope === 'all') return;
+      rouletteScope = 'all';
+      runRouletteSpin();
+    });
   }
 
   if (rouletteRerollBtn) {
-    rouletteRerollBtn.addEventListener('click', startRoulette);
+    rouletteRerollBtn.addEventListener('click', runRouletteSpin);
   }
 
   function closeRoulette() {

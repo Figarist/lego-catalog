@@ -187,17 +187,18 @@
                 <button id="clearSearch" class="clear-btn hidden" aria-label="Clear">&times;</button>
             </div>
             <div class="header-stats">
+                <button id="themeToggle" class="theme-toggle-btn" type="button" title="Світла тема (для класу)" aria-label="Світла тема (для класу)" aria-pressed="false">☀️</button>
                 <button id="aboutBtn" class="header-about-btn" title="Про автора та проєкт" data-i18n-title="header_about_btn" aria-label="Про автора та проєкт">
-                    <span class="about-btn-icon">👨‍🏫</span>
                     <span class="about-btn-text" data-i18n="header_about_btn">Про автора та проєкт</span>
                 </button>
                 <button id="navFav" class="nav-fav-btn" title="Моє обране" data-i18n-title="nav_favorites">
                     <span class="nav-fav-icon">❤️</span>
                     <span id="navFavCount" class="nav-fav-count">0</span>
                 </button>
-                <div class="stat-item is-clickable" title="Зібрано моделей" data-i18n-title="nav_built" id="navBuilt">
-                    <span class="stat-icon">✅</span>
-                    <span class="stat-text"><span id="builtCount">0</span> / <span id="totalCount">0</span></span>
+                <div class="stat-item stat-rank is-clickable" title="Зібрано моделей" data-i18n-title="nav_built" id="navBuilt">
+                    <span class="stat-icon" id="navRankIcon">🌱</span>
+                    <span class="stat-text"><span id="navRankName" class="nav-rank-name">Новачок</span> · <span id="builtCount">0</span>/<span id="totalCount">0</span></span>
+                    <span class="nav-rank-bar" aria-hidden="true"><span class="nav-rank-fill" id="navRankFill"></span></span>
                 </div>
             </div>
         </div>
@@ -217,7 +218,6 @@
                         <div class="hero-content">
                             <p class="hero-greeting" data-i18n="hero_title">Привіт, Майстер! 👋</p>
                             <h1 class="hero-h1" data-i18n="hero_h1">Інструкції LEGO® WeDo 2.0 — 597 схем для уроків робототехніки</h1>
-                            <p data-i18n="hero_subtitle">Що будемо будувати сьогодні?</p>
                             <button id="btnRandom" class="hero-random-btn" data-i18n="btn_random">🎲 Випадкова модель</button>
                         </div>
                         <div class="hero-mascot" id="heroMascot" title="Привіт! Я Вейді 🤖" data-i18n-title="mascot_greeting">
@@ -225,6 +225,13 @@
                             <img src="icons/wedy_mascot.png" alt="WeDy Robot Mascot" class="mascot-img" id="mascotImg">
                         </div>
                     </div>
+                </section>
+
+                <section class="recent-section horizontal-row-wrap hidden" id="recentSection">
+                    <div class="section-header">
+                        <h3 data-i18n="section_recent">⏱️ Нещодавно переглянуті</h3>
+                    </div>
+                    <div id="recentGrid" class="horizontal-scroll"></div>
                 </section>
 
                 <section class="trending-section horizontal-row-wrap">
@@ -261,13 +268,27 @@
             <div id="gridView" class="grid-view hidden">
                 <div class="content-top">
                     <h2 id="currentTitle" data-i18n="view_all">🏆 Всі моделі</h2>
-                    <div class="view-toggle">
-                        <button id="btnGrid" class="vt active" title="Звичайна сітка">
-                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10-10h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
-                        </button>
-                        <button id="btnBig" class="vt" title="Великі плитки">
-                            <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg>
-                        </button>
+                    <div class="content-top-actions">
+                        <button id="btnCatRandom" class="cat-random-btn hidden" type="button" data-i18n="btn_cat_random">🎲 З цієї теми</button>
+                        <div class="view-toggle">
+                            <button id="btnGrid" class="vt active" title="Звичайна сітка">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h8v8H3V3zm0 10h8v8H3v-8zm10-10h8v8h-8V3zm0 10h8v8h-8v-8z"/></svg>
+                            </button>
+                            <button id="btnBig" class="vt" title="Великі плитки">
+                                <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M3 3h18v18H3V3zm2 2v14h14V5H5z"/></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-bar" id="filterBar">
+                    <div class="filter-chips">
+                        <button type="button" class="chip" id="filterUnbuilt" data-filter="unbuilt" data-i18n="filter_unbuilt">⏳ Ще не зібрані</button>
+                        <button type="button" class="chip" id="filterRated" data-filter="rated" data-i18n="filter_rated">⭐ Мої оцінені</button>
+                        <button type="button" class="chip hidden" id="filterInCat" data-filter="incat" data-i18n="filter_in_cat">📂 Лише в категорії</button>
+                    </div>
+                    <div class="filter-meta">
+                        <span class="filter-count" id="filterResultCount"></span>
+                        <button type="button" class="filter-reset-chip hidden" id="filterResetBtn" data-i18n="filter_reset">Скинути фільтри</button>
                     </div>
                 </div>
                 <div id="grid" class="grid"></div>
@@ -336,6 +357,10 @@
             <button class="roulette-sound-btn" id="rouletteSoundBtn" type="button" aria-pressed="false" aria-label="Увімкнути звук" title="Увімкнути звук">🔇</button>
             <button class="modal-close" id="rouletteClose" type="button" aria-label="Закрити">&times;</button>
             <h2 class="roulette-title" id="rouletteTitle" data-i18n="roulette_title">🎡 Колесо Інструкцій</h2>
+            <div class="roulette-scope-toggle hidden" id="rouletteScopeToggle">
+                <button type="button" class="chip active" id="rouletteScopeCat" data-scope="cat" data-i18n="roulette_scope_cat">Ця тема</button>
+                <button type="button" class="chip" id="rouletteScopeAll" data-scope="all" data-i18n="roulette_scope_all">Усі 597</button>
+            </div>
             <div class="roulette-lights" aria-hidden="true">
                 <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
             </div>
@@ -353,6 +378,31 @@
                 <button id="rouletteRerollBtn" class="hero-random-btn roulette-reroll-btn hidden" type="button" data-i18n="roulette_reroll">Крутити ще раз! 🔄</button>
             </div>
         </div>
+    </div>
+
+    <!-- Build Timer Check-in Modal -->
+    <div class="build-timer-overlay" id="buildTimerOverlay">
+        <div class="build-timer-modal" id="buildTimerModal" role="dialog" aria-modal="true" aria-labelledby="buildTimerQuestion">
+            <div class="build-timer-badge" data-i18n="build_timer_running">Таймер збірки йде:</div>
+            <div class="build-timer-clock" id="buildTimerClock">00:00</div>
+            <div class="build-timer-model" id="buildTimerModel"></div>
+            <h3 class="build-timer-question" id="buildTimerQuestion" data-i18n="build_timer_question">Ти вже зібрав цю модель?</h3>
+            <div class="build-timer-actions">
+                <button type="button" class="btn btn--primary build-timer-done-btn" id="buildTimerDoneBtn" data-i18n="build_timer_done">✅ Так, я зібрав!</button>
+                <button type="button" class="btn btn--accent build-timer-reopen-btn" id="buildTimerReopenBtn" data-i18n="build_timer_reopen">📖 До інструкції</button>
+                <button type="button" class="btn build-timer-keep-btn" id="buildTimerKeepBtn" data-i18n="build_timer_keep">⏳ Збираю далі</button>
+                <button type="button" class="btn btn--ghost build-timer-cancel-btn" id="buildTimerCancelBtn" data-i18n="build_timer_cancel">Скасувати</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Build Timer Bar -->
+    <div class="build-floating-bar hidden" id="buildFloatingBar">
+        <button type="button" class="build-floating-info" id="buildFloatingExpand">
+            <span class="build-floating-clock" id="buildFloatingClock">00:00</span>
+            <span class="build-floating-title" id="buildFloatingTitle"></span>
+        </button>
+        <button type="button" class="btn btn--primary build-floating-done" id="buildFloatingDone" data-i18n="build_timer_done">✅ Так, я зібрав!</button>
     </div>
 
     <!-- Disclaimer Modal -->

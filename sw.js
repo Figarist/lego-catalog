@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261123c-roulette-smooth';
+const CACHE_NAME = 'wedo-catalog-v20261123e-anti-ai-recent-timer';
 const ASSETS = [
   './',
   './index.html',

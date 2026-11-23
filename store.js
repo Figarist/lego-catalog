@@ -22,6 +22,21 @@ window.LegoStore = (function() {
     let builtItems = safeGet('lego_built', []);
     let ratings = safeGet('lego_ratings', {});
     let unlockedAchievements = safeGet('lego_achievements', []);
+    let recentItems = safeGet('lego_recent', []);
+    let buildTimes = safeGet('lego_build_times', {});
+    let activeBuild = safeGet('lego_active_build', null);
+
+    // Theme persistence ('dark' | 'light')
+    let currentTheme = 'dark';
+    try {
+        const savedTheme = localStorage.getItem('lego_theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') currentTheme = savedTheme;
+    } catch (_) { /* ignore */ }
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
     // SEO Language overriding via URL parameter (cleaned immediately via replaceState to avoid duplicate URLs)
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
@@ -83,6 +98,19 @@ window.LegoStore = (function() {
         localStorage.setItem('lego_achievements', JSON.stringify(unlockedAchievements));
     }
 
+    function saveRecent() {
+        localStorage.setItem('lego_recent', JSON.stringify(recentItems));
+    }
+
+    function saveBuildTimes() {
+        localStorage.setItem('lego_build_times', JSON.stringify(buildTimes));
+    }
+
+    function saveActiveBuild() {
+        if (activeBuild) localStorage.setItem('lego_active_build', JSON.stringify(activeBuild));
+        else localStorage.removeItem('lego_active_build');
+    }
+
     function checkAchievements(allData) {
         if (!allData) return;
         let changed = false;
@@ -121,12 +149,86 @@ window.LegoStore = (function() {
         if (changed) saveAchievements();
     }
 
+    const RANKS = [
+        { id: 'novice', icon: '🌱', min: 0 },
+        { id: 'mechanic', icon: '🔧', min: 3 },
+        { id: 'engineer', icon: '⚙️', min: 10 },
+        { id: 'robotics', icon: '🤖', min: 25 },
+        { id: 'master', icon: '👑', min: 50 }
+    ];
+
+    function getRankInfo() {
+        const count = builtItems.length;
+        let idx = 0;
+        for (let i = 0; i < RANKS.length; i++) {
+            if (count >= RANKS[i].min) idx = i;
+        }
+        const current = RANKS[idx];
+        const next = idx < RANKS.length - 1 ? RANKS[idx + 1] : null;
+        const prevMin = current.min;
+        const nextMin = next ? next.min : prevMin;
+        const pct = next ? Math.min(100, Math.round(((count - prevMin) / (nextMin - prevMin)) * 100)) : 100;
+        const remaining = next ? Math.max(0, nextMin - count) : 0;
+        return { current, next, count, pct, remaining };
+    }
+
     return {
         getFavorites: () => favorites,
         getBuiltItems: () => builtItems,
         getUnlockedAchievements: () => unlockedAchievements,
         getRatings: () => ratings,
+        getRecent: () => recentItems,
+        getActiveBuild: () => activeBuild,
+        getBuildTime: (id) => buildTimes[id] || 0,
         getLang: () => currentLang,
+        getTheme: () => currentTheme,
+        getRankInfo: getRankInfo,
+
+        addRecent: (id) => {
+            if (!id) return;
+            const idx = recentItems.indexOf(id);
+            if (idx !== -1) recentItems.splice(idx, 1);
+            recentItems.unshift(id);
+            if (recentItems.length > 6) recentItems.length = 6;
+            saveRecent();
+        },
+
+        startBuild: (id) => {
+            if (!id) return null;
+            if (!activeBuild || activeBuild.id !== id) {
+                activeBuild = { id: id, startedAt: Date.now() };
+                saveActiveBuild();
+            }
+            return activeBuild;
+        },
+
+        finishBuild: (id) => {
+            let elapsedSec = 0;
+            if (activeBuild && activeBuild.id === id && activeBuild.startedAt) {
+                elapsedSec = Math.max(1, Math.round((Date.now() - activeBuild.startedAt) / 1000));
+                buildTimes[id] = elapsedSec;
+                saveBuildTimes();
+            }
+            activeBuild = null;
+            saveActiveBuild();
+            return elapsedSec;
+        },
+
+        cancelBuild: () => {
+            activeBuild = null;
+            saveActiveBuild();
+        },
+
+        setTheme: (theme) => {
+            currentTheme = theme === 'light' ? 'light' : 'dark';
+            try { localStorage.setItem('lego_theme', currentTheme); } catch (_) { /* ignore */ }
+            if (currentTheme === 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+            return currentTheme;
+        },
 
         setLang: (lang) => {
             currentLang = lang;
@@ -205,6 +307,7 @@ window.LegoStore = (function() {
 
             healArray(favorites);
             healArray(builtItems);
+            healArray(recentItems);
 
             // Heal ratings keys
             for (const oldId in ratings) {
