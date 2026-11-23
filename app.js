@@ -77,8 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
   // Roulette elements
   const btnRandom = $('btnRandom');
   const rouletteOverlay = $('rouletteOverlay');
+  const rouletteModal = $('rouletteModal');
   const rouletteClose = $('rouletteClose');
+  const rouletteSoundBtn = $('rouletteSoundBtn');
+  const rouletteWindow = $('rouletteWindow');
+  const roulettePointer = $('roulettePointer');
   const rouletteStrip = $('rouletteStrip');
+  const rouletteStatus = $('rouletteStatus');
+  const rouletteResult = $('rouletteResult');
   const rouletteActionBtn = $('rouletteActionBtn');
   const rouletteRerollBtn = $('rouletteRerollBtn');
   const emptyEmoji = $('emptyEmoji');
@@ -277,6 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Refresh dynamic content
     rebuildSearchIndex();
     renderCategories();
+    updateRouletteSoundBtn();
     if (activeCat === 'home') renderHome();
     else switchView(activeCat, '', ''); // refresh current view
   }
@@ -394,10 +401,15 @@ document.addEventListener('DOMContentLoaded', () => {
     render();
   }
 
-  function handleToggleBuilt(id) {
+  function handleToggleBuilt(id, event) {
     const isNowBuilt = LegoStore.toggleBuilt(id, LEGO_DATA);
     if (isNowBuilt) {
-      triggerLegoConfetti();
+      if (event && event.currentTarget && event.currentTarget.getBoundingClientRect) {
+        const r = event.currentTarget.getBoundingClientRect();
+        triggerLegoConfetti(r.left + r.width / 2, r.top + r.height / 2);
+      } else {
+        triggerLegoConfetti();
+      }
       const navBuiltEl = $('navBuilt');
       if (navBuiltEl) {
         navBuiltEl.classList.remove('stat-pulse');
@@ -412,7 +424,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function handleToggleFavorite(id, event) {
     const adding = LegoStore.toggleFavorite(id);
-    if (adding && event) animateFlyingHeart(event.currentTarget);
+    if (adding && event) {
+      const btn = event.currentTarget;
+      btn.classList.remove('heart-pop');
+      void btn.offsetWidth;
+      btn.classList.add('heart-pop');
+      animateFlyingHeart(btn);
+    }
     updateGlobalUI();
     if (activeCat === 'favorites') renderGrid();
     else updateCardUI(id);
@@ -832,8 +850,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Built toggle in modal
     const modalBuiltInput = $('modalBuilt');
     modalBuiltInput.checked = LegoStore.isBuilt(item.p);
-    modalBuiltInput.onclick = () => {
-      handleToggleBuilt(item.p);
+    modalBuiltInput.onclick = (e) => {
+      handleToggleBuilt(item.p, e);
     };
 
     // Rating in modal
@@ -1049,16 +1067,58 @@ document.addEventListener('DOMContentLoaded', () => {
   initDragScroll();
 
   // === ROULETTE LOGIC ===
+  function updateRouletteSoundBtn() {
+    if (!rouletteSoundBtn || !window.LegoRoulette) return;
+    const on = LegoRoulette.isSoundEnabled();
+    rouletteSoundBtn.textContent = on ? '🔊' : '🔇';
+    rouletteSoundBtn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    rouletteSoundBtn.classList.toggle('is-on', on);
+    const label = t(on ? 'roulette_sound_off' : 'roulette_sound_on');
+    rouletteSoundBtn.setAttribute('aria-label', label);
+    rouletteSoundBtn.title = label;
+  }
+
+  if (rouletteSoundBtn) {
+    rouletteSoundBtn.addEventListener('click', () => {
+      if (!window.LegoRoulette) return;
+      LegoRoulette.setSoundEnabled(!LegoRoulette.isSoundEnabled());
+      updateRouletteSoundBtn();
+    });
+    updateRouletteSoundBtn();
+  }
+
   function startRoulette() {
+    document.body.style.overflow = 'hidden';
+    if (window.LegoRoulette && window.LegoRoulette.unlockAudio) {
+      window.LegoRoulette.unlockAudio();
+    }
+    updateRouletteSoundBtn();
     LegoRoulette.start({
       overlay: rouletteOverlay,
+      modal: rouletteModal,
       strip: rouletteStrip,
+      windowEl: rouletteWindow,
+      pointerEl: roulettePointer,
+      statusEl: rouletteStatus,
+      resultEl: rouletteResult,
       actionBtn: rouletteActionBtn,
       rerollBtn: rouletteRerollBtn,
       data: LEGO_DATA,
+      t: t,
+      getCategoryLabel: (cat) => {
+        if (!cat) return '';
+        const emoji = CATEGORY_EMOJI[cat] ? CATEGORY_EMOJI[cat] + ' ' : '';
+        return emoji + getLocalizedCat(cat);
+      },
       onWin: (item) => {
         rouletteWinningItem = item;
-        triggerLegoConfetti();
+        if (rouletteWindow) {
+          const r = rouletteWindow.getBoundingClientRect();
+          triggerLegoConfetti(r.left + r.width / 2, r.top + r.height / 2);
+          setTimeout(() => triggerLegoConfetti(r.left + r.width / 2, r.top + 30), 220);
+        } else {
+          triggerLegoConfetti();
+        }
       }
     });
   }
@@ -1073,8 +1133,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeRoulette() {
     rouletteOverlay.classList.remove('active');
+    if (rouletteModal) {
+      rouletteModal.classList.remove('is-spinning', 'is-won');
+    }
     if (window.LegoRoulette && window.LegoRoulette.cancel) {
       window.LegoRoulette.cancel();
+    }
+    if (!modalOverlay.classList.contains('active') && !(aboutOverlay && aboutOverlay.classList.contains('active'))) {
+      document.body.style.overflow = '';
     }
   }
 

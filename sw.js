@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261118a-landing-pages-friendly-arcade-v2.1.0';
+const CACHE_NAME = 'wedo-catalog-v20261123c-roulette-smooth';
 const ASSETS = [
   './',
   './index.html',

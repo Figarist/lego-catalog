@@ -332,16 +332,25 @@
 
     <!-- Roulette Overlay -->
     <div class="roulette-overlay" id="rouletteOverlay">
-        <div class="roulette-modal" role="dialog" aria-modal="true" aria-labelledby="rouletteTitle">
-            <button class="modal-close" id="rouletteClose" aria-label="Закрити">&times;</button>
-            <h2 class="roulette-title" id="rouletteTitle" data-i18n="roulette_title">🎰 Рулетка Інструкцій</h2>
-            <div class="roulette-window">
-                <div class="roulette-center-line"></div>
+        <div class="roulette-modal" id="rouletteModal" role="dialog" aria-modal="true" aria-labelledby="rouletteTitle">
+            <button class="roulette-sound-btn" id="rouletteSoundBtn" type="button" aria-pressed="false" aria-label="Увімкнути звук" title="Увімкнути звук">🔇</button>
+            <button class="modal-close" id="rouletteClose" type="button" aria-label="Закрити">&times;</button>
+            <h2 class="roulette-title" id="rouletteTitle" data-i18n="roulette_title">🎡 Колесо Інструкцій</h2>
+            <div class="roulette-lights" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <div class="roulette-window" id="rouletteWindow">
+                <div class="roulette-pointer-top" id="roulettePointer" aria-hidden="true"></div>
+                <div class="roulette-center-line" aria-hidden="true"></div>
                 <div class="roulette-strip" id="rouletteStrip"></div>
             </div>
+            <div class="roulette-readout" aria-live="polite">
+                <div class="roulette-status" id="rouletteStatus"></div>
+                <div class="roulette-result hidden" id="rouletteResult"></div>
+            </div>
             <div class="roulette-action">
-                <button id="rouletteActionBtn" class="hero-random-btn hidden" data-i18n="roulette_open">Відкрити цю модель!</button>
-                <button id="rouletteRerollBtn" class="hero-random-btn roulette-reroll-btn hidden" data-i18n="roulette_reroll">Крутити ще раз! 🔄</button>
+                <button id="rouletteActionBtn" class="hero-random-btn roulette-open-btn hidden" type="button" data-i18n="roulette_open">Відкрити цю модель!</button>
+                <button id="rouletteRerollBtn" class="hero-random-btn roulette-reroll-btn hidden" type="button" data-i18n="roulette_reroll">Крутити ще раз! 🔄</button>
             </div>
         </div>
     </div>
