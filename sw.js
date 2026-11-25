@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261123e-anti-ai-recent-timer';
+const CACHE_NAME = 'wedo-catalog-v20261125a-lang-redirect';
 const ASSETS = [
   './',
   './index.html',

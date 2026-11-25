@@ -56,7 +56,14 @@ window.LegoStore = (function() {
     if (urlLang && supportedLangs.includes(urlLang)) {
         currentLang = urlLang;
         localStorage.setItem('app_lang', currentLang);
-        if (window.history && window.history.replaceState) {
+        // On a catalog home page, send ?lang=xx to that locale's own static URL (/lego-catalog/xx/),
+        // so search engines see one URL per language instead of ?lang= duplicates of the uk page.
+        const home = window.location.pathname.match(/^((?:\/lego-catalog)?\/)(?:(en|ru|pl)\/)?(?:index\.html)?$/);
+        if (home && (home[2] || 'uk') !== urlLang) {
+            urlParams.delete('lang');
+            const rest = urlParams.toString();
+            window.location.replace(home[1] + (urlLang === 'uk' ? '' : urlLang + '/') + (rest ? '?' + rest : '') + window.location.hash);
+        } else if (window.history && window.history.replaceState) {
             urlParams.delete('lang');
             const qs = urlParams.toString();
             const cleanUrl = window.location.pathname + (qs ? '?' + qs : '') + window.location.hash;
