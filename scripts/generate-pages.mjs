@@ -115,6 +115,10 @@ const LOCALES = {
   uk: {
     prefix: '', htmlLang: 'uk', ogLocale: 'uk_UA', langName: 'Українська', short: 'UA',
     hub: 'https://sivochka.com/uk/',
+    nextUrl: 'https://sivochka.com/uk/tutoring/scratch/?ref=lego-catalog',
+    nextTitle: 'Що далі після WeDo 2.0?',
+    nextText: 'Коли модель зібрана, найцікавіше — запрограмувати її поведінку. Наступний крок — власні ігри в Scratch, а згодом Python. Веду індивідуальні онлайн-заняття зі Scratch для дітей 6–10 років.',
+    nextBtn: 'Заняття зі Scratch →',
     // Cyrillic names first (Latin-only names such as "AT-AT" go last).
     preferCyrillic: true,
     title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'інструкція', 'інструкції', 'інструкцій')} LEGO WeDo 2.0`,
@@ -157,6 +161,10 @@ const LOCALES = {
       ]
     },
     hub: 'https://sivochka.com/',
+    nextUrl: 'https://sivochka.com/tutoring/scratch/?ref=lego-catalog',
+    nextTitle: 'What comes after WeDo 2.0?',
+    nextText: 'Once a model is built, the fun part is programming how it behaves. The next step is making your own games in Scratch, then Python. I teach 1-on-1 online Scratch lessons for kids ages 6–10.',
+    nextBtn: 'Scratch lessons →',
     preferCyrillic: false,
     title: (name, n) => `${name} — ${n} LEGO WeDo 2.0 ${enPlural(n, 'instruction', 'instructions')}`,
     titleShort: (name, n) => `${name} — ${n} WeDo 2.0 ${enPlural(n, 'guide', 'guides')}`,
@@ -198,6 +206,10 @@ const LOCALES = {
       ]
     },
     hub: 'https://sivochka.com/ru/',
+    nextUrl: 'https://sivochka.com/ru/tutoring/scratch/?ref=lego-catalog',
+    nextTitle: 'Что дальше после WeDo 2.0?',
+    nextText: 'Когда модель собрана, самое интересное — запрограммировать её поведение. Следующий шаг — свои игры в Scratch, а потом Python. Веду индивидуальные онлайн-занятия по Scratch для детей 6–10 лет.',
+    nextBtn: 'Занятия по Scratch →',
     preferCyrillic: true,
     title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'инструкция', 'инструкции', 'инструкций')} LEGO WeDo 2.0`,
     titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'инструкция', 'инструкции', 'инструкций')} WeDo 2.0`,
@@ -239,6 +251,10 @@ const LOCALES = {
       ]
     },
     hub: 'https://sivochka.com/',
+    nextUrl: 'https://sivochka.com/tutoring/scratch/?ref=lego-catalog',
+    nextTitle: 'Co dalej po WeDo 2.0?',
+    nextText: 'Gdy model jest już złożony, najciekawsze jest zaprogramowanie jego zachowania. Kolejny krok to własne gry w Scratch, a potem Python. Prowadzę indywidualne lekcje Scratch online dla dzieci w wieku 6–10 lat.',
+    nextBtn: 'Lekcje Scratch →',
     preferCyrillic: false,
     title: (name, n) => `${name} — ${n} ${slavicPlural(n, 'instrukcja', 'instrukcje', 'instrukcji')} LEGO WeDo 2.0`,
     titleShort: (name, n) => `${name} — ${n} ${slavicPlural(n, 'instrukcja', 'instrukcje', 'instrukcji')} WeDo 2.0`,
@@ -533,6 +549,12 @@ ${cards}
 ${siblings}
             </ul>
         </nav>
+
+        <aside class="lp-next" aria-labelledby="lpNextTitle">
+            <h2 id="lpNextTitle" class="lp-section-title">${esc(L.nextTitle)}</h2>
+            <p>${esc(L.nextText)}</p>
+            <a class="lp-app-btn" href="${L.nextUrl}" data-goatcounter-click="lego-tutoring-scratch">${esc(L.nextBtn)}</a>
+        </aside>
     </main>
 
 ${renderFooter(L, t, appHref, legalHref)}

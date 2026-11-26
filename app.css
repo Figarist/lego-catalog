@@ -2211,6 +2211,8 @@ body{
 .lp-hero p{font-size:1rem;font-weight:600;line-height:1.6;max-width:820px}
 .lp-hero-cta{margin-top:16px}
 .lp-faq{max-width:900px;margin:32px 0 0}
+.lp-next{margin:28px 0 8px;padding:18px 20px;border:1px solid var(--surface2);border-radius:14px;background:var(--surface)}
+.lp-next p{font-weight:600;line-height:1.6;margin:0 0 14px;max-width:820px}
 .lp-section-title{font-size:1.3rem;font-weight:900;margin:8px 0 14px;color:var(--text)}
 .lp-grid{list-style:none;margin-bottom:32px}
 .lp-item{display:flex}
