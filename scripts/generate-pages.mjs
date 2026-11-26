@@ -519,7 +519,7 @@ ${jsonText}
             </div>
         </a>
         <div class="lp-header-actions">
-            <nav class="lp-lang" aria-label="${esc(L.langLabel)}"><ul>${switcher}</ul></nav>
+            <nav class="lp-lang notranslate" translate="no" aria-label="${esc(L.langLabel)}"><ul>${switcher}</ul></nav>
             <a class="lp-app-btn" href="${appHref}">${esc(L.appBtn)}</a>
         </div>
     </header>
@@ -717,7 +717,7 @@ ${jsonText}
             </div>
         </a>
         <div class="lp-header-actions">
-            <nav class="lp-lang" aria-label="${esc(L.langLabel)}"><ul>${switcher}</ul></nav>
+            <nav class="lp-lang notranslate" translate="no" aria-label="${esc(L.langLabel)}"><ul>${switcher}</ul></nav>
             <a class="lp-app-btn" href="${appHref}">${esc(L.appBtn)}</a>
         </div>
     </header>

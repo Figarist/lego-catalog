@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261125a-lang-redirect';
+const CACHE_NAME = 'wedo-catalog-v20261126a-i18n-notranslate';
 const ASSETS = [
   './',
   './index.html',

@@ -73,19 +73,24 @@ window.LegoStore = (function() {
         currentLang = refLang;
         localStorage.setItem('app_lang', currentLang);
     }
-    // Auto-detection logic for first-time visitors
+    // Auto-detection logic for first-time visitors (priority-ordered, bot-safe, non-persisted)
     else if (!currentLang) {
-        const navLang = (navigator.language || navigator.userLanguage || 'uk').toLowerCase();
-        if (navLang.includes('pl')) {
-            currentLang = 'pl';
-        } else if (navLang.includes('en')) {
-            currentLang = 'en';
-        } else if (navLang.includes('ru')) {
-            currentLang = 'ru';
+        const isBot = navigator.webdriver || /bot|crawl|spider|slurp|facebookexternalhit|lighthouse|headless|bingpreview|yandex|baidu|duckduckbot|applebot|semrush|ahrefs/i.test(navigator.userAgent || '');
+        if (isBot) {
+            currentLang = 'uk';
         } else {
-            currentLang = 'uk'; // Fallback/Default
+            const langs = (navigator.languages && navigator.languages.length)
+                ? navigator.languages
+                : [navigator.language || navigator.userLanguage || 'uk'];
+            currentLang = 'uk';
+            for (let i = 0; i < langs.length; i++) {
+                const base = String(langs[i] || '').toLowerCase().split('-')[0];
+                if (supportedLangs.includes(base)) {
+                    currentLang = base;
+                    break;
+                }
+            }
         }
-        localStorage.setItem('app_lang', currentLang);
     }
 
 
