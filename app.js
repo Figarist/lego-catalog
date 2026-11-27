@@ -339,6 +339,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Localized link targets (e.g. privacy policy per language)
+    document.querySelectorAll('[data-i18n-href]').forEach(el => {
+      const key = el.dataset.i18nHref;
+      if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+        el.setAttribute('href', I18N_DATA[lang][key]);
+      }
+    });
+
     // Aria Labels and Titles (tooltips)
     document.querySelectorAll('[aria-label]').forEach(el => {
       if (el.id === 'clearSearch') el.setAttribute('aria-label', t('aria_clear'));

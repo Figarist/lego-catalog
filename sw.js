@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261126a-i18n-notranslate';
+const CACHE_NAME = 'wedo-catalog-v20261127a-privacy-link';
 const ASSETS = [
   './',
   './index.html',

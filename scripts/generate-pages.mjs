@@ -576,6 +576,7 @@ function renderFooter(L, t, appHref, legalHref) {
             <div class="footer-links">
                 <a href="${appHref}">${esc(L.footerCatalog)}</a>
                 <a href="${legalHref}">${esc(t.footer_legal)}</a>
+                <a href="${esc(t.footer_privacy_url)}">${esc(t.footer_privacy)}</a>
                 <a href="${legalHref}#dmca">${esc(t.footer_dmca)}</a>
                 <a href="${L.hub}" data-goatcounter-click="lego-hub">🌐 sivochka.com</a>
                 <a href="https://github.com/Figarist/lego-catalog">⭐ GitHub</a>

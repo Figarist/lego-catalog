@@ -135,6 +135,7 @@
         <section class="legal-section">
             <h2 data-i18n="legal_section_8"><span>🔒</span> 8. Конфіденційність</h2>
             <p data-i18n="legal_section_8_text">Каталог не збирає та не передає жодних персональних даних користувачів. Для статистики використовується анонімний лічильник відвідувань GoatCounter без cookie: він рахує лише перегляди сторінок і не зберігає персональних даних. Обране, оцінки та вибір мови зберігаються лише локально у вашому браузері.</p>
+            <p><span data-i18n="legal_privacy_link">Повний текст політики конфіденційності:</span> <a href="https://sivochka.com/uk/privacy/" data-i18n="footer_privacy" data-i18n-href="footer_privacy_url" style="color:var(--green);font-weight:700">Політика конфіденційності</a></p>
         </section>
 
         <div class="legal-contact">
@@ -158,6 +159,7 @@
             <p data-i18n="lego_fair_play_disclaimer">LEGO® is a trademark of the LEGO Group of companies which does not sponsor, authorize or endorse this site. / LEGO® є торговою маркою LEGO Group, яка не спонсорує, не авторизує та не підтримує цей сайт.</p>
             <p style="margin-top:10px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap">
                 <span>Архів: <a href="https://sivochka.com/lego-catalog/?ref=lego-catalog" target="_blank" rel="noopener noreferrer" style="color:var(--green);text-decoration:none;font-weight:700">BrickBot Study Archive (sivochka.com ↗)</a></span>
+                <a href="https://sivochka.com/uk/privacy/" data-i18n="footer_privacy" data-i18n-href="footer_privacy_url" style="color:var(--green);text-decoration:none;font-weight:700">Політика конфіденційності</a>
                 <a href="https://github.com/Figarist/friendly-arcade" target="_blank" rel="noopener noreferrer" class="badge" style="background:var(--surface2);color:var(--cyan);border:1px solid var(--border);text-decoration:none;padding:4px 10px;font-size:.78rem">🎮 Friendly Arcade UI ↗</a>
             </p>
         </div>
@@ -178,6 +180,13 @@
                 const key = el.dataset.i18n;
                 if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
                     el.textContent = I18N_DATA[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-href]').forEach(el => {
+                const key = el.dataset.i18nHref;
+                if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+                    el.setAttribute('href', I18N_DATA[lang][key]);
                 }
             });
 
