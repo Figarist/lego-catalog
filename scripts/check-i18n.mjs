@@ -2,11 +2,11 @@
 /**
  * Automated i18n parity & completeness gate for LEGO WeDo 2.0 Catalog.
  * Verifies:
- *  1. 100% key parity across uk, en, pl, ru in I18N_DATA, I18N_ACHIEVEMENTS, CATEGORY_MAP.
+ *  1. 100% key parity across uk, en, pl, ru, ko in I18N_DATA, I18N_ACHIEVEMENTS, CATEGORY_MAP.
  *  2. Every data-i18n, data-i18n-title, data-i18n-aria, data-i18n-href, data-i18n-alt,
- *     and data-search-key in index.html and legal.html exists in all 4 locales.
+ *     and data-search-key in index.html and legal.html exists in all 5 locales.
  *  3. No <summary class="seo-faq-summary"> or <p class="seo-faq-answer"> lacks data-i18n.
- *  4. No Ukrainian Cyrillic characters (є, ї, і, ґ) inside en, pl, or ru values in I18N_DATA.
+ *  4. No Ukrainian Cyrillic characters (є, ї, і, ґ) inside en, pl, ru, or ko values in I18N_DATA.
  */
 import { readFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
@@ -14,7 +14,7 @@ import { fileURLToPath } from 'node:url';
 import vm from 'node:vm';
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
-const LANGS = ['uk', 'en', 'pl', 'ru'];
+const LANGS = ['uk', 'en', 'pl', 'ru', 'ko'];
 const UK_CYRILLIC_RE = /[єіїґЄІЇҐ]/;
 
 const translationsSrc = readFileSync(join(ROOT, 'translations.js'), 'utf8');
@@ -64,7 +64,7 @@ if (!CATEGORY_MAP || typeof CATEGORY_MAP !== 'object') {
   }
 }
 
-for (const lang of ['en', 'pl', 'ru']) {
+for (const lang of ['en', 'pl', 'ru', 'ko']) {
   const dict = I18N_DATA[lang] || {};
   for (const [k, v] of Object.entries(dict)) {
     if (typeof v === 'string' && UK_CYRILLIC_RE.test(v)) {

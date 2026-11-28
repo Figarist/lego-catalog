@@ -40,14 +40,14 @@ window.LegoStore = (function() {
     // SEO Language overriding via URL parameter (cleaned immediately via replaceState to avoid duplicate URLs)
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
-    const supportedLangs = ['uk', 'en', 'ru', 'pl'];
+    const supportedLangs = ['uk', 'en', 'ru', 'pl', 'ko'];
 
     let currentLang = localStorage.getItem('app_lang');
     let refLang = null;
     try {
         if (document.referrer) {
             const refPath = new URL(document.referrer).pathname;
-            const m = refPath.match(/\/lego-catalog\/(?:(en|ru|pl)\/(?:c\/)?|c\/)/);
+            const m = refPath.match(/\/lego-catalog\/(?:(en|ru|pl|ko)\/(?:c\/)?|c\/)/);
             if (m) refLang = m[1] || 'uk';
         }
     } catch (e) { /* ignore invalid referrer */ }
@@ -57,12 +57,20 @@ window.LegoStore = (function() {
         currentLang = urlLang;
         localStorage.setItem('app_lang', currentLang);
         // On a catalog home page, send ?lang=xx to that locale's own static URL (/lego-catalog/xx/),
-        // so search engines see one URL per language instead of ?lang= duplicates of the uk page.
-        const home = window.location.pathname.match(/^((?:\/lego-catalog)?\/)(?:(en|ru|pl)\/)?(?:index\.html)?$/);
-        if (home && (home[2] || 'uk') !== urlLang) {
+        // stripping any existing locale segment(s) so redirects are loop-proof.
+        const home = window.location.pathname.match(/^((?:\/lego-catalog)?\/)((?:(?:en|ru|pl|ko)\/)*)(?:index\.html)?$/);
+        if (home) {
+            const existingSegments = home[2].split('/').filter(Boolean);
+            const currentPathLang = existingSegments.length === 1 ? existingSegments[0] : (existingSegments.length === 0 ? 'uk' : null);
+            const targetPath = home[1] + (urlLang === 'uk' ? '' : urlLang + '/');
             urlParams.delete('lang');
             const rest = urlParams.toString();
-            window.location.replace(home[1] + (urlLang === 'uk' ? '' : urlLang + '/') + (rest ? '?' + rest : '') + window.location.hash);
+            const targetUrl = targetPath + (rest ? '?' + rest : '') + window.location.hash;
+            if (currentPathLang !== urlLang && window.location.pathname !== targetPath) {
+                window.location.replace(targetUrl);
+            } else if (window.history && window.history.replaceState) {
+                try { window.history.replaceState(null, '', targetUrl); } catch (e) { /* ignore */ }
+            }
         } else if (window.history && window.history.replaceState) {
             urlParams.delete('lang');
             const qs = urlParams.toString();
@@ -278,7 +286,7 @@ window.LegoStore = (function() {
         getLocalized: (obj) => {
             if (!obj) return '';
             if (typeof obj === 'string') return obj;
-            return obj[currentLang] || (currentLang === 'pl' ? (obj['en'] || obj['uk']) : (obj['uk'] || obj['en'])) || Object.values(obj)[0] || '';
+            return obj[currentLang] || ((currentLang === 'pl' || currentLang === 'ko') ? (obj['en'] || obj['uk']) : (obj['uk'] || obj['en'])) || Object.values(obj)[0] || '';
         },
 
         // Data healing logic to match old IDs (paths) to new IDs (URLs)

@@ -80,11 +80,19 @@
     <div class="legal-page">
         <a href="index.html" class="legal-back" data-i18n="legal_back">← Повернутися до каталогу</a>
 
-        <div class="lang-switcher" style="display:flex;gap:4px;margin-bottom:20px;justify-content:center;background:rgba(0,0,0,.2);padding:4px;border-radius:var(--r-md);border:1px solid rgba(255,255,255,.1);width:fit-content;margin-left:auto;margin-right:auto">
-            <button class="lang-btn" data-lang="uk">UK</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="ru">RU</button>
-            <button class="lang-btn" data-lang="pl">PL</button>
+        <div class="lang-dropdown legal-lang-dropdown notranslate" translate="no">
+            <button type="button" class="lang-toggle" id="langToggle" aria-expanded="false" aria-haspopup="menu" aria-label="Language">
+                <span aria-hidden="true">🌐</span>
+                <span id="langCurrentCode">UK</span>
+                <span aria-hidden="true">▾</span>
+            </button>
+            <div class="lang-menu" id="langMenu" role="menu" hidden>
+                <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="uk">UK · Українська</button>
+                <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="en">EN · English</button>
+                <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="pl">PL · Polski</button>
+                <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="ru">RU · Русский</button>
+                <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="ko">KO · 한국어</button>
+            </div>
         </div>
 
         <div class="legal-hero">
@@ -194,20 +202,49 @@
                 }
             });
 
-            // Update active lang button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.toggle('active', btn.dataset.lang === lang);
+            // Update active lang option & toggle label
+            const codeEl = document.getElementById('langCurrentCode');
+            if (codeEl) codeEl.textContent = lang.toUpperCase();
+            document.querySelectorAll('.lang-option').forEach(btn => {
+                const isCur = btn.dataset.lang === lang;
+                btn.classList.toggle('active', isCur);
+                btn.setAttribute('aria-checked', isCur ? 'true' : 'false');
             });
         }
 
         document.addEventListener('DOMContentLoaded', () => {
             updateLegalUI();
 
-            // Lang switcher
-            document.querySelectorAll('.lang-btn').forEach(btn => {
+            const langToggle = document.getElementById('langToggle');
+            const langMenu = document.getElementById('langMenu');
+            const closeMenu = () => {
+                if (!langToggle || !langMenu) return;
+                langMenu.hidden = true;
+                langToggle.setAttribute('aria-expanded', 'false');
+            };
+            if (langToggle && langMenu) {
+                langToggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const opening = langMenu.hidden;
+                    langMenu.hidden = !opening;
+                    langToggle.setAttribute('aria-expanded', opening ? 'true' : 'false');
+                });
+                document.addEventListener('click', (e) => {
+                    if (!langMenu.hidden && !e.target.closest('.lang-dropdown')) closeMenu();
+                });
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape' && !langMenu.hidden) {
+                        closeMenu();
+                        langToggle.focus();
+                    }
+                });
+            }
+
+            document.querySelectorAll('.lang-option').forEach(btn => {
                 btn.addEventListener('click', () => {
                     LegoStore.setLang(btn.dataset.lang);
                     updateLegalUI();
+                    closeMenu();
                 });
             });
         });

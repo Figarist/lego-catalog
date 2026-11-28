@@ -14,6 +14,7 @@
     <link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/c/avtomobili-mototsykly/">
     <link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/c/avtomobili-mototsykly/">
     <link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/c/avtomobili-mototsykly/">
+    <link rel="alternate" hreflang="ko" href="https://sivochka.com/lego-catalog/ko/c/avtomobili-mototsykly/">
     <link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/c/avtomobili-mototsykly/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Samochody, motocykle — 28 instrukcji LEGO WeDo 2.0">
@@ -25,6 +26,7 @@
     <meta property="og:locale:alternate" content="uk_UA">
     <meta property="og:locale:alternate" content="en_US">
     <meta property="og:locale:alternate" content="ru_RU">
+    <meta property="og:locale:alternate" content="ko_KR">
     <meta property="og:site_name" content="BrickBot Study Archive · sivochka.com">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Samochody, motocykle — 28 instrukcji LEGO WeDo 2.0">
@@ -307,7 +309,14 @@
             </div>
         </a>
         <div class="lp-header-actions">
-            <nav class="lp-lang notranslate" translate="no" aria-label="Język"><ul><li><a class="lp-lang-link" href="../../../c/avtomobili-mototsykly/" hreflang="uk" lang="uk" title="Українська">UA</a></li><li><a class="lp-lang-link" href="../../../en/c/avtomobili-mototsykly/" hreflang="en" lang="en" title="English">EN</a></li><li><a class="lp-lang-link" href="../../../ru/c/avtomobili-mototsykly/" hreflang="ru" lang="ru" title="Русский">RU</a></li><li><a class="lp-lang-link is-current" aria-current="true" href="../../../pl/c/avtomobili-mototsykly/" hreflang="pl" lang="pl" title="Polski">PL</a></li></ul></nav>
+            <div class="lang-dropdown notranslate" translate="no">
+                <button type="button" class="lang-toggle" aria-expanded="false" aria-haspopup="menu" aria-label="Język">
+                    <span aria-hidden="true">🌐</span>
+                    <span>PL</span>
+                    <span aria-hidden="true">▾</span>
+                </button>
+                <ul class="lang-menu" role="menu" hidden><li><a class="lang-option" role="menuitemradio" aria-checked="false" href="../../../c/avtomobili-mototsykly/" hreflang="uk" lang="uk">UK · Українська</a></li><li><a class="lang-option" role="menuitemradio" aria-checked="false" href="../../../en/c/avtomobili-mototsykly/" hreflang="en" lang="en">EN · English</a></li><li><a class="lang-option is-current" aria-current="true" role="menuitemradio" aria-checked="true" href="../../../pl/c/avtomobili-mototsykly/" hreflang="pl" lang="pl">PL · Polski</a></li><li><a class="lang-option" role="menuitemradio" aria-checked="false" href="../../../ru/c/avtomobili-mototsykly/" hreflang="ru" lang="ru">RU · Русский</a></li><li><a class="lang-option" role="menuitemradio" aria-checked="false" href="../../../ko/c/avtomobili-mototsykly/" hreflang="ko" lang="ko">KO · 한국어</a></li></ul>
+            </div>
             <a class="lp-app-btn" href="../../../">🔍 Otwórz interaktywny katalog</a>
         </div>
     </header>
@@ -645,5 +654,16 @@
             </div>
         </div>
     </footer>
+    <script>
+    (function(){
+      var dd=document.querySelector('.lang-dropdown');if(!dd)return;
+      var btn=dd.querySelector('.lang-toggle'),menu=dd.querySelector('.lang-menu');
+      if(!btn||!menu)return;
+      function close(){menu.hidden=true;btn.setAttribute('aria-expanded','false');}
+      btn.addEventListener('click',function(e){e.stopPropagation();var o=menu.hidden;menu.hidden=!o;btn.setAttribute('aria-expanded',o?'true':'false');});
+      document.addEventListener('click',function(e){if(!menu.hidden&&!dd.contains(e.target))close();});
+      document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!menu.hidden){close();btn.focus();}});
+    })();
+    </script>
 </body>
 </html>

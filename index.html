@@ -15,6 +15,7 @@
     <link rel="alternate" hreflang="en" href="https://sivochka.com/lego-catalog/en/">
     <link rel="alternate" hreflang="ru" href="https://sivochka.com/lego-catalog/ru/">
     <link rel="alternate" hreflang="pl" href="https://sivochka.com/lego-catalog/pl/">
+    <link rel="alternate" hreflang="ko" href="https://sivochka.com/lego-catalog/ko/">
     <link rel="alternate" hreflang="x-default" href="https://sivochka.com/lego-catalog/">
 
     <!-- Open Graph (Info, Facebook, Viber, WhatsApp) -->
@@ -174,11 +175,19 @@
                     <small data-i18n="app_subtitle">Каталог інструкцій</small>
                 </div>
             </div>
-            <div class="lang-switcher notranslate" translate="no">
-                <button class="lang-btn" data-lang="uk">🇺🇦 UK</button>
-                <button class="lang-btn" data-lang="en">🇬🇧 EN</button>
-                <button class="lang-btn" data-lang="ru">🇷🇺 RU</button>
-                <button class="lang-btn" data-lang="pl">🇵🇱 PL</button>
+            <div class="lang-dropdown notranslate" translate="no">
+                <button type="button" class="lang-toggle" id="langToggle" aria-expanded="false" aria-haspopup="menu" aria-label="Language">
+                    <span aria-hidden="true">🌐</span>
+                    <span id="langCurrentCode">UK</span>
+                    <span aria-hidden="true">▾</span>
+                </button>
+                <div class="lang-menu" id="langMenu" role="menu" hidden>
+                    <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="uk">UK · Українська</button>
+                    <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="en">EN · English</button>
+                    <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="pl">PL · Polski</button>
+                    <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="ru">RU · Русский</button>
+                    <button type="button" class="lang-option" role="menuitemradio" aria-checked="false" data-lang="ko">KO · 한국어</button>
+                </div>
             </div>
 
             <div class="search-wrap">

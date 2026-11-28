@@ -397,9 +397,13 @@ document.addEventListener('DOMContentLoaded', () => {
       if (cntEl) a.appendChild(cntEl);
     });
 
-    // Update active button
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-      btn.classList.toggle('active', btn.dataset.lang === lang);
+    // Update active language dropdown
+    const langCurrentCode = $('langCurrentCode');
+    if (langCurrentCode) langCurrentCode.textContent = lang.toUpperCase();
+    document.querySelectorAll('.lang-option').forEach(btn => {
+      const isCur = btn.dataset.lang === lang;
+      btn.classList.toggle('active', isCur);
+      btn.setAttribute('aria-checked', isCur ? 'true' : 'false');
     });
 
     // Refresh dynamic content
@@ -411,11 +415,36 @@ document.addEventListener('DOMContentLoaded', () => {
     else switchView(activeCat, '', ''); // refresh current view
   }
 
-  // Lang Switcher Listeners
-  document.querySelectorAll('.lang-btn').forEach(btn => {
+  // Lang Dropdown Listeners
+  const langToggle = $('langToggle');
+  const langMenu = $('langMenu');
+  function closeLangMenu() {
+    if (!langToggle || !langMenu) return;
+    langMenu.hidden = true;
+    langToggle.setAttribute('aria-expanded', 'false');
+  }
+  if (langToggle && langMenu) {
+    langToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const opening = langMenu.hidden;
+      langMenu.hidden = !opening;
+      langToggle.setAttribute('aria-expanded', opening ? 'true' : 'false');
+    });
+    document.addEventListener('click', (e) => {
+      if (!langMenu.hidden && !e.target.closest('.lang-dropdown')) closeLangMenu();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !langMenu.hidden) {
+        closeLangMenu();
+        langToggle.focus();
+      }
+    });
+  }
+  document.querySelectorAll('.lang-option').forEach(btn => {
     btn.addEventListener('click', () => {
       LegoStore.setLang(btn.dataset.lang);
       updateUI();
+      closeLangMenu();
     });
   });
 
@@ -1594,6 +1623,14 @@ document.addEventListener('DOMContentLoaded', () => {
       "Wypróbuj Koło Instrukcji! 🎡",
       "Przekładnia zębata to supermoc! ⚙️",
       "Jesteś mistrzem inżynierii! 🌟"
+    ],
+    ko: [
+      "조립할 준비 됐나요? 여기를 눌러보세요! 🚀",
+      "모델 룰렛을 돌려보세요! 🎡",
+      "기어 장치는 진짜 슈퍼파워예요! ⚙️",
+      "당신은 최고의 마스터 빌더예요! 🌟",
+      "빔 고정을 잊지 마세요! 📐",
+      "새 로봇도 멋지게 만들 수 있을 거예요! 🤖"
     ]
   };
 

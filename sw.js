@@ -1,4 +1,4 @@
-const CACHE_NAME = 'wedo-catalog-v20261128a-i18n-full';
+const CACHE_NAME = 'wedo-catalog-v20261128b-5lang-dropdown';
 const ASSETS = [
   './',
   './index.html',

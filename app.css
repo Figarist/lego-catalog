@@ -92,18 +92,42 @@ body{
   display:flex;align-items:center;gap:12px;
   margin-left:auto;
 }
-.lang-switcher{
-  display:flex;gap:4px;
-  background:rgba(0,0,0,.25);padding:4px;border-radius:var(--r-md);
-  border:1px solid var(--border);
+.lang-dropdown{
+  position:relative;display:inline-flex;align-items:center;flex-shrink:0;
 }
-.lang-btn{
-  background:transparent;border:none;color:var(--text2);
-  padding:6px 10px;border-radius:var(--r-sm);cursor:pointer;
-  font-size:.75rem;font-weight:800;transition:all .2s var(--ease-smooth);
+.legal-lang-dropdown{
+  display:flex;width:fit-content;margin:0 auto 20px;
 }
-.lang-btn:hover{color:#fff;background:rgba(255,255,255,.12)}
-.lang-btn.active{background:var(--green);color:var(--on-green);font-weight:900;box-shadow:var(--shadow-glow-green)}
+.lang-toggle{
+  display:inline-flex;align-items:center;gap:6px;min-height:44px;
+  padding:8px 14px;border-radius:var(--r-pill);
+  background:var(--surface);border:var(--border-width-control) solid var(--surface2);
+  color:var(--text);font-family:inherit;font-size:.85rem;font-weight:800;
+  cursor:pointer;transition:all .2s var(--ease-smooth);white-space:nowrap;
+}
+.lang-toggle:hover,.lang-toggle[aria-expanded="true"]{
+  background:var(--card-hover);border-color:var(--cyan);
+}
+.lang-menu{
+  position:absolute;top:calc(100% + 6px);right:0;min-width:176px;
+  padding:6px;margin:0;list-style:none;border-radius:var(--r-md);
+  background:var(--surface);border:2px solid var(--surface2);
+  box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:200;
+  display:flex;flex-direction:column;gap:4px;
+}
+.lang-menu[hidden]{display:none !important}
+.legal-lang-dropdown .lang-menu{left:50%;right:auto;transform:translateX(-50%)}
+.lang-option{
+  display:flex;align-items:center;width:100%;min-height:44px;
+  padding:8px 12px;border:none;border-radius:var(--r-sm);
+  background:transparent;color:var(--text);font-family:inherit;
+  font-size:.86rem;font-weight:700;text-decoration:none;text-align:left;
+  cursor:pointer;transition:background .15s ease,color .15s ease;white-space:nowrap;
+}
+.lang-option:hover{background:rgba(255,255,255,.1);color:#fff}
+.lang-option.active,.lang-option.is-current{
+  background:var(--green);color:var(--on-green);font-weight:900;
+}
 
 .header-about-btn{
   background:var(--surface);border:var(--border-width-control) solid var(--surface2);
@@ -1415,7 +1439,8 @@ body{
   .header{height:auto;padding:10px 12px}
   .header-inner{height:auto;flex-direction:column;gap:10px;align-items:stretch}
   .logo{justify-content:center}
-  .lang-switcher{justify-content:center}
+  .lang-dropdown{align-self:center}
+  .lang-dropdown .lang-menu{left:50%;right:auto;transform:translateX(-50%)}
   .search-wrap{flex:none;height:auto;max-width:100%;order:3;width:100%;margin-top:2px}
   .header-stats{order:2;justify-content:center;margin:0;gap:8px}
   .grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px}
@@ -1997,7 +2022,7 @@ body{
 
 /* === MOBILE TOUCH TARGETS (WCAG AAA >= 44px) === */
 @media (hover: none) and (pointer: coarse) {
-  .btn, .pill, .chip, .lang-btn, .fav-btn, .vt, .scroll-btn, .clear-btn, .modal-close {
+  .btn, .pill, .chip, .lang-toggle, .lang-option, .fav-btn, .vt, .scroll-btn, .clear-btn, .modal-close {
     min-height: 44px;
     min-width: 44px;
   }
@@ -2313,8 +2338,10 @@ body{
 [data-theme="light"] .genre-name,
 [data-theme="light"] .built-empty-title{color:var(--text)}
 [data-theme="light"] .chip:hover{color:var(--text)}
-[data-theme="light"] .lang-switcher{background:var(--card)}
-[data-theme="light"] .lang-btn:hover{color:var(--text);background:var(--card-hover)}
+[data-theme="light"] .lang-toggle{background:var(--card);color:var(--text)}
+[data-theme="light"] .lang-menu{background:var(--card);box-shadow:0 12px 28px rgba(0,0,0,.15)}
+[data-theme="light"] .lang-option:hover{color:var(--text);background:var(--card-hover)}
+[data-theme="light"] .lang-option.active,[data-theme="light"] .lang-option.is-current{color:var(--on-green);background:var(--green)}
 [data-theme="light"] .nav-rank-bar{background:var(--surface2)}
 [data-theme="light"] .modal,
 [data-theme="light"] .about-modal{background:linear-gradient(155deg,var(--bg2),var(--card))}
