@@ -1,0 +1,28 @@
+name: i18n & Static Pages Gate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: JS syntax check
+        run: |
+          node --check store.js
+          node --check app.js
+          node --check translations.js
+          node --check roulette.js
+          node --check sw.js
+      - name: Check i18n parity and completeness
+        run: node scripts/check-i18n.mjs
+      - name: Check generated SEO pages are up to date
+        run: node scripts/generate-pages.mjs --check

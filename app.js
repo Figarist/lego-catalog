@@ -367,6 +367,36 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Localized alt attributes
+    document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+      const key = el.dataset.i18nAlt;
+      if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+        el.setAttribute('alt', I18N_DATA[lang][key]);
+      }
+    });
+
+    // Localized empty-state search chips
+    document.querySelectorAll('[data-search-key]').forEach(el => {
+      const key = el.dataset.searchKey;
+      if (I18N_DATA[lang] && I18N_DATA[lang][key]) {
+        el.setAttribute('data-search', I18N_DATA[lang][key]);
+      }
+    });
+
+    // Localized SEO category links
+    const catPrefix = lang === 'uk' ? '' : `${lang}/`;
+    document.querySelectorAll('.seo-cats a.lp-cat').forEach(a => {
+      const ukName = a.dataset.catUk;
+      const slug = a.dataset.catSlug;
+      if (!ukName || !slug) return;
+      a.setAttribute('href', `${catPrefix}c/${slug}/`);
+      const emoji = (typeof CATEGORY_EMOJI !== 'undefined' && CATEGORY_EMOJI[ukName]) ? CATEGORY_EMOJI[ukName] : '';
+      const label = (typeof CATEGORY_MAP !== 'undefined' && CATEGORY_MAP[ukName] && CATEGORY_MAP[ukName][lang]) || ukName;
+      const cntEl = a.querySelector('.lp-cnt');
+      a.textContent = `${emoji ? emoji + ' ' : ''}${label} `;
+      if (cntEl) a.appendChild(cntEl);
+    });
+
     // Update active button
     document.querySelectorAll('.lang-btn').forEach(btn => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
@@ -770,7 +800,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (item.ac.includes(CAT_KEY_NEW)) {
       const newBadge = document.createElement('div');
       newBadge.className = 'new-badge';
-      newBadge.textContent = 'NEW';
+      newBadge.textContent = t('new_badge');
       div.appendChild(newBadge);
     }
 
@@ -1523,9 +1553,9 @@ document.addEventListener('DOMContentLoaded', () => {
     chip.addEventListener('click', () => {
       const searchVal = chip.getAttribute('data-search');
       if (searchVal && searchInput) {
+        switchView('all', t('view_all'), '🎯');
         searchInput.value = searchVal;
         if (clearBtn) clearBtn.classList.remove('hidden');
-        switchView('all', t('view_all'), '🎯');
         renderGrid();
       }
     });
@@ -1603,7 +1633,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const shareData = {
       title: getLocalized(item.t),
-      text: `${getLocalized(item.t)} - LEGO WeDo 2.0 Catalog`,
+      text: `${getLocalized(item.t)} — ${t('app_subtitle')}`,
       url: shareUrl.toString()
     };
 

@@ -758,11 +758,11 @@ ${renderFooter(L, t, appHref, legalHref)}
 
 function renderIndexBlock(cats) {
   const items = cats.map(c =>
-    `                    <li><a class="lp-cat" href="c/${c.slug}/">${c.emoji} ${esc(c.names.uk)} <span class="lp-cnt">${c.items.length}</span></a></li>`
+    `                    <li><a class="lp-cat" href="c/${c.slug}/" data-cat-uk="${esc(c.names.uk)}" data-cat-slug="${esc(c.slug)}">${c.emoji} ${esc(c.names.uk)} <span class="lp-cnt">${c.items.length}</span></a></li>`
   ).join('\n');
   return `${INDEX_START}
             <nav class="lp-cats seo-cat-nav" aria-labelledby="seoCatTitle">
-                <h2 id="seoCatTitle" class="seo-guide-title">📂 Категорії інструкцій LEGO WeDo 2.0</h2>
+                <h2 id="seoCatTitle" class="seo-guide-title" data-i18n="seo_cat_title">📂 Категорії інструкцій LEGO WeDo 2.0</h2>
                 <ul>
 ${items}
                 </ul>
